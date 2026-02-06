@@ -1,11 +1,11 @@
 ---
 
-repo_url: "https://f-droid.org/repo"
+repo_url: "https://freetimemaker.github.io/fdroid/repo"
 repo_maxage: 14
-repo_web_base_url: "https://f-droid.org/packages"
+repo_web_base_url: "https://freetimemaker.github.io/fdroid"
 
 # needed until this is fixed: https://gitlab.com/fdroid/fdroidserver/-/issues/1143
-repo_name: "F-Droid"
+repo_name: "Free-Droid"
 
 archive_older: 3
 

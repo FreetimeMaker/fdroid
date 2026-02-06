@@ -62,11 +62,11 @@ variables:
 
 .get_target_source_refs: &get_target_source_refs
   - |
-    if [ "$CI_PROJECT_PATH" = "fdroid/fdroiddata" ] && [ "$CI_COMMIT_BRANCH" = "$CI_DEFAULT_BRANCH" ]; then
+    if [ "$CI_PROJECT_PATH" = "FreetimeMaker/fdroid" ] && [ "$CI_COMMIT_BRANCH" = "$CI_DEFAULT_BRANCH" ]; then
         export TARGET_REF="${CI_COMMIT_BEFORE_SHA}"
         export SOURCE_REF="${CI_COMMIT_SHA}"
     else
-        git remote add upstream https://gitlab.com/fdroid/fdroiddata.git || true
+        git remote add upstream https://gitlab.com/FreetimeMaker/fdroid.git || true
         git fetch upstream ${CI_MERGE_REQUEST_TARGET_BRANCH_NAME:-master}
         export TARGET_REF=$(git merge-base HEAD upstream/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME:-master})
         export SOURCE_REF="${CI_COMMIT_SHA}"
@@ -237,35 +237,6 @@ fdroid lint config:
     - fdroid lint config.yml config/*.yml config/*/*.yml
     # Alternate English locales must include the country code, e.g. en-GB.
     - python3 -c "import os; exit(os.path.exists('config/en/'))"
-
-
-tools check scripts:
-  stage: test
-  needs: []
-  image: debian:trixie-slim
-  rules: *app_verification_rules
-  script:
-    - apt-get -qy update
-    - apt-get -qy dist-upgrade
-    - apt-get -qy install --no-install-recommends exiftool git jq python3 python3-yaml
-    - export EXITVALUE=0
-    - function set_error() { export EXITVALUE=1; printf "\x1b[31mERROR `history|tail -2|head -1|cut -b 6-500`\x1b[0m\n"; }
-
-    - chown -R $(whoami) .
-    - ./tools/check-exif-in-images.sh || set_error
-    - ./tools/check-localized-metadata.py || set_error
-    - ./tools/check-keyalias-collision.py || set_error
-    - ./tools/check-metadata-summary-whitespace.py || set_error
-    - ./tools/check-for-unattached-signatures.py || set_error
-    - ./tools/make-summary-translatable.py || set_error
-
-    # GitLab only supports one codequality report per job
-    - jq '[.[]|.[]]' --slurp *.json > codequality.json
-
-    - exit $EXITVALUE
-  artifacts:
-    reports:
-      codequality: codequality.json
 
 
 # Use roundtrip parsing to check whether config file is in the
@@ -701,35 +672,6 @@ repo/index.html:
       done
     - linkchecker repo/index.html || set_error
     - tidy repo/index.html || set_error
-    - exit $EXITVALUE
-
-weblate merge conflict:
-  stage: test
-  needs: []
-  image: debian:trixie-slim
-  rules:
-    - changes:
-        - .gitlab-ci.yml
-        - config/*/antiFeatures.yml
-        - config/*/categories.yml
-        - config/antiFeatures.yml
-        - config/categories.yml
-  script:
-    - apt-get update
-    - apt-get -qy upgrade
-    - apt-get -qy install --no-install-recommends ca-certificates git
-    - git config user.name "$CI_PIPELINE_ID/$CI_JOB_ID"
-    - git config user.email $CI_PROJECT_PATH@f-droid.org
-    - git fetch https://hosted.weblate.org/git/f-droid/anti-features/
-    - git checkout -B weblate FETCH_HEAD
-    - export EXITVALUE=0
-    - if ! git rebase $CI_COMMIT_SHA; then
-          export EXITVALUE=1;
-          set -x;
-          while git rebase --skip; do echo; done;
-          set +x;
-      fi
-    - git diff --exit-code
     - exit $EXITVALUE
 
 
