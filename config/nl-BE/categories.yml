@@ -1,0 +1,118 @@
+Connectivity:
+  name: Connectiviteit
+Development:
+  name: Ontwikkeling
+Games:
+  name: Spellen
+Graphics:
+  name: Grafisch
+Internet:
+  name: Internet
+Money:
+  name: Geld
+Multimedia:
+  name: Multimedia
+Navigation:
+  name: Navigatie
+Phone & SMS:
+  name: Telefoon & SMS
+Reading:
+  name: Lezen
+Science & Education:
+  name: Onderwijs & wetenschap
+Security:
+  name: Beveiliging
+Sports & Health:
+  name: Sport & Gezondheid
+System:
+  name: Systeem
+Theming:
+  name: Thema’s
+Time:
+  name: Tijd
+Writing:
+  name: Schrijven
+AI Chat:
+  name: AI Chat
+App Manager:
+  name: App Manager
+App Store & Updater:
+  name: App Store en Updater
+Bookmark:
+  name: Bladwijzer
+Browser:
+  name: Browser
+Calculator:
+  name: Rekenmachine
+Calendar & Agenda:
+  name: Kalender & Agenda
+Clock:
+  name: Klok
+Cloud Storage & File Sync:
+  name: Cloud opslag & Bestand Synchronisatie
+DNS & Hosts:
+  name: DNS & Hosts
+Draw:
+  name: Teken
+Ebook Reader:
+  name: Ebook lezer
+Email:
+  name: E-mail
+File Encryption & Vault:
+  name: Bestanden versleuteling en kluis
+File Transfer:
+  name: Bestandsoverdracht
+Finance Manager:
+  name: Financieel manager
+Firewall:
+  name: Firewall
+Forum:
+  name: Forum
+Gallery:
+  name: Galerij
+Habit Tracker:
+  name: Gewoonte tracker
+Icon Pack:
+  name: Pictogrammenpakket
+Inventory:
+  name: Voorraad
+Keyboard & IME:
+  name: Toetsenbord en IME
+Launcher:
+  name: Launcher
+Local Media Player:
+  name: Lokale mediaspeler
+Location Tracker & Sharer:
+  name: Locatietracker en -deler
+Messaging:
+  name: Berichten
+Contact:
+  name: Contact
+Music Practice Tool:
+  name: Muziek oefentool
+Network Analyzer:
+  name: Netwerk analysetool
+News:
+  name: Nieuws
+Note:
+  name: Notitie
+Pass Wallet:
+  name: Kaarten portemonnee
+Password & 2FA:
+  name: Wachtwoord en 2FA
+Podcast:
+  name: Podcast
+Public Transport:
+  name: Openbaar vervoer
+Recipe Manager:
+  name: Receptenbeheerder
+Religion:
+  name: Religie
+Shopping List:
+  name: Boodschappenlijst
+Social Network:
+  name: Sociaalnetwerk
+Task:
+  name: Taak
+Text Editor:
+  name: Teksteditor
