@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1771610235000,
+    "timestamp": 1771611313000,
     "categories": {
       "Weather": {
         "name": {
@@ -24,9 +24,14 @@
         "authorEmail": "jamieachatz@gmail.com",
         "authorName": "Freetime Maker",
         "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
         "name": {
           "en-US": "GeoWeather"
         },
+        "donate": [
+          "https://pay.oxapay.com/13038067"
+        ],
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {

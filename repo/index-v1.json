@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1771610240000,
+    "timestamp": 1771611324000,
     "version": 20002,
     "name": "Free-Droid Repository",
     "icon": "icon.png",
@@ -23,14 +23,17 @@
       "authorName": "Freetime Maker",
       "authorWebSite": "https://freetimemaker.github.io/",
       "binaries": "https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk",
+      "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
       "categories": [
         "Weather"
       ],
       "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
       "suggestedVersionName": "1.2.5",
       "suggestedVersionCode": "26",
+      "donate": "https://pay.oxapay.com/13038067",
       "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
       "license": "Apache-2.0",
+      "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
       "added": 1771601742000,
       "packageName": "com.freetime.geoweather",
@@ -60,6 +63,7 @@
       "authorName": "Freetime Maker",
       "authorWebSite": "https://freetimemaker.github.io/",
       "binaries": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk",
+      "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
       "categories": [
         "Games",
         "Internet"
@@ -67,8 +71,10 @@
       "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
       "suggestedVersionName": "1.0.5",
       "suggestedVersionCode": "6",
+      "donate": "https://pay.oxapay.com/13038067",
       "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
       "license": "Apache-2.0",
+      "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
       "added": 1771601744000,
       "packageName": "com.freetime.ssmpc",

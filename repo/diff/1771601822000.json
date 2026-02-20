@@ -3,7 +3,7 @@
     "description": {
       "en-US": "This is the Official F-Droid Repository from Freetime Maker for Free-Droid apps it includes only Apps from Freetime Maker."
     },
-    "timestamp": 1771610240000,
+    "timestamp": 1771611324000,
     "categories": {
       "fdroid": null,
       "Games": {
@@ -70,12 +70,17 @@
         "authorEmail": "jamieachatz@gmail.com",
         "authorName": "Freetime Maker",
         "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
         "summary": {
           "en-US": "Modern weather app with 7-day forecast for multiple cities"
         },
         "description": {
           "en-US": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n🌟 KEY FEATURES:\n\n🏙️ MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n📅 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n⏰ HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n🎨 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n🔔 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n💳 DONATION FEATURE\n- Support continued development\n- Integrated FreetimeSDK for secure payments\n- Voluntary support for open source\n\n🛠️ MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n"
         },
+        "donate": [
+          "https://pay.oxapay.com/13038067"
+        ],
         "icon": {
           "en-US": {
             "name": "/com.freetime.geoweather/en-US/icon_95fAk10b9h0deFCkPXjOdkpNqkqEa9_p1wWYQJleL_Q=.png",
@@ -207,12 +212,17 @@
         "authorEmail": "jamieachatz@gmail.com",
         "authorName": "Freetime Maker",
         "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
         "summary": {
           "en-US": "The Unofficial Companion App for the SuperSMP Minecraft Server."
         },
         "description": {
           "en-US": "The SuperSMP Companion App is a companion app for the SuperSMP Minecraft Server.\nIt is a free and open-source app that is available for Android devices.\nThe Companion App is Unofficial so its not affiliated with the SuperSMP Server in any way.\n"
         },
+        "donate": [
+          "https://pay.oxapay.com/13038067"
+        ],
         "icon": {
           "en-US": {
             "name": "/com.freetime.ssmpc/en-US/icon_64Vra-riQhIqiqXNsaW3plQAeGW8X8Z9A0ZR_clonRQ=.png",

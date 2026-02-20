@@ -1,11 +1,16 @@
 {
   "repo": {
-    "timestamp": 1771610240000
+    "timestamp": 1771611324000
   },
   "packages": {
     "com.freetime.geoweather": {
       "metadata": {
-        "lastUpdated": 1771610234000
+        "lastUpdated": 1771610234000,
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "donate": [
+          "https://pay.oxapay.com/13038067"
+        ]
       },
       "versions": {
         "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7": null,
@@ -67,6 +72,15 @@
             "en-US": "- Added more Translations\n- Updated so it won't Crash anymore\n- Added much More than that\n- Updated so the Weather Data will be Updated"
           }
         }
+      }
+    },
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "donate": [
+          "https://pay.oxapay.com/13038067"
+        ]
       }
     }
   }
