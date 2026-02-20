@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1771602601000,
+    "timestamp": 1771610240000,
     "version": 20002,
     "name": "Free-Droid Repository",
     "icon": "icon.png",
@@ -27,14 +27,14 @@
         "Weather"
       ],
       "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
-      "suggestedVersionName": "1.2.4",
-      "suggestedVersionCode": "25",
+      "suggestedVersionName": "1.2.5",
+      "suggestedVersionCode": "26",
       "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
       "license": "Apache-2.0",
       "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
       "added": 1771601742000,
       "packageName": "com.freetime.geoweather",
-      "lastUpdated": 1771601744000,
+      "lastUpdated": 1771610234000,
       "localized": {
         "en-US": {
           "description": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udfd9\ufe0f MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n\ud83d\udcc5 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n\u23f0 HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n\ud83c\udfa8 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n\ud83d\udd14 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n\ud83d\udcb3 DONATION FEATURE\n- Support continued development\n- Integrated FreetimeSDK for secure payments\n- Voluntary support for open source\n\n\ud83d\udee0\ufe0f MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n",
@@ -48,7 +48,7 @@
             "4.png"
           ],
           "summary": "Modern weather app with 7-day forecast for multiple cities",
-          "whatsNew": "- Changed Weather View so it wont Crash (Hopefully)\n- Added Scrolling to Weather View and Donation View"
+          "whatsNew": "- Added more Translations\n- Updated so it won't Crash anymore\n- Added much More than that\n- Updated so the Weather Data will be Updated"
         }
       }
     },
@@ -92,6 +92,56 @@
   ],
   "packages": {
     "com.freetime.geoweather": [
+      {
+        "added": 1771610234000,
+        "apkName": "GeoWeather-v1.2.5.apk",
+        "hash": "9d0bb3033ecd11ecd217a1fd884563e1c6672d2475969a7f95239d66fe4f784f",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.geoweather",
+        "sig": "affbe859dac99bd65c457093f896110d",
+        "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
+        "size": 15135204,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 26,
+        "versionName": "1.2.5"
+      },
       {
         "added": 1771601744000,
         "apkName": "GeoWeather-v1.2.4.apk",
@@ -191,56 +241,6 @@
         ],
         "versionCode": 24,
         "versionName": "1.2.3"
-      },
-      {
-        "added": 1771601742000,
-        "apkName": "GeoWeather-v1.2.2.apk",
-        "hash": "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7",
-        "hashType": "sha256",
-        "minSdkVersion": 26,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.geoweather",
-        "sig": "affbe859dac99bd65c457093f896110d",
-        "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
-        "size": 13983263,
-        "targetSdkVersion": 36,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.POST_NOTIFICATIONS",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECEIVE_BOOT_COMPLETED",
-            null
-          ],
-          [
-            "android.permission.FOREGROUND_SERVICE",
-            null
-          ],
-          [
-            "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 23,
-        "versionName": "1.2.2"
       }
     ],
     "com.freetime.ssmpc": [

@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1771602596000,
+    "timestamp": 1771610235000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -11,6 +11,89 @@
     "install": [],
     "uninstall": []
   },
-  "apps": [],
-  "packages": {}
+  "apps": [
+    {
+      "allowedAPKSigningKeys": [
+        "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+      ],
+      "antiFeatures": [
+        "TetheredNet"
+      ],
+      "authorEmail": "jamieachatz@gmail.com",
+      "authorName": "Freetime Maker",
+      "authorWebSite": "https://freetimemaker.github.io/",
+      "binaries": "https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk",
+      "categories": [
+        "Weather"
+      ],
+      "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
+      "suggestedVersionName": "1.2.5",
+      "suggestedVersionCode": "26",
+      "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
+      "license": "Apache-2.0",
+      "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
+      "added": 1771601742000,
+      "packageName": "com.freetime.geoweather",
+      "lastUpdated": 1771610234000,
+      "localized": {
+        "en-US": {
+          "name": "GeoWeather"
+        }
+      }
+    }
+  ],
+  "packages": {
+    "com.freetime.geoweather": [
+      {
+        "added": 1771601742000,
+        "apkName": "GeoWeather-v1.2.2.apk",
+        "hash": "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.geoweather",
+        "sig": "affbe859dac99bd65c457093f896110d",
+        "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
+        "size": 13983263,
+        "targetSdkVersion": 36,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 23,
+        "versionName": "1.2.2"
+      }
+    ]
+  }
 }

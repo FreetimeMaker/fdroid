@@ -1,20 +1,41 @@
 {
   "repo": {
-    "timestamp": 1771610240000
+    "timestamp": 1771610235000,
+    "categories": {
+      "Weather": {
+        "name": {
+          "en-US": "Weather"
+        }
+      }
+    }
   },
   "packages": {
     "com.freetime.geoweather": {
       "metadata": {
-        "lastUpdated": 1771610234000
+        "added": 1771601742000,
+        "categories": [
+          "Weather"
+        ],
+        "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
+        "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
+        "lastUpdated": 1771610234000,
+        "license": "Apache-2.0",
+        "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
+        "authorEmail": "jamieachatz@gmail.com",
+        "authorName": "Freetime Maker",
+        "authorWebSite": "https://freetimemaker.github.io/",
+        "name": {
+          "en-US": "GeoWeather"
+        },
+        "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
-        "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7": null,
-        "9d0bb3033ecd11ecd217a1fd884563e1c6672d2475969a7f95239d66fe4f784f": {
-          "added": 1771610234000,
+        "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7": {
+          "added": 1771601742000,
           "file": {
-            "name": "/GeoWeather-v1.2.5.apk",
-            "sha256": "9d0bb3033ecd11ecd217a1fd884563e1c6672d2475969a7f95239d66fe4f784f",
-            "size": 15135204
+            "name": "/GeoWeather-v1.2.2.apk",
+            "sha256": "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7",
+            "size": 13983263
           },
           "manifest": {
             "nativecode": [
@@ -23,8 +44,8 @@
               "x86",
               "x86_64"
             ],
-            "versionName": "1.2.5",
-            "versionCode": 26,
+            "versionName": "1.2.2",
+            "versionCode": 23,
             "usesSdk": {
               "minSdkVersion": 26,
               "targetSdkVersion": 36
@@ -62,9 +83,6 @@
             "TetheredNet": {
               "en-US": "Rely on open-meteo.com."
             }
-          },
-          "whatsNew": {
-            "en-US": "- Added more Translations\n- Updated so it won't Crash anymore\n- Added much More than that\n- Updated so the Weather Data will be Updated"
           }
         }
       }
