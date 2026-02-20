@@ -1,0 +1,1 @@
+Modern weather app with 7-day forecast for multiple cities

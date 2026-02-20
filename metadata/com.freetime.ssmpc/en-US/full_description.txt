@@ -1,0 +1,3 @@
+The SuperSMP Companion App is a companion app for the SuperSMP Minecraft Server.
+It is a free and open-source app that is available for Android devices.
+The Companion App is Unofficial so its not affiliated with the SuperSMP Server in any way.

@@ -1,0 +1,243 @@
+{
+  "repo": {
+    "name": {
+      "en-US": "Free-Droid Repository"
+    },
+    "description": {
+      "en-US": "The Official F-Droid Repository from Freetime Maker for Free-Droid apps. This Repository is for Apps from Freetime Maker."
+    },
+    "icon": {
+      "en-US": {
+        "name": "/icons/icon.png",
+        "sha256": "bee9c5865ef9aa9571b74d7347db257846611ac9b5f2c4e753c798bc5a40d25e",
+        "size": 414189
+      }
+    },
+    "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo",
+    "timestamp": 1771601822000,
+    "categories": {
+      "fdroid": {
+        "name": {
+          "en-US": "fdroid"
+        }
+      }
+    }
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "metadata": {
+        "added": 1771601742000,
+        "categories": [
+          "fdroid"
+        ],
+        "lastUpdated": 1771601744000,
+        "name": {
+          "en-US": "GeoWeather"
+        },
+        "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+      },
+      "versions": {
+        "32715ebacc5933854fd061a425132424ff7f91bbdf47ce949bb9bd85c534dec2": {
+          "added": 1771601744000,
+          "file": {
+            "name": "/GeoWeather-v1.2.4.apk",
+            "sha256": "32715ebacc5933854fd061a425132424ff7f91bbdf47ce949bb9bd85c534dec2",
+            "size": 15049188
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.2.4",
+            "versionCode": 25,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "41a82c6997f2464f4c30db03fbfae23e077f6e3188a08bc861ce48900b7ae51d": {
+          "added": 1771601743000,
+          "file": {
+            "name": "/GeoWeather-v1.2.3.apk",
+            "sha256": "41a82c6997f2464f4c30db03fbfae23e077f6e3188a08bc861ce48900b7ae51d",
+            "size": 13983263
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.2.3",
+            "versionCode": 24,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7": {
+          "added": 1771601742000,
+          "file": {
+            "name": "/GeoWeather-v1.2.2.apk",
+            "sha256": "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7",
+            "size": 13983263
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.2.2",
+            "versionCode": 23,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "added": 1771601744000,
+        "categories": [
+          "fdroid"
+        ],
+        "lastUpdated": 1771601744000,
+        "name": {
+          "en-US": "SuperSMP Companion"
+        },
+        "preferredSigner": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+      },
+      "versions": {
+        "bbd4516bc34278a0c04a721d42732e161669f434bc60a126023f305cea18c0f3": {
+          "added": 1771601744000,
+          "file": {
+            "name": "/SSMPC-v1.0.5.apk",
+            "sha256": "bbd4516bc34278a0c04a721d42732e161669f434bc60a126023f305cea18c0f3",
+            "size": 14688887
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.0.5",
+            "versionCode": 6,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
