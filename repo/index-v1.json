@@ -1,11 +1,11 @@
 {
   "repo": {
-    "timestamp": 1771601822000,
+    "timestamp": 1771602285000,
     "version": 20002,
     "name": "Free-Droid Repository",
     "icon": "icon.png",
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo",
-    "description": "The Official F-Droid Repository from Freetime Maker for Free-Droid apps. This Repository is for Apps from Freetime Maker."
+    "description": "This is the Official F-Droid Repository from Freetime Maker for Free-Droid apps it includes only Apps from Freetime Maker."
   },
   "requests": {
     "install": [],
@@ -13,26 +13,81 @@
   },
   "apps": [
     {
-      "categories": [
-        "fdroid"
+      "allowedAPKSigningKeys": [
+        "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       ],
-      "suggestedVersionCode": "2147483647",
-      "license": "Unknown",
-      "name": "GeoWeather",
+      "antiFeatures": [
+        "TetheredNet"
+      ],
+      "authorEmail": "jamieachatz@gmail.com",
+      "authorName": "Freetime Maker",
+      "authorWebSite": "https://freetimemaker.github.io/",
+      "binaries": "https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk",
+      "categories": [
+        "Weather"
+      ],
+      "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
+      "suggestedVersionName": "1.2.4",
+      "suggestedVersionCode": "25",
+      "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
+      "license": "Apache-2.0",
+      "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
       "added": 1771601742000,
       "packageName": "com.freetime.geoweather",
-      "lastUpdated": 1771601744000
+      "lastUpdated": 1771601744000,
+      "localized": {
+        "en-US": {
+          "description": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udfd9\ufe0f MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n\ud83d\udcc5 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n\u23f0 HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n\ud83c\udfa8 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n\ud83d\udd14 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n\ud83d\udcb3 DONATION FEATURE\n- Support continued development\n- Integrated FreetimeSDK for secure payments\n- Voluntary support for open source\n\n\ud83d\udee0\ufe0f MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n",
+          "featureGraphic": "featureGraphic_tWlD212zCMmK9tm0m6_Ig7ZI6WZhdbMyKPeIyB76NOI=.png",
+          "icon": "icon_95fAk10b9h0deFCkPXjOdkpNqkqEa9_p1wWYQJleL_Q=.png",
+          "name": "GeoWeather",
+          "phoneScreenshots": [
+            "1.png",
+            "2.png",
+            "3.png",
+            "4.png"
+          ],
+          "summary": "Modern weather app with 7-day forecast for multiple cities",
+          "whatsNew": "- Changed Weather View so it wont Crash (Hopefully)\n- Added Scrolling to Weather View and Donation View"
+        }
+      }
     },
     {
-      "categories": [
-        "fdroid"
+      "allowedAPKSigningKeys": [
+        "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
       ],
-      "suggestedVersionCode": "2147483647",
-      "license": "Unknown",
-      "name": "SuperSMP Companion",
+      "authorEmail": "jamieachatz@gmail.com",
+      "authorName": "Freetime Maker",
+      "authorWebSite": "https://freetimemaker.github.io/",
+      "binaries": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk",
+      "categories": [
+        "Games",
+        "Internet"
+      ],
+      "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
+      "suggestedVersionName": "1.0.5",
+      "suggestedVersionCode": "6",
+      "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
+      "license": "Apache-2.0",
+      "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
       "added": 1771601744000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1771601744000
+      "lastUpdated": 1771601744000,
+      "localized": {
+        "en-US": {
+          "description": "The SuperSMP Companion App is a companion app for the SuperSMP Minecraft Server.\nIt is a free and open-source app that is available for Android devices.\nThe Companion App is Unofficial so its not affiliated with the SuperSMP Server in any way.\n",
+          "featureGraphic": "featureGraphic_8Xfl9KwSr7cCBQh5azFC0kEqAchYdsmiZjzaJ53As_M=.png",
+          "icon": "icon_64Vra-riQhIqiqXNsaW3plQAeGW8X8Z9A0ZR_clonRQ=.png",
+          "name": "SuperSMP Companion",
+          "phoneScreenshots": [
+            "1.png",
+            "2.png",
+            "3.png"
+          ],
+          "summary": "The Unofficial Companion App for the SuperSMP Minecraft Server.",
+          "whatsNew": "- Added to F-Droid"
+        }
+      }
     }
   ],
   "packages": {
