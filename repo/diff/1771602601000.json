@@ -1,10 +1,14 @@
 {
   "repo": {
-    "timestamp": 1771611324000
+    "description": {
+      "en-US": "This is the Official F-Droid Repository from Freetime Maker for Free-Droid apps it includes only Apps from Freetime Maker. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet."
+    },
+    "timestamp": 1771680789000
   },
   "packages": {
     "com.freetime.geoweather": {
       "metadata": {
+        "added": 1771601743000,
         "lastUpdated": 1771610234000,
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
         "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",

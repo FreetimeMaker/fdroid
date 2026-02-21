@@ -1,9 +1,9 @@
 {
   "repo": {
     "description": {
-      "en-US": "This is the Official F-Droid Repository from Freetime Maker for Free-Droid apps it includes only Apps from Freetime Maker."
+      "en-US": "This is the Official F-Droid Repository from Freetime Maker for Free-Droid apps it includes only Apps from Freetime Maker. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet."
     },
-    "timestamp": 1771611324000,
+    "timestamp": 1771680789000,
     "categories": {
       "fdroid": null,
       "Games": {
@@ -26,6 +26,7 @@
   "packages": {
     "com.freetime.geoweather": {
       "metadata": {
+        "added": 1771601743000,
         "categories": [
           "Weather"
         ],

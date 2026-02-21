@@ -8,21 +8,7 @@
   "packages": {
     "com.freetime.geoweather": {
       "metadata": {
-        "added": 1771601743000,
-        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
-        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
-        "donate": [
-          "https://pay.oxapay.com/13038067"
-        ]
-      }
-    },
-    "com.freetime.ssmpc": {
-      "metadata": {
-        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
-        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
-        "donate": [
-          "https://pay.oxapay.com/13038067"
-        ]
+        "added": 1771601743000
       }
     }
   }

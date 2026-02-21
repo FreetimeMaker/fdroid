@@ -1,11 +1,11 @@
 {
   "repo": {
-    "timestamp": 1771611324000,
+    "timestamp": 1771680789000,
     "version": 20002,
     "name": "Free-Droid Repository",
     "icon": "icon.png",
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo",
-    "description": "This is the Official F-Droid Repository from Freetime Maker for Free-Droid apps it includes only Apps from Freetime Maker."
+    "description": "This is the Official F-Droid Repository from Freetime Maker for Free-Droid apps it includes only Apps from Freetime Maker. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet."
   },
   "requests": {
     "install": [],
@@ -35,7 +35,7 @@
       "license": "Apache-2.0",
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
-      "added": 1771601742000,
+      "added": 1771601743000,
       "packageName": "com.freetime.geoweather",
       "lastUpdated": 1771610234000,
       "localized": {

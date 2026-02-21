@@ -3,3 +3,4 @@ config.yml
 tmp/
 repo/status/
 *.apk
+/archive
