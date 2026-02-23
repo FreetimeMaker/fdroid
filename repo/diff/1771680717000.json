@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1771871777000
+    "timestamp": 1771874441000
   },
   "packages": {
     "com.freetime.geoweather": {
@@ -9,11 +9,11 @@
       },
       "versions": {
         "41a82c6997f2464f4c30db03fbfae23e077f6e3188a08bc861ce48900b7ae51d": null,
-        "5cfa7eb16671ccb917782bad8b368d7e7d29651f732863e116d860a8de05608e": {
+        "8778688978941dbc5d464a268bef8f8fa3299974576262552a04e9d8ab4e78d5": {
           "added": 1771871489000,
           "file": {
             "name": "/GeoWeather-v1.2.6.apk",
-            "sha256": "5cfa7eb16671ccb917782bad8b368d7e7d29651f732863e116d860a8de05608e",
+            "sha256": "8778688978941dbc5d464a268bef8f8fa3299974576262552a04e9d8ab4e78d5",
             "size": 14416952
           },
           "manifest": {
