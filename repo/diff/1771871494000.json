@@ -1,0 +1,16 @@
+{
+  "repo": {
+    "timestamp": 1771871777000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "versions": {
+        "5cfa7eb16671ccb917782bad8b368d7e7d29651f732863e116d860a8de05608e": {
+          "whatsNew": {
+            "en-US": "- Added Real FreetimeSDK (My own Payment SDK) Integration"
+          }
+        }
+      }
+    }
+  }
+}
