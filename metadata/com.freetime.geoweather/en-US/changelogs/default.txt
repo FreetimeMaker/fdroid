@@ -1,1 +1,1 @@
-- Added Real FreetimeSDK (My own Payment SDK) Integration
+- Updated so it won't Crash when using USD to Crypto Conversion
