@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1771960691000,
+    "timestamp": 1771961884000,
     "version": 20002,
     "name": "Free-Droid Repository",
     "icon": "icon.png",
@@ -28,8 +28,8 @@
         "Weather"
       ],
       "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
-      "suggestedVersionName": "1.2.6",
-      "suggestedVersionCode": "27",
+      "suggestedVersionName": "1.2.7",
+      "suggestedVersionCode": "28",
       "donate": "https://pay.oxapay.com/13038067",
       "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
       "license": "Apache-2.0",
@@ -51,7 +51,7 @@
             "4.png"
           ],
           "summary": "Modern weather app with 7-day forecast for multiple cities",
-          "whatsNew": "- Added Real FreetimeSDK (My own Payment SDK) Integration"
+          "whatsNew": "- Updated so it won't Crash when using USD to Crypto Conversion"
         }
       }
     },

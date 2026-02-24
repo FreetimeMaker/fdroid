@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1771960691000
+    "timestamp": 1771961884000
   },
   "packages": {
     "com.freetime.geoweather": {
@@ -63,9 +63,9 @@
               "en-US": "Rely on open-meteo.com."
             }
           },
-          "releaseChannels": [
-            "Beta"
-          ]
+          "whatsNew": {
+            "en-US": "- Updated so it won't Crash when using USD to Crypto Conversion"
+          }
         }
       }
     }
