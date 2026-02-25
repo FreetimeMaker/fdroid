@@ -7,17 +7,5 @@
       "en-US": "This is the Official F-Droid Repository from Freetime Maker for FDroid. It includes only Apps from Freetime Maker. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet."
     },
     "timestamp": 1772032690000
-  },
-  "packages": {
-    "com.freetime.geoweather": {
-      "versions": {
-        "783bd30d55dfb9c43938f3f30a9aa0a942dda6c2902177f6a53cfa7b93c240c7": {
-          "releaseChannels": null,
-          "whatsNew": {
-            "en-US": "- Updated so it won't Crash when using USD to Crypto Conversion"
-          }
-        }
-      }
-    }
   }
 }

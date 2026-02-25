@@ -1,11 +1,11 @@
 {
   "repo": {
-    "timestamp": 1771961884000,
+    "timestamp": 1772032690000,
     "version": 20002,
-    "name": "Free-Droid Repository",
+    "name": "Freetime Maker Repository",
     "icon": "icon.png",
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo",
-    "description": "This is the Official F-Droid Repository from Freetime Maker for Free-Droid apps it includes only Apps from Freetime Maker. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet."
+    "description": "This is the Official F-Droid Repository from Freetime Maker for FDroid. It includes only Apps from Freetime Maker. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet."
   },
   "requests": {
     "install": [],
