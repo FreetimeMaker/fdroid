@@ -9,7 +9,7 @@ The Official F-Droid Repository from Freetime Maker featuring open-source Androi
 - **Description:** Modern weather app with 7-day forecast for multiple cities
 - **Category:** Weather
 
-### SSMP Controller
+### SuperSMP Companion
 - **Package ID:** `com.freetime.ssmpc`
 - **Description:** Vote, shop & explore SuperSMP anywhere! 🎮 The ultimate companion app for server features.
 - **Category:** Games, Internet
