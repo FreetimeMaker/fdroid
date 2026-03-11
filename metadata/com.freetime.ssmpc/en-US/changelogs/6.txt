@@ -1,1 +1,17 @@
-- Added to F-Droid
+✨ **New Features:**
+• Added to F-Droid repository for easier installation
+• Enhanced app stability and performance
+• Improved user interface with Material Design 3
+• Better support for newer Android versions
+
+🔧 **Technical Improvements:**
+• Migrated to Kotlin for better performance
+• Upgraded to Jetpack Compose for modern UI
+• Updated build system to Kotlin DSL
+• Enhanced error handling and crash reporting
+
+🐛 **Bug Fixes:**
+• Fixed map loading issues on some devices
+• Resolved voting system connectivity problems
+• Improved shop loading times
+• Better memory management

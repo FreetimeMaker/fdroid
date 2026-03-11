@@ -11,7 +11,7 @@ The Official F-Droid Repository from Freetime Maker featuring open-source Androi
 
 ### SSMP Controller
 - **Package ID:** `com.freetime.ssmpc`
-- **Description:** The Unofficial Companion App for the SuperSMP Minecraft Server.
+- **Description:** Vote, shop & explore SuperSMP anywhere! 🎮 The ultimate companion app for server features.
 - **Category:** Games, Internet
 
 ## 🔧 Repository Setup
@@ -35,12 +35,10 @@ This repository uses the standard F-Droid repository structure:
 
 - `metadata/` - App metadata and build configurations
 - `repo/` - Built APK files and repository index
-- `archive/` - Older versions of applications
-- `srclibs/` - Source libraries
 
 ## 📄 License
 
-This repository and its contents are licensed under the terms specified in the [LICENSE](LICENSE) file.
+This repository and its contents are licensed under the terms specified in the [Apache-2.0 LICENSE](LICENSE) file.
 
 ## 🤝 Contributing
 
@@ -49,12 +47,14 @@ To contribute to this repository:
 1. Fork this repository
 2. Add your app metadata to the `metadata/` directory
 3. Submit a pull request for review
+4. Wait for review and approval
+5. Your app will be available in the repository
+6. Do it whenever you update your app
 
 ## 📞 Support
 
 For support or questions about the applications:
 - Create an issue in this repository
-- Contact Freetime Maker directly
 
 ---
 
