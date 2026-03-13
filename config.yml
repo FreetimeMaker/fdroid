@@ -1,0 +1,14 @@
+sdk_path: /usr/lib/android-sdk
+
+repo_icon: icon.png
+repo_name: Freetime Maker Repository
+repo_description: This is the Official F-Droid Repository from Freetime Maker for F-Droid. It includes Apps from Freetime Maker and others if they want to. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet.
+repo_url: https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo
+
+archive_older: 3
+
+keystore: keystore.p12
+keystorepass: KKKKKK
+keypass: KKKKKK
+repo_keyalias: FDROID
+keydname: CN=Freetime Maker, OU=F-Droid
