@@ -1,0 +1,92 @@
+name: Check and update apps
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y jq yq aapt
+
+      - name: Process apps
+        run: |
+          mkdir -p updated_apks
+
+          for file in apps/*.yml; do
+            echo "Processing $file"
+
+            REPO=$(yq '.repo' "$file")
+            META=$(yq '.metadata' "$file")
+            APK_PATTERN=$(yq '.apk_pattern' "$file")
+            PKG=$(yq '.package_id' "$file")
+
+            echo "Upstream repo: $REPO"
+            echo "Metadata file: $META"
+
+            # Fetch latest release
+            RELEASE_JSON=$(curl -s "https://api.github.com/repos/$REPO/releases/latest")
+            LATEST=$(echo "$RELEASE_JSON" | jq -r .tag_name)
+
+            if [ "$LATEST" = "null" ]; then
+              echo "No releases found for $REPO"
+              continue
+            fi
+
+            # Current version from metadata
+            CURRENT=$(yq '.CurrentVersion' "$META")
+
+            echo "Current: $CURRENT, Latest: $LATEST"
+
+            if [ "$CURRENT" = "$LATEST" ]; then
+              echo "Already up to date."
+              continue
+            fi
+
+            echo "New version detected: $LATEST"
+
+            # Find APK asset
+            APK_URL=$(echo "$RELEASE_JSON" | jq -r ".assets[] | select(.name | test(\"$APK_PATTERN\")) | .browser_download_url")
+
+            if [ -z "$APK_URL" ]; then
+              echo "No matching APK found for pattern $APK_PATTERN"
+              continue
+            fi
+
+            echo "Downloading APK: $APK_URL"
+            wget -q "$APK_URL" -O "updated_apks/$PKG.apk"
+
+            # Extract versionCode
+            VERSION_CODE=$(aapt dump badging "updated_apks/$PKG.apk" | grep versionCode | sed "s/.*versionCode='\([0-9]*\)'.*/\1/")
+
+            echo "VersionCode: $VERSION_CODE"
+
+            # Update metadata
+            yq -i ".CurrentVersion = \"$LATEST\"" "$META"
+            yq -i ".CurrentVersionCode = \"$VERSION_CODE\"" "$META"
+            yq -i ".SrcUrl = \"$APK_URL\"" "$META"
+
+            # Copy APK into repo
+            mkdir -p "repo/$PKG"
+            cp "updated_apks/$PKG.apk" "repo/$PKG/$PKG-$LATEST.apk"
+
+            # Stage changes
+            git add "$META" "repo/$PKG/$PKG-$LATEST.apk"
+          done
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Automated app updates"
+          title: "Automated updates for apps"
+          body: "This PR updates apps to their latest upstream releases."
+          branch: "auto/app-updates"
+          delete-branch: true
