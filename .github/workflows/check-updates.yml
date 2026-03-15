@@ -21,7 +21,7 @@ jobs:
         run: |
           mkdir -p updated_apks
 
-          for file in apps/*.yml; do
+          for file in metadata/*.yml; do
             echo "Processing $file"
 
             REPO=$(yq '.repo' "$file")
