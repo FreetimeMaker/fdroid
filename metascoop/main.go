@@ -120,7 +120,39 @@ func main() {
 					return
 				}
 
-				log.Printf("Working on release with tag name %q", release.GetTagName())tag := release.GetTagName()
+				log.Printf("Working on release with tag name %q", release.GetTagName())
+
+				tag := release.GetTagName()
+				err := git.CheckoutTag(repoPath, tag)
+				if apk == nil {
+					log.Printf("Couldn't find a release asset with extension \".apk\"")
+					return
+				}
+
+				appName := apps.GenerateReleaseFilename(app.Name(), release.GetTagName())
+
+				log.Printf("Target APK name: %s", appName)
+
+				appClone := app
+
+				appClone.ReleaseDescription = release.GetBody()
+				if appClone.ReleaseDescription != "" {
+					log.Printf("Release notes: %s", appClone.ReleaseDescription)
+				}
+
+				apkInfoMap[appName] = appClone
+
+				appTargetPath := filepath.Join(*repoDir, appName)
+
+				// If the app file already exists for this version, we continue
+				if _, err := os.Stat(appTargetPath); !errors.Is(err, os.ErrNotExist) {
+					log.Printf("Already have APK for version %q at %q", release.GetTagName(), appTargetPath)
+					return
+				}
+
+				log.Printf("Downloading APK %q from release %q to %q", apk.GetName(), release.GetTagName(), appTargetPath)
+
+				tag := release.GetTagName()
 
 				log.Printf("Cloning repo %s for tag %s", app.GitURL, tag)
 				repoPath, err := git.CloneRepo(app.GitURL)
@@ -167,6 +199,8 @@ func main() {
 				}
 
 				log.Printf("Successfully built and copied APK for %s", tag)
+
+				log.Printf("Successfully downloaded app for version %q", release.GetTagName())
 			}()
 		}
 	}
@@ -451,6 +485,8 @@ func setNonEmpty(m map[string]interface{}, key string, value string) {
 	}
 }
 
+
+
 func prepareAndroidBuildTools() error {
     sdk := os.Getenv("ANDROID_HOME")
     if sdk == "" {
@@ -464,7 +500,6 @@ func prepareAndroidBuildTools() error {
 
     return nil
 }
-
 
 func downloadStream(targetFile string, rc io.ReadCloser) (err error) {
 	defer rc.Close()
