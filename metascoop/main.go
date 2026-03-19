@@ -122,7 +122,8 @@ func main() {
 
 				log.Printf("Working on release with tag name %q", release.GetTagName())
 
-				apk := apps.FindAPKRelease(release)
+				tag := release.GetTagName()
+				err := git.CheckoutTag(repoPath, tag)
 				if apk == nil {
 					log.Printf("Couldn't find a release asset with extension \".apk\"")
 					return
@@ -154,12 +155,75 @@ func main() {
 				dlCtx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
 				defer cancel()
 
-				appStream, _, err := githubClient.Repositories.DownloadReleaseAsset(dlCtx, repo.Author, repo.Name, apk.GetID(), http.DefaultClient)
+				tag := release.GetTagName()
+
+				log.Printf("Cloning repo %s for tag %s", app.GitURL, tag)
+				repoPath, err := git.CloneRepo(app.GitURL)
 				if err != nil {
-					log.Printf("Error while downloading app %q (artifact id %d) from from release %q: %s", app.GitURL, apk.GetID(), release.GetTagName(), err.Error())
+					log.Printf("Error cloning repo: %s", err)
 					haveError = true
 					return
 				}
+				defer os.RemoveAll(repoPath)
+
+				log.Printf("Checking out tag %s", tag)
+				err = git.CheckoutTag(repoPath, tag)
+				if err != nil {
+					log.Printf("Error checking out tag %s: %s", tag, err)
+					haveError = true
+					return
+				}
+
+				log.Printf("Preparing Android build tools")
+				func prepareAndroidBuildTools() error {
+					sdk := os.Getenv("ANDROID_HOME")
+					if sdk == "" {
+						return fmt.Errorf("ANDROID_HOME not set")
+					}
+
+					required := filepath.Join(sdk, "build-tools", "34.0.0")
+					if _, err := os.Stat(required); err != nil {
+						return fmt.Errorf("Android build-tools missing: %s", required)
+					}
+
+					return nil
+				}
+
+				err = prepareAndroidBuildTools()
+				if err != nil {
+					log.Printf("Android build tools not ready: %s", err)
+					haveError = true
+					return
+				}
+
+				log.Printf("Building APK for %s", tag)
+				cmd := exec.Command("./gradlew", "assembleRelease")
+				cmd.Dir = repoPath
+				cmd.Stdout = os.Stdout
+				cmd.Stderr = os.Stderr
+				err = cmd.Run()
+				if err != nil {
+					log.Printf("Build failed for tag %s: %s", tag, err)
+					haveError = true
+					return
+				}
+
+				apkPath := filepath.Join(repoPath, "app", "build", "outputs", "apk", "release", "app-release.apk")
+				if _, err := os.Stat(apkPath); err != nil {
+					log.Printf("APK not found after build: %s", err)
+					haveError = true
+					return
+				}
+
+				log.Printf("Copying built APK to %s", appTargetPath)
+				err = file.Copy(apkPath, appTargetPath)
+				if err != nil {
+					log.Printf("Copy failed: %s", err)
+					haveError = true
+					return
+				}
+
+				log.Printf("Successfully built and copied APK for %s", tag)
 
 				err = downloadStream(appTargetPath, appStream)
 				if err != nil {
