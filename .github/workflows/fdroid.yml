@@ -34,12 +34,64 @@ jobs:
           echo ./fdroid/keystore.p12
           echo ./fdroid/config.yml
 
-      - uses: actions/setup-go@v2
-        name: Set up Go
+
+  prepare:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+
+    steps:
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+
+      - name: Read repo list
+        id: set-matrix
+        run: |
+          repos=$(cat repos.txt | sed '/^\s*$/d')
+          json="["
+          for r in $repos; do
+            json="$json\"$r\","
+          done
+          json="${json%,}]"
+          echo "matrix=$json" >> $GITHUB_OUTPUT
+
+  build:
+    needs: prepare
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repo: ${{ fromJson(needs.prepare.outputs.matrix) }}
+
+    steps:
+      - name: Checkout Android repo
+        uses: actions/checkout@v4
         with:
-          go-version: '^1.17.0' 
-        
-      - name: Run update script
-        run: bash update.sh 2>&1
-        env:
-          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          repository: ${{ matrix.repo }}
+          path: app
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Build APK
+        run: |
+          cd app
+          chmod +x gradlew
+          ./gradlew assembleRelease
+
+      - name: Collect APK
+        run: |
+          mkdir -p output
+          cp app/app/build/outputs/apk/release/*.apk output/
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.repo }}-apk
+          path: output/*.apk
