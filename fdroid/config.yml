@@ -5,7 +5,7 @@ repo_name: Freetime Maker Repository
 repo_description: This is the Official F-Droid Repository from Freetime Maker for F-Droid. It includes Apps from Freetime Maker and others. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet.
 repo_url: https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo
 
-archive_older: 0
+archive_older: 3
 
 keystore: keystore.p12
 keystorepass: KKKKKK
