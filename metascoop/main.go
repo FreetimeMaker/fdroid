@@ -120,42 +120,7 @@ func main() {
 					return
 				}
 
-				log.Printf("Working on release with tag name %q", release.GetTagName())
-
-				tag := release.GetTagName()
-				err := git.CheckoutTag(repoPath, tag)
-				if apk == nil {
-					log.Printf("Couldn't find a release asset with extension \".apk\"")
-					return
-				}
-
-				appName := apps.GenerateReleaseFilename(app.Name(), release.GetTagName())
-
-				log.Printf("Target APK name: %s", appName)
-
-				appClone := app
-
-				appClone.ReleaseDescription = release.GetBody()
-				if appClone.ReleaseDescription != "" {
-					log.Printf("Release notes: %s", appClone.ReleaseDescription)
-				}
-
-				apkInfoMap[appName] = appClone
-
-				appTargetPath := filepath.Join(*repoDir, appName)
-
-				// If the app file already exists for this version, we continue
-				if _, err := os.Stat(appTargetPath); !errors.Is(err, os.ErrNotExist) {
-					log.Printf("Already have APK for version %q at %q", release.GetTagName(), appTargetPath)
-					return
-				}
-
-				log.Printf("Downloading APK %q from release %q to %q", apk.GetName(), release.GetTagName(), appTargetPath)
-
-				dlCtx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
-				defer cancel()
-
-				tag := release.GetTagName()
+				log.Printf("Working on release with tag name %q", release.GetTagName())tag := release.GetTagName()
 
 				log.Printf("Cloning repo %s for tag %s", app.GitURL, tag)
 				repoPath, err := git.CloneRepo(app.GitURL)
@@ -174,30 +139,8 @@ func main() {
 					return
 				}
 
-				log.Printf("Preparing Android build tools")
-				func prepareAndroidBuildTools() error {
-					sdk := os.Getenv("ANDROID_HOME")
-					if sdk == "" {
-						return fmt.Errorf("ANDROID_HOME not set")
-					}
-
-					required := filepath.Join(sdk, "build-tools", "34.0.0")
-					if _, err := os.Stat(required); err != nil {
-						return fmt.Errorf("Android build-tools missing: %s", required)
-					}
-
-					return nil
-				}
-
-				err = prepareAndroidBuildTools()
-				if err != nil {
-					log.Printf("Android build tools not ready: %s", err)
-					haveError = true
-					return
-				}
-
 				log.Printf("Building APK for %s", tag)
-				cmd := exec.Command("./gradlew", "assembleRelease")
+				cmd := exec.Command("./gradlew", "assembleRelease", "--no-daemon")
 				cmd.Dir = repoPath
 				cmd.Stdout = os.Stdout
 				cmd.Stderr = os.Stderr
@@ -224,15 +167,6 @@ func main() {
 				}
 
 				log.Printf("Successfully built and copied APK for %s", tag)
-
-				err = downloadStream(appTargetPath, appStream)
-				if err != nil {
-					log.Printf("Error while downloading app %q (artifact id %d) from from release %q to %q: %s", app.GitURL, *apk.ID, *release.TagName, appTargetPath, err.Error())
-					haveError = true
-					return
-				}
-
-				log.Printf("Successfully downloaded app for version %q", release.GetTagName())
 			}()
 		}
 	}
@@ -516,6 +450,21 @@ func setNonEmpty(m map[string]interface{}, key string, value string) {
 		log.Printf("Set %s to %q", key, value)
 	}
 }
+
+func prepareAndroidBuildTools() error {
+    sdk := os.Getenv("ANDROID_HOME")
+    if sdk == "" {
+        return fmt.Errorf("ANDROID_HOME not set")
+    }
+
+    required := filepath.Join(sdk, "build-tools", "34.0.0")
+    if _, err := os.Stat(required); err != nil {
+        return fmt.Errorf("Android build-tools fehlen: %s", required)
+    }
+
+    return nil
+}
+
 
 func downloadStream(targetFile string, rc io.ReadCloser) (err error) {
 	defer rc.Close()
