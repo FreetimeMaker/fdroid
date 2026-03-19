@@ -2,10 +2,11 @@ name: Generate F-Droid repo
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main
+  workflow_dispatch: {}
   schedule:
-  - cron: "45 2 * * *"
+    - cron: "45 2 * * *"
 
 jobs:
   apps:
@@ -20,16 +21,18 @@ jobs:
 
       - name: Restore correct mtime
         run: |
-          sudo apt install git-restore-mtime 
+          sudo apt install git-restore-mtime
           git restore-mtime
+
       - name: Install F-Droid server software
         run: |
-                   sudo apt install -y python3 python3-venv git
+          sudo apt install -y python3 python3-venv git
           git clone https://gitlab.com/fdroid/fdroidserver.git
           cd fdroidserver
           python3 -m venv venv
           source venv/bin/activate
           pip install .
+
       - name: Set up repo secrets
         run: |
           echo ./fdroid/keystore.p12
