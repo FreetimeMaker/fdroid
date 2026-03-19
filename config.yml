@@ -1,0 +1,12 @@
+repo_url: "https:raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo"
+repo_maxage: 14
+repo_web_base_url: "githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo"
+repo_icon: icon.png
+repo_name: "Free Repo"
+
+archive_older: 0
+
+keystorepass: KKKKKK
+keypass: KKKKKK
+repo_keyalias: fdroid #Replace NAME with the same value you used when creating the keystore
+keydname: CN=FreetimeMaker, OU=F-Droid #Replace NAME with the same value you used when creating the keystore
