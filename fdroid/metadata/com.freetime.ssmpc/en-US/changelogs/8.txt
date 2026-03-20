@@ -1,0 +1,16 @@
+## What's Changed
+* chore(deps): bump org.jetbrains.kotlin.android from 2.3.0 to 2.3.10 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/14
+* chore(deps): bump androidx.activity:activity from 1.12.3 to 1.12.4 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/13
+* chore(deps): bump androidx.activity:activity-compose from 1.8.2 to 1.12.4 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/12
+* chore(deps): bump org.jetbrains.kotlin.plugin.compose from 2.3.0 to 2.3.10 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/11
+* chore(deps): bump androidx.navigation:navigation-compose from 2.7.7 to 2.9.7 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/10
+* chore(deps): bump androidx.compose.foundation:foundation from 1.10.2 to 1.10.4 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/8
+* chore(deps): bump com.google.devtools.ksp from 2.3.4 to 2.3.6 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/7
+* chore(deps): bump androidx.compose:compose-bom from 2024.02.02 to 2026.02.01 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/6
+* chore(deps): bump org.jetbrains.kotlin:kotlin-stdlib from 1.9.22 to 2.3.10 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/5
+* chore(deps): bump androidx.lifecycle:lifecycle-viewmodel-compose from 2.7.0 to 2.10.0 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/4
+
+## New Contributors
+* @dependabot[bot] made their first contribution in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/14
+
+**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.0.6...v1.0.7
