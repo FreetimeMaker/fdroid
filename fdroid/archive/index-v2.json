@@ -9,13 +9,23 @@
     "icon": {
       "en-US": {
         "name": "/icons/icon.png",
-        "sha256": "a1164112b901b4da00f1706c8be4f9e31429d438858e131c20ef72563ac0fbe8",
-        "size": 1020
+        "sha256": "4a3fe09a073db13cbca1ec17fee2d099544639032e42f31e95938d7e6a2f19a6",
+        "size": 115754
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1774006620000,
+    "timestamp": 1774032314000,
     "categories": {
+      "Games": {
+        "name": {
+          "en-US": "Games"
+        }
+      },
+      "Internet": {
+        "name": {
+          "en-US": "Internet"
+        }
+      },
       "Weather": {
         "name": {
           "en-US": "Weather"
@@ -30,10 +40,16 @@
         "categories": [
           "Weather"
         ],
+        "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
+        "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
         "lastUpdated": 1773996813000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
+        "authorEmail": "jamieachatz@gmail.com",
         "authorName": "FreetimeMaker",
+        "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
         "name": {
           "en-US": "GeoWeather"
         },
@@ -43,6 +59,9 @@
         "description": {
           "en-US": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n🌟 KEY FEATURES:\n\n🏙️ MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n📅 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n⏰ HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n🎨 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n🔔 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n💳 DONATION FEATURE\n- Support continued development\n- Integrated FreetimeSDK for secure payments\n- Voluntary support for open source\n\n🛠️ MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n"
         },
+        "donate": [
+          "https://freetimemaker.github.io/Donation-Web"
+        ],
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
@@ -1111,6 +1130,110 @@
           },
           "antiFeatures": {
             "TetheredNet": {}
+          }
+        }
+      }
+    },
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "added": 1773996814000,
+        "categories": [
+          "Internet",
+          "Games"
+        ],
+        "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
+        "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
+        "lastUpdated": 1773996815000,
+        "license": "Apache-2.0",
+        "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
+        "authorEmail": "jamieachatz@gmail.com",
+        "authorName": "FreetimeMaker",
+        "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "name": {
+          "en-US": "SuperSMP Companion"
+        },
+        "summary": {
+          "en-US": "The Unofficial Companion App for the Minecraft Server SuperSMP"
+        },
+        "description": {
+          "en-US": "🎮 The Ultimate SuperSMP Companion App - Your Server, Everywhere! 🎮\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\n✨ **KEY FEATURES:**\n\n🗳️ **SMART VOTING SYSTEM**\n• Vote for the SuperSMP server directly from your phone\n• Quick access to all voting platforms\n• Track your voting history and rewards\n• Never miss daily vote rewards again\n\n🛒 **INTEGRATED SHOP ACCESS**\n• Browse the official SuperSMP shop catalog\n• View detailed item descriptions and pricing\n• Make secure purchases on-the-go\n• Real-time inventory updates\n\n🗺️ **INTERACTIVE SERVER MAP**\n• Access the official SuperSMP world map\n• Real-time player locations and activity\n• Navigate spawn, warps, and key locations\n• Perfect for exploration and planning\n\n🎨 **MODERN USER INTERFACE**\n• Built with Jetpack Compose for smooth animations\n• Material Design 3 with dark/light themes\n• Intuitive navigation optimized for mobile\n• Responsive design for all screen sizes\n\n🔧 **TECHNICAL EXCELLENCE**\n• Kotlin-first development for performance\n• Modern architecture with MVVM pattern\n• Regular updates with new features\n• Optimized for battery life and performance\n\n📱 **MOBILE OPTIMIZATIONS**\n• Fast loading times even on slower connections\n• Offline mode for cached content\n• Push notifications for server events (coming soon)\n• Designed for Android 7.0 and above\n\n🌟 **WHY CHOOSE THIS APP?**\n\n✅ **FREE & OPEN SOURCE** - No hidden costs or subscriptions\n✅ **SECURE** - Your data and accounts are protected\n✅ **REGULARLY UPDATED** - New features and improvements monthly\n✅ **COMMUNITY DRIVEN** - Features requested by players like you\n✅ **AD-FREE EXPERIENCE** - Focus on what matters: your gameplay\n\n🚀 **PERFECT FOR:**\n\n• Daily voters who want to maximize rewards\n• Shop enthusiasts who browse items frequently\n• Explorers who need map access on-the-go\n• Community members who stay connected\n• Players who want convenience without compromise\n\n⚠️ **IMPORTANT NOTE:**\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\n📋 **SYSTEM REQUIREMENTS:**\n• Android 7.0 (API 24) or higher\n• 50MB free storage space\n• Internet connection for real-time features\n\n🔔 **UPCOMING FEATURES:**\n• Player statistics tracking\n• In-game chat integration\n• Push notifications for server events\n• Multi-language support\n• Offline mode enhancements\n\n💬 **COMMUNITY SUPPORT:**\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level! 🚀\n"
+        },
+        "donate": [
+          "https://freetimemaker.github.io/Donation-Web"
+        ],
+        "preferredSigner": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+      },
+      "versions": {
+        "084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3": {
+          "added": 1773996814000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.0.6.apk",
+            "sha256": "084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3",
+            "size": 14688887
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.0.6",
+            "versionCode": 7,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "bbd4516bc34278a0c04a721d42732e161669f434bc60a126023f305cea18c0f3": {
+          "added": 1773996814000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.0.5.apk",
+            "sha256": "bbd4516bc34278a0c04a721d42732e161669f434bc60a126023f305cea18c0f3",
+            "size": 14688887
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.0.5",
+            "versionCode": 6,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 36
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
           }
         }
       }

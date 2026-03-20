@@ -1,35 +1,32 @@
-Categories:
-  - Games
-  - Internet
-License: Apache-2.0
-AuthorName: Freetime Maker
-AuthorEmail: jamieachatz@gmail.com
-AuthorWebSite: https://freetimemaker.github.io/
-SourceCode: https://github.com/FreetimeMaker/SuperSMP-Companion-App
-IssueTracker: https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues
-Changelog: https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases
-Donate: https://freetimemaker.github.io/Donation-Web
-Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
-Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
-
-AutoName: SuperSMP Companion
-
-RepoType: git
-Repo: https://github.com/FreetimeMaker/SuperSMP-Companion-App.git
-Binaries: 
-  https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk
-
-Builds:
-  - versionName: 1.0.7
-    versionCode: 8
-    commit: 32e973043875caf4f4e350ce4e16fc11d80d1871
-    subdir: app
-    gradle:
-      - yes
-
 AllowedAPKSigningKeys: fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7
-
+AuthorEmail: jamieachatz@gmail.com
+AuthorName: FreetimeMaker
+AuthorWebSite: https://freetimemaker.github.io/
+AutoName: SuperSMP Companion
 AutoUpdateMode: Version
-UpdateCheckMode: Tags
+Binaries: https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
+Builds:
+    - commit: 32e973043875caf4f4e350ce4e16fc11d80d1871
+      gradle:
+        - "yes"
+      subdir: app
+      versionCode: 8
+      versionName: 1.0.7
+Categories:
+    - Internet
+    - Games
+Changelog: https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases
 CurrentVersion: 1.0.7
 CurrentVersionCode: 8
+Description: "\U0001F3AE The Ultimate SuperSMP Companion App - Your Server, Everywhere! \U0001F3AE\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\n✨ **KEY FEATURES:**\n\n\U0001F5F3️ **SMART VOTING SYSTEM**\n• Vote for the SuperSMP server directly from your phone\n• Quick access to all voting platforms\n• Track your voting history and rewards\n• Never miss daily vote rewards again\n\n\U0001F6D2 **INTEGRATED SHOP ACCESS**\n• Browse the official SuperSMP shop catalog\n• View detailed item descriptions and pricing\n• Make secure purchases on-the-go\n• Real-time inventory updates\n\n\U0001F5FA️ **INTERACTIVE SERVER MAP**\n• Access the official SuperSMP world map\n• Real-time player locations and activity\n• Navigate spawn, warps, and key locations\n• Perfect for exploration and planning\n\n\U0001F3A8 **MODERN USER INTERFACE**\n• Built with Jetpack Compose for smooth animations\n• Material Design 3 with dark/light themes\n• Intuitive navigation optimized for mobile\n• Responsive design for all screen sizes\n\n\U0001F527 **TECHNICAL EXCELLENCE**\n• Kotlin-first development for performance\n• Modern architecture with MVVM pattern\n• Regular updates with new features\n• Optimized for battery life and performance\n\n\U0001F4F1 **MOBILE OPTIMIZATIONS**\n• Fast loading times even on slower connections\n• Offline mode for cached content\n• Push notifications for server events (coming soon)\n• Designed for Android 7.0 and above\n\n\U0001F31F **WHY CHOOSE THIS APP?**\n\n✅ **FREE & OPEN SOURCE** - No hidden costs or subscriptions\n✅ **SECURE** - Your data and accounts are protected\n✅ **REGULARLY UPDATED** - New features and improvements monthly\n✅ **COMMUNITY DRIVEN** - Features requested by players like you\n✅ **AD-FREE EXPERIENCE** - Focus on what matters: your gameplay\n\n\U0001F680 **PERFECT FOR:**\n\n• Daily voters who want to maximize rewards\n• Shop enthusiasts who browse items frequently\n• Explorers who need map access on-the-go\n• Community members who stay connected\n• Players who want convenience without compromise\n\n⚠️ **IMPORTANT NOTE:**\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\n\U0001F4CB **SYSTEM REQUIREMENTS:**\n• Android 7.0 (API 24) or higher\n• 50MB free storage space\n• Internet connection for real-time features\n\n\U0001F514 **UPCOMING FEATURES:**\n• Player statistics tracking\n• In-game chat integration\n• Push notifications for server events\n• Multi-language support\n• Offline mode enhancements\n\n\U0001F4AC **COMMUNITY SUPPORT:**\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level! \U0001F680\n"
+Donate: https://freetimemaker.github.io/Donation-Web
+IssueTracker: https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues
+License: Apache-2.0
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
+Name: SuperSMP Companion
+Repo: https://github.com/FreetimeMaker/SuperSMP-Companion-App.git
+RepoType: git
+SourceCode: https://github.com/FreetimeMaker/SuperSMP-Companion-App
+Summary: The Unofficial Companion App for the Minecraft Server SuperSMP
+UpdateCheckMode: Tags
