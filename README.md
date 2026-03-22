@@ -6,7 +6,7 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This 
 <!-- This table is auto-generated. Do not edit -->
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |
-| <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="fdroid/repo/icons/" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | The Official Weather App from Freetime Maker | 1.3.0 (31) |
+| <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="fdroid/repo/icons/" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | The Official Weather App from Freetime Maker | 1.3.1 (32) |
 | <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="fdroid/repo/icons/" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | The Unofficial Companion App for the Minecraft Server SuperSMP | 1.0.7 (8) |
 <!-- end apps table -->
 
