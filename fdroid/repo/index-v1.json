@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1775365526000,
+    "timestamp": 1775452550000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -37,7 +37,7 @@
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "GeoWeather",
       "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
-      "summary": "The Official Weather App from Freetime Maker",
+      "summary": "Modern weather app with 7-day forecast for multiple cities",
       "added": 1773996803000,
       "packageName": "com.freetime.geoweather",
       "lastUpdated": 1774672595000,
@@ -76,7 +76,7 @@
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "SuperSMP Companion",
       "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
-      "summary": "The Unofficial Companion App for the Minecraft Server SuperSMP",
+      "summary": "Vote, shop & explore SuperSMP anywhere! \ud83c\udfae The ultimate companion app for s...",
       "added": 1773996814000,
       "packageName": "com.freetime.ssmpc",
       "lastUpdated": 1773996815000,

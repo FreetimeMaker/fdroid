@@ -138,5 +138,5 @@ Name: GeoWeather
 Repo: https://github.com/FreetimeMaker/GeoWeather.git
 RepoType: git
 SourceCode: https://github.com/FreetimeMaker/GeoWeather
-Summary: The Official Weather App from Freetime Maker
+Summary: Modern weather app with 7-day forecast for multiple cities
 UpdateCheckMode: Tags

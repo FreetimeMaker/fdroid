@@ -1,0 +1,21 @@
+{
+  "repo": {
+    "timestamp": 1775452544000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "metadata": {
+        "summary": {
+          "en-US": "Modern weather app with 7-day forecast for multiple cities"
+        }
+      }
+    },
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "summary": {
+          "en-US": "Vote, shop & explore SuperSMP anywhere! 🎮 The ultimate companion app for s..."
+        }
+      }
+    }
+  }
+}
