@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1775798228000,
+    "timestamp": 1775882256000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -49,7 +49,7 @@
             "3.png",
             "4.png"
           ],
-          "whatsNew": "- Added more Search Options\n- Optimized Notifications\n- Added Material YOU\n\n## What's Changed\n* Add Shapes.kt file defining GeoShapes for the theme by @FreetimeMaker in https://github.com/FreetimeMaker/GeoWeather/pull/48\n* Add missing imports for TextStyle, FontWeight, and sp unit in Type.kt by @FreetimeMaker in https://github.com/FreetimeMaker/GeoWeather/pull/49\n* Fix @Composable invocation error on line 33 in SettingsActivity.kt by @FreetimeMaker in https://github.com/FreetimeMaker/GeoWeather/"
+          "whatsNew": "Automatisch gebaut und signiert."
         }
       }
     },
