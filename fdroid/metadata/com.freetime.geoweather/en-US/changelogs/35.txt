@@ -1,0 +1,3 @@
+This Release introduces Widgets and More.
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.3.3...v1.3.4
