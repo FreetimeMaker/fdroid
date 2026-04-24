@@ -1,0 +1,20 @@
+## What's Changed
+* Updated to Kotlin Multiplatform/ Compose Multiplatform so Web (Which will come soon) and Desktop can be used too for the Weather App
+* chore(deps): bump org.jetbrains.compose.material:material-icons-extended from 1.7.1 to 1.7.3 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/54
+* chore(deps): bump org.jetbrains.kotlinx:kotlinx-coroutines-play-services from 1.9.0 to 1.10.2 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/53
+* chore(deps): bump agp from 8.7.3 to 9.0.1 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/56
+*  chore(deps): bump org.jetbrains.compose.material:material-icons-extended from 1.7.1 to 1.7.3 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/54
+* chore(deps): bump org.jetbrains.kotlinx:kotlinx-coroutines-play-services from 1.9.0 to 1.10.2 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/53
+* chore(deps): bump agp from 8.7.3 to 9.0.1 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/56
+* chore(deps): bump org.jetbrains.compose from 1.7.1 to 1.10.3 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/60
+* chore(deps): bump androidx.compose:compose-bom from 2024.10.00 to 2026.03.01 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/59
+* chore(deps): bump ktor from 3.4.2 to 3.4.3 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/57
+* chore(deps): bump org.jetbrains.compose.material:material-icons-extended from 1.7.1 to 1.7.3 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/66
+* chore(deps): bump androidx.compose:compose-bom from 2026.03.01 to 2026.04.01 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/65
+* chore(deps): bump com.google.android.gms:play-services-base from 18.3.0 to 18.10.0 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/64
+* chore(deps): bump com.google.android.gms:play-services-location from 21.0.1 to 21.3.0 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/63
+* chore(deps): bump com.google.devtools.ksp from 2.3.6 to 2.3.7 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/62
+* chore(deps): bump kotlin from 2.3.20 to 2.3.21 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/61
+
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.3.5...v1.3.6
