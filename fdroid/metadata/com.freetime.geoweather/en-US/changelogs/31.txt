@@ -1,8 +1,0 @@
-You can Look in the Changelog for every Release since v1.2.8
-
-## What's Changed
-* chore(deps): bump org.jetbrains.kotlin.android from 2.3.10 to 2.3.20 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/37
-* chore(deps): bump org.jetbrains.kotlin.plugin.compose from 2.3.10 to 2.3.20 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/36
-
-
-**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.2.9...v1.3.0
