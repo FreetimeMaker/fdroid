@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1777106582000,
+    "timestamp": 1777111235000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -50,6 +50,36 @@
             "4.png"
           ],
           "whatsNew": "## What's Changed\n* Updated to Kotlin Multiplatform/ Compose Multiplatform so Web (Which will come soon) and Desktop can be used too for the Weather App\n* chore(deps): bump org.jetbrains.compose.material:material-icons-extended from 1.7.1 to 1.7.3 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/54\n* chore(deps): bump org.jetbrains.kotlinx:kotlinx-coroutines-play-services from 1.9.0 to 1.10.2 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/53\n* chor"
+        }
+      }
+    },
+    {
+      "antiFeatures": [
+        "TetheredNet"
+      ],
+      "authorName": "FreetimeMaker",
+      "categories": [
+        "Weather"
+      ],
+      "suggestedVersionName": "1.3.7",
+      "suggestedVersionCode": "38",
+      "description": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udfd9\ufe0f MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n\ud83d\udcc5 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n\u23f0 HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n\ud83c\udfa8 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n\ud83d\udd14 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n\ud83d\udcb3 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n\n\ud83d\udee0\ufe0f MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n",
+      "license": "Apache-2.0",
+      "name": "GeoWeather",
+      "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
+      "summary": "Modern weather app with 7-day forecast for multiple cities",
+      "added": 1777111204000,
+      "packageName": "io.github.freetimemaker.geoweather",
+      "lastUpdated": 1777111204000,
+      "localized": {
+        "en-US": {
+          "phoneScreenshots": [
+            "1.png",
+            "2.png",
+            "3.png",
+            "4.png"
+          ],
+          "whatsNew": "Fixed some Errors\n\n**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.3.6...v1.3.7"
         }
       }
     },
@@ -279,6 +309,62 @@
         ],
         "versionCode": 8,
         "versionName": "1.0.7"
+      }
+    ],
+    "io.github.freetimemaker.geoweather": [
+      {
+        "added": 1777111204000,
+        "apkName": "geoweather_v1.3.7.apk",
+        "hash": "4e8f980c8f03c4955c27ef7de8576606d2a95d67e425d50b8d3a3b06bf089f6f",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "io.github.freetimemaker.geoweather",
+        "sig": "affbe859dac99bd65c457093f896110d",
+        "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
+        "size": 23168938,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "io.github.freetimemaker.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 38,
+        "versionName": "1.3.7"
       }
     ]
   }
