@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1777117861000,
+    "timestamp": 1777121038000,
     "categories": {
       "Games": {
         "name": {
@@ -40,8 +40,6 @@
         "categories": [
           "Weather"
         ],
-        "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
-        "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
         "lastUpdated": 1777038605000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
@@ -71,11 +69,7 @@
             ]
           }
         },
-        "authorEmail": "jamieachatz@gmail.com",
         "authorName": "FreetimeMaker",
-        "authorWebSite": "https://freetimemaker.github.io/",
-        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
-        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
         "name": {
           "en-US": "GeoWeather"
         },
@@ -85,9 +79,6 @@
         "description": {
           "en-US": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n🌟 KEY FEATURES:\n\n🏙️ MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n📅 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n⏰ HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n🎨 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n🔔 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n💳 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n\n🛠️ MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n"
         },
-        "donate": [
-          "https://freetimemaker.github.io/Donation-Web"
-        ],
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
@@ -354,6 +345,8 @@
         "categories": [
           "Weather"
         ],
+        "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
+        "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
         "lastUpdated": 1777111204000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
@@ -383,7 +376,11 @@
             ]
           }
         },
+        "authorEmail": "jamieachatz@gmail.com",
         "authorName": "FreetimeMaker",
+        "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
         "name": {
           "en-US": "GeoWeather"
         },
@@ -393,6 +390,9 @@
         "description": {
           "en-US": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n🌟 KEY FEATURES:\n\n🏙️ MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n📅 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n⏰ HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n🎨 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n🔔 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n💳 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n\n🛠️ MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n"
         },
+        "donate": [
+          "https://freetimemaker.github.io/Donation-Web"
+        ],
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
