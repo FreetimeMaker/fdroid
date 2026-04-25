@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1777038628000,
+    "timestamp": 1777093543000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -76,7 +76,7 @@
       {
         "added": 1775798198000,
         "apkName": "geoweather_v1.3.3.apk",
-        "hash": "6d8a5849de9e1f578d1980aa80c8fa9a4dfa91ccc80a6912ee5d247d6cdd1e14",
+        "hash": "29b65839d99c7cb0392016f2042dfe0d900d3fbe56397d70da9f9aa87676d77c",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [
@@ -88,7 +88,7 @@
         "packageName": "com.freetime.geoweather",
         "sig": "affbe859dac99bd65c457093f896110d",
         "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
-        "size": 14953681,
+        "size": 16569978,
         "targetSdkVersion": 36,
         "uses-permission": [
           [
