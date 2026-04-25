@@ -1,7 +1,0 @@
-- Updated some Things
-
-## What's Changed
-* chore(deps): bump gradle-wrapper from 9.4.0 to 9.4.1 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/38
-
-
-**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.3.0...v1.3.1
