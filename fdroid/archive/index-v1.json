@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1777201273000,
+    "timestamp": 1777204424000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -178,7 +178,7 @@
       {
         "added": 1775915655000,
         "apkName": "geoweather_v1.3.4.apk",
-        "hash": "382a722bc8118f067112aaf6c9d0e678f288c943405df03dfb1038749cc03647",
+        "hash": "fe0ca08c499815e733b9998565045812c386a6f20aa9550e2b77f4ace14feeb2",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [

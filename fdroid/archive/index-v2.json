@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1777201273000,
+    "timestamp": 1777204424000,
     "categories": {
       "Games": {
         "name": {
@@ -172,11 +172,11 @@
             }
           }
         },
-        "382a722bc8118f067112aaf6c9d0e678f288c943405df03dfb1038749cc03647": {
+        "fe0ca08c499815e733b9998565045812c386a6f20aa9550e2b77f4ace14feeb2": {
           "added": 1775915655000,
           "file": {
             "name": "/geoweather_v1.3.4.apk",
-            "sha256": "382a722bc8118f067112aaf6c9d0e678f288c943405df03dfb1038749cc03647",
+            "sha256": "fe0ca08c499815e733b9998565045812c386a6f20aa9550e2b77f4ace14feeb2",
             "size": 16578170
           },
           "manifest": {
