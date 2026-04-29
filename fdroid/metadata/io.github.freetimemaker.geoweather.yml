@@ -5,6 +5,7 @@ AuthorName: FreetimeMaker
 AuthorWebSite: https://freetimemaker.github.io/
 AutoName: GeoWeather
 AutoUpdateMode: Version
+Archive Policy: 0
 Binaries: https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk
 Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
 Builds:
@@ -139,4 +140,4 @@ Repo: https://github.com/FreetimeMaker/GeoWeather.git
 RepoType: git
 SourceCode: https://github.com/FreetimeMaker/GeoWeather
 Summary: Modern weather app with 7-day forecast for multiple cities
-UpdateCheckMode: Tags
+UpdateCheckMode: none
