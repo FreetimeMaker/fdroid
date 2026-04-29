@@ -18,8 +18,6 @@ Donate: https://freetimemaker.github.io/Donation-Web
 Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
 Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
 
-ArchivePolicy: 0
-
 AutoName: GeoWeather
 
 RepoType: git
@@ -28,4 +26,4 @@ Repo: https://github.com/FreetimeMaker/GeoWeather.git
 Binaries:
   https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk
 
-AutoUpdateMode: None
+AutoUpdateMode: tags
