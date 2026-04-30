@@ -2,9 +2,6 @@ AllowedAPKSigningKeys: e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76
 AntiFeatures:
   TetheredNet:
     en-US: Rely on open-meteo.com.
-
-Categories:
-  - Weather
 AuthorEmail: jamieachatz@gmail.com
 AuthorName: FreetimeMaker
 AuthorWebSite: https://freetimemaker.github.io/
