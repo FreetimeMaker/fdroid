@@ -1,143 +1,33 @@
-AllowedAPKSigningKeys: e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283
-AntiFeatures: TetheredNet
-AuthorEmail: jamieachatz@gmail.com
-AuthorName: FreetimeMaker
-AuthorWebSite: https://freetimemaker.github.io/
-AutoName: GeoWeather
-AutoUpdateMode: Version
-Archive Policy: 0
-Binaries: https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk
-Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
-Builds:
-    - commit: 14730cd6cdde07a11ed7627d2b54ee94302f11a0
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 7
-      versionName: 1.0.6
-    - commit: bcb8d72c7be643e7bb622fa675e73846a875cf7f
-      gradle:
-        - "yes"
-      subdir: app
-      sudo:
-        - echo "deb https://deb.debian.org/debian bookworm main" > /etc/apt/sources.list.d/bookworm.list
-        - apt-get update
-        - apt-get install -y -t bookworm openjdk-17-jdk-headless
-        - update-java-alternatives -s java-1.17.0-openjdk-amd64
-      versionCode: 10
-      versionName: 1.0.9
-    - commit: def83c39a1f35a092398c29d8c0c4eb702502a3d
-      gradle:
-        - "yes"
-      subdir: app
-      sudo:
-        - echo "deb https://deb.debian.org/debian bookworm main" > /etc/apt/sources.list.d/bookworm.list
-        - apt-get update
-        - apt-get install -y -t bookworm openjdk-17-jdk-headless
-        - update-java-alternatives -s java-1.17.0-openjdk-amd64
-      versionCode: 14
-      versionName: 1.1.3
-    - commit: 04353738ac1e11dc06c91c835050c61985f82e33
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 16
-      versionName: 1.1.5
-    - commit: 2fe50e8d36d673be1bbabf7cc910b97fdedc58e7
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 18
-      versionName: 1.1.7
-    - commit: 9b396eec6eac638ef85d0077e4616746155f4f7b
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 20
-      versionName: 1.1.9
-    - commit: 128fa92f292467d1a9c3779f59c48222f13157b5
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 21
-      versionName: 1.2.0
-    - commit: aaf0acfdd72ab477e424301f44aab0c29a17aa0c
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 22
-      versionName: 1.2.1
-    - commit: c187fabb2e49d4374c86eaf82315e57276643023
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 24
-      versionName: 1.2.3
-    - commit: 69761695570685e3bb0710c3f6581b97b5db9e49
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 25
-      versionName: 1.2.4
-    - commit: 37fc85d60108988ffb060738728e37415c28c727
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 26
-      versionName: 1.2.5
-    - commit: 1953aa55914951c0d9b145887754af5dd712d32e
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 27
-      versionName: 1.2.6
-    - commit: 94219afe58657ad2832575098f35aa8a672ade1c
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 28
-      versionName: 1.2.7
-    - commit: 8b22cb424db97f45f65a2ec74dd161bee7f12ed3
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 29
-      versionName: 1.2.8
-    - commit: 70875cba8a415f6065184e95de7f67350c9763a3
-      gradle:
-        - "yes"
-      postbuild:
-        - mv $$OUT$$ unaligned.apk
-        - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner --replace unaligned.apk $$OUT$$
-      srclibs:
-        - reproducible-apk-tools@v0.3.0
-      subdir: app
-      versionCode: 30
-      versionName: 1.2.9
-    - commit: cf977fae26f1c3f266e478d9e8d8dfbcecd2b87b
-      gradle:
-        - "yes"
-      postbuild:
-        - mv $$OUT$$ unaligned.apk
-        - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner --replace unaligned.apk $$OUT$$
-      srclibs:
-        - reproducible-apk-tools@v0.3.0
-      subdir: app
-      versionCode: 31
-      versionName: 1.3.0
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on open-meteo.com.
+
 Categories:
-    - Weather
-Changelog: https://github.com/FreetimeMaker/GeoWeather/releases
-CurrentVersion: 1.3.7
-CurrentVersionCode: 38
-Description: "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n\U0001F31F KEY FEATURES:\n\n\U0001F3D9️ MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n\U0001F4C5 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n⏰ HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n\U0001F3A8 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n\U0001F514 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n\U0001F4B3 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n\n\U0001F6E0️ MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n"
-Donate: https://freetimemaker.github.io/Donation-Web
-IssueTracker: https://github.com/FreetimeMaker/GeoWeather/issues
+  - Weather
+
 License: Apache-2.0
-Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
-Name: GeoWeather
-Repo: https://github.com/FreetimeMaker/GeoWeather.git
-RepoType: git
+
+AuthorName: Freetime Maker
+AuthorEmail: jamieachatz@gmail.com
+AuthorWebSite: https://freetimemaker.github.io/
+
 SourceCode: https://github.com/FreetimeMaker/GeoWeather
-Summary: Modern weather app with 7-day forecast for multiple cities
-UpdateCheckMode: none
+IssueTracker: https://github.com/FreetimeMaker/GeoWeather/issues
+Changelog: https://github.com/FreetimeMaker/GeoWeather/releases
+Donate: https://freetimemaker.github.io/Donation-Web
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
+
+ArchivePolicy: 0
+
+AutoName: GeoWeather
+
+RepoType: git
+Repo: https://github.com/FreetimeMaker/GeoWeather.git
+
+Binaries:
+  https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk
+
+Builds: []
+
+AutoUpdateMode: None
