@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1777457779000,
+    "timestamp": 1777549156000,
     "categories": {
       "Games": {
         "name": {
@@ -46,12 +46,18 @@
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
         "authorEmail": "jamieachatz@gmail.com",
-        "authorName": "Freetime Maker",
+        "authorName": "FreetimeMaker",
         "authorWebSite": "https://freetimemaker.github.io/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
         "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
         "name": {
           "en-US": "GeoWeather"
+        },
+        "summary": {
+          "en-US": "Modern weather app with 7-day forecast for multiple cities"
+        },
+        "description": {
+          "en-US": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n🌟 KEY FEATURES:\n\n🏙️ MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n📅 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n⏰ HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n🎨 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n🔔 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n💳 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n\n🛠️ MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n"
         },
         "donate": [
           "https://freetimemaker.github.io/Donation-Web"
@@ -59,177 +65,6 @@
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
-        "7a687f949d23920bf0047093e819613fa14f9a4a44d118c3574e477d9468f251": {
-          "added": 1777457753000,
-          "file": {
-            "name": "/geoweather_v1.3.8.apk",
-            "sha256": "7a687f949d23920bf0047093e819613fa14f9a4a44d118c3574e477d9468f251",
-            "size": 22002866
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "1.3.8",
-            "versionCode": 39,
-            "usesSdk": {
-              "minSdkVersion": 26,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "android.permission.ACCESS_FINE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_COARSE_LOCATION"
-              },
-              {
-                "name": "android.permission.WAKE_LOCK"
-              },
-              {
-                "name": "android.permission.ACCESS_NETWORK_STATE"
-              },
-              {
-                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE"
-              },
-              {
-                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              }
-            ]
-          },
-          "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
-          }
-        },
-        "aabc80b958a55465f7359d680af1b1fcd1bf24195d949a1e3a5fb79209fbac74": {
-          "added": 1777038605000,
-          "file": {
-            "name": "/geoweather_v1.3.6.apk",
-            "sha256": "aabc80b958a55465f7359d680af1b1fcd1bf24195d949a1e3a5fb79209fbac74",
-            "size": 23165012
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "1.3.6",
-            "versionCode": 37,
-            "usesSdk": {
-              "minSdkVersion": 26,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.WAKE_LOCK"
-              },
-              {
-                "name": "android.permission.ACCESS_NETWORK_STATE"
-              },
-              {
-                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE"
-              },
-              {
-                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              },
-              {
-                "name": "android.permission.INTERNET"
-              }
-            ]
-          },
-          "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
-          }
-        },
-        "e0bbd87275c24a42a651e47f547c47f4b3ecc2709ad5df1ace48b70099a5f839": {
-          "added": 1776344819000,
-          "file": {
-            "name": "/geoweather_v1.3.5.apk",
-            "sha256": "e0bbd87275c24a42a651e47f547c47f4b3ecc2709ad5df1ace48b70099a5f839",
-            "size": 16610882
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "1.3.5",
-            "versionCode": 36,
-            "usesSdk": {
-              "minSdkVersion": 24,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "android.permission.ACCESS_NETWORK_STATE"
-              },
-              {
-                "name": "android.permission.POST_NOTIFICATIONS"
-              },
-              {
-                "name": "android.permission.WAKE_LOCK"
-              },
-              {
-                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
-              },
-              {
-                "name": "android.permission.ACCESS_FINE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_COARSE_LOCATION"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE"
-              },
-              {
-                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              }
-            ]
-          },
-          "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
-          }
-        },
         "fe0ca08c499815e733b9998565045812c386a6f20aa9550e2b77f4ace14feeb2": {
           "added": 1775915655000,
           "file": {
@@ -280,9 +115,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "29b65839d99c7cb0392016f2042dfe0d900d3fbe56397d70da9f9aa87676d77c": {
@@ -335,9 +168,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "f2b7096b424eab50b47e6f26a65b971cb88b14cd8a0ed256b7812d37d4f82f6d": {
@@ -390,9 +221,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "237ead27c8fc843efa2c4950db956ea85a581bd4d34d8b817bf8e9f17370746c": {
@@ -445,9 +274,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "4599f3770dcb895c4d66c5d777694eeae8438c6d4a2062026047148ac95ea479": {
@@ -500,9 +327,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "0224ef7aca896de97c702a178378dcd72cd1aa28ef8a3726847465b9916fc9fa": {
@@ -555,9 +380,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "e13decf496c87bbaf8d498bd5a0a9ab94868f36d549ea7ea16807e9d2e3d3306": {
@@ -610,9 +433,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "783bd30d55dfb9c43938f3f30a9aa0a942dda6c2902177f6a53cfa7b93c240c7": {
@@ -665,9 +486,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "8778688978941dbc5d464a268bef8f8fa3299974576262552a04e9d8ab4e78d5": {
@@ -720,9 +539,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "9d0bb3033ecd11ecd217a1fd884563e1c6672d2475969a7f95239d66fe4f784f": {
@@ -775,9 +592,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "32715ebacc5933854fd061a425132424ff7f91bbdf47ce949bb9bd85c534dec2": {
@@ -830,9 +645,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "41a82c6997f2464f4c30db03fbfae23e077f6e3188a08bc861ce48900b7ae51d": {
@@ -885,9 +698,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7": {
@@ -940,9 +751,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "7d9bb3e4247a699157ad923ac7a258e8880da9d2447654d5c225162cf1e3572b": {
@@ -995,9 +804,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "6f633158efa31f2efed4ce4bb3ca2e1c03f04aefddad127b056e4fc386683c5a": {
@@ -1050,9 +857,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "8dd4c83c1ab4d2d77e0c4dbd9d8b8121894f926da4bcf631f8d85aaf3149dabe": {
@@ -1105,9 +910,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "d313bcc25303386f6309024ec190926625475771148fcc28ecf9afd31a5cbdcd": {
@@ -1160,9 +963,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "e0dfd9766d3e526417bac4d42cbe0a89ec7634a19bbe27da50f840cebe27ff54": {
@@ -1203,9 +1004,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "fde2b8c96bc9d26858a162f00a044e33900e2654c20c2cf011d499e0838c5d59": {
@@ -1246,9 +1045,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "b6e67c7bf59f4891bca0b6776e12763a011494236318c3fa9e20733904fa21f2": {
@@ -1289,9 +1086,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "3c7f756b65578a310d4d255639f8c90116c1724f87b767d2530d6d2d0633cb30": {
@@ -1332,9 +1127,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "bacd387b2ca247ff4bab17d10c50b9538c997dd26b61dc64d6801c478bf5c591": {
@@ -1375,9 +1168,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "9cdb048825c596cf9c30946b07bd9bfb587c67c0e824a98751b3fc6796f13e78": {
@@ -1424,9 +1215,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "a107d53693e00df461d497377ef4a28c0b654e1efcbb9e43d4a0a37a858a1e9c": {
@@ -1473,9 +1262,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "d6e89231a011f8168ea80c425c38984ad8512c01c1d6fb4c22cb2ec74d63973e": {
@@ -1525,9 +1312,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "725ada50176482463c8fc4b05d9e4458ad2d181b28bff6ad59666e8add3313b1": {
@@ -1574,9 +1359,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "64b870e86bde1f61310b99cd2cd5ab45d05dffff8791e769295bdb2a2b20529e": {
@@ -1626,9 +1409,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "8d51ad50758738039b1848abefd00412c6cf4c9d24241308582e343d537cfec1": {
@@ -1678,9 +1459,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         },
         "18acfaf6bd9834c5dfc0398691f3521587de5d3254c339e682e2d3718bf7f513": {
@@ -1721,9 +1500,7 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {
-              "en-US": "Rely on open-meteo.com."
-            }
+            "TetheredNet": {}
           }
         }
       }
@@ -1828,6 +1605,91 @@
                 "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
               }
             ]
+          }
+        }
+      }
+    },
+    "io.github.freetimemaker.geoweather": {
+      "metadata": {
+        "added": 1777111204000,
+        "categories": [
+          "Weather"
+        ],
+        "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
+        "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
+        "lastUpdated": 1777111204000,
+        "license": "Apache-2.0",
+        "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
+        "authorEmail": "jamieachatz@gmail.com",
+        "authorName": "Freetime Maker",
+        "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "name": {
+          "en-US": "GeoWeather"
+        },
+        "donate": [
+          "https://freetimemaker.github.io/Donation-Web"
+        ],
+        "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+      },
+      "versions": {
+        "4e8f980c8f03c4955c27ef7de8576606d2a95d67e425d50b8d3a3b06bf089f6f": {
+          "added": 1777111204000,
+          "file": {
+            "name": "/geoweather_v1.3.7.apk",
+            "sha256": "4e8f980c8f03c4955c27ef7de8576606d2a95d67e425d50b8d3a3b06bf089f6f",
+            "size": 23168938
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.3.7",
+            "versionCode": 38,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "io.github.freetimemaker.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": "Rely on open-meteo.com."
+            }
           }
         }
       }

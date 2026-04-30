@@ -1,0 +1,4 @@
+**What's New?**
+• Changes Back to Android only
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.3.7...v1.3.8

@@ -1,0 +1,215 @@
+{
+  "repo": {
+    "timestamp": 1777549156000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "versions": {
+        "e0bbd87275c24a42a651e47f547c47f4b3ecc2709ad5df1ace48b70099a5f839": null,
+        "fe0ca08c499815e733b9998565045812c386a6f20aa9550e2b77f4ace14feeb2": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "29b65839d99c7cb0392016f2042dfe0d900d3fbe56397d70da9f9aa87676d77c": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "f2b7096b424eab50b47e6f26a65b971cb88b14cd8a0ed256b7812d37d4f82f6d": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "237ead27c8fc843efa2c4950db956ea85a581bd4d34d8b817bf8e9f17370746c": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "4599f3770dcb895c4d66c5d777694eeae8438c6d4a2062026047148ac95ea479": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "0224ef7aca896de97c702a178378dcd72cd1aa28ef8a3726847465b9916fc9fa": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "e13decf496c87bbaf8d498bd5a0a9ab94868f36d549ea7ea16807e9d2e3d3306": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "783bd30d55dfb9c43938f3f30a9aa0a942dda6c2902177f6a53cfa7b93c240c7": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "8778688978941dbc5d464a268bef8f8fa3299974576262552a04e9d8ab4e78d5": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "9d0bb3033ecd11ecd217a1fd884563e1c6672d2475969a7f95239d66fe4f784f": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "32715ebacc5933854fd061a425132424ff7f91bbdf47ce949bb9bd85c534dec2": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "41a82c6997f2464f4c30db03fbfae23e077f6e3188a08bc861ce48900b7ae51d": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "7d9bb3e4247a699157ad923ac7a258e8880da9d2447654d5c225162cf1e3572b": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "6f633158efa31f2efed4ce4bb3ca2e1c03f04aefddad127b056e4fc386683c5a": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "8dd4c83c1ab4d2d77e0c4dbd9d8b8121894f926da4bcf631f8d85aaf3149dabe": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "d313bcc25303386f6309024ec190926625475771148fcc28ecf9afd31a5cbdcd": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "e0dfd9766d3e526417bac4d42cbe0a89ec7634a19bbe27da50f840cebe27ff54": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "fde2b8c96bc9d26858a162f00a044e33900e2654c20c2cf011d499e0838c5d59": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "b6e67c7bf59f4891bca0b6776e12763a011494236318c3fa9e20733904fa21f2": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "3c7f756b65578a310d4d255639f8c90116c1724f87b767d2530d6d2d0633cb30": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "bacd387b2ca247ff4bab17d10c50b9538c997dd26b61dc64d6801c478bf5c591": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "9cdb048825c596cf9c30946b07bd9bfb587c67c0e824a98751b3fc6796f13e78": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "a107d53693e00df461d497377ef4a28c0b654e1efcbb9e43d4a0a37a858a1e9c": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "d6e89231a011f8168ea80c425c38984ad8512c01c1d6fb4c22cb2ec74d63973e": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "725ada50176482463c8fc4b05d9e4458ad2d181b28bff6ad59666e8add3313b1": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "64b870e86bde1f61310b99cd2cd5ab45d05dffff8791e769295bdb2a2b20529e": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "8d51ad50758738039b1848abefd00412c6cf4c9d24241308582e343d537cfec1": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        },
+        "18acfaf6bd9834c5dfc0398691f3521587de5d3254c339e682e2d3718bf7f513": {
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": null
+            }
+          }
+        }
+      }
+    }
+  }
+}
