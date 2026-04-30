@@ -1,0 +1,7 @@
+## What's Changed
+* Changed the Manifest so the Activities would be opened instead of Crashing
+
+* chore(deps): bump androidx.work:work-runtime-ktx from 2.10.0 to 2.11.2 by @dependabot[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/68
+
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.3.8...v1.3.9
