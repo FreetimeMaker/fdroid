@@ -10,7 +10,7 @@ require (
 	github.com/hashicorp/go-version v1.3.0
 	github.com/r3labs/diff/v2 v2.15.1
 	github.com/r3labs/diff/v3 v3.0.2
-	golang.org/x/oauth2 v0.0.0-20211005180243-6b3c2da341f1
+	golang.org/x/oauth2 v0.36.0
 	golang.org/x/text v0.36.0
 )
 
