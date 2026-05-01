@@ -5,7 +5,7 @@ go 1.17
 require gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
 
 require (
-	github.com/google/go-github/v39 v39.1.0
+	github.com/google/go-github/v39 v39.2.0
 	github.com/hashicorp/go-version v1.3.0
 	github.com/r3labs/diff/v2 v2.14.0
 	golang.org/x/oauth2 v0.0.0-20211005180243-6b3c2da341f1
