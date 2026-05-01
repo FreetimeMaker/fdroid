@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <fdroid>
-	<repo icon="icon.png" name="Freetime Repository" pubkey="308204fa308202e2a003020102020900a30cf5fd1cc96d05300d06092a864886f70d01010b0500302a3110300e060355040b1307462d44726f6964311630140603550403130d4672656574696d654d616b65723020170d3236303331393135343131365a180f32303533303830343135343131365a302a3110300e060355040b1307462d44726f6964311630140603550403130d4672656574696d654d616b657230820222300d06092a864886f70d01010105000382020f003082020a0282020100a4d41bbeb5ec32628605c5f84e25b732a073577274aa4e1a472e603a23b5e1341fbebd71d34c49da8e6864a95cc68bc17f358364d8a70b15e214d60e08372e67e4fd169f7eeb6d65d6cce9dba0034d34ee893732d66f1e84e7ebfd2fe2e2ca45abc97b0cbbc2966db61e2da5be6adb361af6e9ea406859708e7fb9fefea3e36a430b360137eea96efe71ac883dbad496368fac47227e54449ce6b5233142f0fd35ac458e6c43926005d1c6941767dd0bda3c88fa3fb8f7deb2ac33104489267f2d4b069226aae90652e3a6ff94b055c5a0229fb56ded6e7809f72ffa8ce8b2e4968d291ff2f180d10ccdf1dcaf6adb51f1a8d95eb219a20d740543e8edfef3b6f411e252197bd870a71acc60fae550c7735932c0baed3bccbf6a593d53acbe89ce4d3ea05bb51195ae8e05b2aef00546fae9e114037b04b4af4343ac9192a178846d9955ad79e0e3bd397daa97a701510f6fcbe78a94378432366535d11d93640b67c6097c33629f9c2ca068a2a0fe4f8993d1e1dec2190ab474aa5c6a0af86bf300eecfdf92c5d01d30a0c0f80ad834964b033b513d0fba14d9c716f5799f96b0005cacbac5dbab921435946df9ea476165dd01ff4382bb323e0d7e88974f05dd242317e7d5ff625d3900267ea1e4680a3c6f38b0bdd557a7461b9382539d3875772b444c8fb66b0d19cc2bc68451da170dd021f2344368abea4bd2c658a1ad0203010001a321301f301d0603551d0e0416041427e4cee168461eb049d162457be8d8ab6677294f300d06092a864886f70d01010b05000382020100229d357e47a6262ee2afbc9be06f11ba0714f9afd52e848aba97e1702e45a9039cd52c371e2555f7b61674f5263d951db87731c5183341320a3f0405415bbd19aa75c6a76da3e37010d7f196305da29ab6a11f73577109e78a0d1c1c1ce3a7a4049a0b6f67c742ecd07eb3437d88722bc152cc58152812b4a48cb79fd701cea1b4d84e2128b82330e5bdd97b87a628b45895a201b8422f5e284641c5a518c98723b1f6700a04a648de00062c4a924eaddb69197aef8fc15e3eeb1c26b764c54362a59a3feaf3de2e33c87840900f9da076725d3b077d05b070f47acd09041d316b4996ce33b8d54b5c58482285c13affcc51ddebec2924d71b38d635fc4d78c0cddc21a1d159ec65661ec303a2cf52cbdf13a369f4931f159b8d5932f8a01c7fd27f16742eebca09cbc42dd732012cebc3855fd50f6bd71e3ae1b5d8d9963ce6cbf007c684924a8438621ac932e5ba2946e0219463752166211848de693c5736cbb161fae96646b803a0058ec170d9cc8a35bfe69f5a85ba7ce9bb2a7d7e35223442a1c007637129af3ab742ab19ba8d0da1b3cec501d3f6e75f2f5ade8829c194145c89f029e1c34a43dbb8b921de1710a731630fa67943207c0052a3553bd64fd5f7a81a429bb1500cd6c14e440175fdd9f5ebc1a906e7b92b9750c2a09c373b4ed415b7790df91de5009678901d65b7559118f964b59335dd40a4354d0bff" timestamp="1777667222" url="https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo" version="20002">
+	<repo icon="icon.png" name="Freetime Repository" pubkey="308204fa308202e2a003020102020900a30cf5fd1cc96d05300d06092a864886f70d01010b0500302a3110300e060355040b1307462d44726f6964311630140603550403130d4672656574696d654d616b65723020170d3236303331393135343131365a180f32303533303830343135343131365a302a3110300e060355040b1307462d44726f6964311630140603550403130d4672656574696d654d616b657230820222300d06092a864886f70d01010105000382020f003082020a0282020100a4d41bbeb5ec32628605c5f84e25b732a073577274aa4e1a472e603a23b5e1341fbebd71d34c49da8e6864a95cc68bc17f358364d8a70b15e214d60e08372e67e4fd169f7eeb6d65d6cce9dba0034d34ee893732d66f1e84e7ebfd2fe2e2ca45abc97b0cbbc2966db61e2da5be6adb361af6e9ea406859708e7fb9fefea3e36a430b360137eea96efe71ac883dbad496368fac47227e54449ce6b5233142f0fd35ac458e6c43926005d1c6941767dd0bda3c88fa3fb8f7deb2ac33104489267f2d4b069226aae90652e3a6ff94b055c5a0229fb56ded6e7809f72ffa8ce8b2e4968d291ff2f180d10ccdf1dcaf6adb51f1a8d95eb219a20d740543e8edfef3b6f411e252197bd870a71acc60fae550c7735932c0baed3bccbf6a593d53acbe89ce4d3ea05bb51195ae8e05b2aef00546fae9e114037b04b4af4343ac9192a178846d9955ad79e0e3bd397daa97a701510f6fcbe78a94378432366535d11d93640b67c6097c33629f9c2ca068a2a0fe4f8993d1e1dec2190ab474aa5c6a0af86bf300eecfdf92c5d01d30a0c0f80ad834964b033b513d0fba14d9c716f5799f96b0005cacbac5dbab921435946df9ea476165dd01ff4382bb323e0d7e88974f05dd242317e7d5ff625d3900267ea1e4680a3c6f38b0bdd557a7461b9382539d3875772b444c8fb66b0d19cc2bc68451da170dd021f2344368abea4bd2c658a1ad0203010001a321301f301d0603551d0e0416041427e4cee168461eb049d162457be8d8ab6677294f300d06092a864886f70d01010b05000382020100229d357e47a6262ee2afbc9be06f11ba0714f9afd52e848aba97e1702e45a9039cd52c371e2555f7b61674f5263d951db87731c5183341320a3f0405415bbd19aa75c6a76da3e37010d7f196305da29ab6a11f73577109e78a0d1c1c1ce3a7a4049a0b6f67c742ecd07eb3437d88722bc152cc58152812b4a48cb79fd701cea1b4d84e2128b82330e5bdd97b87a628b45895a201b8422f5e284641c5a518c98723b1f6700a04a648de00062c4a924eaddb69197aef8fc15e3eeb1c26b764c54362a59a3feaf3de2e33c87840900f9da076725d3b077d05b070f47acd09041d316b4996ce33b8d54b5c58482285c13affcc51ddebec2924d71b38d635fc4d78c0cddc21a1d159ec65661ec303a2cf52cbdf13a369f4931f159b8d5932f8a01c7fd27f16742eebca09cbc42dd732012cebc3855fd50f6bd71e3ae1b5d8d9963ce6cbf007c684924a8438621ac932e5ba2946e0219463752166211848de693c5736cbb161fae96646b803a0058ec170d9cc8a35bfe69f5a85ba7ce9bb2a7d7e35223442a1c007637129af3ab742ab19ba8d0da1b3cec501d3f6e75f2f5ade8829c194145c89f029e1c34a43dbb8b921de1710a731630fa67943207c0052a3553bd64fd5f7a81a429bb1500cd6c14e440175fdd9f5ebc1a906e7b92b9750c2a09c373b4ed415b7790df91de5009678901d65b7559118f964b59335dd40a4354d0bff" timestamp="1777668357" url="https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo" version="20002">
 		<description>This is the Official F-Droid Repository from Freetime Maker for F-Droid. It includes Apps from Freetime Maker and others. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet.</description>
 	</repo>
 	<application id="com.freetime.geoweather">
@@ -112,83 +112,83 @@ Perfect for daily weather checks, travel planning, or simply staying informed. D
 		<lastupdated>2026-05-01</lastupdated>
 		<name>SuperSMP Companion</name>
 		<summary>Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features</summary>
-		<desc>🎮 The Ultimate SuperSMP Companion App - Your Server, Everywhere! 🎮
+		<desc>The Ultimate SuperSMP Companion App - Your Server, Everywhere!
 
 Enhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.
 
-✨ **KEY FEATURES:**
+KEY FEATURES:
 
-🗳️ **SMART VOTING SYSTEM**
-• Vote for the SuperSMP server directly from your phone
-• Quick access to all voting platforms
-• Track your voting history and rewards
-• Never miss daily vote rewards again
+SMART VOTING SYSTEM
+- Vote for the SuperSMP server directly from your phone
+- Quick access to all voting platforms
+- Track your voting history and rewards
+- Never miss daily vote rewards again
 
-🛒 **INTEGRATED SHOP ACCESS**
-• Browse the official SuperSMP shop catalog
-• View detailed item descriptions and pricing
-• Make secure purchases on-the-go
-• Real-time inventory updates
+INTEGRATED SHOP ACCESS
+- Browse the official SuperSMP shop catalog
+- View detailed item descriptions and pricing
+- Make secure purchases on-the-go
+- Real-time inventory updates
 
-🗺️ **INTERACTIVE SERVER MAP**
-• Access the official SuperSMP world map
-• Real-time player locations and activity
-• Navigate spawn, warps, and key locations
-• Perfect for exploration and planning
+INTERACTIVE SERVER MAP
+- Access the official SuperSMP world map
+- Real-time player locations and activity
+- Navigate spawn, warps, and key locations
+- Perfect for exploration and planning
 
-🎨 **MODERN USER INTERFACE**
-• Built with Jetpack Compose for smooth animations
-• Material Design 3 with dark/light themes
-• Intuitive navigation optimized for mobile
-• Responsive design for all screen sizes
+MODERN USER INTERFACE
+- Built with Jetpack Compose for smooth animations
+- Material Design 3 with dark/light themes
+- Intuitive navigation optimized for mobile
+- Responsive design for all screen sizes
 
-🔧 **TECHNICAL EXCELLENCE**
-• Kotlin-first development for performance
-• Modern architecture with MVVM pattern
-• Regular updates with new features
-• Optimized for battery life and performance
+TECHNICAL EXCELLENCE
+- Kotlin-first development for performance
+- Modern architecture with MVVM pattern
+- Regular updates with new features
+- Optimized for battery life and performance
 
-📱 **MOBILE OPTIMIZATIONS**
-• Fast loading times even on slower connections
-• Offline mode for cached content
-• Push notifications for server events (coming soon)
-• Designed for Android 7.0 and above
+MOBILE OPTIMIZATIONS
+- Fast loading times even on slower connections
+- Offline mode for cached content
+- Push notifications for server events (coming soon)
+- Designed for Android 7.0 and above
 
-🌟 **WHY CHOOSE THIS APP?**
+WHY CHOOSE THIS APP?
 
-✅ **FREE &amp; OPEN SOURCE** - No hidden costs or subscriptions
-✅ **SECURE** - Your data and accounts are protected
-✅ **REGULARLY UPDATED** - New features and improvements monthly
-✅ **COMMUNITY DRIVEN** - Features requested by players like you
-✅ **AD-FREE EXPERIENCE** - Focus on what matters: your gameplay
+FREE &amp; OPEN SOURCE - No hidden costs or subscriptions
+SECURE - Your data and accounts are protected
+REGULARLY UPDATED - New features and improvements monthly
+COMMUNITY DRIVEN - Features requested by players like you
+AD-FREE EXPERIENCE - Focus on what matters: your gameplay
 
-🚀 **PERFECT FOR:**
+PERFECT FOR:
 
-• Daily voters who want to maximize rewards
-• Shop enthusiasts who browse items frequently
-• Explorers who need map access on-the-go
-• Community members who stay connected
-• Players who want convenience without compromise
+Daily voters who want to maximize rewards
+Shop enthusiasts who browse items frequently
+Explorers who need map access on-the-go
+Community members who stay connected
+Players who want convenience without compromise
 
-⚠️ **IMPORTANT NOTE:**
+IMPORTANT NOTE:
 This is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.
 
-📋 **SYSTEM REQUIREMENTS:**
-• Android 7.0 (API 24) or higher
-• 50MB free storage space
-• Internet connection for real-time features
+SYSTEM REQUIREMENTS:
+Android 7.0 (API 24) or higher
+50MB free storage space
+Internet connection for real-time features
 
-🔔 **UPCOMING FEATURES:**
-• Player statistics tracking
-• In-game chat integration
-• Push notifications for server events
-• Multi-language support
-• Offline mode enhancements
+UPCOMING FEATURES:
+Player statistics tracking
+In-game chat integration
+Push notifications for server events
+Multi-language support
+Offline mode enhancements
 
-💬 **COMMUNITY SUPPORT:**
+COMMUNITY SUPPORT:
 Join our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!
 
-Download now and take your SuperSMP experience to the next level! 🚀
+Download now and take your SuperSMP experience to the next level!
 </desc>
 		<license>Apache-2.0</license>
 		<categories>Internet,Games</categories>
@@ -202,14 +202,40 @@ Download now and take your SuperSMP experience to the next level! 🚀
 		<donate>https://freetimemaker.github.io/Donation-Web</donate>
 		<bitcoin>1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE</bitcoin>
 		<litecoin>LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg</litecoin>
-		<marketversion>1.0.7</marketversion>
-		<marketvercode>8</marketvercode>
+		<marketversion>1.0.8</marketversion>
+		<marketvercode>9</marketvercode>
+		<package>
+			<version>1.0.8</version>
+			<versioncode>9</versioncode>
+			<apkname>supersmp-compaion-app_v1.0.8.apk</apkname>
+			<hash type="sha256">dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca</hash>
+			<size>15479416</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>37</targetSdkVersion>
+			<added>2026-05-01</added>
+			<sig>32ac407d33fa9dfbb71cfb41ab478d20</sig>
+			<permissions>INTERNET,com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
 		<package>
 			<version>1.0.7</version>
 			<versioncode>8</versioncode>
 			<apkname>supersmp-compaion-app_v1.0.7.apk</apkname>
 			<hash type="sha256">157a1de243c095890bf3c453993aefc2b28cc427932bb504f4ea5a001422db05</hash>
 			<size>15196791</size>
+			<sdkver>24</sdkver>
+			<targetSdkVersion>36</targetSdkVersion>
+			<added>2026-03-20</added>
+			<sig>32ac407d33fa9dfbb71cfb41ab478d20</sig>
+			<permissions>INTERNET,com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
+			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
+		</package>
+		<package>
+			<version>1.0.6</version>
+			<versioncode>7</versioncode>
+			<apkname>supersmp-compaion-app_v1.0.6.apk</apkname>
+			<hash type="sha256">084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3</hash>
+			<size>14688887</size>
 			<sdkver>24</sdkver>
 			<targetSdkVersion>36</targetSdkVersion>
 			<added>2026-03-20</added>

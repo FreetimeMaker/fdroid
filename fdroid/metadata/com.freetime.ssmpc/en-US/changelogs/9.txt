@@ -1,0 +1,29 @@
+## What's Changed
+
+Fixed F-Droid Builds
+
+* chore(deps): bump androidx.compose.foundation:foundation from 1.10.4 to 1.10.5 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/19
+* chore(deps): bump androidx.compose.ui:ui from 1.10.4 to 1.10.6 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/26
+* chore(deps): bump androidx.compose.foundation:foundation from 1.10.5 to 1.10.6 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/25
+* chore(deps): bump androidx.compose:compose-bom from 2026.02.01 to 2026.03.01 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/24
+* chore(deps): bump org.jetbrains.kotlin.android from 2.3.10 to 2.3.20 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/22
+* chore(deps): bump org.jetbrains.kotlin.plugin.compose from 2.3.10 to 2.3.20 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/21
+* chore(deps): bump org.jetbrains.kotlin:kotlin-stdlib from 2.3.10 to 2.3.20 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/20
+* chore(deps): bump androidx.activity:activity-compose from 1.12.4 to 1.13.0 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/17
+* chore(deps): bump androidx.activity:activity from 1.12.4 to 1.13.0 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/16
+* Updated some Dependencies by @Freetime-Maker in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/37
+* chore(deps): bump org.jetbrains.kotlin.android from 2.3.20 to 2.3.21 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/34
+* chore(deps): bump androidx.navigation:navigation-fragment from 2.9.7 to 2.9.8 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/31
+* chore(deps): bump androidx.navigation:navigation-ui from 2.9.7 to 2.9.8 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/30
+* chore(deps): bump gradle-wrapper from 9.4.1 to 9.5.0 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/38
+* Update softprops/action-gh-release action to v3 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/44
+* Update gradle/actions action to v6 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/43
+* Update actions/upload-artifact action to v7 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/42
+* Update actions/setup-java action to v5 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/41
+* Update actions/checkout action to v6 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/40
+* Update dependency com.android.application to v9.2.0 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/39
+
+## New Contributors
+* @renovate[bot] made their first contribution in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/44
+
+**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.0.7...v1.0.8

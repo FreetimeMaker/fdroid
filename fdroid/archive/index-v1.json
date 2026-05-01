@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1777667216000,
+    "timestamp": 1777668351000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -84,9 +84,9 @@
         "Games"
       ],
       "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
-      "suggestedVersionName": "1.0.7",
-      "suggestedVersionCode": "8",
-      "description": "\ud83c\udfae The Ultimate SuperSMP Companion App - Your Server, Everywhere! \ud83c\udfae\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\n\u2728 **KEY FEATURES:**\n\n\ud83d\uddf3\ufe0f **SMART VOTING SYSTEM**\n\u2022 Vote for the SuperSMP server directly from your phone\n\u2022 Quick access to all voting platforms\n\u2022 Track your voting history and rewards\n\u2022 Never miss daily vote rewards again\n\n\ud83d\uded2 **INTEGRATED SHOP ACCESS**\n\u2022 Browse the official SuperSMP shop catalog\n\u2022 View detailed item descriptions and pricing\n\u2022 Make secure purchases on-the-go\n\u2022 Real-time inventory updates\n\n\ud83d\uddfa\ufe0f **INTERACTIVE SERVER MAP**\n\u2022 Access the official SuperSMP world map\n\u2022 Real-time player locations and activity\n\u2022 Navigate spawn, warps, and key locations\n\u2022 Perfect for exploration and planning\n\n\ud83c\udfa8 **MODERN USER INTERFACE**\n\u2022 Built with Jetpack Compose for smooth animations\n\u2022 Material Design 3 with dark/light themes\n\u2022 Intuitive navigation optimized for mobile\n\u2022 Responsive design for all screen sizes\n\n\ud83d\udd27 **TECHNICAL EXCELLENCE**\n\u2022 Kotlin-first development for performance\n\u2022 Modern architecture with MVVM pattern\n\u2022 Regular updates with new features\n\u2022 Optimized for battery life and performance\n\n\ud83d\udcf1 **MOBILE OPTIMIZATIONS**\n\u2022 Fast loading times even on slower connections\n\u2022 Offline mode for cached content\n\u2022 Push notifications for server events (coming soon)\n\u2022 Designed for Android 7.0 and above\n\n\ud83c\udf1f **WHY CHOOSE THIS APP?**\n\n\u2705 **FREE & OPEN SOURCE** - No hidden costs or subscriptions\n\u2705 **SECURE** - Your data and accounts are protected\n\u2705 **REGULARLY UPDATED** - New features and improvements monthly\n\u2705 **COMMUNITY DRIVEN** - Features requested by players like you\n\u2705 **AD-FREE EXPERIENCE** - Focus on what matters: your gameplay\n\n\ud83d\ude80 **PERFECT FOR:**\n\n\u2022 Daily voters who want to maximize rewards\n\u2022 Shop enthusiasts who browse items frequently\n\u2022 Explorers who need map access on-the-go\n\u2022 Community members who stay connected\n\u2022 Players who want convenience without compromise\n\n\u26a0\ufe0f **IMPORTANT NOTE:**\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\n\ud83d\udccb **SYSTEM REQUIREMENTS:**\n\u2022 Android 7.0 (API 24) or higher\n\u2022 50MB free storage space\n\u2022 Internet connection for real-time features\n\n\ud83d\udd14 **UPCOMING FEATURES:**\n\u2022 Player statistics tracking\n\u2022 In-game chat integration\n\u2022 Push notifications for server events\n\u2022 Multi-language support\n\u2022 Offline mode enhancements\n\n\ud83d\udcac **COMMUNITY SUPPORT:**\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level! \ud83d\ude80\n",
+      "suggestedVersionName": "1.0.8",
+      "suggestedVersionCode": "9",
+      "description": "The Ultimate SuperSMP Companion App - Your Server, Everywhere!\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\nKEY FEATURES:\n\nSMART VOTING SYSTEM\n- Vote for the SuperSMP server directly from your phone\n- Quick access to all voting platforms\n- Track your voting history and rewards\n- Never miss daily vote rewards again\n\nINTEGRATED SHOP ACCESS\n- Browse the official SuperSMP shop catalog\n- View detailed item descriptions and pricing\n- Make secure purchases on-the-go\n- Real-time inventory updates\n\nINTERACTIVE SERVER MAP\n- Access the official SuperSMP world map\n- Real-time player locations and activity\n- Navigate spawn, warps, and key locations\n- Perfect for exploration and planning\n\nMODERN USER INTERFACE\n- Built with Jetpack Compose for smooth animations\n- Material Design 3 with dark/light themes\n- Intuitive navigation optimized for mobile\n- Responsive design for all screen sizes\n\nTECHNICAL EXCELLENCE\n- Kotlin-first development for performance\n- Modern architecture with MVVM pattern\n- Regular updates with new features\n- Optimized for battery life and performance\n\nMOBILE OPTIMIZATIONS\n- Fast loading times even on slower connections\n- Offline mode for cached content\n- Push notifications for server events (coming soon)\n- Designed for Android 7.0 and above\n\nWHY CHOOSE THIS APP?\n\nFREE & OPEN SOURCE - No hidden costs or subscriptions\nSECURE - Your data and accounts are protected\nREGULARLY UPDATED - New features and improvements monthly\nCOMMUNITY DRIVEN - Features requested by players like you\nAD-FREE EXPERIENCE - Focus on what matters: your gameplay\n\nPERFECT FOR:\n\nDaily voters who want to maximize rewards\nShop enthusiasts who browse items frequently\nExplorers who need map access on-the-go\nCommunity members who stay connected\nPlayers who want convenience without compromise\n\nIMPORTANT NOTE:\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\nSYSTEM REQUIREMENTS:\nAndroid 7.0 (API 24) or higher\n50MB free storage space\nInternet connection for real-time features\n\nUPCOMING FEATURES:\nPlayer statistics tracking\nIn-game chat integration\nPush notifications for server events\nMulti-language support\nOffline mode enhancements\n\nCOMMUNITY SUPPORT:\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level!\n",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
       "license": "Apache-2.0",
@@ -1481,66 +1481,6 @@
       }
     ],
     "com.freetime.ssmpc": [
-      {
-        "added": 1777667193000,
-        "apkName": "supersmp-compaion-app_v1.0.8.apk",
-        "hash": "dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca",
-        "hashType": "sha256",
-        "minSdkVersion": 24,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.ssmpc",
-        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
-        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
-        "size": 15479416,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 9,
-        "versionName": "1.0.8"
-      },
-      {
-        "added": 1773996814000,
-        "apkName": "supersmp-compaion-app_v1.0.6.apk",
-        "hash": "084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3",
-        "hashType": "sha256",
-        "minSdkVersion": 24,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.ssmpc",
-        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
-        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
-        "size": 14688887,
-        "targetSdkVersion": 36,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 7,
-        "versionName": "1.0.6"
-      },
       {
         "added": 1773996814000,
         "apkName": "supersmp-compaion-app_v1.0.5.apk",
