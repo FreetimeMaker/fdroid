@@ -5,7 +5,7 @@ go 1.25.0
 require gopkg.in/yaml.v3 v3.0.1
 
 require (
-	github.com/google/go-github/v39 v39.2.0
+	github.com/google/go-github/v85 v85.0.0
 	github.com/google/go-github/v85 v85.0.0
 	github.com/hashicorp/go-version v1.9.0
 	github.com/r3labs/diff/v2 v2.15.1
