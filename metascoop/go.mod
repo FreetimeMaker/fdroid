@@ -1,6 +1,6 @@
 module metascoop
 
-go 1.23.5
+go 1.25.0
 
 require gopkg.in/yaml.v3 v3.0.1
 
@@ -10,7 +10,7 @@ require (
 	github.com/r3labs/diff/v2 v2.15.1
 	github.com/r3labs/diff/v3 v3.0.2
 	golang.org/x/oauth2 v0.0.0-20211005180243-6b3c2da341f1
-	golang.org/x/text v0.3.7
+	golang.org/x/text v0.36.0
 )
 
 require (
