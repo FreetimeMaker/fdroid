@@ -6,13 +6,6 @@ AutoName: SuperSMP Companion
 AutoUpdateMode: Version
 Binaries: https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk
 Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
-Builds:
-    - commit: 32e973043875caf4f4e350ce4e16fc11d80d1871
-      gradle:
-        - "yes"
-      subdir: app
-      versionCode: 8
-      versionName: 1.0.7
 Categories:
     - Internet
     - Games
