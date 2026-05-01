@@ -70,6 +70,9 @@ jobs:
         with:
           go-version: '^1.17.0'
 
+      - name: Fix config.yml permissions
+        run: chmod 600 fdroid/config.yml
+
       - name: Run update script
         run: bash update.sh 2>&1
         env:
