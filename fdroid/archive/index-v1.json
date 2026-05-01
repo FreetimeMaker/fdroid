@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1777634215000,
+    "timestamp": 1777667216000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -93,10 +93,10 @@
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "SuperSMP Companion",
       "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
-      "summary": "Vote, shop & explore SuperSMP anywhere! \ud83c\udfae The ultimate companion app for s...",
+      "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "added": 1773996814000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1773996815000
+      "lastUpdated": 1777667193000
     }
   ],
   "packages": {
@@ -1481,6 +1481,36 @@
       }
     ],
     "com.freetime.ssmpc": [
+      {
+        "added": 1777667193000,
+        "apkName": "supersmp-compaion-app_v1.0.8.apk",
+        "hash": "dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.ssmpc",
+        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
+        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
+        "size": 15479416,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 9,
+        "versionName": "1.0.8"
+      },
       {
         "added": 1773996814000,
         "apkName": "supersmp-compaion-app_v1.0.6.apk",

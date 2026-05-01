@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1777634222000,
+    "timestamp": 1777667222000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -80,10 +80,10 @@
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "SuperSMP Companion",
       "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
-      "summary": "Vote, shop & explore SuperSMP anywhere! \ud83c\udfae The ultimate companion app for s...",
+      "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "added": 1773996814000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1773996815000,
+      "lastUpdated": 1777667193000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [

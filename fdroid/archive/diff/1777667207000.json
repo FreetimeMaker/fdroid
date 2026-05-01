@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1777667216000
+  },
+  "packages": {
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "summary": {
+          "en-US": "Vote, shop & explore SuperSMP anywhere! Companion app for server features"
+        }
+      }
+    }
+  }
+}
