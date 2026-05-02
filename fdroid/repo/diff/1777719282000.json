@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1777719296000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "versions": {
+        "8db8ee2549453ab258c23ae354fb06d364f27eb768ac4128698faded7284e8bc": {
+          "releaseChannels": null
+        }
+      }
+    }
+  }
+}

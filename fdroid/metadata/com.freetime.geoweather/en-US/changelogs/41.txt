@@ -1,0 +1,17 @@
+## What's Changed
+
+Made some Changes
+
+* Update dependency org.jetbrains.kotlinx:kotlinx-datetime to v0.7.1-0.6.x-compat by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/69
+* Update dependency org.jetbrains.kotlinx:kotlinx-datetime to v0.7.1-0.6.x-compat by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/70
+* Update dependency androidx.lifecycle:lifecycle-viewmodel-compose to v2.10.0 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/71
+* Update actions/checkout action to v6 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/72
+* Update actions/setup-java action to v5 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/73
+* Update actions/upload-artifact action to v7 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/74
+* Update gradle/actions action to v6 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/75
+* Update softprops/action-gh-release action to v3 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/76
+
+## New Contributors
+* @renovate[bot] made their first contribution in https://github.com/FreetimeMaker/GeoWeather/pull/69
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.3.9...v1.4.0
