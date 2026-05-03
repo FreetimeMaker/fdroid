@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1777790120000,
+    "timestamp": 1777797679000,
     "categories": {
       "Games": {
         "name": {
@@ -42,7 +42,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
         "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
-        "lastUpdated": 1777754924000,
+        "lastUpdated": 1777797652000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
         "authorEmail": "jamieachatz@gmail.com",

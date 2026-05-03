@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1777790120000,
+    "timestamp": 1777797679000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -28,7 +28,7 @@
         "Weather"
       ],
       "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
-      "suggestedVersionName": "1.5.0",
+      "suggestedVersionName": "1.5.1",
       "suggestedVersionCode": "42",
       "description": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udfd9\ufe0f MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n\ud83d\udcc5 7-DAY FORECAST\n- Detailed weather predictions for the entire week\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n\u23f0 HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n\ud83c\udfa8 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n\ud83d\udd14 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n\ud83d\udcb3 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n\n\ud83d\udee0\ufe0f MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n",
       "donate": "https://freetimemaker.github.io/Donation-Web",
@@ -40,7 +40,7 @@
       "summary": "Modern weather app with 7-day forecast for multiple cities",
       "added": 1773996803000,
       "packageName": "com.freetime.geoweather",
-      "lastUpdated": 1777754924000
+      "lastUpdated": 1777797652000
     },
     {
       "antiFeatures": [

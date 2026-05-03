@@ -1,2 +1,3 @@
-Added my own API
-**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.4.0...v1.5.0
+· Fixed a StartUp Error
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.5.0...v1.5.1
