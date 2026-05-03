@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1777834785000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "metadata": {
+        "summary": {
+          "en-US": "Modern weather app with 3 to 7-day forecast for multiple cities"
+        }
+      }
+    }
+  }
+}

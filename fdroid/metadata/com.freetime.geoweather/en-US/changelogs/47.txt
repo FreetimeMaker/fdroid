@@ -1,0 +1,10 @@
+- Added Cloud Synchronization for favorite locations
+- Added manual "Sync with Cloud" button in Account settings
+- Automatic background synchronization on startup and login
+- Improved data persistence and cross-device availability
+
+## What's Changed
+* Update dependency io.coil-kt:coil-compose to v2.7.0 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/77
+
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.5.4...v1.5.5
