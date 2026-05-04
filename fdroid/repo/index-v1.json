@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1777904827000,
+    "timestamp": 1777913843000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -71,8 +71,8 @@
         "Games"
       ],
       "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
-      "suggestedVersionName": "1.0.8",
-      "suggestedVersionCode": "9",
+      "suggestedVersionName": "1.1.1",
+      "suggestedVersionCode": "11",
       "description": "The Ultimate SuperSMP Companion App - Your Server, Everywhere!\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\nKEY FEATURES:\n\nSMART VOTING SYSTEM\n- Vote for the SuperSMP server directly from your phone\n- Quick access to all voting platforms\n- Track your voting history and rewards\n- Never miss daily vote rewards again\n\nINTEGRATED SHOP ACCESS\n- Browse the official SuperSMP shop catalog\n- View detailed item descriptions and pricing\n- Make secure purchases on-the-go\n- Real-time inventory updates\n\nINTERACTIVE SERVER MAP\n- Access the official SuperSMP world map\n- Real-time player locations and activity\n- Navigate spawn, warps, and key locations\n- Perfect for exploration and planning\n\nMODERN USER INTERFACE\n- Built with Jetpack Compose for smooth animations\n- Material Design 3 with dark/light themes\n- Intuitive navigation optimized for mobile\n- Responsive design for all screen sizes\n\nTECHNICAL EXCELLENCE\n- Kotlin-first development for performance\n- Modern architecture with MVVM pattern\n- Regular updates with new features\n- Optimized for battery life and performance\n\nMOBILE OPTIMIZATIONS\n- Fast loading times even on slower connections\n- Offline mode for cached content\n- Push notifications for server events (coming soon)\n- Designed for Android 7.0 and above\n\nWHY CHOOSE THIS APP?\n\nFREE & OPEN SOURCE - No hidden costs or subscriptions\nSECURE - Your data and accounts are protected\nREGULARLY UPDATED - New features and improvements monthly\nCOMMUNITY DRIVEN - Features requested by players like you\nAD-FREE EXPERIENCE - Focus on what matters: your gameplay\n\nPERFECT FOR:\n\nDaily voters who want to maximize rewards\nShop enthusiasts who browse items frequently\nExplorers who need map access on-the-go\nCommunity members who stay connected\nPlayers who want convenience without compromise\n\nIMPORTANT NOTE:\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\nSYSTEM REQUIREMENTS:\nAndroid 7.0 (API 24) or higher\n50MB free storage space\nInternet connection for real-time features\n\nUPCOMING FEATURES:\nPlayer statistics tracking\nIn-game chat integration\nPush notifications for server events\nMulti-language support\nOffline mode enhancements\n\nCOMMUNITY SUPPORT:\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level!\n",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
@@ -83,7 +83,7 @@
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "added": 1773996814000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1777667193000,
+      "lastUpdated": 1777913808000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
@@ -91,7 +91,7 @@
             "2.png",
             "3.png"
           ],
-          "whatsNew": "## What's Changed\n\nFixed F-Droid Builds\n\n* chore(deps): bump androidx.compose.foundation:foundation from 1.10.4 to 1.10.5 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/19\n* chore(deps): bump androidx.compose.ui:ui from 1.10.4 to 1.10.6 by @dependabot[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/26\n* chore(deps): bump androidx.compose.foundation:foundation from 1.10.5 to 1.10.6 by @dependabot[bot] in https://github.com/FreetimeMaker/Su"
+          "whatsNew": "Better Release\n\n**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.1.0...v1.1.1"
         }
       }
     }
@@ -275,6 +275,36 @@
     ],
     "com.freetime.ssmpc": [
       {
+        "added": 1777913808000,
+        "apkName": "supersmp-compaion-app_v1.1.1.apk",
+        "hash": "84d6a0d62cc6485a098e365c99ceb792ee6ba1d304dc6997758e4283534cab6a",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.ssmpc",
+        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
+        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
+        "size": 15479416,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 11,
+        "versionName": "1.1.1"
+      },
+      {
         "added": 1777667193000,
         "apkName": "supersmp-compaion-app_v1.0.8.apk",
         "hash": "dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca",
@@ -305,9 +335,9 @@
         "versionName": "1.0.8"
       },
       {
-        "added": 1773996815000,
-        "apkName": "supersmp-compaion-app_v1.0.7.apk",
-        "hash": "157a1de243c095890bf3c453993aefc2b28cc427932bb504f4ea5a001422db05",
+        "added": 1777913807000,
+        "apkName": "supersmp-compaion-app_v1.1.0.apk",
+        "hash": "5a7461fc8862ba332eee90d7d74395b004d0c923646f2232e5197a4f57400155",
         "hashType": "sha256",
         "minSdkVersion": 24,
         "nativecode": [
@@ -319,8 +349,8 @@
         "packageName": "com.freetime.ssmpc",
         "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
         "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
-        "size": 15196791,
-        "targetSdkVersion": 36,
+        "size": 15479416,
+        "targetSdkVersion": 37,
         "uses-permission": [
           [
             "android.permission.INTERNET",
@@ -331,38 +361,8 @@
             null
           ]
         ],
-        "versionCode": 8,
-        "versionName": "1.0.7"
-      },
-      {
-        "added": 1773996814000,
-        "apkName": "supersmp-compaion-app_v1.0.6.apk",
-        "hash": "084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3",
-        "hashType": "sha256",
-        "minSdkVersion": 24,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.ssmpc",
-        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
-        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
-        "size": 14688887,
-        "targetSdkVersion": 36,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 7,
-        "versionName": "1.0.6"
+        "versionCode": 9,
+        "versionName": "1.1.0"
       }
     ]
   }
