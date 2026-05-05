@@ -1,0 +1,7 @@
+- Updated Authentication flow with improved Bearer token support
+- Added background synchronization for smoother user experience
+- Integrated authenticated weather data fetching
+- Added new translations (Mara)
+- Improved app stability and fixed minor UI issues
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.5.5...v1.5.6
