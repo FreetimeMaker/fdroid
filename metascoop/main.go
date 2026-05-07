@@ -84,7 +84,6 @@ func main() {
 		if err != nil {
 			log.Printf("Error while looking up repo: %s", err.Error())
 		} else {
-			app.Summary = gitHubRepo.GetDescription()
 
 			if gitHubRepo.License != nil && gitHubRepo.License.SPDXID != nil {
 				app.License = *gitHubRepo.License.SPDXID
@@ -131,13 +130,6 @@ func main() {
 				appName := apps.GenerateReleaseFilename(app.Name(), release.GetTagName())
 
 				log.Printf("Target APK name: %s", appName)
-
-				appClone := app
-
-				appClone.ReleaseDescription = release.GetBody()
-				if appClone.ReleaseDescription != "" {
-					log.Printf("Release notes: %s", appClone.ReleaseDescription)
-				}
 
 				apkInfoMap[appName] = appClone
 
@@ -248,18 +240,6 @@ func main() {
 			setNonEmpty(meta, "Name", fn)
 			setNonEmpty(meta, "SourceCode", apkInfo.GitURL)
 			setNonEmpty(meta, "License", apkInfo.License)
-			setNonEmpty(meta, "Description", apkInfo.Description)
-
-			var summary = apkInfo.Summary
-			// See https://f-droid.org/en/docs/Build_Metadata_Reference/#Summary for max length
-			const maxSummaryLength = 80
-			if len(summary) > maxSummaryLength {
-				summary = summary[:maxSummaryLength-3] + "..."
-
-				log.Printf("Truncated summary to length of %d (max length)", len(summary))
-			}
-
-			setNonEmpty(meta, "Summary", summary)
 
 			if len(apkInfo.Categories) != 0 {
 				meta["Categories"] = apkInfo.Categories
@@ -281,77 +261,7 @@ func main() {
 			}
 
 			log.Printf("Updated metadata file %q", path)
-
-			if apkInfo.ReleaseDescription != "" {
-				destFilePath := filepath.Join(walkPath, latestPackage.PackageName, "en-US", "changelogs", fmt.Sprintf("%d.txt", latestPackage.VersionCode))
-
-				err = os.MkdirAll(filepath.Dir(destFilePath), os.ModePerm)
-				if err != nil {
-					log.Printf("Creating directory for changelog file %q: %s", destFilePath, err.Error())
-					return nil
-				}
-
-				err = os.WriteFile(destFilePath, []byte(apkInfo.ReleaseDescription), os.ModePerm)
-				if err != nil {
-					log.Printf("Writing changelog file %q: %s", destFilePath, err.Error())
-					return nil
-				}
-
-				log.Printf("Wrote release notes to %q", destFilePath)
-			}
-
-			log.Printf("Cloning git repository to search for screenshots")
-
-			gitRepoPath, err := git.CloneRepo(apkInfo.GitURL)
-			if err != nil {
-				log.Printf("Cloning git repo from %q: %s", apkInfo.GitURL, err.Error())
-				return nil
-			}
-			defer os.RemoveAll(gitRepoPath)
-
-			metadata, err := apps.FindMetadata(gitRepoPath)
-			if err != nil {
-				log.Printf("finding metadata in git repo %q: %s", gitRepoPath, err.Error())
-				return nil
-			}
-
-			log.Printf("Found %d screenshots", len(metadata.Screenshots))
-
-			screenshotsPath := filepath.Join(walkPath, latestPackage.PackageName, "en-US", "phoneScreenshots")
-
-			_ = os.RemoveAll(screenshotsPath)
-
-			var sccounter int = 1
-			for _, sc := range metadata.Screenshots {
-				var ext = filepath.Ext(sc)
-				if ext == "" {
-					log.Printf("Invalid: screenshot file extension is empty for %q", sc)
-					continue
-				}
-
-				var newFilePath = filepath.Join(screenshotsPath, fmt.Sprintf("%d%s", sccounter, ext))
-
-				err = os.MkdirAll(filepath.Dir(newFilePath), os.ModePerm)
-				if err != nil {
-					log.Printf("Creating directory for screenshot file %q: %s", newFilePath, err.Error())
-					return nil
-				}
-
-				err = file.Move(sc, newFilePath)
-				if err != nil {
-					log.Printf("Moving screenshot file %q to %q: %s", sc, newFilePath, err.Error())
-					return nil
-				}
-
-				log.Printf("Wrote screenshot to %s", newFilePath)
-
-				sccounter++
-			}
-
-			toRemovePaths = append(toRemovePaths, screenshotsPath)
-
-			return nil
-		}()
+		}
 	})
 	if err != nil {
 		log.Printf("Error while walking metadata: %s", err.Error())
