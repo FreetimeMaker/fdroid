@@ -18,116 +18,119 @@ concurrency:
 
 jobs:
 
-  generate_fdroid_repo:
-    name: "Generate F-Droid repo"
+  build_fdroid:
+    name: "Build F-Droid Repo"
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Create basic directory structure
-        run: mkdir -p fdroid/repo
+      # ---------------------------------------------------------
+      # CACHING
+      # ---------------------------------------------------------
 
-      - name: Restore correct mtime
-        run: |
-          sudo apt install git-restore-mtime
-          git restore-mtime
+      - name: Cache Android SDK
+        uses: actions/cache@v4
+        with:
+          path: ~/android-sdk
+          key: android-sdk-cache
 
-      - name: Install F-Droid server software
+      - name: Cache fdroidserver
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-fdroidserver
+
+      - name: Cache yq
+        uses: actions/cache@v4
+        with:
+          path: /usr/bin/yq
+          key: yq-cache
+
+      # ---------------------------------------------------------
+      # Install dependencies
+      # ---------------------------------------------------------
+
+      - name: Install system packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3 python3-venv git openjdk-17-jdk wget unzip yq imagemagick
+          sudo apt-get install -y git wget unzip imagemagick aapt yq
+
+      - name: Install fdroidserver
+        run: |
           python3 -m pip install --upgrade pip
           python3 -m pip install fdroidserver androguard==4.1.1
-      
-      - name: Install Android SDK (for apksigner)
+
+      - name: Install Android SDK
         run: |
           export ANDROID_HOME=$HOME/android-sdk
           mkdir -p $ANDROID_HOME
           cd $ANDROID_HOME
-      
+
           wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O tools.zip
-      
           mkdir -p cmdline-tools
           unzip tools.zip -d cmdline-tools-temp
-      
           mkdir -p cmdline-tools/latest
           mv cmdline-tools-temp/cmdline-tools/* cmdline-tools/latest/
-      
+
           yes | cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_HOME "platform-tools" "build-tools;34.0.0"
 
-      - name: Set up repo secrets
+      - name: Add aapt to PATH
         run: |
-          echo "./fdroid/keystore.p12"
-          echo "./fdroid/config.yml"
-
-      - name: Set up Go
-        uses: actions/setup-go@v6
-        with:
-          go-version: '^1.17.0'
-
-      - name: Fix config.yml permissions
-        run: chmod 600 fdroid/config.yml
-
-      - name: Run update script
-        run: bash update.sh 2>&1
-        env:
-          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          export ANDROID_HOME=$HOME/android-sdk
+          echo "$ANDROID_HOME/build-tools/34.0.0" >> $GITHUB_PATH
 
       # ---------------------------------------------------------
-      # Clone all upstream repos from apps.yml (in repo root)
+      # Clone upstream repos from apps.yml
       # ---------------------------------------------------------
-      - name: Clone all upstream repositories
+
+      - name: Clone upstream repositories
         run: |
           set -e
-
           mkdir -p upstream
 
-          echo "Reading apps.yml from repo root…"
-          for appid in $(yq 'keys | .[]' apps.yml); do
-            repo_url=$(yq ".\"$appid\".git" apps.yml)
-
+          echo "Reading apps.yml…"
+          for appid in $(yq 'keys | .[]' $GITHUB_WORKSPACE/apps.yml); do
+            repo_url=$(yq ".\"$appid\".git" $GITHUB_WORKSPACE/apps.yml)
             echo "Cloning $appid from $repo_url"
             git clone --depth=1 "$repo_url" "upstream/$appid"
           done
 
       # ---------------------------------------------------------
-      # Copy FULL fastlane folder from upstream/<appid>/fastlane
+      # Copy Fastlane metadata
       # ---------------------------------------------------------
-      - name: Copy full fastlane metadata per app-id
+
+      - name: Copy Fastlane metadata
         run: |
           set -e
-
-          echo "Copying Fastlane metadata…"
+          mkdir -p fdroid/metadata
 
           for apk in fdroid/repo/*.apk; do
             [ -e "$apk" ] || continue
 
             appid=$(aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
-            meta_dir="fdroid/metadata/$appid"
 
-            echo "Processing $appid…"
+            if [ -z "$appid" ]; then
+              echo "ERROR: Could not extract appid from $apk"
+              continue
+            fi
+
+            meta_dir="fdroid/metadata/$appid"
             mkdir -p "$meta_dir"
 
             if [ -d "upstream/$appid/fastlane" ]; then
-              echo "Copying full fastlane folder for $appid…"
-              rsync -av --ignore-existing \
-                "upstream/$appid/fastlane/" \
-                "$meta_dir/fastlane/"
-            else
-              echo "No fastlane folder found for $appid"
+              rsync -av --ignore-existing "upstream/$appid/fastlane/" "$meta_dir/fastlane/"
             fi
-
           done
 
       # ---------------------------------------------------------
-      # Use Fastlane descriptions (short + full) instead of YAML
+      # Import Fastlane descriptions
       # ---------------------------------------------------------
-      - name: Import Fastlane descriptions per app-id
+
+      - name: Import Fastlane descriptions
         run: |
           set -e
-
-          echo "Importing Fastlane descriptions…"
 
           for apk in fdroid/repo/*.apk; do
             [ -e "$apk" ] || continue
@@ -135,49 +138,34 @@ jobs:
             appid=$(aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
             meta_dir="fdroid/metadata/$appid"
             fastlane_dir="$meta_dir/fastlane/metadata/android"
-
-            echo "Processing descriptions for $appid…"
 
             rm -f "$meta_dir/summary.txt"
             rm -f "$meta_dir/description.txt"
 
             locales="en-US en-GB en default"
 
-            short_desc=""
-            full_desc=""
-
             for loc in $locales; do
               if [ -f "$fastlane_dir/$loc/short_description.txt" ]; then
-                short_desc="$fastlane_dir/$loc/short_description.txt"
+                cp "$fastlane_dir/$loc/short_description.txt" "$meta_dir/summary.txt"
                 break
               fi
             done
 
             for loc in $locales; do
               if [ -f "$fastlane_dir/$loc/full_description.txt" ]; then
-                full_desc="$fastlane_dir/$loc/full_description.txt"
+                cp "$fastlane_dir/$loc/full_description.txt" "$meta_dir/description.txt"
                 break
               fi
             done
-
-            if [ -n "$short_desc" ]; then
-              cp "$short_desc" "$meta_dir/summary.txt"
-            fi
-
-            if [ -n "$full_desc" ]; then
-              cp "$full_desc" "$meta_dir/description.txt"
-            fi
-
           done
 
       # ---------------------------------------------------------
-      # Import Fastlane changelogs per app-id
+      # Import Fastlane changelogs
       # ---------------------------------------------------------
-      - name: Import Fastlane changelogs per app-id
+
+      - name: Import Fastlane changelogs
         run: |
           set -e
-
-          echo "Importing Fastlane changelogs…"
 
           for apk in fdroid/repo/*.apk; do
             [ -e "$apk" ] || continue
@@ -185,8 +173,6 @@ jobs:
             appid=$(aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
             meta_dir="fdroid/metadata/$appid"
             fastlane_dir="$meta_dir/fastlane/metadata/android"
-
-            echo "Processing changelogs for $appid…"
 
             mkdir -p "$meta_dir/changelogs"
 
@@ -201,34 +187,25 @@ jobs:
             done
 
             if [ -z "$changelog_locale" ]; then
-              echo "  ⚠ No Fastlane changelogs found for $appid"
               continue
             fi
 
-            echo "  ✓ Using changelogs from: $changelog_locale"
-
             for file in "$changelog_locale"/*.txt; do
-              [ -e "$file" ] || continue
               version=$(basename "$file")
               cp "$file" "$meta_dir/changelogs/$version"
             done
 
             latest=$(ls "$changelog_locale" | sort -n | tail -n 1)
-
-            if [ -n "$latest" ]; then
-              cp "$changelog_locale/$latest" "$meta_dir/changelogs/default.txt"
-            fi
-
+            cp "$changelog_locale/$latest" "$meta_dir/changelogs/default.txt"
           done
 
       # ---------------------------------------------------------
-      # Extract app icons from upstream/<appid>/app/src/main/res
+      # Extract icons
       # ---------------------------------------------------------
-      - name: Extract app icons per app-id
+
+      - name: Extract icons
         run: |
           set -e
-
-          echo "Extracting icons…"
 
           for apk in fdroid/repo/*.apk; do
             [ -e "$apk" ] || continue
@@ -237,46 +214,22 @@ jobs:
             meta_dir="fdroid/metadata/$appid"
             upstream_res="upstream/$appid/app/src/main/res"
 
-            echo "Processing icons for $appid…"
-            mkdir -p "$meta_dir"
-
             densities="mipmap-xxxhdpi mipmap-xxhdpi mipmap-xhdpi mipmap-hdpi mipmap-mdpi"
-
-            icon_found=false
 
             for d in $densities; do
               if [ -f "$upstream_res/$d/ic_launcher.png" ]; then
                 cp "$upstream_res/$d/ic_launcher.png" "$meta_dir/icon.png"
-                icon_found=true
                 break
               fi
             done
-
-            if [ "$icon_found" = false ] && [ -f "$upstream_res/mipmap-xxxhdpi/ic_launcher_round.png" ]; then
-              cp "$upstream_res/mipmap-xxxhdpi/ic_launcher_round.png" "$meta_dir/icon.png"
-              icon_found=true
-            fi
-
-            if [ "$icon_found" = false ] && [ -f "$upstream_res/drawable/ic_launcher_foreground.xml" ]; then
-              convert -background none \
-                "$upstream_res/drawable/ic_launcher_foreground.xml" \
-                "$meta_dir/icon.png"
-              icon_found=true
-            fi
-
           done
 
-  build:
-    name: "Build Jekyll site"
-    runs-on: ubuntu-latest
-    needs: generate_fdroid_repo
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+      # ---------------------------------------------------------
+      # Build Jekyll site
+      # ---------------------------------------------------------
 
       - name: Setup Pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@v4
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
@@ -285,17 +238,14 @@ jobs:
           destination: ./_site
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@v3
 
   deploy:
-    name: "Deploy to GitHub Pages"
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build_fdroid
 
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@v4
