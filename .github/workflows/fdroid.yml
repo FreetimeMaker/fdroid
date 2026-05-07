@@ -36,17 +36,11 @@ jobs:
           path: ~/android-sdk
           key: android-sdk-cache
 
-      - name: Cache fdroidserver
+      - name: Cache pip
         uses: actions/cache@v4
         with:
           path: ~/.cache/pip
-          key: pip-fdroidserver
-
-      - name: Cache yq
-        uses: actions/cache@v4
-        with:
-          path: /usr/bin/yq
-          key: yq-cache
+          key: pip-cache
 
       # ---------------------------------------------------------
       # Install dependencies
@@ -82,7 +76,7 @@ jobs:
           echo "$ANDROID_HOME/build-tools/34.0.0" >> $GITHUB_PATH
 
       # ---------------------------------------------------------
-      # Clone upstream repos from apps.yml
+      # Clone upstream repos from apps.yaml
       # ---------------------------------------------------------
 
       - name: Clone upstream repositories
@@ -90,9 +84,9 @@ jobs:
           set -e
           mkdir -p upstream
 
-          echo "Reading apps.yml…"
-          for appid in $(yq 'keys | .[]' $GITHUB_WORKSPACE/apps.yml); do
-            repo_url=$(yq ".\"$appid\".git" $GITHUB_WORKSPACE/apps.yml)
+          echo "Reading apps.yaml…"
+          for appid in $(yq 'keys | .[]' $GITHUB_WORKSPACE/apps.yaml); do
+            repo_url=$(yq ".\"$appid\".git" $GITHUB_WORKSPACE/apps.yaml)
             echo "Cloning $appid from $repo_url"
             git clone --depth=1 "$repo_url" "upstream/$appid"
           done
@@ -109,7 +103,7 @@ jobs:
           for apk in fdroid/repo/*.apk; do
             [ -e "$apk" ] || continue
 
-            appid=$(aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
+            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
 
             if [ -z "$appid" ]; then
               echo "ERROR: Could not extract appid from $apk"
@@ -135,7 +129,7 @@ jobs:
           for apk in fdroid/repo/*.apk; do
             [ -e "$apk" ] || continue
 
-            appid=$(aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
+            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
             meta_dir="fdroid/metadata/$appid"
             fastlane_dir="$meta_dir/fastlane/metadata/android"
 
@@ -170,7 +164,7 @@ jobs:
           for apk in fdroid/repo/*.apk; do
             [ -e "$apk" ] || continue
 
-            appid=$(aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
+            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
             meta_dir="fdroid/metadata/$appid"
             fastlane_dir="$meta_dir/fastlane/metadata/android"
 
@@ -200,6 +194,47 @@ jobs:
           done
 
       # ---------------------------------------------------------
+      # Import Fastlane screenshots
+      # ---------------------------------------------------------
+
+      - name: Import Fastlane screenshots
+        run: |
+          set -e
+
+          for apk in fdroid/repo/*.apk; do
+            [ -e "$apk" ] || continue
+
+            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
+            meta_dir="fdroid/metadata/$appid"
+            fastlane_dir="$meta_dir/fastlane/metadata/android"
+
+            locales="en-US en-GB en default"
+
+            screenshot_locale=""
+            for loc in $locales; do
+              if [ -d "$fastlane_dir/$loc/images/phoneScreenshots" ]; then
+                screenshot_locale="$fastlane_dir/$loc/images/phoneScreenshots"
+                break
+              fi
+            done
+
+            if [ -z "$screenshot_locale" ]; then
+              continue
+            fi
+
+            target="$meta_dir/en-US/phoneScreenshots"
+            rm -rf "$target"
+            mkdir -p "$target"
+
+            counter=1
+            for img in "$screenshot_locale"/*.{png,jpg,jpeg}; do
+              [ -e "$img" ] || continue
+              cp "$img" "$target/$counter${img##*.}"
+              counter=$((counter+1))
+            done
+          done
+
+      # ---------------------------------------------------------
       # Extract icons
       # ---------------------------------------------------------
 
@@ -210,7 +245,7 @@ jobs:
           for apk in fdroid/repo/*.apk; do
             [ -e "$apk" ] || continue
 
-            appid=$(aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
+            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
             meta_dir="fdroid/metadata/$appid"
             upstream_res="upstream/$appid/app/src/main/res"
 
