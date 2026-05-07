@@ -36,7 +36,7 @@ jobs:
       - name: Install F-Droid server software
         run: |
           sudo apt-get update
-          sudo apt-get install -y python3 python3-venv git openjdk-17-jdk wget unzip
+          sudo apt-get install -y python3 python3-venv git openjdk-17-jdk wget unzip yq
           python3 -m pip install --upgrade pip
           python3 -m pip install fdroidserver androguard==4.1.1
       
@@ -46,18 +46,14 @@ jobs:
           mkdir -p $ANDROID_HOME
           cd $ANDROID_HOME
       
-          # Download commandline tools
           wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O tools.zip
       
-          # Extract into a temp folder
           mkdir -p cmdline-tools
           unzip tools.zip -d cmdline-tools-temp
       
-          # Move the actual content into cmdline-tools/latest
           mkdir -p cmdline-tools/latest
           mv cmdline-tools-temp/cmdline-tools/* cmdline-tools/latest/
       
-          # Install required SDK components
           yes | cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_HOME "platform-tools" "build-tools;34.0.0"
 
       - name: Set up repo secrets
@@ -77,6 +73,64 @@ jobs:
         run: bash update.sh 2>&1
         env:
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      # ---------------------------------------------------------
+      # NEW: Clone all upstream repos from apps.yml
+      # ---------------------------------------------------------
+      - name: Clone all upstream repositories
+        run: |
+          set -e
+
+          mkdir -p upstream
+
+          echo "Reading apps.yml…"
+          for appid in $(yq 'keys | .[]' apps.yml); do
+            repo_url=$(yq ".\"$appid\".git" apps.yml)
+
+            echo "Cloning $appid from $repo_url"
+            git clone --depth=1 "$repo_url" "upstream/$appid"
+          done
+
+      # ---------------------------------------------------------
+      # NEW: Fastlane pro App-ID übernehmen
+      # ---------------------------------------------------------
+      - name: Copy fastlane metadata per app-id
+        run: |
+          set -e
+
+          echo "Scanning APKs…"
+          for apk in fdroid/repo/*.apk; do
+            [ -e "$apk" ] || continue
+
+            # Extract app-id from APK
+            appid=$(aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
+            meta_dir="fdroid/metadata/$appid"
+
+            echo "Processing $appid…"
+            mkdir -p "$meta_dir"
+
+            # Find matching upstream folder
+            if [ -d "upstream/$appid/fastlane" ]; then
+              echo "Found upstream/$appid/fastlane → copying…"
+
+              rsync -av --ignore-existing "upstream/$appid/fastlane/" "$meta_dir/fastlane/"
+            else
+              echo "No fastlane folder for $appid"
+            fi
+
+            # Append release changelog
+            mkdir -p "$meta_dir/changelogs"
+
+            if [ -f "$meta_dir/changelogs/default.txt" ]; then
+              echo -e "\n\n---\nUpstream Release Notes:\n" >> "$meta_dir/changelogs/default.txt"
+              gh release view --repo "$(yq ".\"$appid\".git" apps.yml | sed 's|https://github.com/||')" --json body --jq .body >> "$meta_dir/changelogs/default.txt"
+            else
+              gh release view --repo "$(yq ".\"$appid\".git" apps.yml | sed 's|https://github.com/||')" --json body --jq .body > "$meta_dir/changelogs/default.txt"
+            fi
+
+          done
+        env:
+          GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
 
   build:
     name: "Build Jekyll site"
