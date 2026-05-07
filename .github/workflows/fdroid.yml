@@ -75,7 +75,7 @@ jobs:
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
 
       # ---------------------------------------------------------
-      # Clone all upstream repos from apps.yml
+      # Clone all upstream repos from apps.yml (in repo root)
       # ---------------------------------------------------------
       - name: Clone all upstream repositories
         run: |
@@ -83,7 +83,7 @@ jobs:
 
           mkdir -p upstream
 
-          echo "Reading apps.yml…"
+          echo "Reading apps.yml from repo root…"
           for appid in $(yq 'keys | .[]' apps.yml); do
             repo_url=$(yq ".\"$appid\".git" apps.yml)
 
