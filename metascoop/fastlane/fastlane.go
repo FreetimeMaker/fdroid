@@ -13,7 +13,6 @@ type ImportConfig struct {
     RepoDir   string
     Upstream  string
     ApkList   []string
-    AAPTPath  string
 }
 
 func must(err error) {
@@ -50,30 +49,8 @@ func copyDir(src, dst string) error {
     })
 }
 
-func runAAPT(aapt, apk string) (string, error) {
-    out, err := exec.Command(aapt, "dump", "badging", apk).Output()
-    if err != nil {
-        return "", err
-    }
-    for _, line := range strings.Split(string(out), "\n") {
-        if strings.HasPrefix(line, "package: name=") {
-            parts := strings.Split(line, "'")
-            if len(parts) >= 2 {
-                return parts[1], nil
-            }
-        }
-    }
-    return "", fmt.Errorf("appid not found")
-}
-
 func ImportFastlane(cfg ImportConfig) error {
     for _, apk := range cfg.ApkList {
-        appid, err := runAAPT(cfg.AAPTPath, apk)
-        if err != nil {
-            fmt.Println("ERROR extracting appid:", err)
-            continue
-        }
-
         metaDir := filepath.Join(cfg.RepoDir, "..", "metadata", appid)
         fastlaneSrc := filepath.Join(cfg.Upstream, appid, "fastlane")
         fastlaneAndroid := filepath.Join(metaDir, "fastlane/metadata/android")
