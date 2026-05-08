@@ -56,208 +56,27 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install fdroidserver androguard==4.1.1
 
-      - name: Install Android SDK
+      - name: Install Android SDK (for apksigner)
         run: |
           export ANDROID_HOME=$HOME/android-sdk
-          mkdir -p $ANDROID_HOME
-          cd $ANDROID_HOME
-
+          mkdir -p $ANDROID_HOME/cmdline-tools
+          cd $ANDROID_HOME/cmdline-tools
+          
+          rm -rf latest
+          rm -rf cmdline-tools-temp
+          
           wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O tools.zip
-          mkdir -p cmdline-tools
+          
           unzip tools.zip -d cmdline-tools-temp
-          mkdir -p cmdline-tools/latest
-          mv cmdline-tools-temp/cmdline-tools/* cmdline-tools/latest/
-
-          yes | cmdline-tools/latest/bin/sdkmanager --sdk_root=$ANDROID_HOME "platform-tools" "build-tools;34.0.0"
+          
+          mv cmdline-tools-temp/cmdline-tools latest
+          
+          yes | latest/bin/sdkmanager --sdk_root=$ANDROID_HOME "platform-tools" "build-tools;34.0.0"
 
       - name: Add aapt to PATH
         run: |
           export ANDROID_HOME=$HOME/android-sdk
           echo "$ANDROID_HOME/build-tools/34.0.0" >> $GITHUB_PATH
-
-      # ---------------------------------------------------------
-      # Clone upstream repos from apps.yaml
-      # ---------------------------------------------------------
-
-      - name: Clone upstream repositories
-        run: |
-          set -e
-          mkdir -p upstream
-
-          echo "Reading apps.yaml…"
-          for appid in $(yq 'keys | .[]' $GITHUB_WORKSPACE/apps.yaml); do
-            repo_url=$(yq ".\"$appid\".git" $GITHUB_WORKSPACE/apps.yaml)
-            echo "Cloning $appid from $repo_url"
-            git clone --depth=1 "$repo_url" "upstream/$appid"
-          done
-
-      # ---------------------------------------------------------
-      # Copy Fastlane metadata
-      # ---------------------------------------------------------
-
-      - name: Copy Fastlane metadata
-        run: |
-          set -e
-          mkdir -p fdroid/metadata
-
-          for apk in fdroid/repo/*.apk; do
-            [ -e "$apk" ] || continue
-
-            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
-
-            if [ -z "$appid" ]; then
-              echo "ERROR: Could not extract appid from $apk"
-              continue
-            fi
-
-            meta_dir="fdroid/metadata/$appid"
-            mkdir -p "$meta_dir"
-
-            if [ -d "upstream/$appid/fastlane" ]; then
-              rsync -av --ignore-existing "upstream/$appid/fastlane/" "$meta_dir/fastlane/"
-            fi
-          done
-
-      # ---------------------------------------------------------
-      # Import Fastlane descriptions
-      # ---------------------------------------------------------
-
-      - name: Import Fastlane descriptions
-        run: |
-          set -e
-
-          for apk in fdroid/repo/*.apk; do
-            [ -e "$apk" ] || continue
-
-            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
-            meta_dir="fdroid/metadata/$appid"
-            fastlane_dir="$meta_dir/fastlane/metadata/android"
-
-            rm -f "$meta_dir/summary.txt"
-            rm -f "$meta_dir/description.txt"
-
-            locales="en-US en-GB en default"
-
-            for loc in $locales; do
-              if [ -f "$fastlane_dir/$loc/short_description.txt" ]; then
-                cp "$fastlane_dir/$loc/short_description.txt" "$meta_dir/summary.txt"
-                break
-              fi
-            done
-
-            for loc in $locales; do
-              if [ -f "$fastlane_dir/$loc/full_description.txt" ]; then
-                cp "$fastlane_dir/$loc/full_description.txt" "$meta_dir/description.txt"
-                break
-              fi
-            done
-          done
-
-      # ---------------------------------------------------------
-      # Import Fastlane changelogs
-      # ---------------------------------------------------------
-
-      - name: Import Fastlane changelogs
-        run: |
-          set -e
-
-          for apk in fdroid/repo/*.apk; do
-            [ -e "$apk" ] || continue
-
-            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
-            meta_dir="fdroid/metadata/$appid"
-            fastlane_dir="$meta_dir/fastlane/metadata/android"
-
-            mkdir -p "$meta_dir/changelogs"
-
-            locales="en-US en-GB en default"
-
-            changelog_locale=""
-            for loc in $locales; do
-              if [ -d "$fastlane_dir/$loc/changelogs" ]; then
-                changelog_locale="$fastlane_dir/$loc/changelogs"
-                break
-              fi
-            done
-
-            if [ -z "$changelog_locale" ]; then
-              continue
-            fi
-
-            for file in "$changelog_locale"/*.txt; do
-              version=$(basename "$file")
-              cp "$file" "$meta_dir/changelogs/$version"
-            done
-
-            latest=$(ls "$changelog_locale" | sort -n | tail -n 1)
-            cp "$changelog_locale/$latest" "$meta_dir/changelogs/default.txt"
-          done
-
-      # ---------------------------------------------------------
-      # Import Fastlane screenshots
-      # ---------------------------------------------------------
-
-      - name: Import Fastlane screenshots
-        run: |
-          set -e
-
-          for apk in fdroid/repo/*.apk; do
-            [ -e "$apk" ] || continue
-
-            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
-            meta_dir="fdroid/metadata/$appid"
-            fastlane_dir="$meta_dir/fastlane/metadata/android"
-
-            locales="en-US en-GB en default"
-
-            screenshot_locale=""
-            for loc in $locales; do
-              if [ -d "$fastlane_dir/$loc/images/phoneScreenshots" ]; then
-                screenshot_locale="$fastlane_dir/$loc/images/phoneScreenshots"
-                break
-              fi
-            done
-
-            if [ -z "$screenshot_locale" ]; then
-              continue
-            fi
-
-            target="$meta_dir/en-US/phoneScreenshots"
-            rm -rf "$target"
-            mkdir -p "$target"
-
-            counter=1
-            for img in "$screenshot_locale"/*.{png,jpg,jpeg}; do
-              [ -e "$img" ] || continue
-              cp "$img" "$target/$counter${img##*.}"
-              counter=$((counter+1))
-            done
-          done
-
-      # ---------------------------------------------------------
-      # Extract icons
-      # ---------------------------------------------------------
-
-      - name: Extract icons
-        run: |
-          set -e
-
-          for apk in fdroid/repo/*.apk; do
-            [ -e "$apk" ] || continue
-
-            appid=$($ANDROID_HOME/build-tools/34.0.0/aapt dump badging "$apk" | grep package:\ name | cut -d"'" -f2)
-            meta_dir="fdroid/metadata/$appid"
-            upstream_res="upstream/$appid/app/src/main/res"
-
-            densities="mipmap-xxxhdpi mipmap-xxhdpi mipmap-xhdpi mipmap-hdpi mipmap-mdpi"
-
-            for d in $densities; do
-              if [ -f "$upstream_res/$d/ic_launcher.png" ]; then
-                cp "$upstream_res/$d/ic_launcher.png" "$meta_dir/icon.png"
-                break
-              fi
-            done
-          done
 
       # ---------------------------------------------------------
       # Build Jekyll site
