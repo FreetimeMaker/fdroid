@@ -21,6 +21,7 @@ import (
 	"metascoop/file"
 	"metascoop/git"
 	"metascoop/md"
+	"metascoop/fastlane"
 )
 
 func main() {
@@ -188,6 +189,18 @@ func main() {
 	}
 
 	fmt.Println("Filling in metadata")
+
+	apkFiles, _ := filepath.Glob(filepath.Join(*repoDir, "*.apk"))
+
+	err = fastlane.ImportFastlane(fastlane.ImportConfig{
+		RepoDir:  *repoDir,
+		Upstream: "upstream",
+		ApkList:  apkFiles,
+		AAPTPath: filepath.Join(os.Getenv("ANDROID_HOME"), "build-tools/34.0.0/aapt"),
+	})
+	if err != nil {
+		log.Fatalf("Fastlane import failed: %s", err)
+	}
 
 	fdroidIndex, err := apps.ReadIndex(fdroidIndexFilePath)
 	if err != nil {
