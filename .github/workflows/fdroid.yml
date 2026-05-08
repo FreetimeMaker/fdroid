@@ -56,27 +56,20 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install fdroidserver androguard==4.1.1
 
-      - name: Install Android SDK (for apksigner)
+      - name: Set up repo secrets
         run: |
-          export ANDROID_HOME=$HOME/android-sdk
-          mkdir -p $ANDROID_HOME/cmdline-tools
-          cd $ANDROID_HOME/cmdline-tools
-          
-          rm -rf latest
-          rm -rf cmdline-tools-temp
-          
-          wget https://dl.google.com/android/repository/commandlinetools-linux-11076708_latest.zip -O tools.zip
-          
-          unzip tools.zip -d cmdline-tools-temp
-          
-          mv cmdline-tools-temp/cmdline-tools latest
-          
-          yes | latest/bin/sdkmanager --sdk_root=$ANDROID_HOME "platform-tools" "build-tools;34.0.0"
+          echo "./fdroid/keystore.p12"
+          echo "./fdroid/config.yml"
 
-      - name: Add aapt to PATH
-        run: |
-          export ANDROID_HOME=$HOME/android-sdk
-          echo "$ANDROID_HOME/build-tools/34.0.0" >> $GITHUB_PATH
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '^1.17.0'
+
+      - name: Run update script
+        run: bash update.sh 2>&1
+        env:
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
 
       # ---------------------------------------------------------
       # Build Jekyll site
