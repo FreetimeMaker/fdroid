@@ -196,7 +196,6 @@ func main() {
 		RepoDir:  *repoDir,
 		Upstream: "upstream",
 		ApkList:  apkFiles,
-		AAPTPath: filepath.Join(os.Getenv("ANDROID_HOME"), "build-tools/34.0.0/aapt"),
 	})
 	if err != nil {
 		log.Fatalf("Fastlane import failed: %s", err)
