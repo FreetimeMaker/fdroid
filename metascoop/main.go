@@ -154,6 +154,15 @@ func main() {
 					return
 				}
 
+				err = fastlane.ImportFastlane(fastlane.ImportConfig{
+					RepoDir:  *repoDir,
+					Upstream: "upstream",
+					ApkList:  apkFiles,
+				})
+				if err != nil {
+					log.Fatalf("Fastlane import failed: %s", err)
+				}
+
 				err = downloadStream(appTargetPath, appStream)
 				if err != nil {
 					log.Printf("Error while downloading app %q (artifact id %d) from from release %q to %q: %s", app.GitURL, *apk.ID, *release.TagName, appTargetPath, err.Error())
@@ -191,15 +200,6 @@ func main() {
 	fmt.Println("Filling in metadata")
 
 	apkFiles, _ := filepath.Glob(filepath.Join(*repoDir, "*.apk"))
-
-	err = fastlane.ImportFastlane(fastlane.ImportConfig{
-		RepoDir:  *repoDir,
-		Upstream: "upstream",
-		ApkList:  apkFiles,
-	})
-	if err != nil {
-		log.Fatalf("Fastlane import failed: %s", err)
-	}
 
 	fdroidIndex, err := apps.ReadIndex(fdroidIndexFilePath)
 	if err != nil {
