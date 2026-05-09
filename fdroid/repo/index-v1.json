@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1778345897000,
+    "timestamp": 1778347119000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -47,11 +47,7 @@
             "1.png",
             "2.png",
             "3.png",
-            "4.png",
-            "5.png",
-            "6.png",
-            "7.png",
-            "8.png"
+            "4.png"
           ],
           "whatsNew": "\u2022 Architecture: Full transition to a local-first system. Weather data and geocoding are now fetched directly from providers.\n\u2022 Auth: Added support for Modrinth login. GitHub login now uses the official Supabase SDK for better stability.\n\u2022 Sync: Direct Supabase integration for location and user profile synchronization.\n\u2022 Multi-Provider: Integrated Tomorrow.io and Visual Crossing support (keys can be added in settings).\n\u2022 Performance: Added immediate cache display for weather to eliminate loading "
         }
