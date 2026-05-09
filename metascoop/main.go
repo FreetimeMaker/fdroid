@@ -69,6 +69,7 @@ func main() {
 
 	// map[apkName]info
 	var apkInfoMap = make(map[string]apps.AppInfo)
+	var apkBodyMap = make(map[string]string)
 
 	for _, app := range appsList {
 		fmt.Printf("App: %s/%s\n", app.Author(), app.Name())
@@ -131,9 +132,8 @@ func main() {
 				appName := apps.GenerateReleaseFilename(app.Name(), release.GetTagName())
 
 				log.Printf("Target APK name: %s", appName)
-
-				// Fehler: appClone ist nicht definiert. Es sollte wahrscheinlich 'app' sein.
 				apkInfoMap[appName] = app
+				apkBodyMap[appName] = release.GetBody()
 
 				appTargetPath := filepath.Join(*repoDir, appName)
 
@@ -153,16 +153,6 @@ func main() {
 					log.Printf("Error while downloading app %q (artifact id %d) from from release %q: %s", app.GitURL, apk.GetID(), release.GetTagName(), err.Error())
 					haveError = true
 					return
-				}
-
-				// Fehler: apkFiles wird erst viel später in Zeile 217 definiert.
-				err = fastlane.ImportFastlane(fastlane.ImportConfig{
-					RepoDir:  *repoDir,
-					Upstream: "upstream",
-					ApkList:  []string{appName},
-				})
-				if err != nil {
-					log.Fatalf("Fastlane import failed: %s", err)
 				}
 
 				err = downloadStream(appTargetPath, appStream)
@@ -245,6 +235,40 @@ func main() {
 			}
 
 			// Now update with some info
+
+			// Import Fastlane metadata using the correct Package ID (pkgname)
+			err = fastlane.ImportFastlane(fastlane.ImportConfig{
+				RepoDir:   *repoDir,
+				Upstream:  "upstream",
+				PackageID: pkgname,
+				AppID:     apkInfo.Name(),
+			})
+			if err != nil {
+				log.Printf("Warning: Fastlane import failed for %q: %s", pkgname, err)
+			}
+
+			// Write GitHub release bodies as changelogs for all versions we have
+			for _, pkg := range fdroidIndex.Packages[pkgname] {
+				if body, ok := apkBodyMap[pkg.ApkName]; ok && body != "" {
+					changelogDir := filepath.Join(filepath.Dir(*repoDir), "metadata", pkgname, "changelogs")
+					os.MkdirAll(changelogDir, 0o755)
+					changelogPath := filepath.Join(changelogDir, fmt.Sprintf("%d.txt", pkg.VersionCode))
+					defaultPath := filepath.Join(changelogDir, "default.txt")
+
+					// Nur schreiben, wenn weder ein spezifisches Changelog noch ein default.txt existiert.
+					// Das verhindert, dass GitHub-Releases lokale Fastlane-Daten überschreiben.
+					_, errSpec := os.Stat(changelogPath)
+					_, errDef := os.Stat(defaultPath)
+					if os.IsNotExist(errSpec) && os.IsNotExist(errDef) {
+						err = os.WriteFile(changelogPath, []byte(body), 0o644)
+						if err == nil {
+							log.Printf("Saved GitHub release body as fallback changelog for %s version %d", pkgname, pkg.VersionCode)
+						}
+					} else {
+						log.Printf("Changelog for %s version %d already exists (specific or default), skipping GitHub body", pkgname, pkg.VersionCode)
+					}
+				}
+			}
 
 			setNonEmpty(meta, "AuthorName", apkInfo.Author())
 			fn := apkInfo.FriendlyName

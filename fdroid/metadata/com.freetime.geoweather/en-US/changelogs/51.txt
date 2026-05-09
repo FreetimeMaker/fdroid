@@ -1,3 +1,0 @@
-Added Modrinth Login and More
-
-**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.5.8...v1.6.0
