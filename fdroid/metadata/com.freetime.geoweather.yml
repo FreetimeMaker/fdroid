@@ -127,8 +127,8 @@ Builds:
 Categories:
     - Weather
 Changelog: https://github.com/FreetimeMaker/GeoWeather/releases
-CurrentVersion: 1.7.0
-CurrentVersionCode: 52
+CurrentVersion: 1.7.1
+CurrentVersionCode: 53
 Donate: https://freetimemaker.github.io/Donation-Web
 IssueTracker: https://github.com/FreetimeMaker/GeoWeather/issues
 License: Apache-2.0
