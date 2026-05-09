@@ -51,6 +51,8 @@ func copyDir(src, dst string) error {
 
 func ImportFastlane(cfg ImportConfig) error {
     for _, apk := range cfg.ApkList {
+        // appid wird aus dem APK-Namen extrahiert.
+        appid := strings.TrimSuffix(apk, filepath.Ext(apk))
         metaDir := filepath.Join(cfg.RepoDir, "..", "metadata", appid)
         fastlaneSrc := filepath.Join(cfg.Upstream, appid, "fastlane")
         fastlaneAndroid := filepath.Join(metaDir, "fastlane/metadata/android")

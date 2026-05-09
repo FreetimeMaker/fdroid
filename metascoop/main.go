@@ -132,7 +132,8 @@ func main() {
 
 				log.Printf("Target APK name: %s", appName)
 
-				apkInfoMap[appName] = appClone
+				// Fehler: appClone ist nicht definiert. Es sollte wahrscheinlich 'app' sein.
+				apkInfoMap[appName] = app
 
 				appTargetPath := filepath.Join(*repoDir, appName)
 
@@ -154,10 +155,11 @@ func main() {
 					return
 				}
 
+				// Fehler: apkFiles wird erst viel später in Zeile 217 definiert.
 				err = fastlane.ImportFastlane(fastlane.ImportConfig{
 					RepoDir:  *repoDir,
 					Upstream: "upstream",
-					ApkList:  apkFiles,
+					ApkList:  []string{appName},
 				})
 				if err != nil {
 					log.Fatalf("Fastlane import failed: %s", err)
@@ -333,7 +335,11 @@ func main() {
 	} else {
 		log.Printf("The index files didn't change significantly")
 
-		changedFiles, err := git.GetChangedFileNames(*repoDir)
+		// Wir suchen im Hauptverzeichnis des Projekts (zwei Ebenen über fdroid/repo),
+		// um Änderungen an Metadaten, APKs und der README zu finden.
+		projectRoot := filepath.Dir(filepath.Dir(*repoDir))
+		changedFiles, err := git.GetChangedFileNames(projectRoot)
+
 		if err != nil {
 			log.Fatalf("getting changed files: %s\n::endgroup::\n", err.Error())
 		}
