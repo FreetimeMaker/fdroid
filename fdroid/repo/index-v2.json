@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1778324748000,
+    "timestamp": 1778334271000,
     "categories": {
       "Games": {
         "name": {
@@ -42,7 +42,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
         "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
-        "lastUpdated": 1778285040000,
+        "lastUpdated": 1778334233000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
         "screenshots": {
@@ -111,6 +111,65 @@
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
+        "974cea482c3097812cc899c51c956ba5bde6a7305b2879186d2b9870b19174fb": {
+          "added": 1778334233000,
+          "file": {
+            "name": "/geoweather_v1.6.0.apk",
+            "sha256": "974cea482c3097812cc899c51c956ba5bde6a7305b2879186d2b9870b19174fb",
+            "size": 24174659
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.6.0",
+            "versionCode": 51,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
         "26616d1ad917206cdea1c94976129ef591994a00e6dc6cf4a045ba306ae94fe5": {
           "added": 1778285040000,
           "file": {
@@ -186,65 +245,6 @@
             ],
             "versionName": "1.5.7",
             "versionCode": 49,
-            "usesSdk": {
-              "minSdkVersion": 26,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "android.permission.ACCESS_NETWORK_STATE"
-              },
-              {
-                "name": "android.permission.POST_NOTIFICATIONS"
-              },
-              {
-                "name": "android.permission.WAKE_LOCK"
-              },
-              {
-                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
-              },
-              {
-                "name": "android.permission.ACCESS_FINE_LOCATION"
-              },
-              {
-                "name": "android.permission.ACCESS_COARSE_LOCATION"
-              },
-              {
-                "name": "android.permission.FOREGROUND_SERVICE"
-              },
-              {
-                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              }
-            ]
-          },
-          "antiFeatures": {
-            "TetheredNet": {}
-          }
-        },
-        "2082385f6c8055347dd1ba1da92c81cc5baac2e875e4348c1ea2067126e765b1": {
-          "added": 1777997328000,
-          "file": {
-            "name": "/geoweather_v1.5.6.apk",
-            "sha256": "2082385f6c8055347dd1ba1da92c81cc5baac2e875e4348c1ea2067126e765b1",
-            "size": 22285504
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "1.5.6",
-            "versionCode": 48,
             "usesSdk": {
               "minSdkVersion": 26,
               "targetSdkVersion": 37
