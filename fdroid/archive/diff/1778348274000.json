@@ -1,0 +1,233 @@
+{
+  "repo": {
+    "timestamp": 1778348284000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "metadata": {
+        "summary": {
+          "en-US": "Modern weather app with 3 to 7-day forecast for multiple cities"
+        }
+      },
+      "versions": {
+        "794946277e64e83cfd1c88b1c07cae69b6bade36a4bc5c588c016e66ec5e379d": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "2082385f6c8055347dd1ba1da92c81cc5baac2e875e4348c1ea2067126e765b1": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "23d0f82063be5bc2a8a8527c8d8e42bc151801b66ba7ab9ae0acb227151571c2": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "ef79b240bcfcb9a785fedcbef2fa2d63b7e1d22604f6202f9dbc539af519812a": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "d028d9f7649d089088f5544dbcc21e0db01a8445c0942c4d3a31cf6dca8194c7": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "394ffb943a1471213c3044b250beb41a608db106a0af51e82037c85749adfd6e": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "24e5a82f78fd11de652d44508589adec415a08e1d5353931af42a088551b2c5f": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "d31a2af87121c0949586a44a1cdecd992c6e552e98ba634b6c22e77de49172ef": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "8db8ee2549453ab258c23ae354fb06d364f27eb768ac4128698faded7284e8bc": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "66d76c662c9361e79a4a12f90b53aaa5895329a1f3237f20d7a75761cb2b55c6": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "7a687f949d23920bf0047093e819613fa14f9a4a44d118c3574e477d9468f251": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "aabc80b958a55465f7359d680af1b1fcd1bf24195d949a1e3a5fb79209fbac74": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "e0bbd87275c24a42a651e47f547c47f4b3ecc2709ad5df1ace48b70099a5f839": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "fe0ca08c499815e733b9998565045812c386a6f20aa9550e2b77f4ace14feeb2": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "29b65839d99c7cb0392016f2042dfe0d900d3fbe56397d70da9f9aa87676d77c": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "f2b7096b424eab50b47e6f26a65b971cb88b14cd8a0ed256b7812d37d4f82f6d": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "237ead27c8fc843efa2c4950db956ea85a581bd4d34d8b817bf8e9f17370746c": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "4599f3770dcb895c4d66c5d777694eeae8438c6d4a2062026047148ac95ea479": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "0224ef7aca896de97c702a178378dcd72cd1aa28ef8a3726847465b9916fc9fa": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "e13decf496c87bbaf8d498bd5a0a9ab94868f36d549ea7ea16807e9d2e3d3306": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "783bd30d55dfb9c43938f3f30a9aa0a942dda6c2902177f6a53cfa7b93c240c7": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "8778688978941dbc5d464a268bef8f8fa3299974576262552a04e9d8ab4e78d5": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "9d0bb3033ecd11ecd217a1fd884563e1c6672d2475969a7f95239d66fe4f784f": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "32715ebacc5933854fd061a425132424ff7f91bbdf47ce949bb9bd85c534dec2": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "41a82c6997f2464f4c30db03fbfae23e077f6e3188a08bc861ce48900b7ae51d": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "a1a9ce1244e2f0c487efdb0ba13d4a3d0b1944086fd068b745aa63ef77e5dec7": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "7d9bb3e4247a699157ad923ac7a258e8880da9d2447654d5c225162cf1e3572b": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "6f633158efa31f2efed4ce4bb3ca2e1c03f04aefddad127b056e4fc386683c5a": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "8dd4c83c1ab4d2d77e0c4dbd9d8b8121894f926da4bcf631f8d85aaf3149dabe": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "d313bcc25303386f6309024ec190926625475771148fcc28ecf9afd31a5cbdcd": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "e0dfd9766d3e526417bac4d42cbe0a89ec7634a19bbe27da50f840cebe27ff54": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "fde2b8c96bc9d26858a162f00a044e33900e2654c20c2cf011d499e0838c5d59": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "b6e67c7bf59f4891bca0b6776e12763a011494236318c3fa9e20733904fa21f2": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "3c7f756b65578a310d4d255639f8c90116c1724f87b767d2530d6d2d0633cb30": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "bacd387b2ca247ff4bab17d10c50b9538c997dd26b61dc64d6801c478bf5c591": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "9cdb048825c596cf9c30946b07bd9bfb587c67c0e824a98751b3fc6796f13e78": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "a107d53693e00df461d497377ef4a28c0b654e1efcbb9e43d4a0a37a858a1e9c": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "d6e89231a011f8168ea80c425c38984ad8512c01c1d6fb4c22cb2ec74d63973e": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "725ada50176482463c8fc4b05d9e4458ad2d181b28bff6ad59666e8add3313b1": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "64b870e86bde1f61310b99cd2cd5ab45d05dffff8791e769295bdb2a2b20529e": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "8d51ad50758738039b1848abefd00412c6cf4c9d24241308582e343d537cfec1": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "18acfaf6bd9834c5dfc0398691f3521587de5d3254c339e682e2d3718bf7f513": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        }
+      }
+    },
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "summary": {
+          "en-US": "Vote, shop & explore SuperSMP anywhere! Companion app for server features"
+        }
+      }
+    }
+  }
+}

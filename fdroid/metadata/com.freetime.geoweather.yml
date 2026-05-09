@@ -1,4 +1,5 @@
 AllowedAPKSigningKeys: e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283
+AntiFeatures: TetheredNet
 AuthorEmail: jamieachatz@gmail.com
 AuthorName: FreetimeMaker
 AuthorWebSite: https://freetimemaker.github.io/
@@ -136,3 +137,4 @@ Name: GeoWeather
 Repo: https://github.com/FreetimeMaker/GeoWeather.git
 RepoType: git
 SourceCode: https://github.com/FreetimeMaker/GeoWeather
+Summary: Modern weather app with 3 to 7-day forecast for multiple cities

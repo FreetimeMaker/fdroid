@@ -1,0 +1,38 @@
+{
+  "repo": {
+    "timestamp": 1778348290000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "metadata": {
+        "summary": {
+          "en-US": "Modern weather app with 3 to 7-day forecast for multiple cities"
+        }
+      },
+      "versions": {
+        "b14123eb2796df0a2ab44dcde683b1d42d125352fc14efed53fe060e824bf932": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "974cea482c3097812cc899c51c956ba5bde6a7305b2879186d2b9870b19174fb": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "26616d1ad917206cdea1c94976129ef591994a00e6dc6cf4a045ba306ae94fe5": {
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        }
+      }
+    },
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "summary": {
+          "en-US": "Vote, shop & explore SuperSMP anywhere! Companion app for server features"
+        }
+      }
+    }
+  }
+}
