@@ -41,11 +41,6 @@ func copyDir(src, dst string) error {
         if info.IsDir() {
             return os.MkdirAll(target, 0o755)
         }
-
-        if _, err := os.Stat(target); err == nil {
-            return nil
-        }
-
         return copyFile(path, target)
     })
 }
