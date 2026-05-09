@@ -1,0 +1,17 @@
+## What's Changed
+
+• API: Added support for multiple weather providers via custom API.
+• Plans: Integrated subscription tiers (Free, Freemium, Premium) visibility.
+• Fix: Resolved endless loading screen when weather data fetching fails.
+• UI: Improved Account screen with plan details and logout options.
+• Strings: Full transition from hardcoded text to localized resources.
+
+* Update dependency org.jetbrains.kotlinx:kotlinx-datetime to v0.8.0-0.6.x-compat by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/83
+* Update dependency org.jetbrains.kotlinx:kotlinx-datetime to v0.8.0-0.6.x-compat by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/82
+* Update dependency androidx.compose:compose-bom to v2026.05.00 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/81
+* Update dependency androidx.compose.ui:ui-test-manifest to v1.11.1 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/80
+* Update dependency androidx.compose.runtime:runtime-livedata to v1.11.1 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/79
+* Update dependency org.jetbrains.kotlinx:kotlinx-coroutines-android to v1.11.0 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/84
+
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.5.7...v1.5.8
