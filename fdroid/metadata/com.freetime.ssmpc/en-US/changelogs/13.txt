@@ -1,0 +1,5 @@
+• Added ChangeLog
+• Added Donate Screen
+• Added more Commands
+
+**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.2.0...v1.3.0

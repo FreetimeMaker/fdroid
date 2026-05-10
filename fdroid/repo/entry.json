@@ -1,18 +1,18 @@
 {
-  "timestamp": 1778398295000,
+  "timestamp": 1778406445000,
   "version": 20002,
   "index": {
     "name": "/index-v2.json",
-    "sha256": "e1ab4407cb068267328e83871fac03adfa72edfebb446bfdb813d37871a78159",
-    "size": 14027,
+    "sha256": "0ebc923443ce097ed081aa5d985e14c6faeec75ecff4446ffb51cc0bd5cccde7",
+    "size": 14028,
     "numPackages": 2
   },
   "diffs": {
-    "1778398283000": {
-      "name": "/diff/1778398283000.json",
-      "sha256": "8bd8637044af4b62bfcf97a5c7012098cdf013c7b8945ac7a532ff38beda4c4a",
-      "size": 50,
-      "numPackages": 0
+    "1778406432000": {
+      "name": "/diff/1778406432000.json",
+      "sha256": "027785273dbeff9166cc4111f574e304621d716b8e4f27cbd5ffb9624464c1fe",
+      "size": 255,
+      "numPackages": 1
     }
   }
 }
