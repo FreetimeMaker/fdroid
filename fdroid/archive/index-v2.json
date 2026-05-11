@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1778503632000,
+    "timestamp": 1778515872000,
     "categories": {
       "Games": {
         "name": {
@@ -2384,7 +2384,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1778406406000,
+        "lastUpdated": 1778515839000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "authorEmail": "jamieachatz@gmail.com",
@@ -2404,6 +2404,41 @@
         "preferredSigner": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
       },
       "versions": {
+        "84d6a0d62cc6485a098e365c99ceb792ee6ba1d304dc6997758e4283534cab6a": {
+          "added": 1777913808000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.1.1.apk",
+            "sha256": "84d6a0d62cc6485a098e365c99ceb792ee6ba1d304dc6997758e4283534cab6a",
+            "size": 15479416
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.1.1",
+            "versionCode": 11,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca": {
           "added": 1777667193000,
           "file": {

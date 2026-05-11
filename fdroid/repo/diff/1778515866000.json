@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1778515878000
+  },
+  "packages": {
+    "com.freetime.ssmpc": {
+      "versions": {
+        "49efc5f8fa9d1c42fd3dfb7c08527be1d1cbef0ea1ff44f3fca41a3db56c8579": {
+          "releaseChannels": null
+        }
+      }
+    }
+  }
+}
