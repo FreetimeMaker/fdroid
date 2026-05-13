@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1778648276000,
+    "timestamp": 1778659132000,
     "categories": {
       "Games": {
         "name": {
@@ -276,7 +276,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1778515839000,
+        "lastUpdated": 1778659090000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "screenshots": {
@@ -317,6 +317,41 @@
         "preferredSigner": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
       },
       "versions": {
+        "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636": {
+          "added": 1778659090000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.4.1.apk",
+            "sha256": "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636",
+            "size": 15545064
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.4.1",
+            "versionCode": 15,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "49efc5f8fa9d1c42fd3dfb7c08527be1d1cbef0ea1ff44f3fca41a3db56c8579": {
           "added": 1778515839000,
           "file": {
@@ -368,41 +403,6 @@
             ],
             "versionName": "1.3.0",
             "versionCode": 13,
-            "usesSdk": {
-              "minSdkVersion": 24,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              }
-            ]
-          }
-        },
-        "86dee0cdf0e6cf6f038e0bae26bda7aeb8ee1a19f12e627cd618bf20723cbee7": {
-          "added": 1778271179000,
-          "file": {
-            "name": "/supersmp-compaion-app_v1.2.0.apk",
-            "sha256": "86dee0cdf0e6cf6f038e0bae26bda7aeb8ee1a19f12e627cd618bf20723cbee7",
-            "size": 15495800
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "1.2.0",
-            "versionCode": 12,
             "usesSdk": {
               "minSdkVersion": 24,
               "targetSdkVersion": 37
