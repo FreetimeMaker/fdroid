@@ -2,8 +2,8 @@ sdk_path: /usr/lib/android-sdk
 apksigner: "/home/runner/android-sdk/build-tools/34.0.0/apksigner"
 
 repo_icon: icon.png
-repo_name: Freetime Repository
-repo_description: This is the Official F-Droid Repository from Freetime Maker for F-Droid. It includes Apps from Freetime Maker and others. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet.
+repo_name: Freetime Repo
+repo_description: The official F-Droid repository by Freetime Maker. Providing the latest versions of apps like GeoWeather and SuperSMP Companion. Updates are published here directly and are often available much faster than in the main F-Droid Repository.
 repo_url: https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo
 
 archive_older: 3
