@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1778759307000,
+    "timestamp": 1778761305000,
     "categories": {
       "Games": {
         "name": {
@@ -2384,7 +2384,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1778678722000,
+        "lastUpdated": 1778761268000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "authorEmail": "jamieachatz@gmail.com",
@@ -2405,9 +2405,9 @@
       },
       "versions": {
         "ec7545ba0398949e3baae07cbfc4e64208a8cc3d506efee6468bff8540688ad5": {
-          "added": 1778406406000,
+          "added": 1778761266000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.3.0.apk",
+            "name": "/supersmp-companion-app_v1.3.0.apk",
             "sha256": "ec7545ba0398949e3baae07cbfc4e64208a8cc3d506efee6468bff8540688ad5",
             "size": 15544952
           },
@@ -2440,9 +2440,9 @@
           }
         },
         "86dee0cdf0e6cf6f038e0bae26bda7aeb8ee1a19f12e627cd618bf20723cbee7": {
-          "added": 1778271179000,
+          "added": 1778761265000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.2.0.apk",
+            "name": "/supersmp-companion-app_v1.2.0.apk",
             "sha256": "86dee0cdf0e6cf6f038e0bae26bda7aeb8ee1a19f12e627cd618bf20723cbee7",
             "size": 15495800
           },
@@ -2475,9 +2475,9 @@
           }
         },
         "84d6a0d62cc6485a098e365c99ceb792ee6ba1d304dc6997758e4283534cab6a": {
-          "added": 1777913808000,
+          "added": 1778761265000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.1.1.apk",
+            "name": "/supersmp-companion-app_v1.1.1.apk",
             "sha256": "84d6a0d62cc6485a098e365c99ceb792ee6ba1d304dc6997758e4283534cab6a",
             "size": 15479416
           },
@@ -2510,9 +2510,9 @@
           }
         },
         "dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca": {
-          "added": 1777667193000,
+          "added": 1778761264000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.0.8.apk",
+            "name": "/supersmp-companion-app_v1.0.8.apk",
             "sha256": "dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca",
             "size": 15479416
           },
@@ -2545,9 +2545,9 @@
           }
         },
         "5a7461fc8862ba332eee90d7d74395b004d0c923646f2232e5197a4f57400155": {
-          "added": 1777913807000,
+          "added": 1778761264000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.1.0.apk",
+            "name": "/supersmp-companion-app_v1.1.0.apk",
             "sha256": "5a7461fc8862ba332eee90d7d74395b004d0c923646f2232e5197a4f57400155",
             "size": 15479416
           },
@@ -2580,9 +2580,9 @@
           }
         },
         "157a1de243c095890bf3c453993aefc2b28cc427932bb504f4ea5a001422db05": {
-          "added": 1773996815000,
+          "added": 1778761263000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.0.7.apk",
+            "name": "/supersmp-companion-app_v1.0.7.apk",
             "sha256": "157a1de243c095890bf3c453993aefc2b28cc427932bb504f4ea5a001422db05",
             "size": 15196791
           },
@@ -2615,9 +2615,9 @@
           }
         },
         "084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3": {
-          "added": 1773996814000,
+          "added": 1778761263000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.0.6.apk",
+            "name": "/supersmp-companion-app_v1.0.6.apk",
             "sha256": "084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3",
             "size": 14688887
           },
@@ -2650,9 +2650,9 @@
           }
         },
         "bbd4516bc34278a0c04a721d42732e161669f434bc60a126023f305cea18c0f3": {
-          "added": 1773996814000,
+          "added": 1778761262000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.0.5.apk",
+            "name": "/supersmp-companion-app_v1.0.5.apk",
             "sha256": "bbd4516bc34278a0c04a721d42732e161669f434bc60a126023f305cea18c0f3",
             "size": 14688887
           },

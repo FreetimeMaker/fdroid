@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1778759314000,
+    "timestamp": 1778761312000,
     "version": 20002,
     "name": "Freetime Repo",
     "icon": "icon.png",
@@ -13,13 +13,19 @@
   },
   "apps": [
     {
+      "authorEmail": "jamieachatz@gmail.com",
       "authorName": "FreetimeMaker",
+      "authorWebSite": "https://freetimemaker.github.io/",
+      "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
       "categories": [
         "Money"
       ],
       "suggestedVersionName": "1.0.0",
       "suggestedVersionCode": "1",
+      "donate": "https://freetimemaker.github.io/Donation-Web",
+      "issueTracker": "https://github.com/FreetimeMaker/All-Miner/issues",
       "license": "Apache-2.0",
+      "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "All Miner",
       "sourceCode": "https://github.com/FreetimeMaker/All-Miner",
       "added": 1778759243000,
@@ -101,7 +107,7 @@
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "added": 1773996814000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1778678722000,
+      "lastUpdated": 1778761268000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
@@ -325,8 +331,8 @@
     ],
     "com.freetime.ssmpc": [
       {
-        "added": 1778678722000,
-        "apkName": "supersmp-compaion-app_v1.4.2.apk",
+        "added": 1778761268000,
+        "apkName": "supersmp-companion-app_v1.4.2.apk",
         "hash": "c8a62d43d2ffc6b6b757f8a225956edb7a4cd6e4985474662486c204ac4716a1",
         "hashType": "sha256",
         "minSdkVersion": 24,
@@ -355,8 +361,8 @@
         "versionName": "1.4.2"
       },
       {
-        "added": 1778659090000,
-        "apkName": "supersmp-compaion-app_v1.4.1.apk",
+        "added": 1778761267000,
+        "apkName": "supersmp-companion-app_v1.4.1.apk",
         "hash": "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636",
         "hashType": "sha256",
         "minSdkVersion": 24,
@@ -385,8 +391,8 @@
         "versionName": "1.4.1"
       },
       {
-        "added": 1778515839000,
-        "apkName": "supersmp-compaion-app_v1.4.0.apk",
+        "added": 1778761266000,
+        "apkName": "supersmp-companion-app_v1.4.0.apk",
         "hash": "49efc5f8fa9d1c42fd3dfb7c08527be1d1cbef0ea1ff44f3fca41a3db56c8579",
         "hashType": "sha256",
         "minSdkVersion": 24,
