@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1778761312000,
+    "timestamp": 1778761913000,
     "version": 20002,
     "name": "Freetime Repo",
     "icon": "icon.png",
@@ -20,6 +20,7 @@
       "categories": [
         "Money"
       ],
+      "changelog": "https://github.com/FreetimeMaker/All-Miner/releases",
       "suggestedVersionName": "1.0.0",
       "suggestedVersionCode": "1",
       "donate": "https://freetimemaker.github.io/Donation-Web",
@@ -28,6 +29,7 @@
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "All Miner",
       "sourceCode": "https://github.com/FreetimeMaker/All-Miner",
+      "summary": "Efficient Android crypto miner with RandomX support.",
       "added": 1778759243000,
       "packageName": "com.freetime.allminer",
       "lastUpdated": 1778759243000,
@@ -105,9 +107,9 @@
       "name": "SuperSMP Companion",
       "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
-      "added": 1773996814000,
+      "added": 1778761262000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1778761268000,
+      "lastUpdated": 1778761893000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [

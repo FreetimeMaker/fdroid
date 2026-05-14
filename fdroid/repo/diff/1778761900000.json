@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1778761913000
+  },
+  "packages": {
+    "com.freetime.allminer": {
+      "metadata": {
+        "summary": {
+          "en-US": "Efficient Android crypto miner with RandomX support."
+        }
+      }
+    }
+  }
+}

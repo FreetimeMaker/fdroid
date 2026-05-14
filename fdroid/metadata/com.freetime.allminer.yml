@@ -4,12 +4,13 @@ AuthorWebSite: https://freetimemaker.github.io/
 Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
 Categories:
     - Money
+Changelog: https://github.com/FreetimeMaker/All-Miner/releases
 CurrentVersion: 1.0.0
 CurrentVersionCode: 1
 Donate: https://freetimemaker.github.io/Donation-Web
 IssueTracker: https://github.com/FreetimeMaker/All-Miner/issues
-Changelog: https://github.com/FreetimeMaker/All-Miner/releases
 License: Apache-2.0
 Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
 Name: All Miner
 SourceCode: https://github.com/FreetimeMaker/All-Miner
+Summary: Efficient Android crypto miner with RandomX support.
