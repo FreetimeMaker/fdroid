@@ -1,11 +1,14 @@
 AuthorName: FreetimeMaker
+AuthorEmail: jamieachatz@gmail.com
+AuthorWebSite: https://freetimemaker.github.io/
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
 Categories:
     - Money
 CurrentVersion: 1.0.0
 CurrentVersionCode: 1
-IssueTracker: ""
-License: Apache-2.0
 Name: All Miner
 SourceCode: https://github.com/FreetimeMaker/All-Miner
-Summary: ""
-WebSite: ""
+Donate: https://freetimemaker.github.io/Donation-Web
+IssueTracker: https://github.com/FreetimeMaker/All-Miner/issues
+License: Apache-2.0
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
