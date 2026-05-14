@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1778793806000,
+    "timestamp": 1778800045000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -116,7 +116,7 @@
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "added": 1778761262000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1778793764000
+      "lastUpdated": 1778800005000
     }
   ],
   "packages": {
@@ -2330,7 +2330,7 @@
     ],
     "com.freetime.ssmpc": [
       {
-        "added": 1778793764000,
+        "added": 1778800005000,
         "apkName": "supersmp-compaion-app_v1.3.0.apk",
         "hash": "ec7545ba0398949e3baae07cbfc4e64208a8cc3d506efee6468bff8540688ad5",
         "hashType": "sha256",
@@ -2390,7 +2390,7 @@
         "versionName": "1.3.0"
       },
       {
-        "added": 1778793764000,
+        "added": 1778800005000,
         "apkName": "supersmp-compaion-app_v1.2.0.apk",
         "hash": "86dee0cdf0e6cf6f038e0bae26bda7aeb8ee1a19f12e627cd618bf20723cbee7",
         "hashType": "sha256",
@@ -2450,7 +2450,7 @@
         "versionName": "1.2.0"
       },
       {
-        "added": 1778793763000,
+        "added": 1778800004000,
         "apkName": "supersmp-compaion-app_v1.1.1.apk",
         "hash": "84d6a0d62cc6485a098e365c99ceb792ee6ba1d304dc6997758e4283534cab6a",
         "hashType": "sha256",
@@ -2510,7 +2510,7 @@
         "versionName": "1.1.1"
       },
       {
-        "added": 1778793762000,
+        "added": 1778800003000,
         "apkName": "supersmp-compaion-app_v1.0.8.apk",
         "hash": "dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca",
         "hashType": "sha256",
@@ -2540,7 +2540,7 @@
         "versionName": "1.0.8"
       },
       {
-        "added": 1778793763000,
+        "added": 1778800004000,
         "apkName": "supersmp-compaion-app_v1.1.0.apk",
         "hash": "5a7461fc8862ba332eee90d7d74395b004d0c923646f2232e5197a4f57400155",
         "hashType": "sha256",
@@ -2630,7 +2630,7 @@
         "versionName": "1.1.0"
       },
       {
-        "added": 1778793762000,
+        "added": 1778800003000,
         "apkName": "supersmp-compaion-app_v1.0.7.apk",
         "hash": "157a1de243c095890bf3c453993aefc2b28cc427932bb504f4ea5a001422db05",
         "hashType": "sha256",
@@ -2690,7 +2690,7 @@
         "versionName": "1.0.7"
       },
       {
-        "added": 1778793761000,
+        "added": 1778800002000,
         "apkName": "supersmp-compaion-app_v1.0.6.apk",
         "hash": "084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3",
         "hashType": "sha256",
@@ -2750,7 +2750,7 @@
         "versionName": "1.0.6"
       },
       {
-        "added": 1778793761000,
+        "added": 1778800002000,
         "apkName": "supersmp-compaion-app_v1.0.5.apk",
         "hash": "bbd4516bc34278a0c04a721d42732e161669f434bc60a126023f305cea18c0f3",
         "hashType": "sha256",
