@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1778770657000,
+    "timestamp": 1778772644000,
     "version": 20002,
     "name": "Freetime Repo",
     "icon": "icon.png",
@@ -109,7 +109,7 @@
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "added": 1778761262000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1778770637000,
+      "lastUpdated": 1778772623000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
