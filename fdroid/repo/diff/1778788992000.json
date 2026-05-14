@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1778789008000
+  },
+  "packages": {
+    "com.freetime.allminer": {
+      "versions": {
+        "85f31082ab048b61b3b6789e67c5b906ebc8369f33ea6b04a30e05aed22bc2ef": {
+          "releaseChannels": null
+        }
+      }
+    }
+  }
+}

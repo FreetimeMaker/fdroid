@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1778782741000,
+    "timestamp": 1778789001000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -12,6 +12,28 @@
     "uninstall": []
   },
   "apps": [
+    {
+      "authorEmail": "jamieachatz@gmail.com",
+      "authorName": "FreetimeMaker",
+      "authorWebSite": "https://freetimemaker.github.io/",
+      "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+      "categories": [
+        "Money"
+      ],
+      "changelog": "https://github.com/FreetimeMaker/All-Miner/releases",
+      "suggestedVersionName": "1.2.1",
+      "suggestedVersionCode": "4",
+      "donate": "https://freetimemaker.github.io/Donation-Web",
+      "issueTracker": "https://github.com/FreetimeMaker/All-Miner/issues",
+      "license": "Apache-2.0",
+      "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+      "name": "All Miner",
+      "sourceCode": "https://github.com/FreetimeMaker/All-Miner",
+      "summary": "Efficient Android crypto miner with RandomX support.",
+      "added": 1778759243000,
+      "packageName": "com.freetime.allminer",
+      "lastUpdated": 1778788930000
+    },
     {
       "allowedAPKSigningKeys": [
         "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
@@ -94,10 +116,42 @@
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "added": 1778761262000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1778782702000
+      "lastUpdated": 1778788957000
     }
   ],
   "packages": {
+    "com.freetime.allminer": [
+      {
+        "added": 1778759243000,
+        "apkName": "all-miner_v1.0.0.apk",
+        "hash": "4efa0164127b7652af59def8a405a61c69df401ef4eddc96a4ca32c0a4b61d1e",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.allminer",
+        "sig": "8104a8d6ed7cebbabf11f45b95cdc779",
+        "signer": "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459",
+        "size": 11015420,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 1,
+        "versionName": "1.0.0"
+      }
+    ],
     "com.freetime.geoweather": [
       {
         "added": 1778334233000,
@@ -2276,7 +2330,7 @@
     ],
     "com.freetime.ssmpc": [
       {
-        "added": 1778782700000,
+        "added": 1778788957000,
         "apkName": "supersmp-compaion-app_v1.3.0.apk",
         "hash": "ec7545ba0398949e3baae07cbfc4e64208a8cc3d506efee6468bff8540688ad5",
         "hashType": "sha256",
@@ -2336,7 +2390,7 @@
         "versionName": "1.3.0"
       },
       {
-        "added": 1778782700000,
+        "added": 1778788957000,
         "apkName": "supersmp-compaion-app_v1.2.0.apk",
         "hash": "86dee0cdf0e6cf6f038e0bae26bda7aeb8ee1a19f12e627cd618bf20723cbee7",
         "hashType": "sha256",
@@ -2396,7 +2450,7 @@
         "versionName": "1.2.0"
       },
       {
-        "added": 1778782699000,
+        "added": 1778788956000,
         "apkName": "supersmp-compaion-app_v1.1.1.apk",
         "hash": "84d6a0d62cc6485a098e365c99ceb792ee6ba1d304dc6997758e4283534cab6a",
         "hashType": "sha256",
@@ -2456,7 +2510,7 @@
         "versionName": "1.1.1"
       },
       {
-        "added": 1778782698000,
+        "added": 1778788955000,
         "apkName": "supersmp-compaion-app_v1.0.8.apk",
         "hash": "dd6c65f02c6112454cfe5567e73c38e0f42c7de5daeb571e7b160a67167dc4ca",
         "hashType": "sha256",
@@ -2486,7 +2540,7 @@
         "versionName": "1.0.8"
       },
       {
-        "added": 1778782699000,
+        "added": 1778788956000,
         "apkName": "supersmp-compaion-app_v1.1.0.apk",
         "hash": "5a7461fc8862ba332eee90d7d74395b004d0c923646f2232e5197a4f57400155",
         "hashType": "sha256",
@@ -2576,7 +2630,7 @@
         "versionName": "1.1.0"
       },
       {
-        "added": 1778782698000,
+        "added": 1778788955000,
         "apkName": "supersmp-compaion-app_v1.0.7.apk",
         "hash": "157a1de243c095890bf3c453993aefc2b28cc427932bb504f4ea5a001422db05",
         "hashType": "sha256",
@@ -2636,7 +2690,7 @@
         "versionName": "1.0.7"
       },
       {
-        "added": 1778782697000,
+        "added": 1778788954000,
         "apkName": "supersmp-compaion-app_v1.0.6.apk",
         "hash": "084ab9a13fffdf210ac9dc338353995ba9251a37a938458655ca8ffbdca1d9c3",
         "hashType": "sha256",
@@ -2696,7 +2750,7 @@
         "versionName": "1.0.6"
       },
       {
-        "added": 1778782697000,
+        "added": 1778788954000,
         "apkName": "supersmp-compaion-app_v1.0.5.apk",
         "hash": "bbd4516bc34278a0c04a721d42732e161669f434bc60a126023f305cea18c0f3",
         "hashType": "sha256",

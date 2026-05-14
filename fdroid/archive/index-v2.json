@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1778782741000,
+    "timestamp": 1778789001000,
     "categories": {
       "Games": {
         "name": {
@@ -26,6 +26,11 @@
           "en-US": "Internet"
         }
       },
+      "Money": {
+        "name": {
+          "en-US": "Money"
+        }
+      },
       "Weather": {
         "name": {
           "en-US": "Weather"
@@ -34,6 +39,71 @@
     }
   },
   "packages": {
+    "com.freetime.allminer": {
+      "metadata": {
+        "added": 1778759243000,
+        "categories": [
+          "Money"
+        ],
+        "changelog": "https://github.com/FreetimeMaker/All-Miner/releases",
+        "issueTracker": "https://github.com/FreetimeMaker/All-Miner/issues",
+        "lastUpdated": 1778788930000,
+        "license": "Apache-2.0",
+        "sourceCode": "https://github.com/FreetimeMaker/All-Miner",
+        "authorEmail": "jamieachatz@gmail.com",
+        "authorName": "FreetimeMaker",
+        "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "name": {
+          "en-US": "All Miner"
+        },
+        "summary": {
+          "en-US": "Efficient Android crypto miner with RandomX support."
+        },
+        "donate": [
+          "https://freetimemaker.github.io/Donation-Web"
+        ],
+        "preferredSigner": "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459"
+      },
+      "versions": {
+        "4efa0164127b7652af59def8a405a61c69df401ef4eddc96a4ca32c0a4b61d1e": {
+          "added": 1778759243000,
+          "file": {
+            "name": "/all-miner_v1.0.0.apk",
+            "sha256": "4efa0164127b7652af59def8a405a61c69df401ef4eddc96a4ca32c0a4b61d1e",
+            "size": 11015420
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.0.0",
+            "versionCode": 1,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 35
+            },
+            "signer": {
+              "sha256": [
+                "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        }
+      }
+    },
     "com.freetime.geoweather": {
       "metadata": {
         "added": 1773996803000,
@@ -2384,7 +2454,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1778782702000,
+        "lastUpdated": 1778788957000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "authorEmail": "jamieachatz@gmail.com",

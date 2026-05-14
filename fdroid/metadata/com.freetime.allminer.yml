@@ -5,8 +5,8 @@ Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
 Categories:
     - Money
 Changelog: https://github.com/FreetimeMaker/All-Miner/releases
-CurrentVersion: 1.2.0
-CurrentVersionCode: 3
+CurrentVersion: 1.2.1
+CurrentVersionCode: 4
 Donate: https://freetimemaker.github.io/Donation-Web
 IssueTracker: https://github.com/FreetimeMaker/All-Miner/issues
 License: Apache-2.0
