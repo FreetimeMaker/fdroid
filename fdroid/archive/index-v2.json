@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1778778716000,
+    "timestamp": 1778781824000,
     "categories": {
       "Games": {
         "name": {
@@ -2384,7 +2384,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1778778701000,
+        "lastUpdated": 1778781810000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "authorEmail": "jamieachatz@gmail.com",
