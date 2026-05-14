@@ -18,3 +18,10 @@ supersmp-compaion-app:
   categories: 
     - Internet
     - Games
+
+all-miner:
+  git: https://github.com/FreetimeMaker/All-Miner
+  name: "All Miner"
+
+  categories:
+    - Money
