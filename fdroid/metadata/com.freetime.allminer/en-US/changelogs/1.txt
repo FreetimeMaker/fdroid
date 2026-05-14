@@ -1,0 +1,8 @@
+Initial release of AllMiner!
+- Native RandomX engine integration.
+- unMineable pool support.
+- Multi-thread support with adjustable intensity.
+- Intelligent battery and heat protection.
+- Modern Material 3 design.
+
+**Full Changelog**: https://github.com/FreetimeMaker/All-Miner/commits/v1.0.0
