@@ -1,0 +1,3 @@
+- Added Foreground Service for mining
+
+**Full Changelog**: https://github.com/FreetimeMaker/All-Miner/compare/v1.1.0...v1.2.0

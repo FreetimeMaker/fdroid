@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1778772644000,
+    "timestamp": 1778778723000,
     "version": 20002,
     "name": "Freetime Repo",
     "icon": "icon.png",
@@ -21,8 +21,8 @@
         "Money"
       ],
       "changelog": "https://github.com/FreetimeMaker/All-Miner/releases",
-      "suggestedVersionName": "1.1.0",
-      "suggestedVersionCode": "2",
+      "suggestedVersionName": "1.2.0",
+      "suggestedVersionCode": "3",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/All-Miner/issues",
       "license": "Apache-2.0",
@@ -32,7 +32,7 @@
       "summary": "Efficient Android crypto miner with RandomX support.",
       "added": 1778759243000,
       "packageName": "com.freetime.allminer",
-      "lastUpdated": 1778770585000,
+      "lastUpdated": 1778778647000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
@@ -40,7 +40,7 @@
             "2.png",
             "3.png"
           ],
-          "whatsNew": "- Added persistent settings: your wallet address, pool URL, and selected coin are now saved automatically.\n- Improved Dashboard: comprehensive overview of mining status, battery level, device temperature, and total hashes.\n- Expanded cryptocurrency support: added many more coins for unMineable pools.\n- UI/UX improvements: added scrolling support for smaller screens and redesigned the mining interface.\n- Stability fixes and optimized multi-threading logic.\n\n**Full Changelog**: https://github.com/"
+          "whatsNew": "- Added Foreground Service for mining\n\n**Full Changelog**: https://github.com/FreetimeMaker/All-Miner/compare/v1.1.0...v1.2.0"
         }
       }
     },
@@ -109,7 +109,7 @@
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "added": 1778761262000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1778772623000,
+      "lastUpdated": 1778778701000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
@@ -124,6 +124,48 @@
   ],
   "packages": {
     "com.freetime.allminer": [
+      {
+        "added": 1778778647000,
+        "apkName": "all-miner_v1.2.0.apk",
+        "hash": "1ae23a15f05059d4611a4d5141d2ba5481d82d0da58c317a79f02f02fe2895da",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.allminer",
+        "sig": "8104a8d6ed7cebbabf11f45b95cdc779",
+        "signer": "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459",
+        "size": 11188546,
+        "targetSdkVersion": 35,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 3,
+        "versionName": "1.2.0"
+      },
       {
         "added": 1778770585000,
         "apkName": "all-miner_v1.1.0.apk",

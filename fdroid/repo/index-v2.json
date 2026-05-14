@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1778772644000,
+    "timestamp": 1778778723000,
     "categories": {
       "Games": {
         "name": {
@@ -47,7 +47,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/All-Miner/releases",
         "issueTracker": "https://github.com/FreetimeMaker/All-Miner/issues",
-        "lastUpdated": 1778770585000,
+        "lastUpdated": 1778778647000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/All-Miner",
         "screenshots": {
@@ -88,6 +88,50 @@
         "preferredSigner": "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459"
       },
       "versions": {
+        "1ae23a15f05059d4611a4d5141d2ba5481d82d0da58c317a79f02f02fe2895da": {
+          "added": 1778778647000,
+          "file": {
+            "name": "/all-miner_v1.2.0.apk",
+            "sha256": "1ae23a15f05059d4611a4d5141d2ba5481d82d0da58c317a79f02f02fe2895da",
+            "size": 11188546
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.2.0",
+            "versionCode": 3,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 35
+            },
+            "signer": {
+              "sha256": [
+                "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "1bd7623f09a16f87012e89013728abb09d5cb4a3dde7ef3723cbc44b992e6aed": {
           "added": 1778770585000,
           "file": {
@@ -402,7 +446,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1778772623000,
+        "lastUpdated": 1778778701000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "screenshots": {
