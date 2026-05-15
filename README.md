@@ -6,9 +6,9 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This 
 <!-- This table is auto-generated. Do not edit -->
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |
-| <a href="https://github.com/FreetimeMaker/All-Miner"><img src="fdroid/repo/icons/" alt="All Miner icon" width="36px" height="36px"></a> | [**All Miner**](https://github.com/FreetimeMaker/All-Miner) | Efficient Android crypto miner with RandomX support. | 1.2.1 (4) |
-| <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="fdroid/repo/icons/" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | Modern weather app with 3 to 7-day forecast for multiple cities | 1.7.2 (54) |
-| <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="fdroid/repo/icons/" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features | 1.4.2 (16) |
+| <a href="https://github.com/FreetimeMaker/All-Miner"><img src="fdroid/repo/com.freetime.allminer/en-US/icon.png" alt="All Miner icon" width="36px" height="36px"></a> | [**All Miner**](https://github.com/FreetimeMaker/All-Miner) | Efficient Android crypto miner with RandomX support. | 1.2.1 (4) |
+| <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="fdroid/repo/com.freetime.geoweather/en-US/icon.png"" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | Modern weather app with 3 to 7-day forecast for multiple cities | 1.7.2 (54) |
+| <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="fdroid/repo/com.freetime.supersmpcompanion/en-US/icon.png"" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features | 1.4.2 (16) |
 <!-- end apps table -->
 
 ### How to use
@@ -26,7 +26,7 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This 
     </p>
 
 3. Open the link in F-Droid. It will ask you to add the repository. Everything should already be filled in correctly, so just press "OK".
-4. You can now install my apps, e.g. start by searching for "Notality" in the F-Droid client.
+4. You can now install my apps, e.g. start by searching for "GeoWeather" in the F-Droid client.
 
 Please note that some apps published here might contain [Anti-Features](https://f-droid.org/en/docs/Anti-Features/). If you can't find an app by searching for it, you can go to settings and enable "Include anti-feature apps".
 

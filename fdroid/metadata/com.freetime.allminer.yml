@@ -1,16 +1,38 @@
-AuthorEmail: jamieachatz@gmail.com
-AuthorName: FreetimeMaker
-AuthorWebSite: https://freetimemaker.github.io/
-Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
 Categories:
-    - Money
+  - Money
+License: Apache-2.0
+AuthorName: Freetime Maker
+AuthorEmail: jamieachatz@gmail.com
+AuthorWebSite: https://freetimemaker.github.io/
+SourceCode: https://github.com/FreetimeMaker/All-Miner
+IssueTracker: https://github.com/FreetimeMaker/All-Miner/issues
 Changelog: https://github.com/FreetimeMaker/All-Miner/releases
+Donate: https://freetimemaker.github.io/Donation-Web
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
+
+AutoName: All Miner
+
+RepoType: git
+Repo: https://github.com/FreetimeMaker/All-Miner.git
+
+Builds:
+  - versionName: 1.2.1
+    versionCode: 4
+    commit: f4c183628e0685d49414c580556c03ca326d91d7
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/jniLibs/arm64-v8a/librandomx.a
+      - app/src/main/jniLibs/armeabi-v7a/librandomx.a
+      - app/src/main/jniLibs/x86/librandomx.a
+      - app/src/main/jniLibs/x86_64/librandomx.a
+    ndk: 30.0.14904198
+
+AllowedAPKSigningKeys: 583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
 CurrentVersion: 1.2.1
 CurrentVersionCode: 4
-Donate: https://freetimemaker.github.io/Donation-Web
-IssueTracker: https://github.com/FreetimeMaker/All-Miner/issues
-License: Apache-2.0
-Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
-Name: All Miner
-SourceCode: https://github.com/FreetimeMaker/All-Miner
-Summary: Efficient Android crypto miner with RandomX support.
