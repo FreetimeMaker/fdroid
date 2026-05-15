@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1778844563000,
+    "timestamp": 1778849835000,
     "categories": {
       "Games": {
         "name": {
@@ -41,15 +41,22 @@
   "packages": {
     "com.freetime.allminer": {
       "metadata": {
-        "added": 1778759243000,
+        "added": 1778848672000,
         "categories": [
           "Money"
         ],
         "changelog": "https://github.com/FreetimeMaker/All-Miner/releases",
         "issueTracker": "https://github.com/FreetimeMaker/All-Miner/issues",
-        "lastUpdated": 1778788930000,
+        "lastUpdated": 1778848682000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/All-Miner",
+        "featureGraphic": {
+          "en-US": {
+            "name": "/com.freetime.allminer/en-US/featureGraphic_1SVgZQpoUhmGnb-7bhr_lbYcLGgzPD8QhhR2SY04h00=.png",
+            "sha256": "d52560650a685219869dbfbb6e1aff95b61c2c68333c3f10861476498d38874d",
+            "size": 1255608
+          }
+        },
         "screenshots": {
           "phone": {
             "en-US": [
@@ -72,7 +79,7 @@
           }
         },
         "authorEmail": "jamieachatz@gmail.com",
-        "authorName": "FreetimeMaker",
+        "authorName": "Freetime Maker",
         "authorWebSite": "https://freetimemaker.github.io/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
         "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
@@ -82,16 +89,26 @@
         "summary": {
           "en-US": "Efficient Android crypto miner with RandomX support."
         },
+        "description": {
+          "en-US": "AllMiner is a powerful crypto miner optimized specifically for Android devices. It utilizes the original RandomX engine to enable efficient hashing directly on your smartphone's CPU.\n\nFeatures:\n* Native RandomX Engine: Optimized for ARM64 processors.\n* unMineable Support: Mine coins like DOGE, SHIB, SOL, ADA, and many more directly to your wallet.\n* Multi-Threading: Choose the number of CPU cores for maximum performance or minimum heat generation.\n* Hardware Protection: Automatic stop on overheating or low battery (< 20%).\n* Transparent & Open-Source: No hidden fees, full control over your hardware.\n\nNote: Mining on a smartphone can strain the hardware. Use the integrated heat protection for safe operation."
+        },
         "donate": [
           "https://freetimemaker.github.io/Donation-Web"
         ],
+        "icon": {
+          "en-US": {
+            "name": "/com.freetime.allminer/en-US/icon_SsqO61txcZVO_umwXT1jFyShGd9AuDeZfOKlD6Xvo00=.png",
+            "sha256": "4aca8eeb5b7171954efee9b05d3d631724a119df40b837997ce2a50fa5efa34d",
+            "size": 377638
+          }
+        },
         "preferredSigner": "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459"
       },
       "versions": {
         "85f31082ab048b61b3b6789e67c5b906ebc8369f33ea6b04a30e05aed22bc2ef": {
-          "added": 1778788930000,
+          "added": 1778848682000,
           "file": {
-            "name": "/all-miner_v1.2.1.apk",
+            "name": "/All-Miner-v1.2.1.apk",
             "sha256": "85f31082ab048b61b3b6789e67c5b906ebc8369f33ea6b04a30e05aed22bc2ef",
             "size": 11188546
           },
@@ -130,12 +147,15 @@
                 "name": "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
               }
             ]
+          },
+          "whatsNew": {
+            "en-US": "Initial release of All Miner!\n- Native RandomX engine integration.\n- unMineable pool support.\n- Multi-thread support with adjustable intensity.\n- Intelligent battery and heat protection.\n- Modern Material 3 design.\n- Added persistent settings: your wallet address, pool URL, and selected coin are now saved automatically.\n- Improved Dashboard: comprehensive overview of mining status, battery level, device temperature, and total hashes.\n- Expanded cryptocurrency support: added many more coins for u"
           }
         },
         "1ae23a15f05059d4611a4d5141d2ba5481d82d0da58c317a79f02f02fe2895da": {
-          "added": 1778778647000,
+          "added": 1778848679000,
           "file": {
-            "name": "/all-miner_v1.2.0.apk",
+            "name": "/All-Miner-v1.2.0.apk",
             "sha256": "1ae23a15f05059d4611a4d5141d2ba5481d82d0da58c317a79f02f02fe2895da",
             "size": 11188546
           },
@@ -174,12 +194,15 @@
                 "name": "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
               }
             ]
+          },
+          "whatsNew": {
+            "en-US": "- Added Foreground Service for mining\n"
           }
         },
         "1bd7623f09a16f87012e89013728abb09d5cb4a3dde7ef3723cbc44b992e6aed": {
-          "added": 1778770585000,
+          "added": 1778848672000,
           "file": {
-            "name": "/all-miner_v1.1.0.apk",
+            "name": "/All-Miner-v1.1.0.apk",
             "sha256": "1bd7623f09a16f87012e89013728abb09d5cb4a3dde7ef3723cbc44b992e6aed",
             "size": 11188546
           },
@@ -209,21 +232,32 @@
                 "name": "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
               }
             ]
+          },
+          "whatsNew": {
+            "en-US": "- Added persistent settings: your wallet address, pool URL, and selected coin are now saved automatically.\n- Improved Dashboard: comprehensive overview of mining status, battery level, device temperature, and total hashes.\n- Expanded cryptocurrency support: added many more coins for unMineable pools.\n- UI/UX improvements: added scrolling support for smaller screens and redesigned the mining interface.\n- Stability fixes and optimized multi-threading logic.\n"
           }
         }
       }
     },
     "com.freetime.geoweather": {
       "metadata": {
-        "added": 1773996803000,
+        "added": 1778848701000,
         "categories": [
           "Weather"
         ],
         "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
         "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
-        "lastUpdated": 1778432759000,
+        "lastUpdated": 1778848729000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
+        "translation": "https://translate.codeberg.org/engage/geoweather",
+        "featureGraphic": {
+          "en-US": {
+            "name": "/com.freetime.geoweather/en-US/featureGraphic_tWlD212zCMmK9tm0m6_Ig7ZI6WZhdbMyKPeIyB76NOI=.png",
+            "sha256": "b56943db5db308c98af6d9b49bafc883b648e9666175b33228f788c81efa34e2",
+            "size": 61500
+          }
+        },
         "screenshots": {
           "phone": {
             "en-US": [
@@ -251,7 +285,7 @@
           }
         },
         "authorEmail": "jamieachatz@gmail.com",
-        "authorName": "FreetimeMaker",
+        "authorName": "Freetime Maker",
         "authorWebSite": "https://freetimemaker.github.io/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
         "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
@@ -261,16 +295,26 @@
         "summary": {
           "en-US": "Modern weather app with 3 to 7-day forecast for multiple cities"
         },
+        "description": {
+          "en-US": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n🌟 KEY FEATURES:\n\n🏙️ MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n📅 3 to 7-DAY FORECAST\n- Detailed weather predictions for the entire week (With Premium Plan)\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n⏰ HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n🎨 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n🔔 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n💳 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n- More Saving and more Features (With Premium Plan)\n\n🛠️ MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n"
+        },
         "donate": [
           "https://freetimemaker.github.io/Donation-Web"
         ],
+        "icon": {
+          "en-US": {
+            "name": "/com.freetime.geoweather/en-US/icon_95fAk10b9h0deFCkPXjOdkpNqkqEa9_p1wWYQJleL_Q=.png",
+            "sha256": "f797c0935d1bf61d1d7850a43d78ce764a4daa4a846bdfe9d7059840995e2ff4",
+            "size": 222832
+          }
+        },
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
         "7ebfedd44d2c7d47880972b1e40572e143d05fd1b0b5c4ed9838b5ef955f7a74": {
-          "added": 1778432759000,
+          "added": 1778848729000,
           "file": {
-            "name": "/geoweather_v1.7.2.apk",
+            "name": "/GeoWeather-v1.7.2.apk",
             "sha256": "7ebfedd44d2c7d47880972b1e40572e143d05fd1b0b5c4ed9838b5ef955f7a74",
             "size": 24174659
           },
@@ -323,13 +367,18 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {}
+            "TetheredNet": {
+              "en-US": "Rely on geo-weather-api.vercel.app."
+            }
+          },
+          "whatsNew": {
+            "en-US": "• Fix: Fixed Home screen weather display issues by switching to ID-based location lookups.\n• Fix: Resolved persistent loading issues with improved provider fallbacks.\n• Auth: Improved GitHub/Modrinth login reliability and automated profile syncing.\n• UI: Added manual refresh button to the Home screen for instant updates.\n"
           }
         },
         "1cbb18c0d8e8404893a1235918440d2839f84a380136b2d7560ebcc9d788b433": {
-          "added": 1778360188000,
+          "added": 1778848713000,
           "file": {
-            "name": "/geoweather_v1.7.1.apk",
+            "name": "/GeoWeather-v1.7.1.apk",
             "sha256": "1cbb18c0d8e8404893a1235918440d2839f84a380136b2d7560ebcc9d788b433",
             "size": 24174659
           },
@@ -382,13 +431,18 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {}
+            "TetheredNet": {
+              "en-US": "Rely on geo-weather-api.vercel.app."
+            }
+          },
+          "whatsNew": {
+            "en-US": "• Fix: Resolved weather loading issues by adding robust fallbacks to Open-Meteo.\n• Fix: Home screen now correctly displays up-to-date weather data with automatic and manual refresh options.\n• Auth: Improved GitHub and Modrinth login stability and fixed deep-link redirection.\n• Icons: Added full icon support for Tomorrow.io, including day/night variations.\n• Stability: Enhanced local database caching to ensure weather data is available instantly.\n"
           }
         },
         "b14123eb2796df0a2ab44dcde683b1d42d125352fc14efed53fe060e824bf932": {
-          "added": 1778345856000,
+          "added": 1778848701000,
           "file": {
-            "name": "/geoweather_v1.7.0.apk",
+            "name": "/GeoWeather-v1.7.0.apk",
             "sha256": "b14123eb2796df0a2ab44dcde683b1d42d125352fc14efed53fe060e824bf932",
             "size": 24174659
           },
@@ -441,23 +495,33 @@
             ]
           },
           "antiFeatures": {
-            "TetheredNet": {}
+            "TetheredNet": {
+              "en-US": "Rely on geo-weather-api.vercel.app."
+            }
           }
         }
       }
     },
     "com.freetime.ssmpc": {
       "metadata": {
-        "added": 1778761262000,
+        "added": 1778848753000,
         "categories": [
-          "Internet",
-          "Games"
+          "Games",
+          "Internet"
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1778844512000,
+        "lastUpdated": 1778848808000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
+        "translation": "https://translate.codeberg.org/engage/supersmp-companion",
+        "featureGraphic": {
+          "en-US": {
+            "name": "/com.freetime.ssmpc/en-US/featureGraphic_8Xfl9KwSr7cCBQh5azFC0kEqAchYdsmiZjzaJ53As_M=.png",
+            "sha256": "f177e5f4ac12afb7020508796b3142d2412a01c85876c9a2663cda279dc0b3f3",
+            "size": 409651
+          }
+        },
         "screenshots": {
           "phone": {
             "en-US": [
@@ -480,7 +544,7 @@
           }
         },
         "authorEmail": "jamieachatz@gmail.com",
-        "authorName": "FreetimeMaker",
+        "authorName": "Freetime Maker",
         "authorWebSite": "https://freetimemaker.github.io/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
         "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
@@ -490,16 +554,66 @@
         "summary": {
           "en-US": "Vote, shop & explore SuperSMP anywhere! Companion app for server features"
         },
+        "description": {
+          "en-US": "The Ultimate SuperSMP Companion App - Your Server, Everywhere!\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\nKEY FEATURES:\n\nSMART VOTING SYSTEM\n- Vote for the SuperSMP server directly from your phone\n- Quick access to all voting platforms\n- Track your voting history and rewards\n- Never miss daily vote rewards again\n\nINTEGRATED SHOP ACCESS\n- Browse the official SuperSMP shop catalog\n- View detailed item descriptions and pricing\n- Make secure purchases on-the-go\n- Real-time inventory updates\n\nINTERACTIVE SERVER MAP\n- Access the official SuperSMP world map\n- Real-time player locations and activity\n- Navigate spawn, warps, and key locations\n- Perfect for exploration and planning\n\nMODERN USER INTERFACE\n- Built with Jetpack Compose for smooth animations\n- Material Design 3 with dark/light themes\n- Intuitive navigation optimized for mobile\n- Responsive design for all screen sizes\n\nTECHNICAL EXCELLENCE\n- Kotlin-first development for performance\n- Modern architecture with MVVM pattern\n- Regular updates with new features\n- Optimized for battery life and performance\n\nMOBILE OPTIMIZATIONS\n- Fast loading times even on slower connections\n- Offline mode for cached content\n- Push notifications for server events (coming soon)\n- Designed for Android 7.0 and above\n\nWHY CHOOSE THIS APP?\n\nFREE & OPEN SOURCE - No hidden costs or subscriptions\nSECURE - Your data and accounts are protected\nREGULARLY UPDATED - New features and improvements monthly\nCOMMUNITY DRIVEN - Features requested by players like you\nAD-FREE EXPERIENCE - Focus on what matters: your gameplay\n\nPERFECT FOR:\n\nDaily voters who want to maximize rewards\nShop enthusiasts who browse items frequently\nExplorers who need map access on-the-go\nCommunity members who stay connected\nPlayers who want convenience without compromise\n\nIMPORTANT NOTE:\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\nSYSTEM REQUIREMENTS:\nAndroid 7.0 (API 24) or higher\n50MB free storage space\nInternet connection for real-time features\n\nUPCOMING FEATURES:\nPlayer statistics tracking\nIn-game chat integration\nPush notifications for server events\nMulti-language support\nOffline mode enhancements\n\nCOMMUNITY SUPPORT:\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level!\n"
+        },
         "donate": [
           "https://freetimemaker.github.io/Donation-Web"
         ],
+        "icon": {
+          "en-US": {
+            "name": "/com.freetime.ssmpc/en-US/icon_64Vra-riQhIqiqXNsaW3plQAeGW8X8Z9A0ZR_clonRQ=.png",
+            "sha256": "eb856b6beae242122a8aa5cdb1a5b7a654007865bc5fc67d034651fdc9689d14",
+            "size": 176902
+          }
+        },
         "preferredSigner": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
       },
       "versions": {
-        "c8a62d43d2ffc6b6b757f8a225956edb7a4cd6e4985474662486c204ac4716a1": {
-          "added": 1778782702000,
+        "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a": {
+          "added": 1778848808000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.4.2.apk",
+            "name": "/SSMPC-v1.4.3.apk",
+            "sha256": "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a",
+            "size": 15635349
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.4.3",
+            "versionCode": 17,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "NonFreeNet": {
+              "en-US": "Depends on supersmp.fun server"
+            }
+          }
+        },
+        "c8a62d43d2ffc6b6b757f8a225956edb7a4cd6e4985474662486c204ac4716a1": {
+          "added": 1778848785000,
+          "file": {
+            "name": "/SSMPC-v1.4.2.apk",
             "sha256": "c8a62d43d2ffc6b6b757f8a225956edb7a4cd6e4985474662486c204ac4716a1",
             "size": 15545064
           },
@@ -529,12 +643,20 @@
                 "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
               }
             ]
+          },
+          "antiFeatures": {
+            "NonFreeNet": {
+              "en-US": "Depends on supersmp.fun server"
+            }
+          },
+          "whatsNew": {
+            "en-US": "• Fixed Icon pixeling"
           }
         },
         "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636": {
-          "added": 1778782701000,
+          "added": 1778848753000,
           "file": {
-            "name": "/supersmp-compaion-app_v1.4.1.apk",
+            "name": "/SSMPC-v1.4.1.apk",
             "sha256": "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636",
             "size": 15545064
           },
@@ -564,41 +686,11 @@
                 "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
               }
             ]
-          }
-        },
-        "49efc5f8fa9d1c42fd3dfb7c08527be1d1cbef0ea1ff44f3fca41a3db56c8579": {
-          "added": 1778782701000,
-          "file": {
-            "name": "/supersmp-compaion-app_v1.4.0.apk",
-            "sha256": "49efc5f8fa9d1c42fd3dfb7c08527be1d1cbef0ea1ff44f3fca41a3db56c8579",
-            "size": 15545064
           },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "1.4.0",
-            "versionCode": 14,
-            "usesSdk": {
-              "minSdkVersion": 24,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              }
-            ]
+          "antiFeatures": {
+            "NonFreeNet": {
+              "en-US": "Depends on supersmp.fun server"
+            }
           }
         }
       }

@@ -17,6 +17,32 @@ RepoType: git
 Repo: https://github.com/FreetimeMaker/All-Miner.git
 
 Builds:
+  - versionName: 1.1.0
+    versionCode: 2
+    commit: f4c183628e0685d49414c580556c03ca326d91d7
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/jniLibs/arm64-v8a/librandomx.a
+      - app/src/main/jniLibs/armeabi-v7a/librandomx.a
+      - app/src/main/jniLibs/x86/librandomx.a
+      - app/src/main/jniLibs/x86_64/librandomx.a
+    ndk: 30.0.14904198
+
+  - versionName: 1.2.0
+    versionCode: 3
+    commit: f4c183628e0685d49414c580556c03ca326d91d7
+    subdir: app
+    gradle:
+      - yes
+    scanignore:
+      - app/src/main/jniLibs/arm64-v8a/librandomx.a
+      - app/src/main/jniLibs/armeabi-v7a/librandomx.a
+      - app/src/main/jniLibs/x86/librandomx.a
+      - app/src/main/jniLibs/x86_64/librandomx.a
+    ndk: 30.0.14904198
+
   - versionName: 1.2.1
     versionCode: 4
     commit: f4c183628e0685d49414c580556c03ca326d91d7
