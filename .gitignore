@@ -1,3 +1,5 @@
 tmp/
 fdroid/repo/status
 fdroidserver
+repo/
+srclibs/

@@ -1,5 +1,5 @@
-sdk_path: /usr/lib/android-sdk
-apksigner: "/home/runner/android-sdk/build-tools/34.0.0/apksigner"
+sdk_path: /usr/local/lib/android/sdk
+apksigner: /usr/local/lib/android/sdk/build-tools/37.0.0/apksigner
 
 repo_icon: icon.png
 repo_name: Freetime Repo

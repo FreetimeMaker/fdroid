@@ -63,7 +63,7 @@ jobs:
 
       - name: Update F-Droid Repository
         run: |
-          fdroid update --pretty --delete-unknown
+          fdroid update --pretty --delete-unknown --verbose --config ./fdroid/config.yml
 
       # ---------------------------------------------------------
       # Build Jekyll site

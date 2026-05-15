@@ -63,5 +63,5 @@ AllowedAPKSigningKeys: fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 1.4.2
-CurrentVersionCode: 16
+CurrentVersion: 1.4.3
+CurrentVersionCode: 17
