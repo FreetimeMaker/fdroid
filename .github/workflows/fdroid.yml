@@ -1,4 +1,4 @@
-name: Build F-Droid Repo & Deploy Jekyll to GitHub Pages
+name: Build F-Droid Repo Page & Deploy Jekyll to GitHub Pages
 
 on:
   push:
@@ -19,52 +19,10 @@ concurrency:
 jobs:
 
   build_fdroid:
-    name: "Build F-Droid Repo"
+    name: "Build F-Droid Repo Page"
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # ---------------------------------------------------------
-      # CACHING
-      # ---------------------------------------------------------
-
-      - name: Cache Android SDK
-        uses: actions/cache@v4
-        with:
-          path: ~/android-sdk
-          key: android-sdk-cache
-
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-cache
-
-      # ---------------------------------------------------------
-      # Install dependencies
-      # ---------------------------------------------------------
-
-      - name: Install system packages
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y git wget unzip imagemagick aapt yq
-
-      - name: Install fdroidserver
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install fdroidserver androguard==4.1.1
-
-      - name: Set up repo secrets
-        run: |
-          echo "./fdroid/keystore.p12"
-          echo "./fdroid/config.yml"
-
-      - name: Update F-Droid Repository
-        run: |
-          fdroid update --pretty --delete-unknown --verbose --config ./fdroid/config.yml
-
       # ---------------------------------------------------------
       # Build Jekyll site
       # ---------------------------------------------------------
