@@ -1,9 +1,12 @@
 {
   "repo": {
-    "categories": null,
-    "timestamp": 1778849807000
+    "timestamp": 1778932179000
   },
   "packages": {
-    "com.freetime.allminer": null
+    "com.freetime.allminer": {
+      "metadata": {
+        "lastUpdated": 1778932179000
+      }
+    }
   }
 }
