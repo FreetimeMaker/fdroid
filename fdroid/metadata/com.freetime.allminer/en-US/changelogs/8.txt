@@ -1,0 +1,14 @@
+Initial release of All Miner!
+- Native RandomX engine integration.
+- unMineable pool support.
+- Multi-thread support with adjustable intensity.
+- Intelligent battery and heat protection.
+- Modern Material 3 design.
+- Added persistent settings: your wallet address, pool URL, and selected coin are now saved automatically.
+- Improved Dashboard: comprehensive overview of mining status, battery level, device temperature, and total hashes.
+- Expanded cryptocurrency support: added many more coins for unMineable pools.
+- UI/UX improvements: added scrolling support for smaller screens and redesigned the mining interface.
+- Stability fixes and optimized multi-threading logic.
+- Added Foreground Service for mining
+- Fixed a Few Errors
+- Fixed F-Droid Builds
