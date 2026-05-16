@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1778933230000,
+    "timestamp": 1778949737000,
     "categories": {
       "Money": {
         "name": {
@@ -32,7 +32,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/All-Miner/releases",
         "issueTracker": "https://github.com/FreetimeMaker/All-Miner/issues",
-        "lastUpdated": 1778932179000,
+        "lastUpdated": 1778949737000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/All-Miner",
         "authorEmail": "jamieachatz@gmail.com",
@@ -49,6 +49,50 @@
         "preferredSigner": "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459"
       },
       "versions": {
+        "85f31082ab048b61b3b6789e67c5b906ebc8369f33ea6b04a30e05aed22bc2ef": {
+          "added": 1778848682000,
+          "file": {
+            "name": "/All-Miner-v1.2.1.apk",
+            "sha256": "85f31082ab048b61b3b6789e67c5b906ebc8369f33ea6b04a30e05aed22bc2ef",
+            "size": 11188546
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.2.1",
+            "versionCode": 4,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 35
+            },
+            "signer": {
+              "sha256": [
+                "583b6046a1b104d41632c8ac2b7e86d5e23441bce18c54ddeef7041c0fdbc459"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE_DATA_SYNC"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "1ae23a15f05059d4611a4d5141d2ba5481d82d0da58c317a79f02f02fe2895da": {
           "added": 1778848679000,
           "file": {
