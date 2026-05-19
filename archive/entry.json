@@ -1,0 +1,66 @@
+{
+  "timestamp": 1779209267000,
+  "version": 20002,
+  "index": {
+    "name": "/index-v2.json",
+    "sha256": "3bb49e479348015ad8b4bfe0e976e8624fe479726323e8c07efdbf3ffa87edd4",
+    "size": 12763,
+    "numPackages": 2
+  },
+  "diffs": {
+    "1778848808000": {
+      "name": "/diff/1778848808000.json",
+      "sha256": "ee350171cbb84401bab8eef33a8f630ecb9cfa3e50b8660f1e77a1d2fa7bd526",
+      "size": 8882,
+      "numPackages": 2
+    },
+    "1778849716000": {
+      "name": "/diff/1778849716000.json",
+      "sha256": "2106f5e8d65df18e737adac0f4dda5698164dd52b3edef2332a8fcddb832c1f7",
+      "size": 12300,
+      "numPackages": 2
+    },
+    "1778849807000": {
+      "name": "/diff/1778849807000.json",
+      "sha256": "2106f5e8d65df18e737adac0f4dda5698164dd52b3edef2332a8fcddb832c1f7",
+      "size": 12300,
+      "numPackages": 2
+    },
+    "1778932179000": {
+      "name": "/diff/1778932179000.json",
+      "sha256": "ee350171cbb84401bab8eef33a8f630ecb9cfa3e50b8660f1e77a1d2fa7bd526",
+      "size": 8882,
+      "numPackages": 2
+    },
+    "1778933230000": {
+      "name": "/diff/1778933230000.json",
+      "sha256": "ee350171cbb84401bab8eef33a8f630ecb9cfa3e50b8660f1e77a1d2fa7bd526",
+      "size": 8882,
+      "numPackages": 2
+    },
+    "1778949737000": {
+      "name": "/diff/1778949737000.json",
+      "sha256": "12d29a39bd3cf11d01485db1e767a59d83f72186b60b68e6731722da006405ac",
+      "size": 7486,
+      "numPackages": 2
+    },
+    "1778951382000": {
+      "name": "/diff/1778951382000.json",
+      "sha256": "0e83a03be1bdd435a6c22074965cb6c5c2e74fea028fff797972fbf3efe69036",
+      "size": 6090,
+      "numPackages": 2
+    },
+    "1778954591000": {
+      "name": "/diff/1778954591000.json",
+      "sha256": "b5d5839f958e5c37017acc2b2b2f8e09e640d441072ccd250a3ed689379b0d14",
+      "size": 4694,
+      "numPackages": 2
+    },
+    "1779022287000": {
+      "name": "/diff/1779022287000.json",
+      "sha256": "99dd8f964af060c58205a244af9c766e08f70cc4a94fed8d67d760cb750bd77a",
+      "size": 3167,
+      "numPackages": 1
+    }
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "repo": {
+    "timestamp": 1779209274000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "metadata": {
+        "lastUpdated": 1779209267000
+      },
+      "versions": {
+        "b14123eb2796df0a2ab44dcde683b1d42d125352fc14efed53fe060e824bf932": null,
+        "7da88c07b67fdec769045b264facf5aec71df35dc9d3d8d730b40fa46a2ce1c2": {
+          "added": 1779209267000,
+          "file": {
+            "name": "/GeoWeather-v1.8.0.apk",
+            "sha256": "7da88c07b67fdec769045b264facf5aec71df35dc9d3d8d730b40fa46a2ce1c2",
+            "size": 24170676
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.8.0",
+            "versionCode": 55,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "TetheredNet": {
+              "en-US": "Rely on geo-weather-api.vercel.app."
+            }
+          }
+        }
+      }
+    }
+  }
+}
