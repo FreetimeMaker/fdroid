@@ -19,7 +19,7 @@
     "--delete-unknown"
   ],
   "disabled": [],
-  "endTimestamp": 1779209812865,
+  "endTimestamp": 1779210056219,
   "failedBuilds": {
     "com.freetime.geoweather": [
       7,
@@ -58,11 +58,10 @@
     ]
   },
   "fdroiddata": {
-    "commitId": "47fe330d5a2c58f456629ef49bb380c17c94036b",
+    "commitId": "2b58abb8c6df98c378f69eba508ec19b3d324d90",
     "isDirty": true,
     "modifiedFiles": [
-      ".github/workflows/website.yml",
-      "README.md"
+      "config.yml"
     ],
     "untrackedFiles": []
   },
@@ -72,17 +71,17 @@
   "noPackages": [],
   "noUpdateCheck": [],
   "stages": {
-    "archive_old_apks archive": 1779209800038,
-    "delete_disabled_builds": 1779209800032,
-    "index.make archive": 1779209800040,
-    "index.make repo": 1779209806028,
-    "prepare_apps archive": 1779209800039,
-    "prepare_apps repo": 1779209805993,
-    "process_apks": 1779209800033,
-    "read_added_date_from_all_apks": 1779209800037,
-    "remove_apks": 1779209800036,
-    "scan_repo_files": 1779209800035
+    "archive_old_apks archive": 1779210043946,
+    "delete_disabled_builds": 1779210043934,
+    "index.make archive": 1779210043948,
+    "index.make repo": 1779210051109,
+    "prepare_apps archive": 1779210043947,
+    "prepare_apps repo": 1779210051079,
+    "process_apks": 1779210043938,
+    "read_added_date_from_all_apks": 1779210043945,
+    "remove_apks": 1779210043941,
+    "scan_repo_files": 1779210043940
   },
-  "startTimestamp": 1779206199000,
+  "startTimestamp": 1779206443000,
   "subcommand": "update"
 }
