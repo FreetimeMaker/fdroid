@@ -1,7 +1,7 @@
 {
   "repo": {
     "name": {
-      "en-US": "Freetime Repo"
+      "en-US": "Freetime F-Droid Repo"
     },
     "description": {
       "en-US": "The official F-Droid repository by Freetime Maker. Providing the latest versions of apps like GeoWeather and SuperSMP Companion. Updates are published here directly and are often available much faster than in the main F-Droid Repository."
@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo",
-    "timestamp": 1779210051000,
+    "timestamp": 1779210350000,
     "categories": {
       "Games": {
         "name": {

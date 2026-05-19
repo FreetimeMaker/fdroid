@@ -1,7 +1,10 @@
 {
   "repo": {
+    "name": {
+      "en-US": "Freetime F-Droid Repo"
+    },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo",
-    "timestamp": 1779210051000
+    "timestamp": 1779210350000
   },
   "packages": {
     "com.freetime.allminer": {
