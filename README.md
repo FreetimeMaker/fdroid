@@ -6,23 +6,23 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This 
 <!-- This table is auto-generated. Do not edit -->
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |
-| <a href="https://github.com/FreetimeMaker/All-Miner"><img src="fdroid/repo/com.freetime.allminer/en-US/icon.png" alt="All Miner icon" width="36px" height="36px"></a> | [**All Miner**](https://github.com/FreetimeMaker/All-Miner) | Efficient Android crypto miner with RandomX support. | 1.3.1 (6) |
-| <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="fdroid/repo/com.freetime.geoweather/en-US/icon.png" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | Modern weather app with 3 to 7-day forecast for multiple cities | 1.7.2 (54) |
-| <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="fdroid/repo/com.freetime.ssmpc/en-US/icon.png" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features | 1.4.2 (16) |
+| <a href="https://github.com/FreetimeMaker/All-Miner"><img src="repo/com.freetime.allminer/en-US/icon.png" alt="All Miner icon" width="36px" height="36px"></a> | [**All Miner**](https://github.com/FreetimeMaker/All-Miner) | Efficient Android crypto miner with RandomX support. | 1.3.5 (10) |
+| <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="repo/com.freetime.geoweather/en-US/icon.png" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | Modern weather app with 3 to 7-day forecast for multiple cities | 1.8.0 (55) |
+| <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="repo/com.freetime.ssmpc/en-US/icon.png" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features | 1.4.3 (17) |
 <!-- end apps table -->
 
 ### How to use
 1. At first, you should [install the F-Droid app](https://f-droid.org/), it's an alternative app store for Android.
-2. Now you can copy the following [link](https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo), then add this repository to your F-Droid client:
+2. Now you can copy the following [link](https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo), then add this repository to your F-Droid client:
 
     ```
-    https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo
+    https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo
     ```
 
     Alternatively, you can also scan this QR code:
 
     <p align="center">
-      <img src="fdroid/repo/index.png?raw=true" alt="F-Droid repo QR code"/>
+      <img src="repo/index.png?raw=true" alt="F-Droid repo QR code"/>
     </p>
 
 3. Open the link in F-Droid. It will ask you to add the repository. Everything should already be filled in correctly, so just press "OK".
