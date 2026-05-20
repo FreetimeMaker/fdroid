@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1779280490000,
+    "timestamp": 1779280602000,
     "version": 20002,
     "name": "Freetime F-Droid Repo",
     "icon": "icon.png",
@@ -111,8 +111,8 @@
         "Internet"
       ],
       "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
-      "suggestedVersionName": "1.4.3",
-      "suggestedVersionCode": "17",
+      "suggestedVersionName": "1.4.4",
+      "suggestedVersionCode": "18",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
       "license": "Apache-2.0",
@@ -134,7 +134,7 @@
             "3.png"
           ],
           "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
-          "whatsNew": "\u2022 Fixed Hopefully the App Icon"
+          "whatsNew": "\u2022 Fixed the Monochrome Icon (Hopefully)"
         }
       }
     }

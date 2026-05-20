@@ -3,7 +3,7 @@
     "name": {
       "en-US": "Freetime F-Droid Repo"
     },
-    "timestamp": 1779280490000
+    "timestamp": 1779280602000
   },
   "packages": {
     "com.freetime.ssmpc": {
@@ -50,10 +50,7 @@
             "NonFreeNet": {
               "en-US": "Depends on supersmp.fun server"
             }
-          },
-          "releaseChannels": [
-            "Beta"
-          ]
+          }
         }
       }
     }

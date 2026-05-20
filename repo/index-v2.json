@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo",
-    "timestamp": 1779280490000,
+    "timestamp": 1779280602000,
     "categories": {
       "Games": {
         "name": {
@@ -617,10 +617,7 @@
             "NonFreeNet": {
               "en-US": "Depends on supersmp.fun server"
             }
-          },
-          "releaseChannels": [
-            "Beta"
-          ]
+          }
         },
         "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a": {
           "added": 1778848808000,

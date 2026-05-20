@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1779280486000,
+    "timestamp": 1779280598000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -90,8 +90,8 @@
         "Internet"
       ],
       "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
-      "suggestedVersionName": "1.4.3",
-      "suggestedVersionCode": "17",
+      "suggestedVersionName": "1.4.4",
+      "suggestedVersionCode": "18",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
       "license": "Apache-2.0",
