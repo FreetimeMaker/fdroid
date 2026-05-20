@@ -8,7 +8,7 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This 
 | --- | --- | --- | --- |
 | <a href="https://github.com/FreetimeMaker/All-Miner"><img src="repo/com.freetime.allminer/en-US/icon.png" alt="All Miner icon" width="36px" height="36px"></a> | [**All Miner**](https://github.com/FreetimeMaker/All-Miner) | Efficient Android crypto miner with RandomX support. | 1.3.5 (10) |
 | <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="repo/com.freetime.geoweather/en-US/icon.png" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | Modern weather app with 3 to 7-day forecast for multiple cities | 1.8.0 (55) |
-| <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="repo/com.freetime.ssmpc/en-US/icon.png" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features | 1.4.3 (17) |
+| <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="repo/com.freetime.ssmpc/en-US/icon.png" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features | 1.4.4 (18) |
 <!-- end apps table -->
 
 ### How to use
