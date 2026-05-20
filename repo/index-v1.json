@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1779210350000,
+    "timestamp": 1779280490000,
     "version": 20002,
     "name": "Freetime F-Droid Repo",
     "icon": "icon.png",
@@ -121,7 +121,7 @@
       "translation": "https://translate.codeberg.org/engage/supersmp-companion",
       "added": 1778848753000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1778848808000,
+      "lastUpdated": 1779280486000,
       "localized": {
         "en-US": {
           "description": "The Ultimate SuperSMP Companion App - Your Server, Everywhere!\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\nKEY FEATURES:\n\nSMART VOTING SYSTEM\n- Vote for the SuperSMP server directly from your phone\n- Quick access to all voting platforms\n- Track your voting history and rewards\n- Never miss daily vote rewards again\n\nINTEGRATED SHOP ACCESS\n- Browse the official SuperSMP shop catalog\n- View detailed item descriptions and pricing\n- Make secure purchases on-the-go\n- Real-time inventory updates\n\nINTERACTIVE SERVER MAP\n- Access the official SuperSMP world map\n- Real-time player locations and activity\n- Navigate spawn, warps, and key locations\n- Perfect for exploration and planning\n\nMODERN USER INTERFACE\n- Built with Jetpack Compose for smooth animations\n- Material Design 3 with dark/light themes\n- Intuitive navigation optimized for mobile\n- Responsive design for all screen sizes\n\nTECHNICAL EXCELLENCE\n- Kotlin-first development for performance\n- Modern architecture with MVVM pattern\n- Regular updates with new features\n- Optimized for battery life and performance\n\nMOBILE OPTIMIZATIONS\n- Fast loading times even on slower connections\n- Offline mode for cached content\n- Push notifications for server events (coming soon)\n- Designed for Android 7.0 and above\n\nWHY CHOOSE THIS APP?\n\nFREE & OPEN SOURCE - No hidden costs or subscriptions\nSECURE - Your data and accounts are protected\nREGULARLY UPDATED - New features and improvements monthly\nCOMMUNITY DRIVEN - Features requested by players like you\nAD-FREE EXPERIENCE - Focus on what matters: your gameplay\n\nPERFECT FOR:\n\nDaily voters who want to maximize rewards\nShop enthusiasts who browse items frequently\nExplorers who need map access on-the-go\nCommunity members who stay connected\nPlayers who want convenience without compromise\n\nIMPORTANT NOTE:\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\nSYSTEM REQUIREMENTS:\nAndroid 7.0 (API 24) or higher\n50MB free storage space\nInternet connection for real-time features\n\nUPCOMING FEATURES:\nPlayer statistics tracking\nIn-game chat integration\nPush notifications for server events\nMulti-language support\nOffline mode enhancements\n\nCOMMUNITY SUPPORT:\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level!\n",
@@ -446,6 +446,36 @@
     ],
     "com.freetime.ssmpc": [
       {
+        "added": 1779280486000,
+        "apkName": "SSMPC-v1.4.4.apk",
+        "hash": "6ab3bc0ef5e9d3e6c1a32f0aff891bc7c5f45f5be388b88cfe725d1797023a4b",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.ssmpc",
+        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
+        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
+        "size": 1829405,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 18,
+        "versionName": "1.4.4"
+      },
+      {
         "added": 1778848808000,
         "apkName": "SSMPC-v1.4.3.apk",
         "hash": "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a",
@@ -504,36 +534,6 @@
         ],
         "versionCode": 16,
         "versionName": "1.4.2"
-      },
-      {
-        "added": 1778848753000,
-        "apkName": "SSMPC-v1.4.1.apk",
-        "hash": "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636",
-        "hashType": "sha256",
-        "minSdkVersion": 24,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.ssmpc",
-        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
-        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
-        "size": 15545064,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 15,
-        "versionName": "1.4.1"
       }
     ]
   }

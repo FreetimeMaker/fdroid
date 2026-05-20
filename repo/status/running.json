@@ -19,7 +19,7 @@
     "--delete-unknown"
   ],
   "disabled": [],
-  "endTimestamp": 1779210355107,
+  "endTimestamp": 1779280495167,
   "failedBuilds": {
     "com.freetime.geoweather": [
       7,
@@ -58,12 +58,15 @@
     ]
   },
   "fdroiddata": {
-    "commitId": "4fa4ec40b87ed7223bbbfb15e2afa3d42e619e49",
+    "commitId": "c21f03361d12b58e3462795ac9c4107a7930dddc",
     "isDirty": true,
     "modifiedFiles": [
-      "config.yml"
+      "metadata/com.freetime.ssmpc/en-US/changelogs/default.txt"
     ],
-    "untrackedFiles": []
+    "untrackedFiles": [
+      "metadata/com.freetime.ssmpc/en-US/changelogs/18.txt",
+      "repo/SSMPC-v1.4.4.apk"
+    ]
   },
   "jarsigner": "/usr/lib/jvm/java-21-openjdk-amd64/bin/jarsigner",
   "keytool": "/usr/lib/jvm/java-21-openjdk-amd64/bin/keytool",
@@ -71,17 +74,17 @@
   "noPackages": [],
   "noUpdateCheck": [],
   "stages": {
-    "archive_old_apks archive": 1779210346320,
-    "delete_disabled_builds": 1779210346316,
-    "index.make archive": 1779210346321,
-    "index.make repo": 1779210350911,
-    "prepare_apps archive": 1779210346321,
-    "prepare_apps repo": 1779210350869,
-    "process_apks": 1779210346316,
-    "read_added_date_from_all_apks": 1779210346319,
-    "remove_apks": 1779210346319,
-    "scan_repo_files": 1779210346318
+    "archive_old_apks archive": 1779280486034,
+    "delete_disabled_builds": 1779280485198,
+    "index.make archive": 1779280486036,
+    "index.make repo": 1779280490830,
+    "prepare_apps archive": 1779280486035,
+    "prepare_apps repo": 1779280490785,
+    "process_apks": 1779280485199,
+    "read_added_date_from_all_apks": 1779280486033,
+    "remove_apks": 1779280486031,
+    "scan_repo_files": 1779280486030
   },
-  "startTimestamp": 1779206746000,
+  "startTimestamp": 1779276885000,
   "subcommand": "update"
 }

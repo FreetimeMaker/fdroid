@@ -4,7 +4,7 @@
       "en-US": "Freetime F-Droid Repo"
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo",
-    "timestamp": 1779210350000
+    "timestamp": 1779280490000
   },
   "packages": {
     "com.freetime.geoweather": {
@@ -73,6 +73,57 @@
               "en-US": "Rely on geo-weather-api.vercel.app."
             }
           }
+        }
+      }
+    },
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "lastUpdated": 1779280486000
+      },
+      "versions": {
+        "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636": null,
+        "6ab3bc0ef5e9d3e6c1a32f0aff891bc7c5f45f5be388b88cfe725d1797023a4b": {
+          "added": 1779280486000,
+          "file": {
+            "name": "/SSMPC-v1.4.4.apk",
+            "sha256": "6ab3bc0ef5e9d3e6c1a32f0aff891bc7c5f45f5be388b88cfe725d1797023a4b",
+            "size": 1829405
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.4.4",
+            "versionCode": 18,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "NonFreeNet": {
+              "en-US": "Depends on supersmp.fun server"
+            }
+          },
+          "releaseChannels": [
+            "Beta"
+          ]
         }
       }
     }

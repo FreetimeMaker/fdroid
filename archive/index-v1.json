@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1779210346000,
+    "timestamp": 1779280486000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -70,6 +70,40 @@
       "localized": {
         "en-US": {
           "name": "GeoWeather"
+        }
+      }
+    },
+    {
+      "allowedAPKSigningKeys": [
+        "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+      ],
+      "antiFeatures": [
+        "NonFreeNet"
+      ],
+      "authorEmail": "jamieachatz@gmail.com",
+      "authorName": "Freetime Maker",
+      "authorWebSite": "https://freetimemaker.github.io/",
+      "binaries": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk",
+      "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+      "categories": [
+        "Games",
+        "Internet"
+      ],
+      "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
+      "suggestedVersionName": "1.4.3",
+      "suggestedVersionCode": "17",
+      "donate": "https://freetimemaker.github.io/Donation-Web",
+      "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
+      "license": "Apache-2.0",
+      "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+      "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
+      "translation": "https://translate.codeberg.org/engage/supersmp-companion",
+      "added": 1778848753000,
+      "packageName": "com.freetime.ssmpc",
+      "lastUpdated": 1779280486000,
+      "localized": {
+        "en-US": {
+          "name": "SuperSMP Companion"
         }
       }
     }
@@ -375,6 +409,38 @@
         ],
         "versionCode": 52,
         "versionName": "1.7.0"
+      }
+    ],
+    "com.freetime.ssmpc": [
+      {
+        "added": 1778848753000,
+        "apkName": "SSMPC-v1.4.1.apk",
+        "hash": "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.ssmpc",
+        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
+        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
+        "size": 15545064,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 15,
+        "versionName": "1.4.1"
       }
     ]
   }
