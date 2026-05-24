@@ -19,7 +19,7 @@
     "--delete-unknown"
   ],
   "disabled": [],
-  "endTimestamp": 1779280846456,
+  "endTimestamp": 1779626377714,
   "failedBuilds": {
     "com.freetime.geoweather": [
       7,
@@ -58,31 +58,47 @@
     ]
   },
   "fdroiddata": {
-    "commitId": "62826e93d14d7c6c76fd74a3b01cf3024095ec5e",
+    "commitId": "b26ac192d92063a83a647e7de30db425878638a3",
     "isDirty": true,
     "modifiedFiles": [
-      ".github/workflows/website.yml",
       "README.md"
     ],
-    "untrackedFiles": []
+    "untrackedFiles": [
+      "metadata/com.freetime.dualist.yml",
+      "metadata/com.freetime.dualist/en-US/changelogs/1.txt",
+      "metadata/com.freetime.dualist/en-US/changelogs/default.txt",
+      "metadata/com.freetime.dualist/en-US/full_description.txt",
+      "metadata/com.freetime.dualist/en-US/short_description.txt",
+      "metadata/com.freetime.dualist/en-US/title.txt",
+      "repo/Dualist-v1.0.0.apk",
+      "repo/com.freetime.dualist/en-US/featureGraphic.png",
+      "repo/com.freetime.dualist/en-US/icon.png",
+      "repo/com.freetime.dualist/en-US/phoneScreenshots/1.png",
+      "repo/com.freetime.dualist/en-US/phoneScreenshots/2.png",
+      "repo/com.freetime.dualist/en-US/phoneScreenshots/3.png",
+      "repo/com.freetime.dualist/en-US/phoneScreenshots/4.png",
+      "repo/com.freetime.dualist/en-US/phoneScreenshots/5.png"
+    ]
   },
   "jarsigner": "/usr/lib/jvm/java-21-openjdk-amd64/bin/jarsigner",
   "keytool": "/usr/lib/jvm/java-21-openjdk-amd64/bin/keytool",
   "needsUpdate": [],
-  "noPackages": [],
+  "noPackages": [
+    "com.freetime.dualist"
+  ],
   "noUpdateCheck": [],
   "stages": {
-    "archive_old_apks archive": 1779280836556,
-    "delete_disabled_builds": 1779280836553,
-    "index.make archive": 1779280836558,
-    "index.make repo": 1779280841337,
-    "prepare_apps archive": 1779280836557,
-    "prepare_apps repo": 1779280841295,
-    "process_apks": 1779280836553,
-    "read_added_date_from_all_apks": 1779280836556,
-    "remove_apks": 1779280836555,
-    "scan_repo_files": 1779280836554
+    "archive_old_apks archive": 1779626357983,
+    "delete_disabled_builds": 1779626355948,
+    "index.make archive": 1779626357987,
+    "index.make repo": 1779626367692,
+    "prepare_apps archive": 1779626357986,
+    "prepare_apps repo": 1779626367551,
+    "process_apks": 1779626355948,
+    "read_added_date_from_all_apks": 1779626357983,
+    "remove_apks": 1779626357979,
+    "scan_repo_files": 1779626357978
   },
-  "startTimestamp": 1779277236000,
+  "startTimestamp": 1779622755000,
   "subcommand": "update"
 }

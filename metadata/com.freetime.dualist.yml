@@ -1,0 +1,25 @@
+Categories:
+  - Games
+  - Internet
+License: Apache-2.0
+AuthorName: Freetime Maker
+AuthorEmail: jamieachatz@gmail.com
+AuthorWebSite: https://freetimemaker.github.io/
+SourceCode: https://github.com/FreetimeMaker/Dualist
+IssueTracker: https://github.com/FreetimeMaker/Dualist/issues
+Changelog: https://github.com/FreetimeMaker/Dualist/releases
+Donate: https://freetimemaker.github.io/Donation-Web
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
+
+AutoName: Dualist
+
+RepoType: git
+Repo: https://github.com/FreetimeMaker/Dualist.git
+Binaries: 
+  https://github.com/FreetimeMaker/Dualist/releases/download/v%v/Dualist-v%v.apk
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 1
