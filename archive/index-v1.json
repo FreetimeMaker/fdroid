@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1779805109000,
+    "timestamp": 1779805343000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -24,8 +24,8 @@
         "Money"
       ],
       "changelog": "https://github.com/FreetimeMaker/All-Miner/releases",
-      "suggestedVersionName": "1.3.5",
-      "suggestedVersionCode": "10",
+      "suggestedVersionName": "1.3.6",
+      "suggestedVersionCode": "11",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/All-Miner/issues",
       "license": "Apache-2.0",

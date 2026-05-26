@@ -3,7 +3,7 @@
     "name": {
       "en-US": "Freetime F-Droid Repo"
     },
-    "timestamp": 1779805123000
+    "timestamp": 1779805350000
   },
   "packages": {
     "com.freetime.allminer": {
@@ -54,10 +54,7 @@
                 "name": "com.freetime.allminer.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
               }
             ]
-          },
-          "releaseChannels": [
-            "Beta"
-          ]
+          }
         }
       }
     },
