@@ -1,1 +1,1 @@
-• Deleted the Repository Files so Weather Data will be coming from the Weather Detail Activity again.
+• Reseted the WeatherDetailActivity and more to v1.3.8

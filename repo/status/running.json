@@ -1,89 +1,26 @@
 {
-  "antiFeatures": {
-    "NonFreeNet": {
-      "apps": [
-        "com.freetime.ssmpc"
-      ]
-    },
-    "TetheredNet": {
-      "apps": [
-        "com.freetime.geoweather"
-      ]
-    }
-  },
-  "apksigner": "/home/Jamie/Android/Sdk/build-tools/37.0.0/apksigner",
-  "archivePolicy0": [],
+  "/etc/issue.net": "Ubuntu 24.04.4 LTS",
   "commandLine": [
-    "/home/Jamie/.local/bin/fdroid update",
-    "--pretty",
-    "--delete-unknown"
+    "/home/codespace/.python/current/bin/fdroid update"
   ],
-  "disabled": [],
-  "endTimestamp": 1779805360199,
-  "failedBuilds": {
-    "com.freetime.geoweather": [
-      7,
-      10,
-      14,
-      16,
-      18,
-      20,
-      21,
-      22,
-      24,
-      25,
-      26,
-      27,
-      28,
-      29,
-      30,
-      32,
-      33,
-      34,
-      39,
-      40,
-      41,
-      42,
-      46,
-      47,
-      48,
-      49,
-      50
-    ],
-    "com.freetime.ssmpc": [
-      11,
-      12,
-      13,
-      14
-    ]
-  },
   "fdroiddata": {
-    "commitId": "1e759acbb561bd551bbbfdd1cfc0be169cfcded0",
+    "commitId": "a8389645dcc7b90fdb235b39c58edbc2a531eba9",
     "isDirty": true,
     "modifiedFiles": [
-      "metadata/com.freetime.allminer.yml"
+      "config.yml",
+      "metadata/com.freetime.geoweather.yml",
+      "metadata/com.freetime.geoweather/en-US/changelogs/default.txt",
+      "repo/status/running.json"
     ],
-    "untrackedFiles": []
+    "untrackedFiles": [
+      "metadata/com.freetime.geoweather/en-US/changelogs/56.txt",
+      "repo/GeoWeather-v1.8.1.apk"
+    ]
   },
-  "jarsigner": "/usr/lib/jvm/java-21-openjdk-amd64/bin/jarsigner",
-  "keytool": "/usr/lib/jvm/java-21-openjdk-amd64/bin/keytool",
-  "needsUpdate": [],
-  "noPackages": [
-    "com.freetime.dualist"
-  ],
-  "noUpdateCheck": [],
   "stages": {
-    "archive_old_apks archive": 1779805343509,
-    "delete_disabled_builds": 1779805343505,
-    "index.make archive": 1779805343512,
-    "index.make repo": 1779805350396,
-    "prepare_apps archive": 1779805343511,
-    "prepare_apps repo": 1779805350341,
-    "process_apks": 1779805343505,
-    "read_added_date_from_all_apks": 1779805343509,
-    "remove_apks": 1779805343507,
-    "scan_repo_files": 1779805343507
+    "delete_disabled_builds": 1779970089466,
+    "process_apks": 1779970089466
   },
-  "startTimestamp": 1779801743000,
+  "startTimestamp": 1779970089000,
   "subcommand": "update"
 }
