@@ -1,4 +1,5 @@
 {
+  "/etc/issue.net": "Ubuntu 24.04.4 LTS",
   "antiFeatures": {
     "NonFreeNet": {
       "apps": [
@@ -11,15 +12,15 @@
       ]
     }
   },
-  "apksigner": "/home/Jamie/Android/Sdk/build-tools/37.0.0/apksigner",
+  "apksigner": "/home/codespace/android-sdk/build-tools/34.0.0/apksigner",
   "archivePolicy0": [],
   "commandLine": [
-    "/home/Jamie/.local/bin/fdroid update",
+    "/home/codespace/.python/current/bin/fdroid update",
     "--pretty",
     "--delete-unknown"
   ],
   "disabled": [],
-  "endTimestamp": 1779805360199,
+  "endTimestamp": 1780046352839,
   "failedBuilds": {
     "com.freetime.geoweather": [
       7,
@@ -58,32 +59,33 @@
     ]
   },
   "fdroiddata": {
-    "commitId": "1e759acbb561bd551bbbfdd1cfc0be169cfcded0",
+    "commitId": "d209ab0cff553249071300a3af4a0e0c5dd0d835",
     "isDirty": true,
     "modifiedFiles": [
-      "metadata/com.freetime.allminer.yml"
+      "config.yml",
+      "repo/status/running.json"
     ],
     "untrackedFiles": []
   },
-  "jarsigner": "/usr/lib/jvm/java-21-openjdk-amd64/bin/jarsigner",
-  "keytool": "/usr/lib/jvm/java-21-openjdk-amd64/bin/keytool",
+  "jarsigner": "/usr/lib/jvm/java-17-openjdk-amd64/bin/jarsigner",
+  "keytool": "/usr/lib/jvm/java-17-openjdk-amd64/bin/keytool",
   "needsUpdate": [],
   "noPackages": [
     "com.freetime.dualist"
   ],
   "noUpdateCheck": [],
   "stages": {
-    "archive_old_apks archive": 1779805343509,
-    "delete_disabled_builds": 1779805343505,
-    "index.make archive": 1779805343512,
-    "index.make repo": 1779805350396,
-    "prepare_apps archive": 1779805343511,
-    "prepare_apps repo": 1779805350341,
-    "process_apks": 1779805343505,
-    "read_added_date_from_all_apks": 1779805343509,
-    "remove_apks": 1779805343507,
-    "scan_repo_files": 1779805343507
+    "archive_old_apks archive": 1780046342004,
+    "delete_disabled_builds": 1780046313669,
+    "index.make archive": 1780046342007,
+    "index.make repo": 1780046348167,
+    "prepare_apps archive": 1780046342006,
+    "prepare_apps repo": 1780046347944,
+    "process_apks": 1780046313670,
+    "read_added_date_from_all_apks": 1780046342004,
+    "remove_apks": 1780046330421,
+    "scan_repo_files": 1780046330420
   },
-  "startTimestamp": 1779801743000,
+  "startTimestamp": 1780046313000,
   "subcommand": "update"
 }
