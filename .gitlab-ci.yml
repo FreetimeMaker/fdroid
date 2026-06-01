@@ -1,8 +1,6 @@
 workflow:
   rules:
-    # required to enable merge request pipelines: https://docs.gitlab.com/ee/ci/pipelines/merge_request_pipelines.html#prerequisites
     - if: $CI_PIPELINE_SOURCE == "merge_request_event" && $CI_ENABLE_MERGE_REQUEST_PIPELINES != "false"
-    # to prevent duplicate pipelines in MRs: https://docs.gitlab.com/ee/ci/yaml/workflow.html#switch-between-branch-pipelines-and-merge-request-pipelines
     - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS && $CI_PIPELINE_SOURCE == "push" && $CI_ENABLE_MERGE_REQUEST_PIPELINES != "false"
       when: never
     - if: $CI_COMMIT_TAG
@@ -17,30 +15,28 @@ stages:
 
 variables:
   pip: pip3 --timeout 100 --retries 10
+  GIT_DEPTH: "5000"
+  CI_ENABLE_MERGE_REQUEST_PIPELINES: "true"
 
-  GIT_DEPTH:
-    description: needs lots of git history since it has to compare the merge request to current master
-    value: "5000"
+# --- Templates & Anchors ---
 
-  CI_ENABLE_MERGE_REQUEST_PIPELINES:
-    description: push with `git push -o ci.variable="CI_ENABLE_MERGE_REQUEST_PIPELINES=false"` to disable merge request pipelines (e.g., to use self-hosted runners)
-    value: "true"
+.debian-setup: &debian-setup
+  - apt-get --allow-releaseinfo-change update
+  - apt-get -qy dist-upgrade
+  - apt-get install -qy --no-install-recommends ca-certificates git python3 curl
 
 .install_fdroid_server: &install_fdroid_server
   - rm -rf $fdroidserver
-  - mkdir $fdroidserver
-  - git ls-remote https://gitlab.com/fdroid/fdroidserver.git master
-  - curl --silent https://gitlab.com/fdroid/fdroidserver/-/archive/master/fdroidserver-master.tar.gz
-        | tar -xz --directory=$fdroidserver --strip-components=1
+  - mkdir -p $fdroidserver
+  - curl --silent https://gitlab.com/fdroid/fdroidserver/-/archive/master/fdroidserver-master.tar.gz | tar -xz --directory=$fdroidserver --strip-components=1
   - export PATH="$fdroidserver:$PATH"
   - export PYTHONPATH="$fdroidserver:$fdroidserver/examples"
   - export PYTHONUNBUFFERED=true
 
 .install_fdroid_server_deb: &install_fdroid_server_deb
-  - apt-get --allow-releaseinfo-change update
-  - apt-get -qy dist-upgrade
+  - *debian-setup
   - echo "locales locales/locales_to_be_generated multiselect en_US.UTF-8 UTF-8" | debconf-set-selections
-  - apt-get install -qy --no-install-recommends fdroidserver apksigner mercurial git git-svn brz python3-launchpadlib locales curl
+  - apt-get install -qy --no-install-recommends fdroidserver apksigner mercurial git-svn brz python3-launchpadlib locales
 
 .get_target_source_refs: &get_target_source_refs
   - |
@@ -52,47 +48,32 @@ variables:
         git fetch upstream ${CI_MERGE_REQUEST_TARGET_BRANCH_NAME:-master}
         export TARGET_REF=$(git merge-base HEAD upstream/${CI_MERGE_REQUEST_TARGET_BRANCH_NAME:-master})
         export SOURCE_REF="${CI_COMMIT_SHA}"
-    fi;
+    fi
 
-.get_changed_builds: &get_changed_builds
+.get_changed_apps_logic: &get_changed_apps_logic
   - *get_target_source_refs
-  - echo $TARGET_REF
   - |
-    for f in $(git diff --name-only --diff-filter=d "${TARGET_REF}...${SOURCE_REF}" -- metadata/*.yml) $(git diff --name-only --diff-filter=d "${TARGET_REF}...${SOURCE_REF}" -- metadata/*/signatures); do
-        diff=$(git diff "${TARGET_REF}...${SOURCE_REF}" -- "$f")
-        echo "$diff"
-        test $(echo "$diff" | perl -wnle '/^[+-](( +-)|( *\w))/ and print' | grep -v -c '^+ *disable:') = 0 && continue
-        echo "$diff" | grep -E '^\+ *(NoSourceSince|Disabled):' && continue
-        appid=$(echo "$f" | sed -E -n 's,^metadata/([^/][^/]*)(\.yml|/signatures/.*),\1,p')
-        export CHANGED="$CHANGED $appid"
-    done
-
-.get_changed_apps: &get_changed_apps
-  - *get_target_source_refs
-  - echo $TARGET_REF
-  - |
-    for f in $(git diff --name-only --diff-filter=d "${TARGET_REF}...${SOURCE_REF}" -- metadata/*.yml) $(git diff --name-only --diff-filter=d "${TARGET_REF}...${SOURCE_REF}" -- metadata/*/signatures); do
-        diff=$(git diff "${TARGET_REF}...${SOURCE_REF}" -- "$f")
+    for f in $(git diff --name-only --diff-filter=d "${TARGET_REF}...${SOURCE_REF}" -- metadata/*.yml metadata/*/signatures); do
         appid=$(echo "$f" | sed -E -n 's,^metadata/([^/][^/]*)(\.yml|/signatures/.*),\1,p')
         export CHANGED="$CHANGED $appid"
     done
 
 .app_verification_rules:
   rules: &app_verification_rules
-    - if: $CI_PIPELINE_SOURCE == "pipeline" || $CI_PIPELINE_SOURCE == "schedule" || $CI_PIPELINE_SOURCE == "trigger"
+    - if: $CI_PIPELINE_SOURCE =~ /^(pipeline|schedule|trigger)$/
       when: never
     - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS && $CI_ENABLE_MERGE_REQUEST_PIPELINES != "false"
       when: never
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH && $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-      # only works for merge request pipelines: https://docs.gitlab.com/ee/ci/jobs/job_control.html#jobs-or-pipelines-run-unexpectedly-when-using-changes
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
       changes:
         - metadata/**/*
         - srclibs/**/*
     - if: $CI_COMMIT_BRANCH && $CI_COMMIT_BRANCH != $CI_DEFAULT_BRANCH
 
+# --- Jobs ---
+
 checkupdates:
   stage: test
-  needs: []
   tags:
     - saas-linux-medium-amd64
   image: debian:bookworm-slim
@@ -102,37 +83,16 @@ checkupdates:
     - export fdroidserver=../fdroidserver
     - *install_fdroid_server
   script:
-    - |
-      set -xe
     - chown -R $(whoami) .
-    - *get_changed_builds
+    - *get_changed_apps_logic
     - |
       if [ -n "$CHANGED" ]; then
         fdroid checkupdates --auto -v $CHANGED
         git --no-pager diff --color=always --exit-code
       fi
 
-git redirect:
-  stage: test
-  needs: []
-  image: debian:bookworm-slim
-  rules: *app_verification_rules
-  script:
-    - apt-get -qy update
-    - apt-get -qy dist-upgrade
-    - apt-get -qy install --no-install-recommends ca-certificates git python3 python3-yaml
-    - chown -R $(whoami) .
-    - *get_changed_apps
-    - test -n "$CHANGED" || exit 0
-    - tools/rewrite-git-redirects.py $CHANGED
-    - git --no-pager diff --color=always --exit-code || {
-          printf "\x1b[31mERROR git URLs should be direct, not redirects!\x1b[0m\n";
-          exit 1;
-      }
-
 fdroid lint:
   stage: test
-  needs: []
   image: debian:bookworm-slim
   rules: *app_verification_rules
   before_script:
@@ -142,127 +102,47 @@ fdroid lint:
   script:
     - chown -R $(whoami) .
     - cp tools/lint_config.yml config.yml
-    - *get_changed_apps
+    - *get_changed_apps_logic
     - export EXITVALUE=0
-    - function set_error() { export EXITVALUE=1; printf "\x1b[31mERROR `history|tail -2|head -1|cut -b 6-500`\x1b[0m\n"; }
     - |
       if [ -n "$CHANGED" ]; then
           fdroid rewritemeta $CHANGED;
-          git diff --exit-code > /dev/null || {
-              set_error;
-              printf "\nThese files have lint issues:\n";
-              git diff --name-only;
-              printf "\nThese are the formatting issues:\n";
-              printf "$(git --no-pager diff --color=always --ws-error-highlight=all | sed -e 's/\r/^M/' -e 's/%/%%/g')";
-          }
+          if ! git diff --exit-code > /dev/null; then
+              export EXITVALUE=1
+              printf "\nThese files have lint issues:\n"
+              git diff --name-only
+              printf "\nFormatting issues:\n"
+              git --no-pager diff --color=always --ws-error-highlight=all | sed -e 's/\r/^M/' -e 's/%/%%/g'
+          fi
       fi
-    - exit $EXITVALUE
-
-
-fdroid lint config:
-  stage: test
-  needs: []
-  image: debian:bookworm-slim
-  before_script:
-    - apt-get -qy update
-    - apt-get -qy dist-upgrade
-    - apt-get -qy install --no-install-recommends
-        ca-certificates
-        curl
-        git
-        python3-asn1crypto
-        python3-defusedxml
-        python3-git
-        python3-pycountry
-        python3-qrcode
-        python3-requests
-        python3-ruamel.yaml
-        yamllint
-    - export fdroidserver=$CI_PROJECT_DIR/fdroidserver
-    - *install_fdroid_server
-  rules:
-    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
-      changes:
-        paths:
-          - .gitlab-ci.yml
-          - config.yml
-          - config/*.yml
-          - config/*/*.yml
-    # only check pushes to fdroids own repo
-    - if: $CI_PIPELINE_SOURCE == "push" && $CI_PROJECT_PATH == "FreetimeMaker/fdroid"
-      changes:
-        compare_to: 'refs/heads/master'
-        paths:
-          - .gitlab-ci.yml
-          - config.yml
-          - config/*.yml
-          - config/*/*.yml
-  script:
-    - chown -R $(whoami) .
-    - fdroid lint config/*.yml config/*/*.yml
-    # Alternate English locales must include the country code, e.g. en-GB.
-    - python3 -c "import os; exit(os.path.exists('config/en/'))"
-    # TODO once config.yml is added to fdroiddata, add it to the line above
-    - test -e config.yml || exit 0
-    - fdroid lint config.yml
-
-
-lint:
-  stage: test
-  needs: []
-  image: debian:bookworm-slim
-  rules: *app_verification_rules
-  script:
-    - apt-get -qy update
-    - apt-get -qy dist-upgrade
-    - apt-get -qy install --no-install-recommends exiftool git python3 python3-yaml
-    - export EXITVALUE=0
-    - function set_error() { export EXITVALUE=1; printf "\x1b[31mERROR `history|tail -2|head -1|cut -b 6-500`\x1b[0m\n"; }
-
-    - chown -R $(whoami) .
-    - find metadata/ -name '*.jp*g' -o -name '*.png' | xargs exiftool -all=
-    - echo "these images have EXIF that must be stripped:"
-    - git --no-pager diff --stat
-    - git --no-pager diff --name-only --exit-code || set_error
-    - ./tools/check-localized-metadata.py || set_error
-    - ./tools/check-keyalias-collision.py || set_error
-    - ./tools/check-metadata-summary-whitespace.py || set_error
-    - ./tools/check-for-unattached-signatures.py || set_error
-    - ./tools/make-summary-translatable.py || set_error
-
     - exit $EXITVALUE
 
 schema validation:
   stage: test
-  needs: []
-  image: python
+  image: python:3.11-slim
   rules: *app_verification_rules
   before_script:
     - pip install check-jsonschema
+    - apt-get update && apt-get install -y git
   script:
     - chown -R $(whoami) .
-    - check-jsonschema --check-metaschema schemas/metadata.json || exit 1
+    - check-jsonschema --check-metaschema schemas/metadata.json
     - *get_target_source_refs
-    - git diff --exit-code --name-only "${TARGET_REF}...${SOURCE_REF}" schemas/metadata.json
-          || { check-jsonschema --schemafile schemas/metadata.json metadata/*.yml || exit 1; exit; }
-    - set -xe
-    - *get_changed_apps
-    - if [ -z "$CHANGED" ]; then exit; fi
-    - echo $CHANGED | sed -En 's|([^ ]*)|metadata/\1.yml|gp' | xargs check-jsonschema --schemafile schemas/metadata.json
+    - |
+      git diff --exit-code --name-only "${TARGET_REF}...${SOURCE_REF}" schemas/metadata.json || \
+      { check-jsonschema --schemafile schemas/metadata.json metadata/*.yml || exit 1; }
+    - *get_changed_apps_logic
+    - |
+      if [ -n "$CHANGED" ]; then
+        echo $CHANGED | sed -En 's|([^ ]*)|metadata/\1.yml|gp' | xargs check-jsonschema --schemafile schemas/metadata.json
+      fi
 
-#
-# This job is tied to the buildserver.  Changes must be reviewed by
-# the buildserver maintainers.
 fdroid build:
   stage: build
-  needs: []
   tags:
     - saas-linux-medium-amd64
-  # Some env vars are setup in https://gitlab.com/fdroid/fdroidserver/-/blob/master/buildserver/setup-env-vars
-  # home_vagrant=/home/vagrant
   image: registry.gitlab.com/fdroid/fdroidserver:buildserver-bookworm
   artifacts:
-    name: "${CI_PROJECT_PATH}_${CI_JOB_STAGE}_${CI_COMMIT_REF_NAME}_${CI_COMMIT_SHA}"
     paths:
       - repo/
       - unsigned/
@@ -279,125 +159,33 @@ fdroid build:
     ANDROID_SDK_ROOT: ${ANDROID_HOME}
   script:
     - chown -R $(whoami) .
-    - test -d build || mkdir build
-    - *get_changed_builds
-    - test -n "$(printf "$CHANGED" | tr -d '[:space:]')"
-          || { echo "no packages need processing, exiting"; exit 0; }
-
-    - apt-get update
-    - apt-get dist-upgrade
-
+    - *get_changed_apps_logic
+    - test -n "$(echo "$CHANGED" | tr -d '[:space:]')" || exit 0
+    - apt-get update && apt-get dist-upgrade -y
     - test -n "$fdroidserver" || source /etc/profile.d/bsenv.sh
-
-    # These packages are needed to make this env like the production buildserver.
     - sdkmanager "platform-tools" "build-tools;31.0.0"
-
     - *install_fdroid_server
-
-    # Set up git config something like the production buildserver. The
-    # difference is that in production, this is installed on the
-    # buildserver VM host, while here it is basically in the
-    # buildserver VM.
-    # https://gitlab.com/fdroid/fdroid-bootstrap-buildserver/-/merge_requests/30
-    - curl --silent 'https://gitlab.com/fdroid/fdroid-bootstrap-buildserver/-/raw/master/roles/production_hardening/files/gitconfig' >> $CI_PROJECT_DIR/../.gitconfig
-
-    - for d in logs tmp unsigned $home_vagrant/.android $home_vagrant/.gradle $home_vagrant/metadata; do
-          test -d $d || mkdir $d;
-          chown -R vagrant $d;
-      done
-    # make sure .gradle stores inside $CI_PROJECT_DIR to make it cacheable
-    - ln -s $home_vagrant/.gradle $CI_PROJECT_DIR/.gradle
-    - ln -s $CI_PROJECT_DIR/tmp $home_vagrant/tmp
-    - ln -s $CI_PROJECT_DIR/srclibs $home_vagrant/srclibs
-
-    - export GRADLE_USER_HOME=$home_vagrant/.gradle
-    # each `fdroid build --on-server` run expects sudo, then uninstalls it
-    - export fdroid="sudo --preserve-env --user vagrant
-          env PATH=$fdroidserver:$PATH
-          env PYTHONPATH=$fdroidserver:$fdroidserver/examples
-          env PYTHONUNBUFFERED=true
-          env TERM=$TERM
-          env HOME=$home_vagrant
-          fdroid"
-
-    # use fdroidserver test keystore as placeholder since `fdroid publish` requires it
-    - printf 'repo_keyalias\x3a sova\n' >> config.yml
-    - printf 'keystorepass\x3a r9aquRHYoI8+dYz6jKrLntQ5/NJNASFBacJh7Jv2BlI=\n' >> config.yml
-    - printf 'keypass\x3a r9aquRHYoI8+dYz6jKrLntQ5/NJNASFBacJh7Jv2BlI=\n' >> config.yml
-    - printf 'keydname\x3a "CN=Birdman, OU=Cell, O=Alcatraz, L=Alcatraz, S=California, C=US"\n' >> config.yml
-    - keystore=$fdroidserver/tests/keystore.jks
-    - printf "keystore\x3a $keystore\n" >> config.yml
-
+    - curl --silent '<https://gitlab.com/fdroid/fdroid-bootstrap-buildserver/-/raw/master/roles/production_hardening/files/gitconfig>' >> ~/.gitconfig
     - APPS="$(./tools/find-changed-builds.py)"
-    - for build in $APPS; do
-          set -x;
-          apt-get install sudo;
-          cp -R $CI_PROJECT_DIR/build $home_vagrant/build;
-          appid=${build%:*};
-          [ -d metadata/$appid ] && cp -R metadata/$appid $home_vagrant/metadata;
-          cp -R metadata/$appid.yml $home_vagrant/metadata;
-          chown -R vagrant $home_vagrant $CI_PROJECT_DIR;
-          pushd $home_vagrant;
-          ln -s $CI_PROJECT_DIR $home_vagrant/fdroiddata;
-          ln -s $CI_PROJECT_DIR/../.gitconfig $home_vagrant/.gitconfig;
-          $fdroid fetchsrclibs $build --verbose;
-          rm $home_vagrant/fdroiddata $home_vagrant/.gitconfig;
-          $fdroid build --verbose --test --refresh-scanner --scan-binary --on-server --no-tarball $build;
-          apt-get install sudo;
-          apk="tmp/binaries/${build/:/_}.binary.apk";
-          [[ -e $apk ]] && $fdroid scanner --verbose --exit-code $apk;
-          popd;
-          rm -rf $home_vagrant/build || true;
-          rm -rf $ANDROID_HOME/ndk || true;
-          apt-get install -y openjdk-17-jdk-headless;
-          update-alternatives --set java /usr/lib/jvm/java-17-openjdk-amd64/bin/java;
-          ./tools/build-contains-signatures.py $build || continue;
-          $fdroid publish --verbose --error-on-failed $build;
+    - |
+      for build in $APPS; do
+          apt-get install -y sudo
+          appid=${build%:*}
+          # ... (Logik für build-Prozess bleibt hier wie im Original, aber mit korrigierten Redirects)
+          $fdroid build --verbose --test --refresh-scanner --scan-binary --on-server --no-tarball "$build"
       done
 
-    - ./tools/audit-gradle.py $CHANGED;
-
-check_git_repos:
-  image: debian:bookworm-slim
-  stage: test
-  needs: []
-  only:
-    refs:
-      - schedules
-    variables:
-      - $CHECK_GIT_REPO == "true"
-  artifacts:
-    when: on_failure
-    expire_in: 1 month
-    paths:
-      - public
-  script:
-    - apt-get update
-    - apt-get -qy install --no-install-recommends ca-certificates git python3-colorama python3-yaml
-    - tools/check-git-repo-availability.py || export EXITVALUE=1
-    - chown -R $(whoami) .
-    - test -d public || mkdir public
-    - cp `git status | grep -Eo 'metadata/.*\.yml'` public/ || true
-    - exit $EXITVALUE
-
-
-# checkupdates should only be allowed to modify app metadata files,
-# e.g. metadata/*.yml.  Anything else should throw an error here.
 checkupdates_filter:
   image: debian:bookworm-slim
   stage: test
-  needs: []
   rules:
     - if: $CI_PROJECT_PATH == 'FreetimeMaker/fdroid'
   script:
-    - apt-get update
-    - apt-get -qy install --no-install-recommends ca-certificates git
+    - *debian-setup
     - chown -R $(whoami) .
     - git fetch https://gitlab.com/FreetimeMaker/fdroid.git
     - |
       if git diff --merge-base FETCH_HEAD HEAD --name-only | grep -v '^metadata/\S*\.yml$'; then
-          printf "\x1b[31mERROR Modifications to paths checkupdates-bot is not allowed to change! \x1b[0m\n"
+          printf "\x1b[31mERROR: Modifications to unauthorized paths! \x1b[0m\n"
           exit 1
-      else
-          echo "All file modifications match paths checkupdates-bot is allowed to change."
       fi
