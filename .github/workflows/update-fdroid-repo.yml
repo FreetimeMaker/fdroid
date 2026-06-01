@@ -1,0 +1,48 @@
+name: Update F-Droid Repo
+
+on:
+  schedule:
+    # Uhrzeit in UTC. Hier täglich um 03:00 UTC.
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Make update script executable
+        run: |
+          chmod +x .github/scripts/update-readme.py
+
+      - name: Update README from repo/index.xml and validate metadata
+        id: update
+        run: |
+          python .github/scripts/update-readme.py
+          echo "changed=$(git status --porcelain | wc -l)" >> $GITHUB_OUTPUT
+
+      - name: Create pull request for repo update
+        if: steps.update.outputs.changed != '0'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: 'chore: update F-Droid repo metadata and README'
+          branch: 'auto/fdroid-update-${{ github.run_number }}'
+          title: 'Auto-update F-Droid repo and README'
+          body: |
+            This pull request was created automatically by GitHub Actions.
+            It updates the README table from the current `repo/index.xml`, checks metadata for apps in `metadata/*.yml`, and commits any detected changes.
+          labels: 'auto-update'
+          assignees: ''
+          reviewers: ''
+          delete-branch: true
