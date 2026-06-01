@@ -1,0 +1,79 @@
+name: Build and Update F-Droid Repo
+
+on:
+  push:
+      branches: ["main"]
+  schedule:
+    # Täglich um 04:00 UTC
+    - cron: '0 4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install F-Droid Server and dependencies
+        run: |
+          pip install fdroidserver
+
+      - name: Install apksigner and Android SDK dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y apksigner
+          mkdir -p /home/Jamie/Android/Sdk/build-tools/37.0.0
+          sudo ln -sf $(which apksigner) /home/Jamie/Android/Sdk/build-tools/37.0.0/apksigner
+
+      - name: Run fdroid update to rebuild indexes
+        env:
+          FDROID_KEY_STORE_PASS: KKKKKK
+          FDROID_KEY_PASS: KKKKKK
+        run: |
+          cd ${{ github.workspace }}
+          fdroid update --verbose --delete-unknown --pretty
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add -A
+          if git diff-index --quiet HEAD --; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Commit and push changes
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: rebuild F-Droid repo indexes [skip ci]"
+          git push
+
+      - name: Run update-readme script
+        run: |
+          python .github/scripts/update-readme.py
+
+      - name: Commit README changes if any
+        id: readme_changes
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "readme_changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "readme_changed=true" >> $GITHUB_OUTPUT
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: update README from repo index [skip ci]"
+            git push
+          fi

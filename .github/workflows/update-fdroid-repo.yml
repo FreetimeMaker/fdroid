@@ -1,6 +1,8 @@
 name: Update F-Droid Repo
 
 on:
+  push:
+    branches: ["main"]
   schedule:
     # Uhrzeit in UTC. Hier täglich um 03:00 UTC.
     - cron: '0 3 * * *'
