@@ -1,10 +1,10 @@
 {
   "repo": {
-    "timestamp": 1780307317349,
-    "version": 30000,
+    "timestamp": 1780915198000,
+    "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
-    "description": "These are the apps that have been archived from the main repo.",
+    "description": "Dies sind die Apps, die aus dem Hauptrepository archiviert wurden.",
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/archive"
   },
   "requests": {
@@ -56,8 +56,8 @@
         "Weather"
       ],
       "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
-      "suggestedVersionName": "1.8.1",
-      "suggestedVersionCode": "56",
+      "suggestedVersionName": "1.9.0",
+      "suggestedVersionCode": "57",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
       "license": "Apache-2.0",
@@ -65,9 +65,8 @@
       "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
       "translation": "https://translate.codeberg.org/engage/geoweather",
       "added": 1778848701000,
-      "icon": "com.freetime.geoweather.53.png",
       "packageName": "com.freetime.geoweather",
-      "lastUpdated": 1780046313668,
+      "lastUpdated": 1780915169000,
       "localized": {
         "en-US": {
           "name": "GeoWeather"
@@ -395,6 +394,64 @@
       }
     ],
     "com.freetime.geoweather": [
+      {
+        "added": 1778848729000,
+        "apkName": "GeoWeather-v1.7.2.apk",
+        "hash": "7ebfedd44d2c7d47880972b1e40572e143d05fd1b0b5c4ed9838b5ef955f7a74",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.geoweather",
+        "sig": "affbe859dac99bd65c457093f896110d",
+        "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
+        "size": 24174659,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 54,
+        "versionName": "1.7.2"
+      },
       {
         "added": 1778848713000,
         "apkName": "GeoWeather-v1.7.1.apk",
