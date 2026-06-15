@@ -26,7 +26,7 @@ import (
 func main() {
 	var (
 		appsFilePath = flag.String("ap", "apps.yaml", "Path to apps.yaml file")
-		repoDir      = flag.String("rd", "fdroid/repo", "Path to fdroid \"repo\" directory")
+		repoDir      = flag.String("rd", "repo", "Path to fdroid \"repo\" directory")
 		accessToken  = flag.String("pat", "", "GitHub personal access token")
 
 		debugMode = flag.Bool("debug", false, "Debug mode won't run the fdroid command")

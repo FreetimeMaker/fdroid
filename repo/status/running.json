@@ -1,0 +1,13 @@
+{
+  "commandLine": [
+    "/home/Jamie/.local/bin/fdroid update",
+    "--pretty",
+    "--delete-unknown"
+  ],
+  "stages": {
+    "delete_disabled_builds": 1781540874000,
+    "process_apks": 1781540874000
+  },
+  "startTimestamp": 1781537273000,
+  "subcommand": "update"
+}

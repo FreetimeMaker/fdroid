@@ -31,7 +31,7 @@ jobs:
         with:
           repository: ${{ secrets.KEYSTORE_REPOSITORY }}
           token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
-          path: fdroid/
+          path: ./
 
       # ---------------------------------------------------------
       # CACHING
@@ -65,8 +65,8 @@ jobs:
 
       - name: Set up repo secrets
         run: |
-          echo "./fdroid/keystore.p12"
-          echo "./fdroid/config.yml"
+          echo "./keystore.p12"
+          echo "./config.yml"
 
       - name: Set up Go
         uses: actions/setup-go@v2
@@ -88,7 +88,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./fdroid/repo
+          source: ./repo
           destination: ./_site
 
       - name: Upload artifact

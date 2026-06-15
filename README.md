@@ -12,16 +12,16 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This 
 
 ### How to use
 1. At first, you should [install the F-Droid app](https://f-droid.org/), it's an alternative app store for Android.
-2. Now you can copy the following [link](https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo), then add this repository to your F-Droid client:
+2. Now you can copy the following [link](https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo), then add this repository to your F-Droid client:
 
     ```
-    https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo
+    https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/repo
     ```
 
     Alternatively, you can also scan this QR code:
 
     <p align="center">
-      <img src="fdroid/repo/index.png?raw=true" alt="F-Droid repo QR code"/>
+      <img src="repo/index.png?raw=true" alt="F-Droid repo QR code"/>
     </p>
 
 3. Open the link in F-Droid. It will ask you to add the repository. Everything should already be filled in correctly, so just press "OK".
