@@ -1,0 +1,33 @@
+AntiFeatures:
+  TetheredNet:
+    en-US: Rely on open-meteo.com.
+
+Categories:
+  - Weather
+
+License: Apache-2.0
+
+AuthorName: Freetime Maker
+AuthorEmail: jamieachatz@gmail.com
+AuthorWebSite: https://freetimemaker.github.io/
+
+SourceCode: https://github.com/FreetimeMaker/GeoWeather
+IssueTracker: https://github.com/FreetimeMaker/GeoWeather/issues
+Changelog: https://github.com/FreetimeMaker/GeoWeather/releases
+Donate: https://freetimemaker.github.io/Donation-Web
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
+
+ArchivePolicy: 0
+
+AutoName: GeoWeather
+
+RepoType: git
+Repo: https://github.com/FreetimeMaker/GeoWeather.git
+
+Binaries:
+  https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk
+
+Builds: []
+
+AutoUpdateMode: None

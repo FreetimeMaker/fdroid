@@ -1,0 +1,24 @@
+AllowedAPKSigningKeys: fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7
+AuthorEmail: jamieachatz@gmail.com
+AuthorName: FreetimeMaker
+AuthorWebSite: https://freetimemaker.github.io/
+AutoName: SuperSMP Companion
+AutoUpdateMode: Version
+Binaries: https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
+Categories:
+    - Internet
+    - Games
+Changelog: https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases
+CurrentVersion: 1.4.0
+CurrentVersionCode: 14
+Donate: https://freetimemaker.github.io/Donation-Web
+IssueTracker: https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues
+License: Apache-2.0
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
+Name: SuperSMP Companion
+Repo: https://github.com/FreetimeMaker/SuperSMP-Companion-App.git
+RepoType: git
+SourceCode: https://github.com/FreetimeMaker/SuperSMP-Companion-App
+Summary: Vote, shop & explore SuperSMP anywhere! Companion app for server features
+UpdateCheckMode: Tags

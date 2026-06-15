@@ -1,0 +1,14 @@
+## What's Changed
+
+- Added Darkmode
+- Added Dynamic Clor
+- Added more Theme Settings
+
+* Update dependency androidx.compose:compose-bom to v2026.05.00 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/49
+* Update dependency com.android.application to v9.2.1 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/48
+* Update dependency androidx.compose.ui:ui to v1.11.1 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/47
+* Update dependency androidx.compose.ui:ui to v1.11.1 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/46
+* Update dependency androidx.compose.foundation:foundation to v1.11.1 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/45
+
+
+**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.1.1...v1.2.0
