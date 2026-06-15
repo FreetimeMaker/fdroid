@@ -1,0 +1,428 @@
+{
+  "repo": {
+    "name": {
+      "en-US": "Freetime Repository"
+    },
+    "description": {
+      "en-US": "This is the Official F-Droid Repository from Freetime Maker for F-Droid. It includes Apps from Freetime Maker and others. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet."
+    },
+    "icon": {
+      "en-US": {
+        "name": "/icons/icon.png",
+        "sha256": "4a3fe09a073db13cbca1ec17fee2d099544639032e42f31e95938d7e6a2f19a6",
+        "size": 115754
+      }
+    },
+    "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
+    "timestamp": 1778745094000,
+    "categories": {
+      "Games": {
+        "name": {
+          "en-US": "Games"
+        }
+      },
+      "Internet": {
+        "name": {
+          "en-US": "Internet"
+        }
+      },
+      "Weather": {
+        "name": {
+          "en-US": "Weather"
+        }
+      }
+    }
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "metadata": {
+        "added": 1773996803000,
+        "categories": [
+          "Weather"
+        ],
+        "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
+        "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
+        "lastUpdated": 1778432759000,
+        "license": "Apache-2.0",
+        "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
+        "screenshots": {
+          "phone": {
+            "en-US": [
+              {
+                "name": "/com.freetime.geoweather/en-US/phoneScreenshots/1.png",
+                "sha256": "829c373aaa2c395321db592f9494804e91bddb0ad9d93e1ea5c489d64aeea9ca",
+                "size": 95750
+              },
+              {
+                "name": "/com.freetime.geoweather/en-US/phoneScreenshots/2.png",
+                "sha256": "d96d943d6b4af59fad19a33ffe3d523548801b4f0116032934cbe84b45a87052",
+                "size": 96427
+              },
+              {
+                "name": "/com.freetime.geoweather/en-US/phoneScreenshots/3.png",
+                "sha256": "8503fc5484bd29b29627efcda35991dd6f5727beddf45ae679ccc0e316bd4ac4",
+                "size": 41418
+              },
+              {
+                "name": "/com.freetime.geoweather/en-US/phoneScreenshots/4.png",
+                "sha256": "0e4b0bda1780858eff444ab6b0be1f41d1e669c750052f823a1b2a4f9bd0fa10",
+                "size": 47131
+              }
+            ]
+          }
+        },
+        "authorEmail": "jamieachatz@gmail.com",
+        "authorName": "FreetimeMaker",
+        "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "name": {
+          "en-US": "GeoWeather"
+        },
+        "summary": {
+          "en-US": "Modern weather app with 3 to 7-day forecast for multiple cities"
+        },
+        "donate": [
+          "https://freetimemaker.github.io/Donation-Web"
+        ],
+        "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+      },
+      "versions": {
+        "7ebfedd44d2c7d47880972b1e40572e143d05fd1b0b5c4ed9838b5ef955f7a74": {
+          "added": 1778432759000,
+          "file": {
+            "name": "/geoweather_v1.7.2.apk",
+            "sha256": "7ebfedd44d2c7d47880972b1e40572e143d05fd1b0b5c4ed9838b5ef955f7a74",
+            "size": 24174659
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.7.2",
+            "versionCode": 54,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "1cbb18c0d8e8404893a1235918440d2839f84a380136b2d7560ebcc9d788b433": {
+          "added": 1778360188000,
+          "file": {
+            "name": "/geoweather_v1.7.1.apk",
+            "sha256": "1cbb18c0d8e8404893a1235918440d2839f84a380136b2d7560ebcc9d788b433",
+            "size": 24174659
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.7.1",
+            "versionCode": 53,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
+        "b14123eb2796df0a2ab44dcde683b1d42d125352fc14efed53fe060e824bf932": {
+          "added": 1778345856000,
+          "file": {
+            "name": "/geoweather_v1.7.0.apk",
+            "sha256": "b14123eb2796df0a2ab44dcde683b1d42d125352fc14efed53fe060e824bf932",
+            "size": 24174659
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.7.0",
+            "versionCode": 52,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        }
+      }
+    },
+    "com.freetime.ssmpc": {
+      "metadata": {
+        "added": 1773996814000,
+        "categories": [
+          "Internet",
+          "Games"
+        ],
+        "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
+        "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
+        "lastUpdated": 1778678722000,
+        "license": "Apache-2.0",
+        "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
+        "screenshots": {
+          "phone": {
+            "en-US": [
+              {
+                "name": "/com.freetime.ssmpc/en-US/phoneScreenshots/1.png",
+                "sha256": "4e8d5f42774e1e7db55c46ef82e3a45077bb189d8bc1ed3ba4b88bbf7039c081",
+                "size": 325077
+              },
+              {
+                "name": "/com.freetime.ssmpc/en-US/phoneScreenshots/2.png",
+                "sha256": "c1956723aa4c0497f437220656020aadd5ce9758721fe389ffb821bf869b6c9c",
+                "size": 458385
+              },
+              {
+                "name": "/com.freetime.ssmpc/en-US/phoneScreenshots/3.png",
+                "sha256": "67067b1c8e8d077438cdedd52c30acf08ca4b88914bc71a2be6a4a0477bd5540",
+                "size": 1058369
+              }
+            ]
+          }
+        },
+        "authorEmail": "jamieachatz@gmail.com",
+        "authorName": "FreetimeMaker",
+        "authorWebSite": "https://freetimemaker.github.io/",
+        "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
+        "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "name": {
+          "en-US": "SuperSMP Companion"
+        },
+        "summary": {
+          "en-US": "Vote, shop & explore SuperSMP anywhere! Companion app for server features"
+        },
+        "donate": [
+          "https://freetimemaker.github.io/Donation-Web"
+        ],
+        "preferredSigner": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+      },
+      "versions": {
+        "c8a62d43d2ffc6b6b757f8a225956edb7a4cd6e4985474662486c204ac4716a1": {
+          "added": 1778678722000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.4.2.apk",
+            "sha256": "c8a62d43d2ffc6b6b757f8a225956edb7a4cd6e4985474662486c204ac4716a1",
+            "size": 15545064
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.4.2",
+            "versionCode": 16,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636": {
+          "added": 1778659090000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.4.1.apk",
+            "sha256": "94bd1aa91181558542fd98a306aca361dabfab2574f0eb592e39a12716a09636",
+            "size": 15545064
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.4.1",
+            "versionCode": 15,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
+        "49efc5f8fa9d1c42fd3dfb7c08527be1d1cbef0ea1ff44f3fca41a3db56c8579": {
+          "added": 1778515839000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.4.0.apk",
+            "sha256": "49efc5f8fa9d1c42fd3dfb7c08527be1d1cbef0ea1ff44f3fca41a3db56c8579",
+            "size": 15545064
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.4.0",
+            "versionCode": 14,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

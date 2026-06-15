@@ -1,0 +1,28 @@
+Dualist - Simple, Adaptive, Private.
+
+Dualist is a streamlined, high-performance To-Do List application designed for the modern Android ecosystem. It focuses on a seamless transition between mobile and large-screen form factors using a state-of-the-art adaptive architecture.
+
+🌟 KEY FEATURES:
+
+🌓 ADAPTIVE 2-PANE LAYOUT
+- Optimized List-Detail pattern that automatically expands to two panes on tablets and foldables.
+- Providing a high-productivity workspace for large-screen devices.
+
+🏠 OFFLINE-FIRST & PRIVATE
+- All your tasks are stored locally on your device in a robust Room database.
+- No cloud sync, no data mining, and no accounts required. Your data stays with you.
+
+🚫 NO GOOGLE SERVICES REQUIRED
+- Completely free of Google Play Services (GMS).
+- Runs perfectly on de-googled Android distributions and privacy-focused ROMs.
+
+🎨 VIBRANT MATERIAL 3 DESIGN
+- A bold, energetic color scheme utilizing the latest Material Design 3 principles.
+- Full support for Light and Dark modes.
+- Modern edge-to-edge display integration.
+
+✅ CORE TASK MANAGEMENT
+- Effortlessly add, check off, and delete tasks.
+- Intuitive and responsive interface designed for speed and clarity.
+
+Dualist is the perfect companion for anyone seeking a fast, private, and beautifully designed task manager that feels at home on any device size. Download Dualist today and experience a new standard in adaptive productivity!

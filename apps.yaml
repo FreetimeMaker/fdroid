@@ -1,0 +1,195 @@
+geoweather:
+  git: https://github.com/FreetimeMaker/GeoWeather
+  name: "GeoWeather"
+  description: |
+    GeoWeather - Your Modern Weather App for Android
+
+    Experience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.
+
+    🌟 KEY FEATURES:
+
+    🏙️ MULTIPLE CITIES
+    - Add unlimited cities to your list
+    - Quick switching between different locations
+    - Personal favorites list
+
+    📅 3 to 7-DAY FORECAST
+    - Detailed weather predictions for the entire week (With Premium Plan)
+    - Temperature trends and precipitation probability
+    - Wind speed and humidity information
+
+    ⏰ HOURLY UPDATES
+    - Precise weather data on an hourly basis
+    - Optimal planning for your day
+    - Real-time updates for weather changes
+
+    🎨 VISUAL REPRESENTATION
+    - Beautiful weather icons for every condition
+    - Clear and comprehensive graphics
+    - Modern Material Design interface
+
+    🔔 SMART NOTIFICATIONS
+    - Weather alerts for your locations
+    - Personal notification settings
+    - Daily weather summaries
+
+    💳 DONATION FEATURE
+    - Support continued development
+    - Voluntary support for open source
+    - More Saving and more Features (With Premium Plan)
+
+    🛠️ MODERN TECHNOLOGY
+    - Developed with Jetpack Compose for smooth performance
+    - Native Android development with Kotlin
+    - Regular updates and new features
+
+    Perfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!
+  
+  # As described on https://f-droid.org/en/docs/Build_Metadata_Reference/#Categories,
+  # you can use any name here, but you should look at the existing categories first
+  categories: 
+    - Weather
+
+  anti_features:
+    - TetheredNet
+
+
+supersmp-companion-app:
+  git: https://github.com/FreetimeMaker/SuperSMP-Companion-App
+  name: "SuperSMP Companion"
+  description: |
+    The Ultimate SuperSMP Companion App - Your Server, Everywhere!
+
+    Enhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.
+
+    KEY FEATURES:
+
+    SMART VOTING SYSTEM
+    - Vote for the SuperSMP server directly from your phone
+    - Quick access to all voting platforms
+    - Track your voting history and rewards
+    - Never miss daily vote rewards again
+
+    INTEGRATED SHOP ACCESS
+    - Browse the official SuperSMP shop catalog
+    - View detailed item descriptions and pricing
+    - Make secure purchases on-the-go
+    - Real-time inventory updates
+
+    INTERACTIVE SERVER MAP
+    - Access the official SuperSMP world map
+    - Real-time player locations and activity
+    - Navigate spawn, warps, and key locations
+    - Perfect for exploration and planning
+
+    MODERN USER INTERFACE
+    - Built with Jetpack Compose for smooth animations
+    - Material Design 3 with dark/light themes
+    - Intuitive navigation optimized for mobile
+    - Responsive design for all screen sizes
+
+    TECHNICAL EXCELLENCE
+    - Kotlin-first development for performance
+    - Modern architecture with MVVM pattern
+    - Regular updates with new features
+    - Optimized for battery life and performance
+
+    MOBILE OPTIMIZATIONS
+    - Fast loading times even on slower connections
+    - Offline mode for cached content
+    - Push notifications for server events (coming soon)
+    - Designed for Android 7.0 and above
+
+    WHY CHOOSE THIS APP?
+
+    FREE & OPEN SOURCE - No hidden costs or subscriptions
+    SECURE - Your data and accounts are protected
+    REGULARLY UPDATED - New features and improvements monthly
+    COMMUNITY DRIVEN - Features requested by players like you
+    AD-FREE EXPERIENCE - Focus on what matters: your gameplay
+
+    PERFECT FOR:
+
+    Daily voters who want to maximize rewards
+    Shop enthusiasts who browse items frequently
+    Explorers who need map access on-the-go
+    Community members who stay connected
+    Players who want convenience without compromise
+
+    IMPORTANT NOTE:
+    This is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.
+
+    SYSTEM REQUIREMENTS:
+    Android 7.0 (API 24) or higher
+    50MB free storage space
+    Internet connection for real-time features
+
+    UPCOMING FEATURES:
+    Player statistics tracking
+    In-game chat integration
+    Push notifications for server events
+    Multi-language support
+    Offline mode enhancements
+
+    COMMUNITY SUPPORT:
+    Join our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!
+
+    Download now and take your SuperSMP experience to the next level!
+  
+  categories: 
+    - Internet
+    - Game Helper
+
+dualist:
+  git: https://github.com/FreetimeMaker/Dualist
+  name: "Dualist"
+  description: |
+    Dualist - Simple, Adaptive, Private.
+
+    Dualist is a streamlined, high-performance To-Do List application designed for the modern Android ecosystem. It focuses on a seamless transition between mobile and large-screen form factors using a state-of-the-art adaptive architecture.
+
+    🌟 KEY FEATURES:
+
+    🌓 ADAPTIVE 2-PANE LAYOUT
+    - Optimized List-Detail pattern that automatically expands to two panes on tablets and foldables.
+    - Providing a high-productivity workspace for large-screen devices.
+
+    🏠 OFFLINE-FIRST & PRIVATE
+    - All your tasks are stored locally on your device in a robust Room database.
+    - No cloud sync, no data mining, and no accounts required. Your data stays with you.
+
+    🚫 NO GOOGLE SERVICES REQUIRED
+    - Completely free of Google Play Services (GMS).
+    - Runs perfectly on de-googled Android distributions and privacy-focused ROMs.
+
+    🎨 VIBRANT MATERIAL 3 DESIGN
+    - A bold, energetic color scheme utilizing the latest Material Design 3 principles.
+    - Full support for Light and Dark modes.
+    - Modern edge-to-edge display integration.
+
+    ✅ CORE TASK MANAGEMENT
+    - Effortlessly add, check off, and delete tasks.
+    - Intuitive and responsive interface designed for speed and clarity.
+
+    Dualist is the perfect companion for anyone seeking a fast, private, and beautifully designed task manager that feels at home on any device size. Download Dualist today and experience a new standard in adaptive productivity!
+
+  categories: 
+    - Task
+
+all-miner:
+  git: https://github.com/FreetimeMaker/All-Miner
+  name: "All-Miner"
+  description: |
+    AllMiner is a powerful crypto miner optimized specifically for Android devices. It utilizes the original RandomX engine to enable efficient hashing directly on your smartphone's CPU.
+
+    Features:
+    * Native RandomX Engine: Optimized for ARM64 processors.
+    * unMineable Support: Mine coins like DOGE, SHIB, SOL, ADA, and many more directly to your wallet.
+    * Multi-Threading: Choose the number of CPU cores for maximum performance or minimum heat generation.
+    * Hardware Protection: Automatic stop on overheating or low battery (< 20%).
+    * Transparent & Open-Source: No hidden fees, full control over your hardware.
+
+    Note: Mining on a smartphone can strain the hardware. Use the integrated heat protection for safe operation.
+
+  categories: 
+    - Money

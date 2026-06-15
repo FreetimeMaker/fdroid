@@ -1,1 +1,0 @@
-- Added Foreground Service for mining

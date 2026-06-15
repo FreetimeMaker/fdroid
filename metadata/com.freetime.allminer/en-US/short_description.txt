@@ -1,1 +1,0 @@
-Efficient Android crypto miner with RandomX support.

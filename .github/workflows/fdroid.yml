@@ -1,0 +1,99 @@
+name: Build F-Droid Repo & Deploy Jekyll to GitHub Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  schedule:
+    - cron: "0 * * * *"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+
+  build_fdroid:
+    name: "Build F-Droid Repo"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Checkout Keystore Repository
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ secrets.KEYSTORE_REPOSITORY }}
+          token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
+          path: fdroid/
+
+      # ---------------------------------------------------------
+      # CACHING
+      # ---------------------------------------------------------
+
+      - name: Cache Android SDK
+        uses: actions/cache@v4
+        with:
+          path: ~/android-sdk
+          key: android-sdk-cache
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: pip-cache
+
+      # ---------------------------------------------------------
+      # Install dependencies
+      # ---------------------------------------------------------
+
+      - name: Install system packages
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y git wget unzip imagemagick aapt yq
+
+      - name: Install fdroidserver
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install fdroidserver androguard==4.1.1
+
+      - name: Set up repo secrets
+        run: |
+          echo "./fdroid/keystore.p12"
+          echo "./fdroid/config.yml"
+
+      - name: Set up Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: '^1.17.0'
+
+      - name: Run update script
+        run: bash update.sh 2>&1
+        env:
+          GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+
+      # ---------------------------------------------------------
+      # Build Jekyll site
+      # ---------------------------------------------------------
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./fdroid/repo
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
