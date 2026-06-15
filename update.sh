@@ -5,7 +5,7 @@ echo "::group::Building metascoop executable"
 go build -o metascoop
 echo "::endgroup::"
 
-./metascoop -ap=../apps.yaml -rd=../fdroid/repo -pat="$GH_ACCESS_TOKEN" $1
+./metascoop -ap=../apps.yaml -rd=./fdroid/repo -pat="$GH_ACCESS_TOKEN" $1
 EXIT_CODE=$?
 cd ..
 
