@@ -34,29 +34,13 @@ jobs:
           path: temp_secrets
 
       # ---------------------------------------------------------
-      # CACHING
-      # ---------------------------------------------------------
-
-      - name: Cache Android SDK
-        uses: actions/cache@v4
-        with:
-          path: ~/android-sdk
-          key: android-sdk-cache
-
-      - name: Cache pip
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pip
-          key: pip-cache
-
-      # ---------------------------------------------------------
       # Install dependencies
       # ---------------------------------------------------------
 
       - name: Install system packages
         run: |
           sudo apt-get update
-          sudo apt-get install -y git wget unzip imagemagick aapt yq
+          sudo apt-get install -y git wget unzip imagemagick aapt yq apksigner zipalign
 
       - name: Install fdroidserver
         run: |
@@ -68,6 +52,13 @@ jobs:
           # Kopiere alle Dateien aus dem Root des Keystore-Repos in den lokalen fdroid-Ordner
           cp -r temp_secrets/. fdroid/
           rm -rf temp_secrets
+          
+          # Korrigiere Pfade in der config.yml für den GitHub Runner
+          sed -i 's|apksigner: .*|apksigner: /usr/bin/apksigner|' fdroid/config.yml
+          
+          # Berechtigungen korrigieren (Sicherheitsanforderung von fdroid)
+          chmod 0600 fdroid/config.yml
+          [ -f fdroid/keystore.p12 ] && chmod 0600 fdroid/keystore.p12
 
       - name: Set up Go
         uses: actions/setup-go@v2
