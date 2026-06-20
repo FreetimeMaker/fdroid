@@ -54,7 +54,7 @@ geoweather:
     - TetheredNet
 
 
-supersmp-companion-app:
+supersmp-compaion-app:
   git: https://github.com/FreetimeMaker/SuperSMP-Companion-App
   name: "SuperSMP Companion"
   description: |
