@@ -31,7 +31,7 @@ jobs:
         with:
           repository: ${{ secrets.KEYSTORE_REPOSITORY }}
           token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
-          path: secrets
+          path: fdroid/
 
       # ---------------------------------------------------------
       # CACHING
@@ -65,8 +65,8 @@ jobs:
 
       - name: Set up repo secrets
         run: |
-          cp secrets/keystore.p12 fdroid/
-          cp secrets/config.yml fdroid/
+          fdroid/
+          fdroid/
 
       - name: Set up Go
         uses: actions/setup-go@v2
