@@ -24,7 +24,7 @@ elif [ $EXIT_CODE -eq 0 ]; then
 
     # Ensure secrets are not pushed when running in GitHub Actions
     if [ "$GITHUB_ACTIONS" = "true" ]; then
-        rm -f fdroid/keystore.p12 fdroid/config.yml
+        rm -f fdroid/keystore.p12
     fi
 
     git config --global user.name 'github-actions'
