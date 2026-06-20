@@ -65,8 +65,8 @@ jobs:
 
       - name: Set up repo secrets
         run: |
-          # Kopiere den Inhalt des fdroid-Ordners aus dem Keystore-Repo in das lokale fdroid-Verzeichnis
-          cp -r temp_secrets/fdroid/. fdroid/
+          # Kopiere alle Dateien aus dem Root des Keystore-Repos in den lokalen fdroid-Ordner
+          cp -r temp_secrets/. fdroid/
           rm -rf temp_secrets
 
       - name: Set up Go
