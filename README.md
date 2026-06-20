@@ -6,8 +6,9 @@ This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This 
 <!-- This table is auto-generated. Do not edit -->
 | Icon | Name | Description | Version |
 | --- | --- | --- | --- |
-| <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="fdroid/repo/icons/" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | Modern weather app with 3 to 7-day forecast for multiple cities | 1.7.2 (54) |
-| <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="fdroid/repo/icons/" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features | 1.4.0 (14) |
+| <a href="https://github.com/FreetimeMaker/Dualist"><img src="fdroid/repo/icons/" alt="Dualist icon" width="36px" height="36px"></a> | [**Dualist**](https://github.com/FreetimeMaker/Dualist) | Modern, adaptive, and offline-first To-Do List app. | 1.0.0 (1) |
+| <a href="https://github.com/FreetimeMaker/GeoWeather"><img src="fdroid/repo/icons/" alt="GeoWeather icon" width="36px" height="36px"></a> | [**GeoWeather**](https://github.com/FreetimeMaker/GeoWeather) | Modern weather app with 3 to 7-day forecast for multiple cities | 2.0.0 (58) |
+| <a href="https://github.com/FreetimeMaker/SuperSMP-Companion-App"><img src="fdroid/repo/icons/" alt="SuperSMP Companion icon" width="36px" height="36px"></a> | [**SuperSMP Companion**](https://github.com/FreetimeMaker/SuperSMP-Companion-App) | Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features | 1.4.4 (18) |
 <!-- end apps table -->
 
 ### How to use

@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1778568361000,
+    "timestamp": 1781956183000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -12,6 +12,34 @@
     "uninstall": []
   },
   "apps": [
+    {
+      "authorName": "FreetimeMaker",
+      "categories": [
+        "Task"
+      ],
+      "suggestedVersionName": "1.0.0",
+      "suggestedVersionCode": "1",
+      "description": "Dualist - Simple, Adaptive, Private.\n\nDualist is a streamlined, high-performance To-Do List application designed for the modern Android ecosystem. It focuses on a seamless transition between mobile and large-screen form factors using a state-of-the-art adaptive architecture.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udf13 ADAPTIVE 2-PANE LAYOUT\n- Optimized List-Detail pattern that automatically expands to two panes on tablets and foldables.\n- Providing a high-productivity workspace for large-screen devices.\n\n\ud83c\udfe0 OFFLINE-FIRST & PRIVATE\n- All your tasks are stored locally on your device in a robust Room database.\n- No cloud sync, no data mining, and no accounts required. Your data stays with you.\n\n\ud83d\udeab NO GOOGLE SERVICES REQUIRED\n- Completely free of Google Play Services (GMS).\n- Runs perfectly on de-googled Android distributions and privacy-focused ROMs.\n\n\ud83c\udfa8 VIBRANT MATERIAL 3 DESIGN\n- A bold, energetic color scheme utilizing the latest Material Design 3 principles.\n- Full support for Light and Dark modes.\n- Modern edge-to-edge display integration.\n\n\u2705 CORE TASK MANAGEMENT\n- Effortlessly add, check off, and delete tasks.\n- Intuitive and responsive interface designed for speed and clarity.\n\nDualist is the perfect companion for anyone seeking a fast, private, and beautifully designed task manager that feels at home on any device size. Download Dualist today and experience a new standard in adaptive productivity!\n",
+      "license": "Apache-2.0",
+      "name": "Dualist",
+      "sourceCode": "https://github.com/FreetimeMaker/Dualist",
+      "summary": "Modern, adaptive, and offline-first To-Do List app.",
+      "added": 1781956112000,
+      "packageName": "com.freetime.dualist",
+      "lastUpdated": 1781956112000,
+      "localized": {
+        "en-US": {
+          "phoneScreenshots": [
+            "1.png",
+            "2.png",
+            "3.png",
+            "4.png",
+            "5.png"
+          ],
+          "whatsNew": "Initial release of Dualist: A modern, adaptive, and offline-first To-Do list application built with Jetpack Compose.\n\n**Full Changelog**: https://github.com/FreetimeMaker/Dualist/commits/v1.0.0"
+        }
+      }
+    },
     {
       "allowedAPKSigningKeys": [
         "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
@@ -28,8 +56,9 @@
         "Weather"
       ],
       "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
-      "suggestedVersionName": "1.7.2",
-      "suggestedVersionCode": "54",
+      "suggestedVersionName": "2.0.0",
+      "suggestedVersionCode": "58",
+      "description": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udfd9\ufe0f MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n\ud83d\udcc5 3 to 7-DAY FORECAST\n- Detailed weather predictions for the entire week (With Premium Plan)\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n\u23f0 HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n\ud83c\udfa8 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n\ud83d\udd14 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n\ud83d\udcb3 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n- More Saving and more Features (With Premium Plan)\n\n\ud83d\udee0\ufe0f MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
       "license": "Apache-2.0",
@@ -37,9 +66,10 @@
       "name": "GeoWeather",
       "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
       "summary": "Modern weather app with 3 to 7-day forecast for multiple cities",
+      "translation": "https://translate.codeberg.org/projects/geoweather/geoweather/",
       "added": 1773996803000,
       "packageName": "com.freetime.geoweather",
-      "lastUpdated": 1778432759000,
+      "lastUpdated": 1781956135000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
@@ -48,13 +78,16 @@
             "3.png",
             "4.png"
           ],
-          "whatsNew": "\u2022 Fix: Fixed Home screen weather display issues by switching to ID-based location lookups.\n\u2022 Fix: Resolved persistent loading issues with improved provider fallbacks.\n\u2022 Auth: Improved GitHub/Modrinth login reliability and automated profile syncing.\n\u2022 UI: Added manual refresh button to the Home screen for instant updates.\n\n**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.7.1...v1.7.2"
+          "whatsNew": "Added More Weather Provider and changed a few things\n\n**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.9.0...v2.0.0"
         }
       }
     },
     {
       "allowedAPKSigningKeys": [
         "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+      ],
+      "antiFeatures": [
+        "NonFreeNet"
       ],
       "authorEmail": "jamieachatz@gmail.com",
       "authorName": "FreetimeMaker",
@@ -63,11 +96,12 @@
       "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
       "categories": [
         "Internet",
-        "Games"
+        "Game Helper"
       ],
       "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
-      "suggestedVersionName": "1.4.0",
-      "suggestedVersionCode": "14",
+      "suggestedVersionName": "1.4.4",
+      "suggestedVersionCode": "18",
+      "description": "The Ultimate SuperSMP Companion App - Your Server, Everywhere!\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\nKEY FEATURES:\n\nSMART VOTING SYSTEM\n- Vote for the SuperSMP server directly from your phone\n- Quick access to all voting platforms\n- Track your voting history and rewards\n- Never miss daily vote rewards again\n\nINTEGRATED SHOP ACCESS\n- Browse the official SuperSMP shop catalog\n- View detailed item descriptions and pricing\n- Make secure purchases on-the-go\n- Real-time inventory updates\n\nINTERACTIVE SERVER MAP\n- Access the official SuperSMP world map\n- Real-time player locations and activity\n- Navigate spawn, warps, and key locations\n- Perfect for exploration and planning\n\nMODERN USER INTERFACE\n- Built with Jetpack Compose for smooth animations\n- Material Design 3 with dark/light themes\n- Intuitive navigation optimized for mobile\n- Responsive design for all screen sizes\n\nTECHNICAL EXCELLENCE\n- Kotlin-first development for performance\n- Modern architecture with MVVM pattern\n- Regular updates with new features\n- Optimized for battery life and performance\n\nMOBILE OPTIMIZATIONS\n- Fast loading times even on slower connections\n- Offline mode for cached content\n- Push notifications for server events (coming soon)\n- Designed for Android 7.0 and above\n\nWHY CHOOSE THIS APP?\n\nFREE & OPEN SOURCE - No hidden costs or subscriptions\nSECURE - Your data and accounts are protected\nREGULARLY UPDATED - New features and improvements monthly\nCOMMUNITY DRIVEN - Features requested by players like you\nAD-FREE EXPERIENCE - Focus on what matters: your gameplay\n\nPERFECT FOR:\n\nDaily voters who want to maximize rewards\nShop enthusiasts who browse items frequently\nExplorers who need map access on-the-go\nCommunity members who stay connected\nPlayers who want convenience without compromise\n\nIMPORTANT NOTE:\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\nSYSTEM REQUIREMENTS:\nAndroid 7.0 (API 24) or higher\n50MB free storage space\nInternet connection for real-time features\n\nUPCOMING FEATURES:\nPlayer statistics tracking\nIn-game chat integration\nPush notifications for server events\nMulti-language support\nOffline mode enhancements\n\nCOMMUNITY SUPPORT:\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level!\n",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
       "license": "Apache-2.0",
@@ -75,9 +109,10 @@
       "name": "SuperSMP Companion",
       "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
+      "translation": "https://translate.codeberg.org/projects/supersmp-companion/supersmp-companion/",
       "added": 1773996814000,
       "packageName": "com.freetime.ssmpc",
-      "lastUpdated": 1778515839000,
+      "lastUpdated": 1781956141000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
@@ -85,17 +120,53 @@
             "2.png",
             "3.png"
           ],
-          "whatsNew": "\u2022 Added Monochrome Icon\n\u2022 Fixed Donations not Opening via WebView\n**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.3.0...v1.4.0"
+          "whatsNew": "## What's Changed\n* Fixed the Monochrome Icon (Hopefully)\n* Update plugin com.google.devtools.ksp to v2.3.8 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/51\n\n\n**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.4.3...v1.4.4"
         }
       }
     }
   ],
   "packages": {
+    "com.freetime.dualist": [
+      {
+        "added": 1781956112000,
+        "apkName": "dualist_v1.0.0.apk",
+        "hash": "131daa6b1c8cb9bb6f962c160c2da2755f926fd14e2c21635eb34faf43a4017d",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.dualist",
+        "sig": "4849fce5170b9d6e5215c0f50fd02c78",
+        "signer": "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b",
+        "size": 2909471,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ]
+        ],
+        "versionCode": 1,
+        "versionName": "1.0.0"
+      }
+    ],
     "com.freetime.geoweather": [
       {
-        "added": 1778432759000,
-        "apkName": "geoweather_v1.7.2.apk",
-        "hash": "7ebfedd44d2c7d47880972b1e40572e143d05fd1b0b5c4ed9838b5ef955f7a74",
+        "added": 1781956135000,
+        "apkName": "geoweather_v2.0.0.apk",
+        "hash": "4161b3241938299fdea3bbd2e8dbc1022d15390b2bc3a7d6cf97f2063c2f3349",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [
@@ -107,7 +178,7 @@
         "packageName": "com.freetime.geoweather",
         "sig": "affbe859dac99bd65c457093f896110d",
         "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
-        "size": 24174659,
+        "size": 22400436,
         "targetSdkVersion": 37,
         "uses-permission": [
           [
@@ -147,13 +218,13 @@
             null
           ]
         ],
-        "versionCode": 54,
-        "versionName": "1.7.2"
+        "versionCode": 58,
+        "versionName": "2.0.0"
       },
       {
-        "added": 1778360188000,
-        "apkName": "geoweather_v1.7.1.apk",
-        "hash": "1cbb18c0d8e8404893a1235918440d2839f84a380136b2d7560ebcc9d788b433",
+        "added": 1781956134000,
+        "apkName": "geoweather_v1.9.0.apk",
+        "hash": "dd123003f4c61e370299024ef45e45adea098dd8eabcd90001b91e41d14ba6cc",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [
@@ -165,7 +236,7 @@
         "packageName": "com.freetime.geoweather",
         "sig": "affbe859dac99bd65c457093f896110d",
         "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
-        "size": 24174659,
+        "size": 24252596,
         "targetSdkVersion": 37,
         "uses-permission": [
           [
@@ -205,13 +276,13 @@
             null
           ]
         ],
-        "versionCode": 53,
-        "versionName": "1.7.1"
+        "versionCode": 57,
+        "versionName": "1.9.0"
       },
       {
-        "added": 1778345856000,
-        "apkName": "geoweather_v1.7.0.apk",
-        "hash": "b14123eb2796df0a2ab44dcde683b1d42d125352fc14efed53fe060e824bf932",
+        "added": 1781956134000,
+        "apkName": "geoweather_v1.8.1.apk",
+        "hash": "958003577b20fb858a3e388474a997bb4cfc019637dddbc7d9ccead0a28bcad0",
         "hashType": "sha256",
         "minSdkVersion": 26,
         "nativecode": [
@@ -223,7 +294,7 @@
         "packageName": "com.freetime.geoweather",
         "sig": "affbe859dac99bd65c457093f896110d",
         "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
-        "size": 24174659,
+        "size": 24215732,
         "targetSdkVersion": 37,
         "uses-permission": [
           [
@@ -263,15 +334,75 @@
             null
           ]
         ],
-        "versionCode": 52,
-        "versionName": "1.7.0"
+        "versionCode": 56,
+        "versionName": "1.8.1"
       }
     ],
     "com.freetime.ssmpc": [
       {
-        "added": 1778515839000,
-        "apkName": "supersmp-compaion-app_v1.4.0.apk",
-        "hash": "49efc5f8fa9d1c42fd3dfb7c08527be1d1cbef0ea1ff44f3fca41a3db56c8579",
+        "added": 1781956141000,
+        "apkName": "supersmp-compaion-app_v1.4.4.apk",
+        "hash": "6ab3bc0ef5e9d3e6c1a32f0aff891bc7c5f45f5be388b88cfe725d1797023a4b",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.ssmpc",
+        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
+        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
+        "size": 1829405,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 18,
+        "versionName": "1.4.4"
+      },
+      {
+        "added": 1781956141000,
+        "apkName": "supersmp-compaion-app_v1.4.3.apk",
+        "hash": "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.ssmpc",
+        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
+        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
+        "size": 15635349,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 17,
+        "versionName": "1.4.3"
+      },
+      {
+        "added": 1781956140000,
+        "apkName": "supersmp-compaion-app_v1.4.2.apk",
+        "hash": "c8a62d43d2ffc6b6b757f8a225956edb7a4cd6e4985474662486c204ac4716a1",
         "hashType": "sha256",
         "minSdkVersion": 24,
         "nativecode": [
@@ -295,68 +426,8 @@
             null
           ]
         ],
-        "versionCode": 14,
-        "versionName": "1.4.0"
-      },
-      {
-        "added": 1778406406000,
-        "apkName": "supersmp-compaion-app_v1.3.0.apk",
-        "hash": "ec7545ba0398949e3baae07cbfc4e64208a8cc3d506efee6468bff8540688ad5",
-        "hashType": "sha256",
-        "minSdkVersion": 24,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.ssmpc",
-        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
-        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
-        "size": 15544952,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 13,
-        "versionName": "1.3.0"
-      },
-      {
-        "added": 1778271179000,
-        "apkName": "supersmp-compaion-app_v1.2.0.apk",
-        "hash": "86dee0cdf0e6cf6f038e0bae26bda7aeb8ee1a19f12e627cd618bf20723cbee7",
-        "hashType": "sha256",
-        "minSdkVersion": 24,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.ssmpc",
-        "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
-        "signer": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7",
-        "size": 15495800,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 12,
-        "versionName": "1.2.0"
+        "versionCode": 16,
+        "versionName": "1.4.2"
       }
     ]
   }
