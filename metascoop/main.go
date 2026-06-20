@@ -21,7 +21,6 @@ import (
 	"metascoop/file"
 	"metascoop/git"
 	"metascoop/md"
-	"metascoop/fastlane"
 )
 
 func main() {
@@ -69,7 +68,6 @@ func main() {
 
 	// map[apkName]info
 	var apkInfoMap = make(map[string]apps.AppInfo)
-	var apkBodyMap = make(map[string]string)
 
 	for _, app := range appsList {
 		fmt.Printf("App: %s/%s\n", app.Author(), app.Name())
@@ -86,6 +84,7 @@ func main() {
 		if err != nil {
 			log.Printf("Error while looking up repo: %s", err.Error())
 		} else {
+			app.Summary = gitHubRepo.GetDescription()
 
 			if gitHubRepo.License != nil && gitHubRepo.License.SPDXID != nil {
 				app.License = *gitHubRepo.License.SPDXID
@@ -132,8 +131,15 @@ func main() {
 				appName := apps.GenerateReleaseFilename(app.Name(), release.GetTagName())
 
 				log.Printf("Target APK name: %s", appName)
-				apkInfoMap[appName] = app
-				apkBodyMap[appName] = release.GetBody()
+
+				appClone := app
+
+				appClone.ReleaseDescription = release.GetBody()
+				if appClone.ReleaseDescription != "" {
+					log.Printf("Release notes: %s", appClone.ReleaseDescription)
+				}
+
+				apkInfoMap[appName] = appClone
 
 				appTargetPath := filepath.Join(*repoDir, appName)
 
@@ -191,8 +197,6 @@ func main() {
 
 	fmt.Println("Filling in metadata")
 
-	apkFiles, _ := filepath.Glob(filepath.Join(*repoDir, "*.apk"))
-
 	fdroidIndex, err := apps.ReadIndex(fdroidIndexFilePath)
 	if err != nil {
 		log.Fatalf("reading f-droid repo index: %s\n::endgroup::\n", err.Error())
@@ -236,40 +240,6 @@ func main() {
 
 			// Now update with some info
 
-			// Import Fastlane metadata using the correct Package ID (pkgname)
-			err = fastlane.ImportFastlane(fastlane.ImportConfig{
-				RepoDir:   *repoDir,
-				Upstream:  "upstream",
-				PackageID: pkgname,
-				AppID:     apkInfo.Name(),
-			})
-			if err != nil {
-				log.Printf("Warning: Fastlane import failed for %q: %s", pkgname, err)
-			}
-
-			// Write GitHub release bodies as changelogs for all versions we have
-			for _, pkg := range fdroidIndex.Packages[pkgname] {
-				if body, ok := apkBodyMap[pkg.ApkName]; ok && body != "" {
-					changelogDir := filepath.Join(filepath.Dir(*repoDir), "metadata", pkgname, "changelogs")
-					os.MkdirAll(changelogDir, 0o755)
-					changelogPath := filepath.Join(changelogDir, fmt.Sprintf("%d.txt", pkg.VersionCode))
-					defaultPath := filepath.Join(changelogDir, "default.txt")
-
-					// Nur schreiben, wenn weder ein spezifisches Changelog noch ein default.txt existiert.
-					// Das verhindert, dass GitHub-Releases lokale Fastlane-Daten überschreiben.
-					_, errSpec := os.Stat(changelogPath)
-					_, errDef := os.Stat(defaultPath)
-					if os.IsNotExist(errSpec) && os.IsNotExist(errDef) {
-						err = os.WriteFile(changelogPath, []byte(body), 0o644)
-						if err == nil {
-							log.Printf("Saved GitHub release body as fallback changelog for %s version %d", pkgname, pkg.VersionCode)
-						}
-					} else {
-						log.Printf("Changelog for %s version %d already exists (specific or default), skipping GitHub body", pkgname, pkg.VersionCode)
-					}
-				}
-			}
-
 			setNonEmpty(meta, "AuthorName", apkInfo.Author())
 			fn := apkInfo.FriendlyName
 			if fn == "" {
@@ -278,6 +248,18 @@ func main() {
 			setNonEmpty(meta, "Name", fn)
 			setNonEmpty(meta, "SourceCode", apkInfo.GitURL)
 			setNonEmpty(meta, "License", apkInfo.License)
+			setNonEmpty(meta, "Description", apkInfo.Description)
+
+			var summary = apkInfo.Summary
+			// See https://f-droid.org/en/docs/Build_Metadata_Reference/#Summary for max length
+			const maxSummaryLength = 80
+			if len(summary) > maxSummaryLength {
+				summary = summary[:maxSummaryLength-3] + "..."
+
+				log.Printf("Truncated summary to length of %d (max length)", len(summary))
+			}
+
+			setNonEmpty(meta, "Summary", summary)
 
 			if len(apkInfo.Categories) != 0 {
 				meta["Categories"] = apkInfo.Categories
@@ -299,7 +281,77 @@ func main() {
 			}
 
 			log.Printf("Updated metadata file %q", path)
-		}
+
+			if apkInfo.ReleaseDescription != "" {
+				destFilePath := filepath.Join(walkPath, latestPackage.PackageName, "en-US", "changelogs", fmt.Sprintf("%d.txt", latestPackage.VersionCode))
+
+				err = os.MkdirAll(filepath.Dir(destFilePath), os.ModePerm)
+				if err != nil {
+					log.Printf("Creating directory for changelog file %q: %s", destFilePath, err.Error())
+					return nil
+				}
+
+				err = os.WriteFile(destFilePath, []byte(apkInfo.ReleaseDescription), os.ModePerm)
+				if err != nil {
+					log.Printf("Writing changelog file %q: %s", destFilePath, err.Error())
+					return nil
+				}
+
+				log.Printf("Wrote release notes to %q", destFilePath)
+			}
+
+			log.Printf("Cloning git repository to search for screenshots")
+
+			gitRepoPath, err := git.CloneRepo(apkInfo.GitURL)
+			if err != nil {
+				log.Printf("Cloning git repo from %q: %s", apkInfo.GitURL, err.Error())
+				return nil
+			}
+			defer os.RemoveAll(gitRepoPath)
+
+			metadata, err := apps.FindMetadata(gitRepoPath)
+			if err != nil {
+				log.Printf("finding metadata in git repo %q: %s", gitRepoPath, err.Error())
+				return nil
+			}
+
+			log.Printf("Found %d screenshots", len(metadata.Screenshots))
+
+			screenshotsPath := filepath.Join(walkPath, latestPackage.PackageName, "en-US", "phoneScreenshots")
+
+			_ = os.RemoveAll(screenshotsPath)
+
+			var sccounter int = 1
+			for _, sc := range metadata.Screenshots {
+				var ext = filepath.Ext(sc)
+				if ext == "" {
+					log.Printf("Invalid: screenshot file extension is empty for %q", sc)
+					continue
+				}
+
+				var newFilePath = filepath.Join(screenshotsPath, fmt.Sprintf("%d%s", sccounter, ext))
+
+				err = os.MkdirAll(filepath.Dir(newFilePath), os.ModePerm)
+				if err != nil {
+					log.Printf("Creating directory for screenshot file %q: %s", newFilePath, err.Error())
+					return nil
+				}
+
+				err = file.Move(sc, newFilePath)
+				if err != nil {
+					log.Printf("Moving screenshot file %q to %q: %s", sc, newFilePath, err.Error())
+					return nil
+				}
+
+				log.Printf("Wrote screenshot to %s", newFilePath)
+
+				sccounter++
+			}
+
+			toRemovePaths = append(toRemovePaths, screenshotsPath)
+
+			return nil
+		}()
 	})
 	if err != nil {
 		log.Printf("Error while walking metadata: %s", err.Error())
@@ -359,11 +411,7 @@ func main() {
 	} else {
 		log.Printf("The index files didn't change significantly")
 
-		// Wir suchen im Hauptverzeichnis des Projekts (zwei Ebenen über fdroid/repo),
-		// um Änderungen an Metadaten, APKs und der README zu finden.
-		projectRoot := filepath.Dir(filepath.Dir(*repoDir))
-		changedFiles, err := git.GetChangedFileNames(projectRoot)
-
+		changedFiles, err := git.GetChangedFileNames(*repoDir)
 		if err != nil {
 			log.Fatalf("getting changed files: %s\n::endgroup::\n", err.Error())
 		}
