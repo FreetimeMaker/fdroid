@@ -27,11 +27,11 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Checkout Keystore Repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v4
         with:
           repository: ${{ secrets.KEYSTORE_REPOSITORY }}
           token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
-          path: ./
+          path: secrets
 
       # ---------------------------------------------------------
       # CACHING
@@ -65,8 +65,8 @@ jobs:
 
       - name: Set up repo secrets
         run: |
-          echo "./keystore.p12"
-          echo "./config.yml"
+          cp secrets/keystore.p12 fdroid/
+          cp secrets/config.yml fdroid/
 
       - name: Set up Go
         uses: actions/setup-go@v2
