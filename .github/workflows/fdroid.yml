@@ -31,7 +31,7 @@ jobs:
         with:
           repository: ${{ secrets.KEYSTORE_REPOSITORY }}
           token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
-          path: fdroid/
+          path: temp_secrets
 
       # ---------------------------------------------------------
       # CACHING
@@ -65,8 +65,9 @@ jobs:
 
       - name: Set up repo secrets
         run: |
-          fdroid/
-          fdroid/
+          # Kopiere den Inhalt des fdroid-Ordners aus dem Keystore-Repo in das lokale fdroid-Verzeichnis
+          cp -r temp_secrets/fdroid/. fdroid/
+          rm -rf temp_secrets
 
       - name: Set up Go
         uses: actions/setup-go@v2
