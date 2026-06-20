@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1781975277000
+  },
+  "packages": {
+    "com.freetime.geoweather": {
+      "metadata": {
+        "summary": {
+          "en-US": "Modern weather app with 16-day forecast for multiple cities"
+        }
+      }
+    }
+  }
+}

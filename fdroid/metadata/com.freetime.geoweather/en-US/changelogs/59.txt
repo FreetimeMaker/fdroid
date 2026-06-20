@@ -1,0 +1,19 @@
+## What's Changed
+* Update dependency androidx.compose.runtime:runtime-livedata to v1.11.3 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/96
+* Update dependency androidx.compose.ui:ui-test-manifest to v1.11.3 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/97
+* Update dependency androidx.compose:compose-bom to v2026.06.00 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/98
+* Update dependency androidx.lifecycle:lifecycle-runtime-ktx to v2.11.0 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/99
+* Update dependency androidx.lifecycle:lifecycle-viewmodel-compose to v2.11.0 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/100
+* Update Gradle to v9.6.0 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/101
+* Update actions/checkout action to v7 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/102
+• Power Update: Extended forecast to 16 days.
+• Visualization: Added 24h Trend charts for temperature and rain.
+• Technical: Wind Compass, Pressure Trend, Visibility, and Cloud Base data.
+• Health: Added UV-Index, Pollutants (PM2.5, NO2, O3), and Pollen count.
+• Geology: Integrated Earthquake monitor for nearby activity.
+• Astronomy: Graphical Moon Phases and Golden/Blue Hour info.
+• Customization: OLED Black Mode and App Icon Themes.
+• User Experience: Activity Scores, App Shortcuts, and fixed notifications.
+• Privacy: Removed all account/login requirements. App is now 100% account-free.
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v2.0.0...v2.1.0

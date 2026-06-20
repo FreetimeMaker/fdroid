@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1781959120000,
+    "timestamp": 1781975277000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -42,7 +42,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
         "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
-        "lastUpdated": 1781956135000,
+        "lastUpdated": 1781975231000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
         "translation": "https://translate.codeberg.org/projects/geoweather/geoweather/",
@@ -55,7 +55,7 @@
           "en-US": "GeoWeather"
         },
         "summary": {
-          "en-US": "Modern weather app with 3 to 7-day forecast for multiple cities"
+          "en-US": "Modern weather app with 16-day forecast for multiple cities"
         },
         "description": {
           "en-US": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n🌟 KEY FEATURES:\n\n🏙️ MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n📅 3 to 7-DAY FORECAST\n- Detailed weather predictions for the entire week (With Premium Plan)\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n⏰ HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n🎨 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n🔔 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n💳 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n- More Saving and more Features (With Premium Plan)\n\n🛠️ MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n"
@@ -66,6 +66,65 @@
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
+        "958003577b20fb858a3e388474a997bb4cfc019637dddbc7d9ccead0a28bcad0": {
+          "added": 1781956134000,
+          "file": {
+            "name": "/geoweather_v1.8.1.apk",
+            "sha256": "958003577b20fb858a3e388474a997bb4cfc019637dddbc7d9ccead0a28bcad0",
+            "size": 24215732
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.8.1",
+            "versionCode": 56,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
         "7da88c07b67fdec769045b264facf5aec71df35dc9d3d8d730b40fa46a2ce1c2": {
           "added": 1781956133000,
           "file": {
