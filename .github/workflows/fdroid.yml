@@ -80,7 +80,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./repo
+          source: ./fdroid/repo
           destination: ./_site
 
       - name: Upload artifact
