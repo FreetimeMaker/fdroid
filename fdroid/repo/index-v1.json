@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1782404881000,
+    "timestamp": 1782414570000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -62,8 +62,8 @@
         "Weather"
       ],
       "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
-      "suggestedVersionName": "2.1.0",
-      "suggestedVersionCode": "59",
+      "suggestedVersionName": "2.1.1",
+      "suggestedVersionCode": "60",
       "description": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udfd9\ufe0f MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n\ud83d\udcc5 3 to 7-DAY FORECAST\n- Detailed weather predictions for the entire week (With Premium Plan)\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n\u23f0 HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n\ud83c\udfa8 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n\ud83d\udd14 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n\ud83d\udcb3 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n- More Saving and more Features (With Premium Plan)\n\n\ud83d\udee0\ufe0f MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
@@ -75,7 +75,7 @@
       "translation": "https://translate.codeberg.org/projects/geoweather/geoweather/",
       "added": 1773996803000,
       "packageName": "com.freetime.geoweather",
-      "lastUpdated": 1781975231000,
+      "lastUpdated": 1782414518000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
@@ -84,7 +84,7 @@
             "3.png",
             "4.png"
           ],
-          "whatsNew": "## What's Changed\n* Update dependency androidx.compose.runtime:runtime-livedata to v1.11.3 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/96\n* Update dependency androidx.compose.ui:ui-test-manifest to v1.11.3 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/97\n* Update dependency androidx.compose:compose-bom to v2026.06.00 by @renovate[bot] in https://github.com/FreetimeMaker/GeoWeather/pull/98\n* Update dependency androidx.lifecycle:lifecycle-runtime-k"
+          "whatsNew": "\u2022 Full localization cleanup: Externalized all hardcoded UI strings.\n\u2022 Code stability improvements and minor bug fixes.\n**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v2.1.0...v2.1.1"
         }
       }
     },
@@ -208,6 +208,64 @@
     ],
     "com.freetime.geoweather": [
       {
+        "added": 1782414518000,
+        "apkName": "geoweather_v2.1.1.apk",
+        "hash": "304b053cfb6aacd4bd1705950d9160645aaa94ec205ca30c166fa6d13fc00d16",
+        "hashType": "sha256",
+        "minSdkVersion": 26,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.geoweather",
+        "sig": "affbe859dac99bd65c457093f896110d",
+        "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
+        "size": 22588852,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.INTERNET",
+            null
+          ],
+          [
+            "android.permission.ACCESS_NETWORK_STATE",
+            null
+          ],
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.WAKE_LOCK",
+            null
+          ],
+          [
+            "android.permission.RECEIVE_BOOT_COMPLETED",
+            null
+          ],
+          [
+            "android.permission.ACCESS_FINE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.ACCESS_COARSE_LOCATION",
+            null
+          ],
+          [
+            "android.permission.FOREGROUND_SERVICE",
+            null
+          ],
+          [
+            "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 60,
+        "versionName": "2.1.1"
+      },
+      {
         "added": 1781975231000,
         "apkName": "geoweather_v2.1.0.apk",
         "hash": "9cd979b5bae8d02cd3a6c0d7b2c0d2df9d2c644d489f885f9aa1bb349658cb5d",
@@ -322,64 +380,6 @@
         ],
         "versionCode": 58,
         "versionName": "2.0.0"
-      },
-      {
-        "added": 1781956134000,
-        "apkName": "geoweather_v1.9.0.apk",
-        "hash": "dd123003f4c61e370299024ef45e45adea098dd8eabcd90001b91e41d14ba6cc",
-        "hashType": "sha256",
-        "minSdkVersion": 26,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.geoweather",
-        "sig": "affbe859dac99bd65c457093f896110d",
-        "signer": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283",
-        "size": 24252596,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ],
-          [
-            "android.permission.POST_NOTIFICATIONS",
-            null
-          ],
-          [
-            "android.permission.WAKE_LOCK",
-            null
-          ],
-          [
-            "android.permission.RECEIVE_BOOT_COMPLETED",
-            null
-          ],
-          [
-            "android.permission.ACCESS_FINE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_COARSE_LOCATION",
-            null
-          ],
-          [
-            "android.permission.FOREGROUND_SERVICE",
-            null
-          ],
-          [
-            "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 57,
-        "versionName": "1.9.0"
       }
     ],
     "com.freetime.ssmpc": [
