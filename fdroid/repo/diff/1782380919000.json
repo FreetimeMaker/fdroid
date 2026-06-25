@@ -1,0 +1,14 @@
+{
+  "repo": {
+    "timestamp": 1782380934000
+  },
+  "packages": {
+    "com.freetime.dualist": {
+      "versions": {
+        "47906ed2dad299248f1c7763c43b2048079b0555808088094a8f1ab7afd88735": {
+          "releaseChannels": null
+        }
+      }
+    }
+  }
+}

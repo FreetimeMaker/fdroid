@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1782373569000,
+    "timestamp": 1782380934000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -46,7 +46,7 @@
           "Task"
         ],
         "issueTracker": "https://github.com/FreetimeMaker/Dualist/issues",
-        "lastUpdated": 1781956112000,
+        "lastUpdated": 1782380857000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/Dualist",
         "screenshots": {
@@ -100,6 +100,47 @@
         "preferredSigner": "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b"
       },
       "versions": {
+        "47906ed2dad299248f1c7763c43b2048079b0555808088094a8f1ab7afd88735": {
+          "added": 1782380857000,
+          "file": {
+            "name": "/dualist_v1.1.0.apk",
+            "sha256": "47906ed2dad299248f1c7763c43b2048079b0555808088094a8f1ab7afd88735",
+            "size": 2370948
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.1.0",
+            "versionCode": 2,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.USE_EXACT_ALARM"
+              },
+              {
+                "name": "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "131daa6b1c8cb9bb6f962c160c2da2755f926fd14e2c21635eb34faf43a4017d": {
           "added": 1781956112000,
           "file": {
