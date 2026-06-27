@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1782571538000,
+    "timestamp": 1782575467000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -30,6 +30,7 @@
       "name": "Dualist",
       "sourceCode": "https://github.com/FreetimeMaker/Dualist",
       "summary": "Modern, adaptive, and offline-first To-Do List app.",
+      "translation": "https://translate.codeberg.org/projects/dualist/dualist/",
       "added": 1781956112000,
       "packageName": "com.freetime.dualist",
       "lastUpdated": 1782380857000,

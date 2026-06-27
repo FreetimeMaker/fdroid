@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1782571538000,
+    "timestamp": 1782575467000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -49,6 +49,7 @@
         "lastUpdated": 1782380857000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/Dualist",
+        "translation": "https://translate.codeberg.org/projects/dualist/dualist/",
         "screenshots": {
           "phone": {
             "en-US": [
