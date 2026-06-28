@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1782645073000,
+    "timestamp": 1782654558000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -20,8 +20,8 @@
       "categories": [
         "Task"
       ],
-      "suggestedVersionName": "1.1.1",
-      "suggestedVersionCode": "3",
+      "suggestedVersionName": "1.1.3",
+      "suggestedVersionCode": "5",
       "description": "Dualist - Simple, Adaptive, Private.\n\nDualist is a streamlined, high-performance To-Do List application designed for the modern Android ecosystem. It focuses on a seamless transition between mobile and large-screen form factors using a state-of-the-art adaptive architecture.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udf13 ADAPTIVE 2-PANE LAYOUT\n- Optimized List-Detail pattern that automatically expands to two panes on tablets and foldables.\n- Providing a high-productivity workspace for large-screen devices.\n\n\ud83c\udfe0 OFFLINE-FIRST & PRIVATE\n- All your tasks are stored locally on your device in a robust Room database.\n- No cloud sync, no data mining, and no accounts required. Your data stays with you.\n\n\ud83d\udeab NO GOOGLE SERVICES REQUIRED\n- Completely free of Google Play Services (GMS).\n- Runs perfectly on de-googled Android distributions and privacy-focused ROMs.\n\n\ud83c\udfa8 VIBRANT MATERIAL 3 DESIGN\n- A bold, energetic color scheme utilizing the latest Material Design 3 principles.\n- Full support for Light and Dark modes.\n- Modern edge-to-edge display integration.\n\n\u2705 CORE TASK MANAGEMENT\n- Effortlessly add, check off, and delete tasks.\n- Intuitive and responsive interface designed for speed and clarity.\n\nDualist is the perfect companion for anyone seeking a fast, private, and beautifully designed task manager that feels at home on any device size. Download Dualist today and experience a new standard in adaptive productivity!\n",
       "donate": "https://freetimemaker.github.io/Donation-Web",
       "issueTracker": "https://github.com/FreetimeMaker/Dualist/issues",
@@ -33,7 +33,7 @@
       "translation": "https://translate.codeberg.org/projects/dualist/dualist/",
       "added": 1781956112000,
       "packageName": "com.freetime.dualist",
-      "lastUpdated": 1782583550000,
+      "lastUpdated": 1782654481000,
       "localized": {
         "en-US": {
           "phoneScreenshots": [
@@ -43,7 +43,7 @@
             "4.png",
             "5.png"
           ],
-          "whatsNew": "\u2022 Fixed the App Crash on App Startup\n\n**Full Changelog**: https://github.com/FreetimeMaker/Dualist/compare/v1.1.0...v1.1.1"
+          "whatsNew": "\u2022 Fixed an F-Droid Reproductible Build Error (Hopefully)\n\n**Full Changelog**: https://github.com/FreetimeMaker/Dualist/compare/v1.1.2...v1.1.3"
         }
       }
     },
@@ -135,6 +135,82 @@
   "packages": {
     "com.freetime.dualist": [
       {
+        "added": 1782654481000,
+        "apkName": "dualist_v1.1.3.apk",
+        "hash": "0a3439721510a44935e5e28fb348473f04d0563f6425252f92451d37e39f802f",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.dualist",
+        "sig": "4849fce5170b9d6e5215c0f50fd02c78",
+        "signer": "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b",
+        "size": 2375044,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.USE_EXACT_ALARM",
+            null
+          ],
+          [
+            "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 5,
+        "versionName": "1.1.3"
+      },
+      {
+        "added": 1782654481000,
+        "apkName": "dualist_v1.1.2.apk",
+        "hash": "953e0c6ec9f51630c8c8c522646bd14f12a0c98110547305fbd89b3cb44ba38b",
+        "hashType": "sha256",
+        "minSdkVersion": 24,
+        "nativecode": [
+          "arm64-v8a",
+          "armeabi-v7a",
+          "x86",
+          "x86_64"
+        ],
+        "packageName": "com.freetime.dualist",
+        "sig": "4849fce5170b9d6e5215c0f50fd02c78",
+        "signer": "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b",
+        "size": 2375044,
+        "targetSdkVersion": 37,
+        "uses-permission": [
+          [
+            "android.permission.POST_NOTIFICATIONS",
+            null
+          ],
+          [
+            "android.permission.SCHEDULE_EXACT_ALARM",
+            null
+          ],
+          [
+            "android.permission.USE_EXACT_ALARM",
+            null
+          ],
+          [
+            "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
+            null
+          ]
+        ],
+        "versionCode": 4,
+        "versionName": "1.1.2"
+      },
+      {
         "added": 1782583550000,
         "apkName": "dualist_v1.1.1.apk",
         "hash": "580ce41f4eb1a9169a4a536737776b29d947643df54c298b400b49edfd3ab4a1",
@@ -171,78 +247,6 @@
         ],
         "versionCode": 3,
         "versionName": "1.1.1"
-      },
-      {
-        "added": 1782380857000,
-        "apkName": "dualist_v1.1.0.apk",
-        "hash": "47906ed2dad299248f1c7763c43b2048079b0555808088094a8f1ab7afd88735",
-        "hashType": "sha256",
-        "minSdkVersion": 24,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.dualist",
-        "sig": "4849fce5170b9d6e5215c0f50fd02c78",
-        "signer": "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b",
-        "size": 2370948,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.POST_NOTIFICATIONS",
-            null
-          ],
-          [
-            "android.permission.SCHEDULE_EXACT_ALARM",
-            null
-          ],
-          [
-            "android.permission.USE_EXACT_ALARM",
-            null
-          ],
-          [
-            "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ]
-        ],
-        "versionCode": 2,
-        "versionName": "1.1.0"
-      },
-      {
-        "added": 1781956112000,
-        "apkName": "dualist_v1.0.0.apk",
-        "hash": "131daa6b1c8cb9bb6f962c160c2da2755f926fd14e2c21635eb34faf43a4017d",
-        "hashType": "sha256",
-        "minSdkVersion": 24,
-        "nativecode": [
-          "arm64-v8a",
-          "armeabi-v7a",
-          "x86",
-          "x86_64"
-        ],
-        "packageName": "com.freetime.dualist",
-        "sig": "4849fce5170b9d6e5215c0f50fd02c78",
-        "signer": "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b",
-        "size": 2909471,
-        "targetSdkVersion": 37,
-        "uses-permission": [
-          [
-            "android.permission.INTERNET",
-            null
-          ],
-          [
-            "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION",
-            null
-          ],
-          [
-            "android.permission.ACCESS_NETWORK_STATE",
-            null
-          ]
-        ],
-        "versionCode": 1,
-        "versionName": "1.0.0"
       }
     ],
     "com.freetime.geoweather": [

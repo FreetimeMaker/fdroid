@@ -1,0 +1,3 @@
+• Fixed an F-Droid Reproductible Build Error (Hopefully)
+
+**Full Changelog**: https://github.com/FreetimeMaker/Dualist/compare/v1.1.2...v1.1.3

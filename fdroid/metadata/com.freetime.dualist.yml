@@ -4,8 +4,8 @@ AuthorWebSite: https://freetimemaker.github.io/
 Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
 Categories:
     - Task
-CurrentVersion: 1.1.1
-CurrentVersionCode: 3
+CurrentVersion: 1.1.3
+CurrentVersionCode: 5
 Description: "Dualist - Simple, Adaptive, Private.\n\nDualist is a streamlined, high-performance To-Do List application designed for the modern Android ecosystem. It focuses on a seamless transition between mobile and large-screen form factors using a state-of-the-art adaptive architecture.\n\n\U0001F31F KEY FEATURES:\n\n\U0001F313 ADAPTIVE 2-PANE LAYOUT\n- Optimized List-Detail pattern that automatically expands to two panes on tablets and foldables.\n- Providing a high-productivity workspace for large-screen devices.\n\n\U0001F3E0 OFFLINE-FIRST & PRIVATE\n- All your tasks are stored locally on your device in a robust Room database.\n- No cloud sync, no data mining, and no accounts required. Your data stays with you.\n\n\U0001F6AB NO GOOGLE SERVICES REQUIRED\n- Completely free of Google Play Services (GMS).\n- Runs perfectly on de-googled Android distributions and privacy-focused ROMs.\n\n\U0001F3A8 VIBRANT MATERIAL 3 DESIGN\n- A bold, energetic color scheme utilizing the latest Material Design 3 principles.\n- Full support for Light and Dark modes.\n- Modern edge-to-edge display integration.\n\n✅ CORE TASK MANAGEMENT\n- Effortlessly add, check off, and delete tasks.\n- Intuitive and responsive interface designed for speed and clarity.\n\nDualist is the perfect companion for anyone seeking a fast, private, and beautifully designed task manager that feels at home on any device size. Download Dualist today and experience a new standard in adaptive productivity!\n"
 Donate: https://freetimemaker.github.io/Donation-Web
 IssueTracker: https://github.com/FreetimeMaker/Dualist/issues
