@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1784721050000,
+    "timestamp": 1784728552000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -159,7 +159,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/GeoWeather/releases",
         "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
-        "lastUpdated": 1784584947000,
+        "lastUpdated": 1784728500000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
         "translation": "https://translate.codeberg.org/projects/geoweather/geoweather/",
@@ -183,6 +183,65 @@
         "preferredSigner": "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
       },
       "versions": {
+        "304b053cfb6aacd4bd1705950d9160645aaa94ec205ca30c166fa6d13fc00d16": {
+          "added": 1782414518000,
+          "file": {
+            "name": "/geoweather_v2.1.1.apk",
+            "sha256": "304b053cfb6aacd4bd1705950d9160645aaa94ec205ca30c166fa6d13fc00d16",
+            "size": 22588852
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "2.1.1",
+            "versionCode": 60,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.ACCESS_FINE_LOCATION"
+              },
+              {
+                "name": "android.permission.ACCESS_COARSE_LOCATION"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "TetheredNet": {}
+          }
+        },
         "9cd979b5bae8d02cd3a6c0d7b2c0d2df9d2c644d489f885f9aa1bb349658cb5d": {
           "added": 1781975231000,
           "file": {

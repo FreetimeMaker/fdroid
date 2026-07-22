@@ -1,0 +1,4 @@
+• Added ScrollView in FreetimeSDK Donation Screen
+• Changed the E-Mail Address
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v2.2.0...v2.2.1
