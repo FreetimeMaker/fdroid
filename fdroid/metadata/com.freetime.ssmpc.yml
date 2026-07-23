@@ -2,7 +2,7 @@ AllowedAPKSigningKeys: fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f
 AntiFeatures:
     NonFreeNet:
         en-US: Depends on supersmp.fun server
-AuthorEmail: jamieachatz@gmail.com
+AuthorEmail: 9ndlzdct@anonaddy.me
 AuthorName: FreetimeMaker
 AuthorWebSite: https://freetimemaker.github.io/
 AutoName: SuperSMP Companion
