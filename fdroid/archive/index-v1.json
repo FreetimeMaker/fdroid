@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1784822445000,
+    "timestamp": 1784828944000,
     "version": 20002,
     "name": "My First F-Droid Archive Demo",
     "icon": "icon.png",
@@ -13,7 +13,7 @@
   },
   "apps": [
     {
-      "authorEmail": "jamieachatz@gmail.com",
+      "authorEmail": "9ndlzdct@anonaddy.me",
       "authorName": "FreetimeMaker",
       "authorWebSite": "https://freetimemaker.github.io/",
       "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
@@ -42,7 +42,7 @@
       "antiFeatures": [
         "TetheredNet"
       ],
-      "authorEmail": "jamieachatz@gmail.com",
+      "authorEmail": "9ndlzdct@anonaddy.me",
       "authorName": "FreetimeMaker",
       "authorWebSite": "https://freetimemaker.github.io/",
       "binaries": "https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk",
@@ -73,7 +73,7 @@
       "antiFeatures": [
         "NonFreeNet"
       ],
-      "authorEmail": "jamieachatz@gmail.com",
+      "authorEmail": "9ndlzdct@anonaddy.me",
       "authorName": "FreetimeMaker",
       "authorWebSite": "https://freetimemaker.github.io/",
       "binaries": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk",
