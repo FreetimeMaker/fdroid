@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1787477389000,
+    "timestamp": 1787480780000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -3107,7 +3107,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1781986682000,
+        "lastUpdated": 1787480735000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "translation": "https://translate.codeberg.org/projects/supersmp-companion/supersmp-companion/",
@@ -3131,6 +3131,46 @@
         "preferredSigner": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
       },
       "versions": {
+        "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a": {
+          "added": 1781956141000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.4.3.apk",
+            "sha256": "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a",
+            "size": 15635349
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.4.3",
+            "versionCode": 17,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "NonFreeNet": {
+              "en-US": "Depends on supersmp.fun server"
+            }
+          }
+        },
         "c8a62d43d2ffc6b6b757f8a225956edb7a4cd6e4985474662486c204ac4716a1": {
           "added": 1781956140000,
           "file": {

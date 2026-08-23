@@ -1,0 +1,9 @@
+## What's Changed
+* Update kotlin monorepo to v2.4.0 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/54
+* Update ksp monorepo to v2.3.9 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/55
+* Update ktor monorepo to v3.5.0 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/56
+* Update room to v2.8.4 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/57
+* Update work to v2.11.2 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/58
+
+
+**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.5.0...v1.6.0

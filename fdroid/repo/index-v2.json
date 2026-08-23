@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1787477395000,
+    "timestamp": 1787480787000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -481,7 +481,7 @@
         ],
         "changelog": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases",
         "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
-        "lastUpdated": 1781986682000,
+        "lastUpdated": 1787480735000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "translation": "https://translate.codeberg.org/projects/supersmp-companion/supersmp-companion/",
@@ -526,6 +526,58 @@
         "preferredSigner": "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
       },
       "versions": {
+        "dd3a6fdc8477a17f9080eb8289020ef20c04db2d240644e7a4d5c0b743b65248": {
+          "added": 1787480735000,
+          "file": {
+            "name": "/supersmp-compaion-app_v1.6.0.apk",
+            "sha256": "dd3a6fdc8477a17f9080eb8289020ef20c04db2d240644e7a4d5c0b743b65248",
+            "size": 3411349
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.6.0",
+            "versionCode": 20,
+            "usesSdk": {
+              "minSdkVersion": 26,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.INTERNET"
+              },
+              {
+                "name": "android.permission.WAKE_LOCK"
+              },
+              {
+                "name": "android.permission.ACCESS_NETWORK_STATE"
+              },
+              {
+                "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+              },
+              {
+                "name": "android.permission.FOREGROUND_SERVICE"
+              },
+              {
+                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          },
+          "antiFeatures": {
+            "NonFreeNet": {
+              "en-US": "Depends on supersmp.fun server"
+            }
+          }
+        },
         "203bfaf3ce4c73ff34f111a8437fe67dd16717c6723e7821979ea142e592b366": {
           "added": 1781986682000,
           "file": {
@@ -607,46 +659,6 @@
           },
           "whatsNew": {
             "en-US": "## What's Changed\n* Fixed the Monochrome Icon (Hopefully)\n* Update plugin com.google.devtools.ksp to v2.3.8 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/51\n\n\n**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.4.3...v1.4.4"
-          }
-        },
-        "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a": {
-          "added": 1781956141000,
-          "file": {
-            "name": "/supersmp-compaion-app_v1.4.3.apk",
-            "sha256": "874d9c5c566008f8fd529f2c3ef8aba0ec010749c28af77e0ee255531b83ba6a",
-            "size": 15635349
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "1.4.3",
-            "versionCode": 17,
-            "usesSdk": {
-              "minSdkVersion": 24,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.INTERNET"
-              },
-              {
-                "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              }
-            ]
-          },
-          "antiFeatures": {
-            "NonFreeNet": {
-              "en-US": "Depends on supersmp.fun server"
-            }
           }
         }
       }
