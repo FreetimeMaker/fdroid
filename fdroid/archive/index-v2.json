@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1787597049000,
+    "timestamp": 1787599706000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -50,7 +50,7 @@
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/Dualist",
         "translation": "https://translate.codeberg.org/projects/dualist/dualist/",
-        "authorEmail": "9ndlzdct@anonaddy.me",
+        "authorEmail": "FreetimeMaker@proton.me",
         "authorName": "FreetimeMaker",
         "authorWebSite": "https://freetimemaker.github.io/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
@@ -163,7 +163,7 @@
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
         "translation": "https://translate.codeberg.org/projects/geoweather/geoweather/",
-        "authorEmail": "9ndlzdct@anonaddy.me",
+        "authorEmail": "FreetimeMaker@proton.me",
         "authorName": "FreetimeMaker",
         "authorWebSite": "https://freetimemaker.github.io/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
@@ -3111,7 +3111,7 @@
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
         "translation": "https://translate.codeberg.org/projects/supersmp-companion/supersmp-companion/",
-        "authorEmail": "9ndlzdct@anonaddy.me",
+        "authorEmail": "FreetimeMaker@proton.me",
         "authorName": "FreetimeMaker",
         "authorWebSite": "https://freetimemaker.github.io/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
