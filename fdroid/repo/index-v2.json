@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1787610524000,
+    "timestamp": 1787613897000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -46,7 +46,7 @@
           "Task"
         ],
         "issueTracker": "https://github.com/FreetimeMaker/Dualist/issues",
-        "lastUpdated": 1787603546000,
+        "lastUpdated": 1787613809000,
         "license": "Apache-2.0",
         "sourceCode": "https://github.com/FreetimeMaker/Dualist",
         "translation": "https://translate.codeberg.org/projects/dualist/dualist/",
@@ -101,6 +101,47 @@
         "preferredSigner": "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b"
       },
       "versions": {
+        "8b9ad48df210772b0348a4f76a993caec9ee74cfe16da4f7c29185f009c763e7": {
+          "added": 1787613809000,
+          "file": {
+            "name": "/dualist_v1.1.5.apk",
+            "sha256": "8b9ad48df210772b0348a4f76a993caec9ee74cfe16da4f7c29185f009c763e7",
+            "size": 2375044
+          },
+          "manifest": {
+            "nativecode": [
+              "arm64-v8a",
+              "armeabi-v7a",
+              "x86",
+              "x86_64"
+            ],
+            "versionName": "1.1.5",
+            "versionCode": 7,
+            "usesSdk": {
+              "minSdkVersion": 24,
+              "targetSdkVersion": 37
+            },
+            "signer": {
+              "sha256": [
+                "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b"
+              ]
+            },
+            "usesPermission": [
+              {
+                "name": "android.permission.POST_NOTIFICATIONS"
+              },
+              {
+                "name": "android.permission.SCHEDULE_EXACT_ALARM"
+              },
+              {
+                "name": "android.permission.USE_EXACT_ALARM"
+              },
+              {
+                "name": "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+              }
+            ]
+          }
+        },
         "f1de1f0c5d185fda666aeaf87da175bdd7ba9d67d31a921d20667b1cc636bc08": {
           "added": 1787603546000,
           "file": {
@@ -158,47 +199,6 @@
             ],
             "versionName": "1.1.3",
             "versionCode": 5,
-            "usesSdk": {
-              "minSdkVersion": 24,
-              "targetSdkVersion": 37
-            },
-            "signer": {
-              "sha256": [
-                "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b"
-              ]
-            },
-            "usesPermission": [
-              {
-                "name": "android.permission.POST_NOTIFICATIONS"
-              },
-              {
-                "name": "android.permission.SCHEDULE_EXACT_ALARM"
-              },
-              {
-                "name": "android.permission.USE_EXACT_ALARM"
-              },
-              {
-                "name": "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-              }
-            ]
-          }
-        },
-        "953e0c6ec9f51630c8c8c522646bd14f12a0c98110547305fbd89b3cb44ba38b": {
-          "added": 1782654481000,
-          "file": {
-            "name": "/dualist_v1.1.2.apk",
-            "sha256": "953e0c6ec9f51630c8c8c522646bd14f12a0c98110547305fbd89b3cb44ba38b",
-            "size": 2375044
-          },
-          "manifest": {
-            "nativecode": [
-              "arm64-v8a",
-              "armeabi-v7a",
-              "x86",
-              "x86_64"
-            ],
-            "versionName": "1.1.2",
-            "versionCode": 4,
             "usesSdk": {
               "minSdkVersion": 24,
               "targetSdkVersion": 37
