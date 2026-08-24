@@ -3,3 +3,4 @@ fdroid/repo/status
 fdroidserver
 fdroid/keystore.p12
 fdroid/*.jks
+.idea
