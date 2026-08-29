@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1787982858000,
+    "timestamp": 1787988052000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -15,7 +15,7 @@
     {
       "authorEmail": "FreetimeMaker@proton.me",
       "authorName": "FreetimeMaker",
-      "authorWebSite": "https://freetimemaker.github.io/",
+      "authorWebSite": "https://free-time.me/",
       "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
       "categories": [
         "Task"
@@ -23,7 +23,7 @@
       "suggestedVersionName": "1.1.6",
       "suggestedVersionCode": "8",
       "description": "Dualist - Simple, Adaptive, Private.\n\nDualist is a streamlined, high-performance To-Do List application designed for the modern Android ecosystem. It focuses on a seamless transition between mobile and large-screen form factors using a state-of-the-art adaptive architecture.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udf13 ADAPTIVE 2-PANE LAYOUT\n- Optimized List-Detail pattern that automatically expands to two panes on tablets and foldables.\n- Providing a high-productivity workspace for large-screen devices.\n\n\ud83c\udfe0 OFFLINE-FIRST & PRIVATE\n- All your tasks are stored locally on your device in a robust Room database.\n- No cloud sync, no data mining, and no accounts required. Your data stays with you.\n\n\ud83d\udeab NO GOOGLE SERVICES REQUIRED\n- Completely free of Google Play Services (GMS).\n- Runs perfectly on de-googled Android distributions and privacy-focused ROMs.\n\n\ud83c\udfa8 VIBRANT MATERIAL 3 DESIGN\n- A bold, energetic color scheme utilizing the latest Material Design 3 principles.\n- Full support for Light and Dark modes.\n- Modern edge-to-edge display integration.\n\n\u2705 CORE TASK MANAGEMENT\n- Effortlessly add, check off, and delete tasks.\n- Intuitive and responsive interface designed for speed and clarity.\n\nDualist is the perfect companion for anyone seeking a fast, private, and beautifully designed task manager that feels at home on any device size. Download Dualist today and experience a new standard in adaptive productivity!\n",
-      "donate": "https://freetimemaker.github.io/Donation-Web",
+      "donate": "https://free-time.me/don",
       "issueTracker": "https://github.com/FreetimeMaker/Dualist/issues",
       "license": "Apache-2.0",
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
@@ -56,7 +56,7 @@
       ],
       "authorEmail": "FreetimeMaker@proton.me",
       "authorName": "FreetimeMaker",
-      "authorWebSite": "https://freetimemaker.github.io/",
+      "authorWebSite": "https://free-time.me/",
       "binaries": "https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk",
       "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
       "categories": [
@@ -66,7 +66,7 @@
       "suggestedVersionName": "2.3.0",
       "suggestedVersionCode": "65",
       "description": "GeoWeather - Your Modern Weather App for Android\n\nExperience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.\n\n\ud83c\udf1f KEY FEATURES:\n\n\ud83c\udfd9\ufe0f MULTIPLE CITIES\n- Add unlimited cities to your list\n- Quick switching between different locations\n- Personal favorites list\n\n\ud83d\udcc5 3 to 7-DAY FORECAST\n- Detailed weather predictions for the entire week (With Premium Plan)\n- Temperature trends and precipitation probability\n- Wind speed and humidity information\n\n\u23f0 HOURLY UPDATES\n- Precise weather data on an hourly basis\n- Optimal planning for your day\n- Real-time updates for weather changes\n\n\ud83c\udfa8 VISUAL REPRESENTATION\n- Beautiful weather icons for every condition\n- Clear and comprehensive graphics\n- Modern Material Design interface\n\n\ud83d\udd14 SMART NOTIFICATIONS\n- Weather alerts for your locations\n- Personal notification settings\n- Daily weather summaries\n\n\ud83d\udcb3 DONATION FEATURE\n- Support continued development\n- Voluntary support for open source\n- More Saving and more Features (With Premium Plan)\n\n\ud83d\udee0\ufe0f MODERN TECHNOLOGY\n- Developed with Jetpack Compose for smooth performance\n- Native Android development with Kotlin\n- Regular updates and new features\n\nPerfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!\n",
-      "donate": "https://freetimemaker.github.io/Donation-Web",
+      "donate": "https://free-time.me/don",
       "issueTracker": "https://github.com/FreetimeMaker/GeoWeather/issues",
       "license": "Apache-2.0",
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
@@ -98,7 +98,7 @@
       ],
       "authorEmail": "FreetimeMaker@proton.me",
       "authorName": "FreetimeMaker",
-      "authorWebSite": "https://freetimemaker.github.io/",
+      "authorWebSite": "https://free-time.me/",
       "binaries": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk",
       "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
       "categories": [
@@ -109,7 +109,7 @@
       "suggestedVersionName": "1.6.0",
       "suggestedVersionCode": "20",
       "description": "The Ultimate SuperSMP Companion App - Your Server, Everywhere!\n\nEnhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.\n\nKEY FEATURES:\n\nSMART VOTING SYSTEM\n- Vote for the SuperSMP server directly from your phone\n- Quick access to all voting platforms\n- Track your voting history and rewards\n- Never miss daily vote rewards again\n\nINTEGRATED SHOP ACCESS\n- Browse the official SuperSMP shop catalog\n- View detailed item descriptions and pricing\n- Make secure purchases on-the-go\n- Real-time inventory updates\n\nINTERACTIVE SERVER MAP\n- Access the official SuperSMP world map\n- Real-time player locations and activity\n- Navigate spawn, warps, and key locations\n- Perfect for exploration and planning\n\nMODERN USER INTERFACE\n- Built with Jetpack Compose for smooth animations\n- Material Design 3 with dark/light themes\n- Intuitive navigation optimized for mobile\n- Responsive design for all screen sizes\n\nTECHNICAL EXCELLENCE\n- Kotlin-first development for performance\n- Modern architecture with MVVM pattern\n- Regular updates with new features\n- Optimized for battery life and performance\n\nMOBILE OPTIMIZATIONS\n- Fast loading times even on slower connections\n- Offline mode for cached content\n- Push notifications for server events (coming soon)\n- Designed for Android 7.0 and above\n\nWHY CHOOSE THIS APP?\n\nFREE & OPEN SOURCE - No hidden costs or subscriptions\nSECURE - Your data and accounts are protected\nREGULARLY UPDATED - New features and improvements monthly\nCOMMUNITY DRIVEN - Features requested by players like you\nAD-FREE EXPERIENCE - Focus on what matters: your gameplay\n\nPERFECT FOR:\n\nDaily voters who want to maximize rewards\nShop enthusiasts who browse items frequently\nExplorers who need map access on-the-go\nCommunity members who stay connected\nPlayers who want convenience without compromise\n\nIMPORTANT NOTE:\nThis is an unofficial companion app created by fans for the SuperSMP community. It is not affiliated with or endorsed by the SuperSMP Minecraft Server team. All server content and branding remain property of their respective owners.\n\nSYSTEM REQUIREMENTS:\nAndroid 7.0 (API 24) or higher\n50MB free storage space\nInternet connection for real-time features\n\nUPCOMING FEATURES:\nPlayer statistics tracking\nIn-game chat integration\nPush notifications for server events\nMulti-language support\nOffline mode enhancements\n\nCOMMUNITY SUPPORT:\nJoin our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!\n\nDownload now and take your SuperSMP experience to the next level!\n",
-      "donate": "https://freetimemaker.github.io/Donation-Web",
+      "donate": "https://free-time.me/don",
       "issueTracker": "https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues",
       "license": "Apache-2.0",
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
