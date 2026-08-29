@@ -1,0 +1,5 @@
+## What's Changed
+* Update actions/setup-java action to v6 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/18
+
+
+**Full Changelog**: https://github.com/FreetimeMaker/Dualist/compare/v1.1.6...v1.1.7
