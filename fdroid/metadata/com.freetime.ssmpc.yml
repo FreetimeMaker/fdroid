@@ -146,10 +146,10 @@ IssueTracker: https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues
 License: Apache-2.0
 Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
 Name: SuperSMP Companion
+OpenCollective: freetimemaker
 Repo: https://github.com/FreetimeMaker/SuperSMP-Companion-App.git
 RepoType: git
 SourceCode: https://github.com/FreetimeMaker/SuperSMP-Companion-App
 Summary: Vote, shop & explore SuperSMP anywhere! Companion app for server features
 Translation: https://translate.codeberg.org/projects/supersmp-companion/supersmp-companion/
 UpdateCheckMode: Tags
-OpenCollective: freetimemaker

@@ -1,6 +1,6 @@
 {
   "repo": {
-    "timestamp": 1788024703000,
+    "timestamp": 1788031869000,
     "version": 20002,
     "name": "Freetime Repository",
     "icon": "icon.png",
@@ -28,6 +28,7 @@
       "license": "Apache-2.0",
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "Dualist",
+      "openCollective": "freetimemaker",
       "sourceCode": "https://github.com/FreetimeMaker/Dualist",
       "summary": "Modern, adaptive, and offline-first To-Do List app.",
       "translation": "https://translate.codeberg.org/projects/dualist/dualist/",
@@ -71,6 +72,7 @@
       "license": "Apache-2.0",
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "GeoWeather",
+      "openCollective": "freetimemaker",
       "sourceCode": "https://github.com/FreetimeMaker/GeoWeather",
       "summary": "Modern weather app with 16-day forecast for multiple cities",
       "translation": "https://translate.codeberg.org/projects/geoweather/geoweather/",
@@ -114,6 +116,7 @@
       "license": "Apache-2.0",
       "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
       "name": "SuperSMP Companion",
+      "openCollective": "freetimemaker",
       "sourceCode": "https://github.com/FreetimeMaker/SuperSMP-Companion-App",
       "summary": "Vote, shop & explore SuperSMP anywhere! Companion app for server features",
       "translation": "https://translate.codeberg.org/projects/supersmp-companion/supersmp-companion/",

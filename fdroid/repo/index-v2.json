@@ -14,7 +14,7 @@
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/repo",
-    "timestamp": 1788024703000,
+    "timestamp": 1788031869000,
     "categories": {
       "Game Helper": {
         "name": {
@@ -86,6 +86,7 @@
         "authorWebSite": "https://free-time.me/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
         "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "openCollective": "freetimemaker",
         "name": {
           "en-US": "Dualist"
         },
@@ -269,6 +270,7 @@
         "authorWebSite": "https://free-time.me/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
         "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "openCollective": "freetimemaker",
         "name": {
           "en-US": "GeoWeather"
         },
@@ -511,6 +513,7 @@
         "authorWebSite": "https://free-time.me/",
         "bitcoin": "1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE",
         "litecoin": "LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg",
+        "openCollective": "freetimemaker",
         "name": {
           "en-US": "SuperSMP Companion"
         },
