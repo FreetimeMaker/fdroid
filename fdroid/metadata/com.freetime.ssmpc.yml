@@ -4,7 +4,7 @@ AntiFeatures:
         en-US: Depends on supersmp.fun server
 AuthorEmail: FreetimeMaker@proton.me
 AuthorName: FreetimeMaker
-AuthorWebSite: https://freetimemaker.github.io/
+AuthorWebSite: https://free-time.me/
 AutoName: SuperSMP Companion
 AutoUpdateMode: Version
 Binaries: https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk
@@ -141,7 +141,7 @@ Description: |
     Join our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!
 
     Download now and take your SuperSMP experience to the next level!
-Donate: https://freetimemaker.github.io/Donation-Web
+Donate: https://free-time.me/don
 IssueTracker: https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues
 License: Apache-2.0
 Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
