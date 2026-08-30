@@ -1,3 +1,7 @@
+# IMPORTANT
+
+## Now under [Website](https://github.com/FreetimeMaker/Multi-Node-Apps/tree/main/fdroid)
+
 # fdroid
 This repository hosts an [F-Droid](https://f-droid.org/) repo for my apps. This allows you to install and update apps very easily.
 
