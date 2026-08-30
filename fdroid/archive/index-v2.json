@@ -9,12 +9,12 @@
     "icon": {
       "en-US": {
         "name": "/icons/icon.png",
-        "sha256": "4a3fe09a073db13cbca1ec17fee2d099544639032e42f31e95938d7e6a2f19a6",
-        "size": 115754
+        "sha256": "c45323ea8d0ff92db186aca8db47f29e903a3e30d45d73c9be20c6668fdc5f82",
+        "size": 252009
       }
     },
     "address": "https://raw.githubusercontent.com/FreetimeMaker/fdroid/main/fdroid/archive",
-    "timestamp": 1788076808000,
+    "timestamp": 1788086121000,
     "categories": {
       "Game Helper": {
         "name": {
