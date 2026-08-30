@@ -1,4 +1,4 @@
-name: Build F-Droid Repo & Deploy Jekyll to GitHub Pages
+name: Build F-Droid Repo & Publish to free-time.me
 
 on:
   push:
@@ -9,12 +9,6 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
 
@@ -49,14 +43,9 @@ jobs:
 
       - name: Set up repo secrets
         run: |
-          # Kopiere alle Dateien aus dem Root des Keystore-Repos in den lokalen fdroid-Ordner
           cp -r temp_secrets/. fdroid/
           rm -rf temp_secrets
-          
-          # Korrigiere Pfade in der config.yml für den GitHub Runner
           sed -i 's|apksigner: .*|apksigner: /usr/bin/apksigner|' fdroid/config.yml
-          
-          # Berechtigungen korrigieren (Sicherheitsanforderung von fdroid)
           chmod 0600 fdroid/config.yml
           [ -f fdroid/keystore.p12 ] && chmod 0600 fdroid/keystore.p12
 
@@ -71,21 +60,18 @@ jobs:
           GH_ACCESS_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
 
       # ---------------------------------------------------------
-      # Build Jekyll site
+      # Publish to free-time.me (Vercel Blob)
       # ---------------------------------------------------------
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v6
-
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
-          source: ./fdroid/repo
-          destination: ./_site
+          node-version: 20
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+      - name: Install upload deps
+        run: npm install @vercel/blob
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Upload repo to Vercel Blob
+        run: node .github/scripts/upload-to-blob.js
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
