@@ -1,0 +1,6 @@
+title: Freetime Repository
+description: Official F-Droid repository from Freetime Maker
+
+# Die von fdroidserver generierte Seite unter /repo/ (index.html, index.css, index.png,
+# icons/, ...) wird von Jekyll unverändert als statischer Inhalt ausgeliefert.
+# Da die Asset-Pfade in der index.html relativ sind, stimmen sie an dieser Stelle.
