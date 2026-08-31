@@ -63,6 +63,9 @@ jobs:
       - name: Set up fdroid build
         run: fdroid build --all
 
+      - name: Publish fdroid repo
+        run: fdroid publish
+
       # ---------------------------------------------------------
       # Build Jekyll site
       # ---------------------------------------------------------
