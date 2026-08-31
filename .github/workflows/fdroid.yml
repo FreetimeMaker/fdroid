@@ -63,8 +63,25 @@ jobs:
       - name: Set up fdroid build
         run: fdroid build --all
 
+      - name: Update fdroid repo
+        run: fdroid update --no-sign --delete-unknown
+
       - name: Publish fdroid repo
         run: fdroid publish
+
+      # ---------------------------------------------------------
+      # Clean secrets & build artifacts before the Pages build.
+      # Jekyll uses the repo root (source: ./) as its site source, so
+      # anything left here would end up in the public _site. Signing
+      # keys and gradle build outputs must never be published.
+      # ---------------------------------------------------------
+
+      - name: Clean secrets & build artifacts
+        run: |
+          rm -rf build assets logs public metadata
+          rm -f ./*.jks ./*.p12 ./keystore.p12
+          find repo -name '*.log.gz' -delete
+          rm -rf repo/status
 
       # ---------------------------------------------------------
       # Build Jekyll site
