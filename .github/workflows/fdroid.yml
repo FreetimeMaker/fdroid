@@ -64,7 +64,7 @@ jobs:
         run: fdroid build --all
 
       - name: Update fdroid repo
-        run: fdroid update --no-sign --delete-unknown
+        run: fdroid update --nosign --delete-unknown
 
       - name: Publish fdroid repo
         run: fdroid publish
