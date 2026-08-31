@@ -1,15 +1,1 @@
-## What's Changed
-* Update dependency androidx.navigation3:navigation3-runtime to v1.1.6 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/1
-* Update dependency androidx.navigation3:navigation3-ui to v1.1.6 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/2
-* Update dependency com.google.devtools.ksp to v2.3.11 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/3
-* Update dependency org.jetbrains.kotlin.plugin.compose to v2.4.10 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/4
-* Update dependency org.jetbrains.kotlin.plugin.serialization to v2.4.10 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/5
-* Update dependency androidx.compose:compose-bom to v2026.08.00 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/6
-* Update dependency com.android.application to v9.3.2 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/7
-* Update dependency com.squareup.okhttp3:logging-interceptor to v5.5.0 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/8
-* Update dependency com.squareup.okhttp3:okhttp to v5.5.0 by @renovate[bot] in https://github.com/FreetimeMaker/Dualist/pull/9
-
-## New Contributors
-* @renovate[bot] made their first contribution in https://github.com/FreetimeMaker/Dualist/pull/1
-
-**Full Changelog**: https://github.com/FreetimeMaker/Dualist/compare/v1.1.3...v1.1.4
+• Fixed (hopefully) the F-Droid Reproductible Build Error

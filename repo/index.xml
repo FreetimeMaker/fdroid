@@ -1,15 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<fdroid>
-	<repo icon="icon.png" name="Freetime Repository" pubkey="308204fa308202e2a003020102020900a30cf5fd1cc96d05300d06092a864886f70d01010b0500302a3110300e060355040b1307462d44726f6964311630140603550403130d4672656574696d654d616b65723020170d3236303331393135343131365a180f32303533303830343135343131365a302a3110300e060355040b1307462d44726f6964311630140603550403130d4672656574696d654d616b657230820222300d06092a864886f70d01010105000382020f003082020a0282020100a4d41bbeb5ec32628605c5f84e25b732a073577274aa4e1a472e603a23b5e1341fbebd71d34c49da8e6864a95cc68bc17f358364d8a70b15e214d60e08372e67e4fd169f7eeb6d65d6cce9dba0034d34ee893732d66f1e84e7ebfd2fe2e2ca45abc97b0cbbc2966db61e2da5be6adb361af6e9ea406859708e7fb9fefea3e36a430b360137eea96efe71ac883dbad496368fac47227e54449ce6b5233142f0fd35ac458e6c43926005d1c6941767dd0bda3c88fa3fb8f7deb2ac33104489267f2d4b069226aae90652e3a6ff94b055c5a0229fb56ded6e7809f72ffa8ce8b2e4968d291ff2f180d10ccdf1dcaf6adb51f1a8d95eb219a20d740543e8edfef3b6f411e252197bd870a71acc60fae550c7735932c0baed3bccbf6a593d53acbe89ce4d3ea05bb51195ae8e05b2aef00546fae9e114037b04b4af4343ac9192a178846d9955ad79e0e3bd397daa97a701510f6fcbe78a94378432366535d11d93640b67c6097c33629f9c2ca068a2a0fe4f8993d1e1dec2190ab474aa5c6a0af86bf300eecfdf92c5d01d30a0c0f80ad834964b033b513d0fba14d9c716f5799f96b0005cacbac5dbab921435946df9ea476165dd01ff4382bb323e0d7e88974f05dd242317e7d5ff625d3900267ea1e4680a3c6f38b0bdd557a7461b9382539d3875772b444c8fb66b0d19cc2bc68451da170dd021f2344368abea4bd2c658a1ad0203010001a321301f301d0603551d0e0416041427e4cee168461eb049d162457be8d8ab6677294f300d06092a864886f70d01010b05000382020100229d357e47a6262ee2afbc9be06f11ba0714f9afd52e848aba97e1702e45a9039cd52c371e2555f7b61674f5263d951db87731c5183341320a3f0405415bbd19aa75c6a76da3e37010d7f196305da29ab6a11f73577109e78a0d1c1c1ce3a7a4049a0b6f67c742ecd07eb3437d88722bc152cc58152812b4a48cb79fd701cea1b4d84e2128b82330e5bdd97b87a628b45895a201b8422f5e284641c5a518c98723b1f6700a04a648de00062c4a924eaddb69197aef8fc15e3eeb1c26b764c54362a59a3feaf3de2e33c87840900f9da076725d3b077d05b070f47acd09041d316b4996ce33b8d54b5c58482285c13affcc51ddebec2924d71b38d635fc4d78c0cddc21a1d159ec65661ec303a2cf52cbdf13a369f4931f159b8d5932f8a01c7fd27f16742eebca09cbc42dd732012cebc3855fd50f6bd71e3ae1b5d8d9963ce6cbf007c684924a8438621ac932e5ba2946e0219463752166211848de693c5736cbb161fae96646b803a0058ec170d9cc8a35bfe69f5a85ba7ce9bb2a7d7e35223442a1c007637129af3ab742ab19ba8d0da1b3cec501d3f6e75f2f5ade8829c194145c89f029e1c34a43dbb8b921de1710a731630fa67943207c0052a3553bd64fd5f7a81a429bb1500cd6c14e440175fdd9f5ebc1a906e7b92b9750c2a09c373b4ed415b7790df91de5009678901d65b7559118f964b59335dd40a4354d0bff" timestamp="1788086849" url="https://free-time.me/fdroid/main/fdroid/repo" version="20002">
-		<description>This is the Official F-Droid Repository from Freetime Maker for F-Droid. It includes Apps from Freetime Maker and others. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet.</description>
-	</repo>
-	<application id="com.freetime.dualist">
-		<id>com.freetime.dualist</id>
-		<added>2026-06-20</added>
-		<lastupdated>2026-08-29</lastupdated>
-		<name>Dualist</name>
-		<summary>Modern, adaptive, and offline-first To-Do List app.</summary>
-		<desc>Dualist - Simple, Adaptive, Private.
+<?xml version="1.0" encoding="utf-8"?><fdroid><repo icon="icon.png" name="Freetime Repository" pubkey="308204fa308202e2a003020102020900a30cf5fd1cc96d05300d06092a864886f70d01010b0500302a3110300e060355040b1307462d44726f6964311630140603550403130d4672656574696d654d616b65723020170d3236303331393135343131365a180f32303533303830343135343131365a302a3110300e060355040b1307462d44726f6964311630140603550403130d4672656574696d654d616b657230820222300d06092a864886f70d01010105000382020f003082020a0282020100a4d41bbeb5ec32628605c5f84e25b732a073577274aa4e1a472e603a23b5e1341fbebd71d34c49da8e6864a95cc68bc17f358364d8a70b15e214d60e08372e67e4fd169f7eeb6d65d6cce9dba0034d34ee893732d66f1e84e7ebfd2fe2e2ca45abc97b0cbbc2966db61e2da5be6adb361af6e9ea406859708e7fb9fefea3e36a430b360137eea96efe71ac883dbad496368fac47227e54449ce6b5233142f0fd35ac458e6c43926005d1c6941767dd0bda3c88fa3fb8f7deb2ac33104489267f2d4b069226aae90652e3a6ff94b055c5a0229fb56ded6e7809f72ffa8ce8b2e4968d291ff2f180d10ccdf1dcaf6adb51f1a8d95eb219a20d740543e8edfef3b6f411e252197bd870a71acc60fae550c7735932c0baed3bccbf6a593d53acbe89ce4d3ea05bb51195ae8e05b2aef00546fae9e114037b04b4af4343ac9192a178846d9955ad79e0e3bd397daa97a701510f6fcbe78a94378432366535d11d93640b67c6097c33629f9c2ca068a2a0fe4f8993d1e1dec2190ab474aa5c6a0af86bf300eecfdf92c5d01d30a0c0f80ad834964b033b513d0fba14d9c716f5799f96b0005cacbac5dbab921435946df9ea476165dd01ff4382bb323e0d7e88974f05dd242317e7d5ff625d3900267ea1e4680a3c6f38b0bdd557a7461b9382539d3875772b444c8fb66b0d19cc2bc68451da170dd021f2344368abea4bd2c658a1ad0203010001a321301f301d0603551d0e0416041427e4cee168461eb049d162457be8d8ab6677294f300d06092a864886f70d01010b05000382020100229d357e47a6262ee2afbc9be06f11ba0714f9afd52e848aba97e1702e45a9039cd52c371e2555f7b61674f5263d951db87731c5183341320a3f0405415bbd19aa75c6a76da3e37010d7f196305da29ab6a11f73577109e78a0d1c1c1ce3a7a4049a0b6f67c742ecd07eb3437d88722bc152cc58152812b4a48cb79fd701cea1b4d84e2128b82330e5bdd97b87a628b45895a201b8422f5e284641c5a518c98723b1f6700a04a648de00062c4a924eaddb69197aef8fc15e3eeb1c26b764c54362a59a3feaf3de2e33c87840900f9da076725d3b077d05b070f47acd09041d316b4996ce33b8d54b5c58482285c13affcc51ddebec2924d71b38d635fc4d78c0cddc21a1d159ec65661ec303a2cf52cbdf13a369f4931f159b8d5932f8a01c7fd27f16742eebca09cbc42dd732012cebc3855fd50f6bd71e3ae1b5d8d9963ce6cbf007c684924a8438621ac932e5ba2946e0219463752166211848de693c5736cbb161fae96646b803a0058ec170d9cc8a35bfe69f5a85ba7ce9bb2a7d7e35223442a1c007637129af3ab742ab19ba8d0da1b3cec501d3f6e75f2f5ade8829c194145c89f029e1c34a43dbb8b921de1710a731630fa67943207c0052a3553bd64fd5f7a81a429bb1500cd6c14e440175fdd9f5ebc1a906e7b92b9750c2a09c373b4ed415b7790df91de5009678901d65b7559118f964b59335dd40a4354d0bff" timestamp="1788105344" url="https://free-time.me/fdroid/repo" version="30000"><description>This is the Official F-Droid Repository from Freetime Maker for F-Droid. It includes Apps from Freetime Maker and others. It gets Updates from Freetime Maker directly and faster than the Official F-Droid Repository from F-Droid and includes Apps that aren't in the F-Droid Repository yet.</description></repo><application id="com.freetime.dualist"><id>com.freetime.dualist</id><added>2026-08-30</added><lastupdated>2026-08-30</lastupdated><name>Dualist</name><summary>Modern, adaptive, and offline-first To-Do List app.</summary><icon>com.freetime.dualist.9.png</icon><desc>Dualist - Simple, Adaptive, Private.
 
 Dualist is a streamlined, high-performance To-Do List application designed for the modern Android ecosystem. It focuses on a seamless transition between mobile and large-screen form factors using a state-of-the-art adaptive architecture.
 
@@ -37,173 +26,50 @@ Dualist is a streamlined, high-performance To-Do List application designed for t
 - Intuitive and responsive interface designed for speed and clarity.
 
 Dualist is the perfect companion for anyone seeking a fast, private, and beautifully designed task manager that feels at home on any device size. Download Dualist today and experience a new standard in adaptive productivity!
-</desc>
-		<license>Apache-2.0</license>
-		<categories>Task</categories>
-		<category>Task</category>
-		<web></web>
-		<source>https://github.com/FreetimeMaker/Dualist</source>
-		<tracker>https://github.com/FreetimeMaker/Dualist/issues</tracker>
-		<author>FreetimeMaker</author>
-		<email>FreetimeMaker@proton.me</email>
-		<donate>https://free-time.me/don</donate>
-		<bitcoin>1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE</bitcoin>
-		<litecoin>LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg</litecoin>
-		<openCollective>freetimemaker</openCollective>
-		<marketversion>1.1.7</marketversion>
-		<marketvercode>9</marketvercode>
-		<package>
-			<version>1.1.7</version>
-			<versioncode>9</versioncode>
-			<apkname>dualist_v1.1.7.apk</apkname>
-			<hash type="sha256">b6ae16a64037f410da9be7049c4cc69c06281063d0aaa62d8f1c065e31becfa7</hash>
-			<size>2391428</size>
-			<sdkver>24</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-08-29</added>
-			<sig>4849fce5170b9d6e5215c0f50fd02c78</sig>
-			<permissions>POST_NOTIFICATIONS,SCHEDULE_EXACT_ALARM,USE_EXACT_ALARM,com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-		<package>
-			<version>1.1.6</version>
-			<versioncode>8</versioncode>
-			<apkname>dualist_v1.1.6.apk</apkname>
-			<hash type="sha256">280fd00986cda28bf071a7e441b3697f4f21d9168c2b7fbba829f7a23bc246a5</hash>
-			<size>2375044</size>
-			<sdkver>24</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-08-25</added>
-			<sig>4849fce5170b9d6e5215c0f50fd02c78</sig>
-			<permissions>POST_NOTIFICATIONS,SCHEDULE_EXACT_ALARM,USE_EXACT_ALARM,com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-		<package>
-			<version>1.1.5</version>
-			<versioncode>7</versioncode>
-			<apkname>dualist_v1.1.5.apk</apkname>
-			<hash type="sha256">8b9ad48df210772b0348a4f76a993caec9ee74cfe16da4f7c29185f009c763e7</hash>
-			<size>2375044</size>
-			<sdkver>24</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-08-24</added>
-			<sig>4849fce5170b9d6e5215c0f50fd02c78</sig>
-			<permissions>POST_NOTIFICATIONS,SCHEDULE_EXACT_ALARM,USE_EXACT_ALARM,com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-	</application>
-	<application id="com.freetime.geoweather">
-		<id>com.freetime.geoweather</id>
-		<added>2026-03-20</added>
-		<lastupdated>2026-08-20</lastupdated>
-		<name>GeoWeather</name>
-		<summary>Modern weather app with 16-day forecast for multiple cities</summary>
-		<desc>GeoWeather - Your Modern Weather App for Android
+</desc><license>Apache-2.0</license><categories>Task</categories><category>Task</category><web></web><source>https://github.com/FreetimeMaker/Dualist</source><tracker>https://github.com/FreetimeMaker/Dualist/issues</tracker><changelog>https://github.com/FreetimeMaker/Dualist/releases</changelog><author>Freetime Maker</author><email>FreetimeMaker@proton.me</email><donate>https://free-time.me/don</donate><bitcoin>1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE</bitcoin><litecoin>LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg</litecoin><marketversion>1.1.7</marketversion><marketvercode>9</marketvercode><package><version>1.1.7</version><versioncode>9</versioncode><apkname>Dualist-v1.1.7.apk</apkname><hash type="sha256">b6ae16a64037f410da9be7049c4cc69c06281063d0aaa62d8f1c065e31becfa7</hash><size>2391428</size><sdkver>24</sdkver><targetSdkVersion>37</targetSdkVersion><added>2026-08-30</added><sig>4849fce5170b9d6e5215c0f50fd02c78</sig><permissions>POST_NOTIFICATIONS,SCHEDULE_EXACT_ALARM,USE_EXACT_ALARM,com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions><nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode></package></application><application id="com.freetime.geoweather"><id>com.freetime.geoweather</id><added>2026-08-30</added><lastupdated>2026-08-30</lastupdated><name>GeoWeather</name><summary>Modern weather app with 16-day forecast for multiple cities</summary><icon>com.freetime.geoweather.65.png</icon><desc>GeoWeather - Your Modern, Privacy-First Weather App
 
-Experience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant user interface.
+Experience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant, Material You interface.
 
 🌟 KEY FEATURES:
 
-🏙️ MULTIPLE CITIES
+🏙️ MULTIPLE CITIES &amp; SHORTCUTS
 - Add unlimited cities to your list
-- Quick switching between different locations
-- Personal favorites list
+- Quick switching between locations
+- App Shortcuts: Jump to your top cities directly from the homescreen
 
-📅 3 to 7-DAY FORECAST
-- Detailed weather predictions for the entire week (With Premium Plan)
-- Temperature trends and precipitation probability
-- Wind speed and humidity information
+📅 UP TO 16-DAY FORECAST
+- Extended 16-day weather predictions (Open-Meteo)
+- 24h Trend charts for temperature and precipitation
+- Wind speed, gusts, and humidity information
 
-⏰ HOURLY UPDATES
-- Precise weather data on an hourly basis
-- Optimal planning for your day
-- Real-time updates for weather changes
+⏰ TECHNICAL &amp; GEOLOGICAL DATA
+- Wind Compass for direction and speed
+- Barometer with 3h pressure trends
+- Visibility and Cloud Base height
+- Integrated Earthquake monitor for nearby geological activity
 
-🎨 VISUAL REPRESENTATION
-- Beautiful weather icons for every condition
-- Clear and comprehensive graphics
-- Modern Material Design interface
+🏥 HEALTH &amp; ENVIRONMENT
+- UV-Index with color-coded risk levels
+- Air Pollutants (PM2.5, PM10, NO2, O3)
+- Pollen count (Alder, Birch, Grass)
+- Outdoor Activity Score (Jogging, Laundry, Gardening)
 
-🔔 SMART NOTIFICATIONS
-- Weather alerts for your locations
-- Personal notification settings
-- Daily weather summaries
+🌗 ASTRONOMY &amp; PHOTOGRAPHY
+- Graphical Moon Phase display
+- Golden Hour and Blue Hour windows for photographers
+- Precise sunrise and sunset times
 
-💳 DONATION FEATURE
-- Support continued development
-- Voluntary support for open source
-- More Saving and more Features (With Premium Plan)
+🎨 CUSTOMIZATION
+- Material You: Dynamic colors based on your wallpaper
+- OLED Black Mode for AMOLED screens
 
-🛠️ MODERN TECHNOLOGY
-- Developed with Jetpack Compose for smooth performance
-- Native Android development with Kotlin
-- Regular updates and new features
+🛡️ 100% PRIVATE &amp; OPEN SOURCE
+- No account required, no login needed
+- No trackers
+- Local JSON Backup &amp; Restore for your cities
 
-Perfect for daily weather checks, travel planning, or simply staying informed. Download GeoWeather now and experience weather in a whole new way!
-</desc>
-		<license>Apache-2.0</license>
-		<categories>Weather</categories>
-		<category>Weather</category>
-		<web></web>
-		<source>https://github.com/FreetimeMaker/GeoWeather</source>
-		<tracker>https://github.com/FreetimeMaker/GeoWeather/issues</tracker>
-		<changelog>https://github.com/FreetimeMaker/GeoWeather/releases</changelog>
-		<author>FreetimeMaker</author>
-		<email>FreetimeMaker@proton.me</email>
-		<donate>https://free-time.me/don</donate>
-		<bitcoin>1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE</bitcoin>
-		<litecoin>LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg</litecoin>
-		<openCollective>freetimemaker</openCollective>
-		<marketversion>2.3.0</marketversion>
-		<marketvercode>65</marketvercode>
-		<antifeatures>TetheredNet</antifeatures>
-		<package>
-			<version>2.3.0</version>
-			<versioncode>65</versioncode>
-			<apkname>geoweather_v2.3.0.apk</apkname>
-			<hash type="sha256">20e67fc18ec78e4c464f0ecb4b5b332b3ffe428cde422e2fbdac1eb826a35df7</hash>
-			<size>22715601</size>
-			<sdkver>26</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-08-20</added>
-			<sig>affbe859dac99bd65c457093f896110d</sig>
-			<permissions>ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_SPECIAL_USE,INTERNET,POST_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-		<package>
-			<version>2.2.2</version>
-			<versioncode>64</versioncode>
-			<apkname>geoweather_v2.2.2.apk</apkname>
-			<hash type="sha256">92cbe9a69606bc47c1eb85d84794ef203000b2bd4bca4af22fffd1f2973b829b</hash>
-			<size>22658854</size>
-			<sdkver>26</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-07-26</added>
-			<sig>affbe859dac99bd65c457093f896110d</sig>
-			<permissions>ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_SPECIAL_USE,INTERNET,POST_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-		<package>
-			<version>2.2.1</version>
-			<versioncode>63</versioncode>
-			<apkname>geoweather_v2.2.1.apk</apkname>
-			<hash type="sha256">635fa6a4e74fa8792c0eb008c03c6887515f176b696cb02141abdc12eb8802c5</hash>
-			<size>22634221</size>
-			<sdkver>26</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-07-22</added>
-			<sig>affbe859dac99bd65c457093f896110d</sig>
-			<permissions>ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_SPECIAL_USE,INTERNET,POST_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-	</application>
-	<application id="com.freetime.ssmpc">
-		<id>com.freetime.ssmpc</id>
-		<added>2026-03-20</added>
-		<lastupdated>2026-08-23</lastupdated>
-		<name>SuperSMP Companion</name>
-		<summary>Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features</summary>
-		<desc>The Ultimate SuperSMP Companion App - Your Server, Everywhere!
+Perfect for daily weather checks, travel planning, or simply staying informed without being tracked. Download GeoWeather now!
+</desc><license>Apache-2.0</license><categories>Weather</categories><category>Weather</category><web></web><source>https://github.com/FreetimeMaker/GeoWeather</source><tracker>https://github.com/FreetimeMaker/GeoWeather/issues</tracker><changelog>https://github.com/FreetimeMaker/GeoWeather/releases</changelog><author>Freetime Maker</author><email>FreetimeMaker@proton.me</email><donate>https://free-time.me/don</donate><bitcoin>1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE</bitcoin><litecoin>LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg</litecoin><marketversion>2.3.0</marketversion><marketvercode>65</marketvercode><antifeatures>TetheredNet</antifeatures><package><version>2.3.0</version><versioncode>65</versioncode><apkname>GeoWeather-v2.3.0.apk</apkname><hash type="sha256">20e67fc18ec78e4c464f0ecb4b5b332b3ffe428cde422e2fbdac1eb826a35df7</hash><size>22715601</size><sdkver>26</sdkver><targetSdkVersion>37</targetSdkVersion><added>2026-08-30</added><sig>affbe859dac99bd65c457093f896110d</sig><permissions>ACCESS_COARSE_LOCATION,ACCESS_FINE_LOCATION,ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,FOREGROUND_SERVICE_SPECIAL_USE,INTERNET,POST_NOTIFICATIONS,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions><nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode></package></application><application id="com.freetime.ssmpc"><id>com.freetime.ssmpc</id><added>2026-08-30</added><lastupdated>2026-08-30</lastupdated><name>SuperSMP Companion</name><summary>Vote, shop &amp; explore SuperSMP anywhere! Companion app for server features</summary><icon>com.freetime.ssmpc.20.png</icon><desc>The Ultimate SuperSMP Companion App - Your Server, Everywhere!
 
 Enhance your SuperSMP Minecraft experience with the official companion app designed for players on the go! Access essential server features, stay connected with the community, and manage your server interactions right from your Android device.
 
@@ -229,12 +95,14 @@ INTERACTIVE SERVER MAP
 
 MODERN USER INTERFACE
 - Built with Jetpack Compose for smooth animations
-- Material Design 3 with dark/light themes
+- Material Design 3 with Dynamic Color support (Android 12+)
+- OLED Black Mode for AMOLED screens
 - Intuitive navigation optimized for mobile
 - Responsive design for all screen sizes
 
 TECHNICAL EXCELLENCE
 - Kotlin-first development for performance
+- Privacy-focused WebView with tracker blocking
 - Modern architecture with MVVM pattern
 - Regular updates with new features
 - Optimized for battery life and performance
@@ -280,61 +148,4 @@ COMMUNITY SUPPORT:
 Join our growing community of SuperSMP players! Report bugs, request features, and connect with fellow users through our GitHub repository. Your feedback helps shape the future of this app!
 
 Download now and take your SuperSMP experience to the next level!
-</desc>
-		<license>Apache-2.0</license>
-		<categories>Internet,Game Helper</categories>
-		<category>Internet</category>
-		<web></web>
-		<source>https://github.com/FreetimeMaker/SuperSMP-Companion-App</source>
-		<tracker>https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues</tracker>
-		<changelog>https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases</changelog>
-		<author>FreetimeMaker</author>
-		<email>FreetimeMaker@proton.me</email>
-		<donate>https://free-time.me/don</donate>
-		<bitcoin>1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE</bitcoin>
-		<litecoin>LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg</litecoin>
-		<openCollective>freetimemaker</openCollective>
-		<marketversion>1.6.0</marketversion>
-		<marketvercode>20</marketvercode>
-		<antifeatures>NonFreeNet</antifeatures>
-		<package>
-			<version>1.6.0</version>
-			<versioncode>20</versioncode>
-			<apkname>supersmp-compaion-app_v1.6.0.apk</apkname>
-			<hash type="sha256">dd3a6fdc8477a17f9080eb8289020ef20c04db2d240644e7a4d5c0b743b65248</hash>
-			<size>3411349</size>
-			<sdkver>26</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-08-23</added>
-			<sig>32ac407d33fa9dfbb71cfb41ab478d20</sig>
-			<permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,INTERNET,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-		<package>
-			<version>1.5.0</version>
-			<versioncode>19</versioncode>
-			<apkname>supersmp-compaion-app_v1.5.0.apk</apkname>
-			<hash type="sha256">203bfaf3ce4c73ff34f111a8437fe67dd16717c6723e7821979ea142e592b366</hash>
-			<size>1853925</size>
-			<sdkver>24</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-06-20</added>
-			<sig>32ac407d33fa9dfbb71cfb41ab478d20</sig>
-			<permissions>INTERNET,com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-		<package>
-			<version>1.4.4</version>
-			<versioncode>18</versioncode>
-			<apkname>supersmp-compaion-app_v1.4.4.apk</apkname>
-			<hash type="sha256">6ab3bc0ef5e9d3e6c1a32f0aff891bc7c5f45f5be388b88cfe725d1797023a4b</hash>
-			<size>1829405</size>
-			<sdkver>24</sdkver>
-			<targetSdkVersion>37</targetSdkVersion>
-			<added>2026-06-20</added>
-			<sig>32ac407d33fa9dfbb71cfb41ab478d20</sig>
-			<permissions>INTERNET,com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions>
-			<nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode>
-		</package>
-	</application>
-</fdroid>
+</desc><license>Apache-2.0</license><categories>Game Helper,Internet</categories><category>Game Helper</category><web></web><source>https://github.com/FreetimeMaker/SuperSMP-Companion-App</source><tracker>https://github.com/FreetimeMaker/SuperSMP-Companion-App/issues</tracker><changelog>https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases</changelog><author>Freetime Maker</author><email>FreetimeMaker@proton.me</email><donate>https://free-time/don</donate><bitcoin>1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE</bitcoin><litecoin>LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg</litecoin><marketversion>1.6.0</marketversion><marketvercode>20</marketvercode><antifeatures>NonFreeNet</antifeatures><package><version>1.6.0</version><versioncode>20</versioncode><apkname>SSMPC-v1.6.0.apk</apkname><hash type="sha256">dd3a6fdc8477a17f9080eb8289020ef20c04db2d240644e7a4d5c0b743b65248</hash><size>3411349</size><sdkver>26</sdkver><targetSdkVersion>37</targetSdkVersion><added>2026-08-30</added><sig>32ac407d33fa9dfbb71cfb41ab478d20</sig><permissions>ACCESS_NETWORK_STATE,FOREGROUND_SERVICE,INTERNET,RECEIVE_BOOT_COMPLETED,WAKE_LOCK,com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION</permissions><nativecode>arm64-v8a,armeabi-v7a,x86,x86_64</nativecode></package></application></fdroid>

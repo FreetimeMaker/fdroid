@@ -4,5 +4,3 @@
 • Multi-Provider: Integrated Tomorrow.io and Visual Crossing support (keys can be added in settings).
 • Performance: Added immediate cache display for weather to eliminate loading wait times.
 • Reliability: Fixed deep-link redirection and resolved various UI and translation bugs.
-
-**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.6.0...v1.7.0

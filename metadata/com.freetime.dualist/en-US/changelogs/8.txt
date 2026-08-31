@@ -1,1 +1,1 @@
-**Full Changelog**: https://github.com/FreetimeMaker/Dualist/compare/v1.1.5...v1.1.6
+• Under the Hood Changes so the F-Droid Build should run successful now

@@ -1,1 +1,0 @@
-Initial release of Dualist: A modern, adaptive, and offline-first To-Do list application built with Jetpack Compose.

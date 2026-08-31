@@ -2,5 +2,3 @@
 • Fix: Resolved persistent loading issues with improved provider fallbacks.
 • Auth: Improved GitHub/Modrinth login reliability and automated profile syncing.
 • UI: Added manual refresh button to the Home screen for instant updates.
-
-**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v1.7.1...v1.7.2

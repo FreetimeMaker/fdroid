@@ -1,18 +1,34 @@
-AuthorEmail: FreetimeMaker@proton.me
-AuthorName: FreetimeMaker
-AuthorWebSite: https://free-time.me/
-Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
 Categories:
-    - Task
+  - Task
+License: Apache-2.0
+AuthorName: Freetime Maker
+AuthorEmail: FreetimeMaker@proton.me
+AuthorWebSite: https://free-time.me/
+SourceCode: https://github.com/FreetimeMaker/Dualist
+IssueTracker: https://github.com/FreetimeMaker/Dualist/issues
+Translation: https://translate.codeberg.org/projects/dualist/dualist/
+Changelog: https://github.com/FreetimeMaker/Dualist/releases
+Donate: https://free-time.me/don
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
+
+AutoName: Dualist
+
+RepoType: git
+Repo: https://github.com/FreetimeMaker/Dualist.git
+Binaries: https://github.com/FreetimeMaker/Dualist/releases/download/v%v/Dualist-v%v.apk
+
+Builds:
+  - versionName: 1.1.7
+    versionCode: 9
+    commit: bcdb2b64077ff31ea8e7bc9a3877d352b5780346
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
 CurrentVersion: 1.1.7
 CurrentVersionCode: 9
-Description: "Dualist - Simple, Adaptive, Private.\n\nDualist is a streamlined, high-performance To-Do List application designed for the modern Android ecosystem. It focuses on a seamless transition between mobile and large-screen form factors using a state-of-the-art adaptive architecture.\n\n\U0001F31F KEY FEATURES:\n\n\U0001F313 ADAPTIVE 2-PANE LAYOUT\n- Optimized List-Detail pattern that automatically expands to two panes on tablets and foldables.\n- Providing a high-productivity workspace for large-screen devices.\n\n\U0001F3E0 OFFLINE-FIRST & PRIVATE\n- All your tasks are stored locally on your device in a robust Room database.\n- No cloud sync, no data mining, and no accounts required. Your data stays with you.\n\n\U0001F6AB NO GOOGLE SERVICES REQUIRED\n- Completely free of Google Play Services (GMS).\n- Runs perfectly on de-googled Android distributions and privacy-focused ROMs.\n\n\U0001F3A8 VIBRANT MATERIAL 3 DESIGN\n- A bold, energetic color scheme utilizing the latest Material Design 3 principles.\n- Full support for Light and Dark modes.\n- Modern edge-to-edge display integration.\n\n✅ CORE TASK MANAGEMENT\n- Effortlessly add, check off, and delete tasks.\n- Intuitive and responsive interface designed for speed and clarity.\n\nDualist is the perfect companion for anyone seeking a fast, private, and beautifully designed task manager that feels at home on any device size. Download Dualist today and experience a new standard in adaptive productivity!\n"
-Donate: https://free-time.me/don
-IssueTracker: https://github.com/FreetimeMaker/Dualist/issues
-License: Apache-2.0
-Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
-Name: Dualist
-OpenCollective: freetimemaker
-SourceCode: https://github.com/FreetimeMaker/Dualist
-Summary: Modern, adaptive, and offline-first To-Do List app.
-Translation: https://translate.codeberg.org/projects/dualist/dualist/

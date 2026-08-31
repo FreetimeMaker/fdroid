@@ -1,4 +1,0 @@
-- Added new Donation Screen with more options
-- Added Wallet Addresses for various Cryptocurrencies
-- Added OLED Black Mode for AMOLED screens
-- Added WebView Settings (Private View & External Browser)

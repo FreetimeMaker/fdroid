@@ -1,1 +1,0 @@
-• Fixed an F-Droid Reproductible Build Error (Hopefully)
