@@ -1,5 +1,8 @@
 .vscode
-node_modules/*
+_site/
+.jekyll-cache/
+.sass-cache/
+Gemfile.lock
 logs
 repo/*.log.gz
 build/*
