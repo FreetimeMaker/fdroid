@@ -50,15 +50,15 @@ jobs:
       - name: Set up repo secrets
         run: |
           # Kopiere alle Dateien aus dem Root des Keystore-Repos in den lokalen fdroid-Ordner
-          cp -r temp_secrets/. fdroid/
+          cp -r temp_secrets/. ./
           rm -rf temp_secrets
           
           # Korrigiere Pfade in der config.yml für den GitHub Runner
-          sed -i 's|apksigner: .*|apksigner: /usr/bin/apksigner|' fdroid/config.yml
+          sed -i 's|apksigner: .*|apksigner: /usr/bin/apksigner|' config.yml
           
           # Berechtigungen korrigieren (Sicherheitsanforderung von fdroid)
-          chmod 0600 fdroid/config.yml
-          [ -f fdroid/keystore.p12 ] && chmod 0600 fdroid/keystore.p12
+          chmod 0600 config.yml
+          [ -f keystore.p12 ] && chmod 0600 keystore.p12
 
       - name: Set up fdroid build
         run: fdroid build --all
