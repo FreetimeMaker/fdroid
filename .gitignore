@@ -1,6 +1,7 @@
-tmp/
-fdroid/repo/status
-fdroidserver
-fdroid/keystore.p12
-fdroid/*.jks
-.idea
+.vscode
+node_modules/*
+logs
+repo/*.log.gz
+build/*
+repo/status/*
+keystore.p12

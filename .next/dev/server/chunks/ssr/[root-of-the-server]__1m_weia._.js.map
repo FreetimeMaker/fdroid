@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 40, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/jamie/WebstormProjects/Website/fdroid/pages/_document.tsx"],"sourcesContent":["// pages/_document.tsx\r\nimport { Html, Head, Main, NextScript } from \"next/document\";\r\n\r\nexport default function Document() {\r\n  return (\r\n    <Html lang=\"de\">\r\n      <Head>\r\n        {/* Pfad zeigt auf public/repo/style.css */}\r\n        <link rel=\"stylesheet\" href=\"/repo/style.css\" />\r\n      </Head>\r\n      <body>\r\n        <Main />\r\n        <NextScript />\r\n      </body>\r\n    </Html>\r\n  );\r\n}"],"names":["Document","lang","rel","href"],"mappings":";;;;;AAAA,sBAAsB;AACtB;;;AAEe,SAASA;IACtB,qBACE,qKAAC,2IAAI;QAACC,MAAK;;0BACT,qKAAC,2IAAI;0BAEH,cAAA,qKAAC;oBAAKC,KAAI;oBAAaC,MAAK;;;;;;;;;;;0BAE9B,qKAAC;;kCACC,qKAAC,2IAAI;;;;;kCACL,qKAAC,iJAAU;;;;;;;;;;;;;;;;;AAInB"}}]
+}

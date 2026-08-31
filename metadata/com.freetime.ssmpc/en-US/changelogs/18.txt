@@ -1,0 +1,6 @@
+## What's Changed
+* Fixed the Monochrome Icon (Hopefully)
+* Update plugin com.google.devtools.ksp to v2.3.8 by @renovate[bot] in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/51
+
+
+**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.4.3...v1.4.4

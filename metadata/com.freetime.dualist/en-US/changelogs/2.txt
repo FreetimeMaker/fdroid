@@ -1,0 +1,7 @@
+• Added Search & Filter for tasks.
+• Added Swipe-to-Delete gesture.
+• Added Categories and Tags support.
+• Integrated local JSON Backup & Restore.
+• Improved Material 3 Adaptive Navigation.
+• Added Task Reminders and local notifications.
+**Full Changelog**: https://github.com/FreetimeMaker/Dualist/compare/v1.0.0...v1.1.0

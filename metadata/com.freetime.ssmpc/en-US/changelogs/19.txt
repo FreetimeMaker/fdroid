@@ -1,0 +1,11 @@
+## What's Changed
+* Hand mailto and tel links to the system from the web screens by @jim-daf in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/53
+- Added new Donation Screen with more options
+- Added Wallet Addresses for various Cryptocurrencies
+- Added OLED Black Mode for AMOLED screens
+- Added WebView Settings (Private View & External Browser)
+
+## New Contributors
+* @jim-daf made their first contribution in https://github.com/FreetimeMaker/SuperSMP-Companion-App/pull/53
+
+**Full Changelog**: https://github.com/FreetimeMaker/SuperSMP-Companion-App/compare/v1.4.4...v1.5.0

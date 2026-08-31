@@ -1,0 +1,6 @@
+• Integrated FreetimeSDK for crypto donations
+• Updated Kotlin and Gradle tools
+• Added new language changer and updated translations
+• General bug fixes and performance improvements
+
+**Full Changelog**: https://github.com/FreetimeMaker/GeoWeather/compare/v2.1.2...v2.2.0

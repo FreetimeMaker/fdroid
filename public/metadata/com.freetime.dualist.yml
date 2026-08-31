@@ -1,0 +1,34 @@
+Categories:
+  - Task
+License: Apache-2.0
+AuthorName: Freetime Maker
+AuthorEmail: FreetimeMaker@proton.me
+AuthorWebSite: https://free-time.me/
+SourceCode: https://github.com/FreetimeMaker/Dualist
+IssueTracker: https://github.com/FreetimeMaker/Dualist/issues
+Translation: https://translate.codeberg.org/projects/dualist/dualist/
+Changelog: https://github.com/FreetimeMaker/Dualist/releases
+Donate: https://free-time.me/don
+Bitcoin: 1DsCAVrzvGokrzXpe6YR33QuTo5EppiKRE
+Litecoin: LU2ERRXKTeKnzpuieQcpsBteViEY7ff5Wg
+
+AutoName: Dualist
+
+RepoType: git
+Repo: https://github.com/FreetimeMaker/Dualist.git
+Binaries: https://github.com/FreetimeMaker/Dualist/releases/download/v%v/Dualist-v%v.apk
+
+Builds:
+  - versionName: 1.1.7
+    versionCode: 9
+    commit: bcdb2b64077ff31ea8e7bc9a3877d352b5780346
+    subdir: app
+    gradle:
+      - yes
+
+AllowedAPKSigningKeys: ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.1.7
+CurrentVersionCode: 9

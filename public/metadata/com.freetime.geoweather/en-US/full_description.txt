@@ -1,0 +1,43 @@
+GeoWeather - Your Modern, Privacy-First Weather App
+
+Experience an intuitive weather application inspired by the Swiss MeteoSwiss app. GeoWeather provides you with precise weather information for multiple cities with an elegant, Material You interface.
+
+🌟 KEY FEATURES:
+
+🏙️ MULTIPLE CITIES & SHORTCUTS
+- Add unlimited cities to your list
+- Quick switching between locations
+- App Shortcuts: Jump to your top cities directly from the homescreen
+
+📅 UP TO 16-DAY FORECAST
+- Extended 16-day weather predictions (Open-Meteo)
+- 24h Trend charts for temperature and precipitation
+- Wind speed, gusts, and humidity information
+
+⏰ TECHNICAL & GEOLOGICAL DATA
+- Wind Compass for direction and speed
+- Barometer with 3h pressure trends
+- Visibility and Cloud Base height
+- Integrated Earthquake monitor for nearby geological activity
+
+🏥 HEALTH & ENVIRONMENT
+- UV-Index with color-coded risk levels
+- Air Pollutants (PM2.5, PM10, NO2, O3)
+- Pollen count (Alder, Birch, Grass)
+- Outdoor Activity Score (Jogging, Laundry, Gardening)
+
+🌗 ASTRONOMY & PHOTOGRAPHY
+- Graphical Moon Phase display
+- Golden Hour and Blue Hour windows for photographers
+- Precise sunrise and sunset times
+
+🎨 CUSTOMIZATION
+- Material You: Dynamic colors based on your wallpaper
+- OLED Black Mode for AMOLED screens
+
+🛡️ 100% PRIVATE & OPEN SOURCE
+- No account required, no login needed
+- No trackers
+- Local JSON Backup & Restore for your cities
+
+Perfect for daily weather checks, travel planning, or simply staying informed without being tracked. Download GeoWeather now!
