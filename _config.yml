@@ -4,8 +4,10 @@ description: Official F-Droid repository from Freetime Maker
 # The fdroidserver-generated page under /repo/ (index.html, index.css, index.png,
 # icons/, ...) is served by Jekyll verbatim as static content. Because all asset
 # paths inside index.html are relative, they resolve correctly at that location.
-
-# public/ was the static directory of the former Next.js implementation and is a
-# duplicate of the real fdroidserver structure (repo/, archive/). It is not deployed.
+#
+# Only the website-relevant content is deployed. fdroidserver source files
+# (metadata/, config.yml) and the former Next.js static dir (public/) are excluded.
 exclude:
   - public
+  - metadata
+  - config.yml
