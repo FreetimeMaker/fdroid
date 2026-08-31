@@ -1,8 +1,0 @@
-title: Freetime Repository
-description: Official F-Droid repository from Freetime Maker
-
-# Basis-Pfad für die F-Droid Repository-Assets (entspricht NEXT_PUBLIC_REPO_BASE)
-# Kann pro Build über die Umgebungsvariable REPO_BASE überschrieben werden.
-repo_base: /fdroid/repo
-
-markdown: kramdown
