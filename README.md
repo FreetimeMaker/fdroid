@@ -50,5 +50,13 @@ To build the static site into `_site/`:
 bundle exec jekyll build
 ```
 
+The site is deployed with **GitHub Pages** (custom domain via `CNAME`). A GitHub
+Actions workflow (`.github/workflows/jekyll.yml`) builds Jekyll and publishes
+`_site/` automatically on every push to `main`.
+
+Note: This is a Jekyll project now. **Vercel** cannot build it (it expected the
+previous Next.js setup with `package.json`/`pages/`), so Vercel should be disabled
+for the domain; GitHub Pages is the host.
+
 ### [License](LICENSE)
 The license is for the files in this repository, *except* those in the `fdroid` directory. These files *might* be licensed differently; you can use an F-Droid client to get the details for each app.
