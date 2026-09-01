@@ -18,3 +18,4 @@ keystorepass: KKKKKK
 keypass: KKKKKK
 repo_keyalias: fdroid
 keydname: CN=Freetime Maker, OU=F-Droid
+repo_key_sha256: 525aad9b346f70388d96e281c061bc184b5afec35872bf1e140ad8063cc2a1c2
