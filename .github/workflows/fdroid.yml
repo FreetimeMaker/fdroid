@@ -34,7 +34,7 @@ jobs:
           destination: ./_site
 
       - name: Add CNAME
-        run: cp CNAME ./_site/CNAME
+        run: sudo cp CNAME ./_site/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
