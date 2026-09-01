@@ -1,14 +1,12 @@
-name: Build F-Droid Repo & Deploy Jekyll to GitHub Pages
+name: Build & Deploy Jekyll to GitHub Pages
 
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
-  schedule:
-    - cron: "0 * * * *"
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
@@ -17,87 +15,28 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-
-  build_fdroid:
-    name: "Build F-Droid Repo"
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
-
-      - name: Checkout Keystore Repository
-        uses: actions/checkout@v4
-        with:
-          repository: ${{ secrets.KEYSTORE_REPOSITORY }}
-          token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
-          path: temp_secrets
-
-      # ---------------------------------------------------------
-      # Install dependencies
-      # ---------------------------------------------------------
-
-      - name: Install system packages
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y git wget unzip imagemagick aapt yq apksigner zipalign
-
-      - name: Install fdroidserver
-        run: |
-          python3 -m pip install --upgrade pip
-          python3 -m pip install fdroidserver androguard==4.1.1
-
-      - name: Set up repo secrets
-        run: |
-          # Kopiere alle Dateien aus dem Root des Keystore-Repos in den lokalen fdroid-Ordner
-          cp -r temp_secrets/. ./
-          rm -rf temp_secrets
-          
-          # Korrigiere Pfade in der config.yml für den GitHub Runner
-          sed -i 's|apksigner: .*|apksigner: /usr/bin/apksigner|' config.yml
-          
-          # Berechtigungen korrigieren (Sicherheitsanforderung von fdroid)
-          chmod 0600 config.yml
-          [ -f keystore.p12 ] && chmod 0600 keystore.p12
-
-      - name: Set up fdroid build
-        run: fdroid build --all
-
-      - name: Update fdroid repo
-        run: fdroid update --no-sign --delete-unknown
-
-      - name: Publish fdroid repo
-        run: fdroid publish
-
-      # ---------------------------------------------------------
-      # Clean secrets & build artifacts before the Pages build.
-      # Jekyll uses the repo root (source: ./) as its site source, so
-      # anything left here would end up in the public _site. Signing
-      # keys and gradle build outputs must never be published.
-      # ---------------------------------------------------------
-
-      - name: Clean secrets & build artifacts
-        run: |
-          rm -rf build assets logs public metadata
-          rm -f ./*.jks ./*.p12 ./keystore.p12
-          find repo -name '*.log.gz' -delete
-          rm -rf repo/status
-
-      # ---------------------------------------------------------
-      # Build Jekyll site
-      # ---------------------------------------------------------
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
 
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./repo
           destination: ./_site
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
       - name: Deploy to GitHub Pages
         id: deployment
