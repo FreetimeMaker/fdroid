@@ -1,0 +1,228 @@
+{
+  "METADATA_VERSION": 30000,
+  "allow_disabled_algorithms": false,
+  "Dualist-v1.1.7.apk": {
+    "file": {
+      "name": "Dualist-v1.1.7.apk",
+      "sha256": "b6ae16a64037f410da9be7049c4cc69c06281063d0aaa62d8f1c065e31becfa7",
+      "size": 2391428
+    },
+    "icons_src": {
+      "160": "res/d2.webp",
+      "240": "res/MO.webp",
+      "320": "res/qs.webp",
+      "480": "res/Sn.webp",
+      "640": "res/sK.webp"
+    },
+    "icons": {
+      "640": "com.freetime.dualist.9.png",
+      "480": "com.freetime.dualist.9.png",
+      "320": "com.freetime.dualist.9.png",
+      "240": "com.freetime.dualist.9.png",
+      "160": "com.freetime.dualist.9.png",
+      "0": "com.freetime.dualist.9.png"
+    },
+    "antiFeatures": {},
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "ce51dc2448e8d02b6c60ed33929d0fba2515cefd7d8af4f1471af9bc92bf479b"
+        ]
+      },
+      "usesSdk": {
+        "minSdkVersion": 24,
+        "targetSdkVersion": 37
+      },
+      "versionName": "1.1.7",
+      "nativecode": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "usesPermission": [
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.SCHEDULE_EXACT_ALARM"
+        },
+        {
+          "name": "android.permission.USE_EXACT_ALARM"
+        },
+        {
+          "name": "com.freetime.dualist.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ]
+    },
+    "packageName": "com.freetime.dualist",
+    "versionCode": 9,
+    "name": "Dualist",
+    "is_v1_signed_only": false,
+    "sig": "4849fce5170b9d6e5215c0f50fd02c78",
+    "icon": "com.freetime.dualist.9.png",
+    "added": 1788109927587
+  },
+  "GeoWeather-v2.3.0.apk": {
+    "file": {
+      "name": "GeoWeather-v2.3.0.apk",
+      "sha256": "20e67fc18ec78e4c464f0ecb4b5b332b3ffe428cde422e2fbdac1eb826a35df7",
+      "size": 22715601
+    },
+    "icons_src": {
+      "160": "res/_i.webp",
+      "240": "res/B1.webp",
+      "320": "res/II.webp",
+      "480": "res/AF.webp",
+      "640": "res/p9.webp"
+    },
+    "icons": {
+      "640": "com.freetime.geoweather.65.png",
+      "480": "com.freetime.geoweather.65.png",
+      "320": "com.freetime.geoweather.65.png",
+      "240": "com.freetime.geoweather.65.png",
+      "160": "com.freetime.geoweather.65.png",
+      "0": "com.freetime.geoweather.65.png"
+    },
+    "antiFeatures": {},
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283"
+        ]
+      },
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 37
+      },
+      "versionName": "2.3.0",
+      "nativecode": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.POST_NOTIFICATIONS"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.ACCESS_FINE_LOCATION"
+        },
+        {
+          "name": "android.permission.ACCESS_COARSE_LOCATION"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE_SPECIAL_USE"
+        },
+        {
+          "name": "com.freetime.geoweather.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ]
+    },
+    "packageName": "com.freetime.geoweather",
+    "versionCode": 65,
+    "name": "GeoWeather",
+    "is_v1_signed_only": false,
+    "sig": "affbe859dac99bd65c457093f896110d",
+    "icon": "com.freetime.geoweather.65.png",
+    "added": 1788109927587
+  },
+  "SSMPC-v1.6.0.apk": {
+    "file": {
+      "name": "SSMPC-v1.6.0.apk",
+      "sha256": "dd3a6fdc8477a17f9080eb8289020ef20c04db2d240644e7a4d5c0b743b65248",
+      "size": 3411349
+    },
+    "icons_src": {
+      "160": "res/_i.webp",
+      "240": "res/B1.webp",
+      "320": "res/II.webp",
+      "480": "res/AF.webp",
+      "640": "res/p9.webp"
+    },
+    "icons": {
+      "640": "com.freetime.ssmpc.20.png",
+      "480": "com.freetime.ssmpc.20.png",
+      "320": "com.freetime.ssmpc.20.png",
+      "240": "com.freetime.ssmpc.20.png",
+      "160": "com.freetime.ssmpc.20.png",
+      "0": "com.freetime.ssmpc.20.png"
+    },
+    "antiFeatures": {},
+    "manifest": {
+      "signer": {
+        "sha256": [
+          "fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7"
+        ]
+      },
+      "usesSdk": {
+        "minSdkVersion": 26,
+        "targetSdkVersion": 37
+      },
+      "versionName": "1.6.0",
+      "nativecode": [
+        "arm64-v8a",
+        "armeabi-v7a",
+        "x86",
+        "x86_64"
+      ],
+      "usesPermission": [
+        {
+          "name": "android.permission.INTERNET"
+        },
+        {
+          "name": "android.permission.WAKE_LOCK"
+        },
+        {
+          "name": "android.permission.ACCESS_NETWORK_STATE"
+        },
+        {
+          "name": "android.permission.RECEIVE_BOOT_COMPLETED"
+        },
+        {
+          "name": "android.permission.FOREGROUND_SERVICE"
+        },
+        {
+          "name": "com.freetime.ssmpc.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        }
+      ]
+    },
+    "packageName": "com.freetime.ssmpc",
+    "versionCode": 20,
+    "name": "SuperSMP Companion",
+    "is_v1_signed_only": false,
+    "sig": "32ac407d33fa9dfbb71cfb41ab478d20",
+    "icon": "com.freetime.ssmpc.20.png",
+    "added": 1788109927587
+  },
+  "CNAME": {
+    "name": "CNAME",
+    "file": {
+      "name": "CNAME",
+      "sha256": "a258f48cb5ff46abec3ce20a24550c6365323a4cc30f8a7c4d322414ea7d49d9",
+      "size": 19
+    },
+    "versionCode": 0,
+    "manifest": {
+      "versionName": "a258f48"
+    },
+    "packageName": "a258f48cb5ff46abec3ce20a24550c6365323a4cc30f8a7c4d322414ea7d49d9",
+    "added": 1788241979264
+  }
+}
