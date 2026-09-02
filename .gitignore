@@ -8,3 +8,6 @@ repo/*.log.gz
 build/*
 repo/status/*
 keystore.p12
+unsigned/*
+tmp/*
+logs/*
