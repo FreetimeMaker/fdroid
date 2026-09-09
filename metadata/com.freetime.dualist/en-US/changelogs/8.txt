@@ -1,1 +1,0 @@
-• Under the Hood Changes so the F-Droid Build should run successful now
