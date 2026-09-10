@@ -397,6 +397,48 @@ jobs:
 
           apksigner version
 
+      - name: Accept Android SDK licenses
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          SDKMANAGER="$(command -v sdkmanager || true)"
+
+          if [ -z "$SDKMANAGER" ]; then
+            SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-}}"
+
+            if [ -n "$SDK_ROOT" ]; then
+              SDKMANAGER="$(
+                find "$SDK_ROOT" \
+                  -type f \
+                  -name sdkmanager \
+                  -perm -u+x \
+                  2>/dev/null \
+                  | sort \
+                  | tail -n1
+              )"
+            fi
+          fi
+
+          if [ -z "$SDKMANAGER" ]; then
+            echo "::error::sdkmanager could not be found on the GitHub Actions runner."
+            exit 1
+          fi
+
+          echo "Using sdkmanager: $SDKMANAGER"
+
+          set +o pipefail
+          yes | "$SDKMANAGER" --licenses
+          SDKMANAGER_STATUS="${PIPESTATUS[1]}"
+          set -o pipefail
+
+          if [ "$SDKMANAGER_STATUS" -ne 0 ]; then
+            echo "::error::sdkmanager --licenses failed with exit code $SDKMANAGER_STATUS."
+            exit "$SDKMANAGER_STATUS"
+          fi
+
+          echo "Android SDK licenses accepted."
+
       - name: Set up gradlew-fdroid
         shell: bash
         run: |
