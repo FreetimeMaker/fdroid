@@ -273,6 +273,19 @@ jobs:
           git diff \
             -- "metadata/$APP_ID.yml"
 
+      - name: Run fdroid.sh when no update is available
+        if: steps.update.outputs.changed == 'false'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          chmod +x ./fdroid.sh
+          chmod +x ./changelogs.sh
+
+          bash ./fdroid.sh
+
+          rm -f keystore.p12
+
       - name: Run fdroid-bot.sh
         if: steps.update.outputs.changed == 'true'
         shell: bash
