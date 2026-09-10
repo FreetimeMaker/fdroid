@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: fdroid-auto-update
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   collect-apps:
@@ -73,7 +73,7 @@ jobs:
     name: Check ${{ matrix.app }}
     needs:
       - collect-apps
-    if: needs.collect-apps.outputs.has_apps == 'true'
+    if: github.event_name != 'push' && needs.collect-apps.outputs.has_apps == 'true'
     runs-on: ubuntu-latest
 
     strategy:
@@ -217,7 +217,7 @@ jobs:
     name: Apply app updates directly to main
     needs:
       - update-app
-    if: needs.update-app.result == 'success'
+    if: github.event_name != 'push' && needs.update-app.result == 'success'
     runs-on: ubuntu-latest
 
     outputs:
