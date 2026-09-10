@@ -330,7 +330,7 @@ jobs:
           "$SDKMANAGER" --sdk_root="$SDK_ROOT" --channel=3 \
             "platform-tools" \
             "build-tools;36.0.0" \
-            "platforms;android-37" \
+            "platforms;android-37.0" \
             "ndk;28.0.13004108"
 
           APKSIGNER="$SDK_ROOT/build-tools/36.0.0/apksigner"
