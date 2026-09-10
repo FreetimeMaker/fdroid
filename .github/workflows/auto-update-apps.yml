@@ -111,6 +111,30 @@ jobs:
           python -m pip install \
             "fdroidserver"
 
+      - name: Install Android SDK Build Tools
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          sudo apt-get update
+          sudo apt-get install -y \
+            apksigner \
+            android-sdk-build-tools
+
+          if ! command -v apksigner >/dev/null 2>&1; then
+            APKSIGNER_PATH="$(find /usr/lib/android-sdk/build-tools -type f -name apksigner | sort -V | tail -n1)"
+
+            if [ -z "$APKSIGNER_PATH" ]; then
+              echo "::error::apksigner could not be found after installing Android SDK Build Tools."
+              exit 1
+            fi
+
+            sudo ln -sf "$APKSIGNER_PATH" /usr/bin/apksigner
+          fi
+
+          echo "Using apksigner: $(command -v apksigner)"
+          apksigner version
+
       - name: Save metadata file list
         shell: bash
         run: |
@@ -124,8 +148,6 @@ jobs:
             | sort \
             > /tmp/metadata-before.txt
 
-
-
       - name: Getting KeyStore
         uses: actions/checkout@v6
         with:
@@ -135,8 +157,8 @@ jobs:
 
       - name: Copy KeyStore to Root Dir
         run: |
-            cp -r temp_secrets/keystore.p12 ./
-            rm -rf temp_secrets
+          cp -r temp_secrets/keystore.p12 ./
+          rm -rf temp_secrets
 
       - name: Check app for update
         shell: bash
@@ -243,7 +265,7 @@ jobs:
           chmod +x ./changelogs.sh
 
           bash ./fdroid-bot.sh
-          
+
           rm -rf keystore.p12
 
       - name: Create app branch
@@ -361,9 +383,9 @@ jobs:
         if: steps.update.outputs.changed == 'true'
         shell: bash
         env:
+          GH_TOKEN: ${{ github.token }}
           PR_TITLE: ${{ steps.pr.outputs.title }}
           PR_BODY: ${{ steps.pr.outputs.body }}
-
           HEAD_BRANCH: ${{ steps.branch.outputs.branch }}
 
         run: |
