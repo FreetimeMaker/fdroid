@@ -14,10 +14,81 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  check-and-update:
+
+  collect-apps:
+    name: Collect existing apps
     runs-on: ubuntu-latest
 
+    outputs:
+      apps: ${{ steps.apps.outputs.apps }}
+      has_apps: ${{ steps.apps.outputs.has_apps }}
+
     steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Collect existing apps
+        id: apps
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -t METADATA_FILES < <(
+            find metadata \
+              -maxdepth 1 \
+              -type f \
+              -name '*.yml' \
+              -printf '%f\n' \
+              | sort
+          )
+
+          if [ "${#METADATA_FILES[@]}" -eq 0 ]; then
+            echo "No existing apps found."
+
+            echo 'apps=[]' >> "$GITHUB_OUTPUT"
+            echo 'has_apps=false' >> "$GITHUB_OUTPUT"
+
+            exit 0
+          fi
+
+          APP_IDS=()
+
+          for FILE in "${METADATA_FILES[@]}"; do
+            APP_IDS+=("${FILE%.yml}")
+          done
+
+          APPS_JSON="$(
+            printf '%s\n' "${APP_IDS[@]}" \
+              | jq -Rsc \
+              'split("\n") | map(select(length > 0))'
+          )"
+
+          echo "apps=$APPS_JSON" >> "$GITHUB_OUTPUT"
+          echo "has_apps=true" >> "$GITHUB_OUTPUT"
+
+          echo "Found apps:"
+
+          printf ' - %s\n' "${APP_IDS[@]}"
+
+  update-app:
+    name: Check ${{ matrix.app }}
+
+    needs:
+      - collect-apps
+
+    if: needs.collect-apps.outputs.has_apps == 'true'
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+
+      matrix:
+        app: ${{ fromJSON(needs.collect-apps.outputs.apps) }}
+
+    steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
@@ -31,136 +102,224 @@ jobs:
 
       - name: Install F-Droid server tools
         run: |
+          set -euo pipefail
+
           python -m pip install --upgrade pip
-          python -m pip install "fdroidserver==2.4.5"
 
-      - name: Collect existing apps
-        id: apps
+          python -m pip install \
+            "fdroidserver==2.4.5"
+
+      - name: Save metadata file list
         shell: bash
         run: |
           set -euo pipefail
 
-          mapfile -t METADATA_FILES < <(find metadata -maxdepth 1 -type f -name '*.yml' -printf '%f\n' | sort)
+          find metadata \
+            -maxdepth 1 \
+            -type f \
+            -name '*.yml' \
+            -printf '%f\n' \
+            | sort \
+            > /tmp/metadata-before.txt
 
-          if [ "${#METADATA_FILES[@]}" -eq 0 ]; then
-            echo "No existing apps found in metadata/."
-            echo "has_apps=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
+      - name: Check app for update
+        shell: bash
+        env:
+          APP_ID: ${{ matrix.app }}
+        run: |
+          set -euo pipefail
 
-          printf '%s\n' "${METADATA_FILES[@]}" > /tmp/metadata-before.txt
+          echo "Checking:"
+          echo "$APP_ID"
 
-          APP_IDS=()
-          for file in "${METADATA_FILES[@]}"; do
-            APP_IDS+=("${file%.yml}")
-          done
+          fdroid checkupdates \
+            --auto \
+            --autoonly \
+            --allow-dirty \
+            "$APP_ID"
 
-          printf '%s\n' "${APP_IDS[@]}" > /tmp/app-ids.txt
-          echo "has_apps=true" >> "$GITHUB_OUTPUT"
-          echo "Found ${#APP_IDS[@]} existing app(s): ${APP_IDS[*]}"
-
-      - name: Check existing apps for updates
-        if: steps.apps.outputs.has_apps == 'true'
+      - name: Ensure no apps were added or removed
         shell: bash
         run: |
           set -euo pipefail
-          mapfile -t APP_IDS < /tmp/app-ids.txt
 
-          # --autoonly restricts processing to apps that already opted into
-          # F-Droid auto updates. Passing explicit existing app IDs ensures this
-          # workflow can never discover/add a new app on its own.
-          fdroid checkupdates --auto --autoonly --allow-dirty "${APP_IDS[@]}"
+          find metadata \
+            -maxdepth 1 \
+            -type f \
+            -name '*.yml' \
+            -printf '%f\n' \
+            | sort \
+            > /tmp/metadata-after.txt
 
-      - name: Ensure no new app metadata was added
-        if: steps.apps.outputs.has_apps == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-          find metadata -maxdepth 1 -type f -name '*.yml' -printf '%f\n' | sort > /tmp/metadata-after.txt
+          if ! diff \
+            -u \
+            /tmp/metadata-before.txt \
+            /tmp/metadata-after.txt
+          then
+            echo "::error::App metadata files changed."
+            echo "::error::Adding/removing apps is not allowed."
 
-          if ! diff -u /tmp/metadata-before.txt /tmp/metadata-after.txt; then
-            echo "::error::The update process changed the set of app metadata files. New or removed apps are not allowed."
             exit 1
           fi
 
-      - name: Detect metadata changes
-        if: steps.apps.outputs.has_apps == 'true'
-        id: changes
+      - name: Detect update
+        id: update
         shell: bash
+        env:
+          APP_ID: ${{ matrix.app }}
         run: |
           set -euo pipefail
 
-          if git diff --quiet -- 'metadata/*.yml'; then
+          if git diff \
+            --quiet \
+            -- "metadata/$APP_ID.yml"
+          then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No app updates found."
+
+            echo "No update for $APP_ID."
+
             exit 0
           fi
+
+          VERSION="$(
+            sed -n \
+              's/^CurrentVersion:[[:space:]]*//p' \
+              "metadata/$APP_ID.yml" \
+              | tail -n1
+          )"
+
+          VERSION_CODE="$(
+            sed -n \
+              's/^CurrentVersionCode:[[:space:]]*//p' \
+              "metadata/$APP_ID.yml" \
+              | tail -n1
+          )"
 
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
-          git diff --name-only -- 'metadata/*.yml' \
-            | sed -n 's#^metadata/\(.*\)\.yml$#\1#p' \
-            | sort -u > /tmp/updated-apps.txt
+          echo "version=$VERSION" \
+            >> "$GITHUB_OUTPUT"
 
-          echo "Updated apps:"
-          cat /tmp/updated-apps.txt
+          echo "version_code=$VERSION_CODE" \
+            >> "$GITHUB_OUTPUT"
 
-      - name: Validate updated metadata
-        if: steps.changes.outputs.changed == 'true'
+          echo
+          echo "================================"
+          echo "Update found"
+          echo "================================"
+          echo "App:         $APP_ID"
+          echo "Version:     $VERSION"
+          echo "VersionCode: $VERSION_CODE"
+
+          git diff \
+            -- "metadata/$APP_ID.yml"
+
+      - name: Validate metadata
+        if: steps.update.outputs.changed == 'true'
         shell: bash
+        env:
+          APP_ID: ${{ matrix.app }}
         run: |
           set -euo pipefail
-          mapfile -t UPDATED_APPS < /tmp/updated-apps.txt
 
           fdroid readmeta
-          fdroid lint "${UPDATED_APPS[@]}"
+
+          fdroid lint "$APP_ID"
 
       - name: Run fdroid-bot.sh
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.update.outputs.changed == 'true'
         shell: bash
+        env:
+          APP_ID: ${{ matrix.app }}
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
+
+          chmod +x ./fdroid-bot.sh
+          chmod +x ./changelogs.sh
+
           bash ./fdroid-bot.sh
 
-      - name: Push bot branch
-        if: steps.changes.outputs.changed == 'true'
-        id: push
+      - name: Validate final metadata
+        if: steps.update.outputs.changed == 'true'
         shell: bash
+        env:
+          APP_ID: ${{ matrix.app }}
         run: |
           set -euo pipefail
 
-          BRANCH="bot/fdroid-auto-update"
-          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
+          fdroid readmeta
+          fdroid lint "$APP_ID"
 
-          git config user.name "freetimemaker-fdroid-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Create app branch
+        if: steps.update.outputs.changed == 'true'
+        id: branch
+        shell: bash
+        env:
+          APP_ID: ${{ matrix.app }}
+          VERSION: ${{ steps.update.outputs.version }}
+        run: |
+          set -euo pipefail
 
-          git checkout -B "$BRANCH"
+          SAFE_APP="$(
+            printf '%s' "$APP_ID" \
+              | sed 's/[^A-Za-z0-9._-]/-/g'
+          )"
+
+          SAFE_VERSION="$(
+            printf '%s' "$VERSION" \
+              | sed 's/[^A-Za-z0-9._-]/-/g'
+          )"
+
+          BRANCH="bot/fdroid-auto-update/${SAFE_APP}-${SAFE_VERSION}"
+
+          echo "branch=$BRANCH" \
+            >> "$GITHUB_OUTPUT"
+
+          echo "Branch:"
+          echo "$BRANCH"
+
+          git config \
+            user.name \
+            "freetimemaker-fdroid-bot"
+
+          git config \
+            user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout \
+            -B \
+            "$BRANCH"
+
           git add -A
 
           if git diff --cached --quiet; then
-            echo "::error::The update check reported changes, but there is nothing to commit after fdroid-bot.sh."
+            echo "::error::Nothing to commit."
             exit 1
           fi
 
-          git commit -m "Auto-update F-Droid apps"
-          git push --force-with-lease origin "$BRANCH"
+          git status
 
-      - name: Build pull request title and body
-        if: steps.changes.outputs.changed == 'true'
+          git commit \
+            -m "Update $APP_ID to $VERSION"
+
+          git push \
+            --force-with-lease \
+            origin \
+            "HEAD:$BRANCH"
+
+      - name: Build pull request
+        if: steps.update.outputs.changed == 'true'
         id: pr
         shell: bash
+        env:
+          APP_ID: ${{ matrix.app }}
+          VERSION: ${{ steps.update.outputs.version }}
+          VERSION_CODE: ${{ steps.update.outputs.version_code }}
         run: |
           set -euo pipefail
-          mapfile -t UPDATED_APPS < /tmp/updated-apps.txt
 
-          if [ "${#UPDATED_APPS[@]}" -eq 1 ]; then
-            APP_ID="${UPDATED_APPS[0]}"
-            VERSION="$(sed -n 's/^CurrentVersion:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1)"
-            TITLE="Update $APP_ID to $VERSION"
-          else
-            TITLE="Update ${#UPDATED_APPS[@]} F-Droid apps"
-          fi
+          TITLE="Update $APP_ID to $VERSION"
 
           {
             echo "title<<EOF"
@@ -170,59 +329,81 @@ jobs:
 
           {
             echo "body<<EOF"
+
             echo "## Automatic F-Droid update"
             echo
-            echo "This pull request was generated automatically after checking only apps already present in \`metadata/\`."
+
+            echo "This pull request was generated automatically."
             echo
-            echo "### Updated apps"
+
+            echo "### Updated app"
             echo
-            for APP_ID in "${UPDATED_APPS[@]}"; do
-              VERSION="$(sed -n 's/^CurrentVersion:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1)"
-              VERSION_CODE="$(sed -n 's/^CurrentVersionCode:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1)"
-              echo "- \`$APP_ID\` → **$VERSION** (versionCode \`$VERSION_CODE\`)"
-            done
+
+            echo "- App: \`$APP_ID\`"
+            echo "- Version: **$VERSION**"
+            echo "- versionCode: \`$VERSION_CODE\`"
+
             echo
             echo "### Checks performed"
             echo
-            echo "- F-Droid update check ran with \`--auto --autoonly\` for explicit existing app IDs."
-            echo "- The workflow verified that no metadata file was added or removed."
+
+            echo "- F-Droid update check ran with \`--auto --autoonly\`."
+            echo "- Only \`$APP_ID\` was checked."
+            echo "- No app metadata files were added or removed."
             echo "- \`fdroid readmeta\` completed successfully."
-            echo "- \`fdroid lint\` completed successfully for every updated app."
-            echo "- \`fdroid-bot.sh\` completed successfully before these changes were pushed."
+            echo "- \`fdroid lint $APP_ID\` completed successfully."
+            echo "- \`changelogs.sh\` was run through \`fdroid-bot.sh\`."
+            echo "- \`fdroid-bot.sh\` completed successfully."
+            echo "- Final metadata validation completed successfully."
+
             echo
             echo "Generated by GitHub Actions workflow: \`${GITHUB_WORKFLOW}\`."
+
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
       - name: Create or update pull request
-        if: steps.changes.outputs.changed == 'true'
+        if: steps.update.outputs.changed == 'true'
+        shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+
           PR_TITLE: ${{ steps.pr.outputs.title }}
           PR_BODY: ${{ steps.pr.outputs.body }}
-          HEAD_BRANCH: ${{ steps.push.outputs.branch }}
-        shell: bash
+
+          HEAD_BRANCH: ${{ steps.branch.outputs.branch }}
+
         run: |
           set -euo pipefail
 
-          EXISTING_PR="$(gh pr list \
-            --repo "$GITHUB_REPOSITORY" \
-            --state open \
-            --head "$HEAD_BRANCH" \
-            --json number \
-            --jq '.[0].number // empty')"
+          EXISTING_PR="$(
+            gh pr list \
+              --repo "$GITHUB_REPOSITORY" \
+              --state open \
+              --head "$HEAD_BRANCH" \
+              --json number \
+              --jq '.[0].number // empty'
+          )"
 
           if [ -n "$EXISTING_PR" ]; then
-            gh pr edit "$EXISTING_PR" \
+
+            echo "Updating PR #$EXISTING_PR..."
+
+            gh pr edit \
+              "$EXISTING_PR" \
               --repo "$GITHUB_REPOSITORY" \
               --title "$PR_TITLE" \
               --body "$PR_BODY"
-            echo "Updated existing PR #$EXISTING_PR."
+
           else
+
+            echo "Creating pull request..."
+
             gh pr create \
               --repo "$GITHUB_REPOSITORY" \
               --base "${GITHUB_REF_NAME:-main}" \
               --head "$HEAD_BRANCH" \
               --title "$PR_TITLE" \
               --body "$PR_BODY"
+
           fi
