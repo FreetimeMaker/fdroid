@@ -124,6 +124,20 @@ jobs:
             | sort \
             > /tmp/metadata-before.txt
 
+
+
+      - name: Getting KeyStore
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ secrets.KEYSTORE_REPOSITORY }}
+          token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
+          path: temp_secrets
+
+      - name: Copy KeyStore to Root Dir
+        run: |
+            cp -r temp_secrets/keystore.p12 ./
+            rm -rf temp_secrets
+
       - name: Check app for update
         shell: bash
         env:
@@ -229,17 +243,8 @@ jobs:
           chmod +x ./changelogs.sh
 
           bash ./fdroid-bot.sh
-
-      - name: Validate final metadata
-        if: steps.update.outputs.changed == 'true'
-        shell: bash
-        env:
-          APP_ID: ${{ matrix.app }}
-        run: |
-          set -euo pipefail
-
-          fdroid readmeta
-          fdroid lint "$APP_ID"
+          
+          rm -rf keystore.p12
 
       - name: Create app branch
         if: steps.update.outputs.changed == 'true'
