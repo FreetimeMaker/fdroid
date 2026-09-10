@@ -1,6 +1,9 @@
 name: Auto-update existing F-Droid apps
 
 on:
+  push:
+    branches:
+      - '**'
   schedule:
     - cron: "0 * * * *"
   workflow_dispatch:
@@ -26,7 +29,7 @@ jobs:
     steps:
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Collect existing apps
         id: apps
@@ -90,15 +93,14 @@ jobs:
     steps:
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7
         with:
           python-version: "3.13"
-          cache: pip
 
       - name: Install F-Droid server tools
         run: |
@@ -107,7 +109,7 @@ jobs:
           python -m pip install --upgrade pip
 
           python -m pip install \
-            "fdroidserver==2.4.5"
+            "fdroidserver"
 
       - name: Save metadata file list
         shell: bash
@@ -366,8 +368,6 @@ jobs:
         if: steps.update.outputs.changed == 'true'
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
-
           PR_TITLE: ${{ steps.pr.outputs.title }}
           PR_BODY: ${{ steps.pr.outputs.body }}
 
