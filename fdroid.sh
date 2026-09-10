@@ -31,12 +31,6 @@ echo "./changelogs.sh"
 ./changelogs.sh
 
 echo
-echo "==> Reading metadata..."
-echo "fdroid readmeta"
-
-fdroid readmeta
-
-echo
 echo "==> Updating repository..."
 echo "fdroid update"
 

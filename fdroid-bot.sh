@@ -44,12 +44,6 @@ else
 fi
 
 echo
-echo "==> Reading metadata..."
-echo "fdroid readmeta"
-
-fdroid readmeta
-
-echo
 echo "==> Updating F-Droid repository..."
 echo "fdroid update"
 
