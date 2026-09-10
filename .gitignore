@@ -12,3 +12,4 @@ unsigned/*
 tmp/*
 logs/*
 repo/*.tar.gz
+.idea/*
