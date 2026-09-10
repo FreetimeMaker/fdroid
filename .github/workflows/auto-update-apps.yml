@@ -2,7 +2,7 @@ name: Auto-update existing F-Droid apps
 
 on:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
