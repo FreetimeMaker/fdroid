@@ -135,6 +135,27 @@ jobs:
           echo "Using apksigner: $(command -v apksigner)"
           apksigner version
 
+      - name: Set up gradlew-fdroid
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          sudo rm -rf /opt/gradlew-fdroid
+          sudo git clone --depth 1 \
+            https://gitlab.com/fdroid/gradlew-fdroid.git \
+            /opt/gradlew-fdroid
+
+          sudo chmod +x /opt/gradlew-fdroid/gradlew-fdroid
+
+          sed -i \
+            's#^gradle:.*#gradle: /opt/gradlew-fdroid/gradlew-fdroid#' \
+            config.yml
+
+          echo "Configured Gradle wrapper:"
+          grep '^gradle:' config.yml
+
+          test -x /opt/gradlew-fdroid/gradlew-fdroid
+
       - name: Save metadata file list
         shell: bash
         run: |
@@ -422,3 +443,9 @@ jobs:
               --body "$PR_BODY"
 
           fi
+
+      - name: Clean up gradlew-fdroid
+        if: always()
+        shell: bash
+        run: |
+          sudo rm -rf /opt/gradlew-fdroid
