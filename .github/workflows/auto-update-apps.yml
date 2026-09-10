@@ -3,14 +3,13 @@ name: Auto-update existing F-Droid apps
 on:
   push:
     branches:
-      - '**'
+      - main
   schedule:
     - cron: "0 * * * *"
   workflow_dispatch:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: fdroid-auto-update
@@ -19,6 +18,7 @@ concurrency:
 jobs:
   collect-apps:
     name: Collect existing apps
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
 
     outputs:
@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v6
+        with:
+          ref: main
 
       - name: Collect existing apps
         id: apps
@@ -83,6 +85,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          ref: main
           fetch-depth: 0
 
       - name: Set up Python
@@ -91,54 +94,11 @@ jobs:
           python-version: "3.13"
 
       - name: Install F-Droid server tools
+        shell: bash
         run: |
           set -euo pipefail
           python -m pip install --upgrade pip
-          python -m pip install "fdroidserver"
-
-      - name: Install Android SDK Build Tools
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          sudo apt-get update
-          sudo apt-get install -y \
-            apksigner \
-            android-sdk-build-tools
-
-          if ! command -v apksigner >/dev/null 2>&1; then
-            APKSIGNER_PATH="$(find /usr/lib/android-sdk/build-tools -type f -name apksigner | sort -V | tail -n1)"
-
-            if [ -z "$APKSIGNER_PATH" ]; then
-              echo "::error::apksigner could not be found after installing Android SDK Build Tools."
-              exit 1
-            fi
-
-            sudo ln -sf "$APKSIGNER_PATH" /usr/bin/apksigner
-          fi
-
-          echo "Using apksigner: $(command -v apksigner)"
-          apksigner version
-
-      - name: Set up gradlew-fdroid
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          sudo rm -rf /opt/gradlew-fdroid
-          sudo git clone --depth 1 \
-            https://gitlab.com/fdroid/gradlew-fdroid.git \
-            /opt/gradlew-fdroid
-
-          sudo chmod +x /opt/gradlew-fdroid/gradlew-fdroid
-
-          sed -i \
-            's#^gradle:.*#gradle: /opt/gradlew-fdroid/gradlew-fdroid#' \
-            config.yml
-
-          echo "Configured Gradle wrapper:"
-          grep '^gradle:' config.yml
-          test -x /opt/gradlew-fdroid/gradlew-fdroid
+          python -m pip install fdroidserver
 
       - name: Save metadata file list
         shell: bash
@@ -152,18 +112,6 @@ jobs:
             -printf '%f\n' \
             | sort \
             > /tmp/metadata-before.txt
-
-      - name: Getting KeyStore
-        uses: actions/checkout@v6
-        with:
-          repository: ${{ secrets.KEYSTORE_REPOSITORY }}
-          token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
-          path: temp_secrets
-
-      - name: Copy KeyStore to Root Dir
-        run: |
-          cp -r temp_secrets/keystore.p12 ./
-          rm -rf temp_secrets
 
       - name: Check app for update
         shell: bash
@@ -230,14 +178,7 @@ jobs:
           echo "version_code=$VERSION_CODE" >> "$GITHUB_OUTPUT"
           echo "source_code=$SOURCE_CODE" >> "$GITHUB_OUTPUT"
 
-          echo
-          echo "================================"
-          echo "Update found"
-          echo "================================"
-          echo "App:         $APP_ID"
-          echo "Version:     $VERSION"
-          echo "VersionCode: $VERSION_CODE"
-
+          echo "Update found: $APP_ID -> $VERSION ($VERSION_CODE)"
           git diff -- "metadata/$APP_ID.yml"
 
       - name: Save update result
@@ -251,7 +192,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          mkdir -p update-result
+          mkdir -p update-result/metadata
 
           jq -n \
             --arg app_id "$APP_ID" \
@@ -268,180 +209,30 @@ jobs:
             }' \
             > update-result/result.json
 
+          if [ "$CHANGED" = "true" ]; then
+            cp "metadata/$APP_ID.yml" "update-result/metadata/$APP_ID.yml"
+          fi
+
       - name: Upload update result
         uses: actions/upload-artifact@v4
         with:
           name: update-result-${{ matrix.app }}
-          path: update-result/result.json
+          path: update-result
           if-no-files-found: error
           retention-days: 1
 
-      - name: Run fdroid.sh when no update is available
-        if: steps.update.outputs.changed == 'false'
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          chmod +x ./fdroid.sh
-          chmod +x ./changelogs.sh
-
-          bash ./fdroid.sh
-
-          rm -f keystore.p12
-
-      - name: Run fdroid-bot.sh
-        if: steps.update.outputs.changed == 'true'
-        shell: bash
-        env:
-          APP_ID: ${{ matrix.app }}
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-
-          chmod +x ./fdroid-bot.sh
-          chmod +x ./changelogs.sh
-
-          bash ./fdroid-bot.sh
-
-          rm -f keystore.p12
-
-      - name: Restore temporary config changes
-        if: steps.update.outputs.changed == 'true'
-        shell: bash
-        run: |
-          git checkout -- config.yml
-
-      - name: Create app branch
-        if: steps.update.outputs.changed == 'true'
-        id: branch
-        shell: bash
-        env:
-          APP_ID: ${{ matrix.app }}
-          VERSION: ${{ steps.update.outputs.version }}
-        run: |
-          set -euo pipefail
-
-          SAFE_APP="$(printf '%s' "$APP_ID" | sed 's/[^A-Za-z0-9._-]/-/g')"
-          SAFE_VERSION="$(printf '%s' "$VERSION" | sed 's/[^A-Za-z0-9._-]/-/g')"
-          BRANCH="bot/fdroid-auto-update/${SAFE_APP}-${SAFE_VERSION}"
-
-          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
-          echo "Branch: $BRANCH"
-
-          git config user.name "freetimemaker-fdroid-bot"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          git checkout -B "$BRANCH"
-          git add -A
-
-          if git diff --cached --quiet; then
-            echo "::error::Nothing to commit."
-            exit 1
-          fi
-
-          git status
-          git commit -m "Update $APP_ID to $VERSION"
-          git push --force-with-lease origin "HEAD:$BRANCH"
-
-      - name: Build pull request
-        if: steps.update.outputs.changed == 'true'
-        id: pr
-        shell: bash
-        env:
-          APP_ID: ${{ matrix.app }}
-          VERSION: ${{ steps.update.outputs.version }}
-          VERSION_CODE: ${{ steps.update.outputs.version_code }}
-        run: |
-          set -euo pipefail
-
-          TITLE="Update $APP_ID to $VERSION"
-
-          {
-            echo "title<<EOF"
-            echo "$TITLE"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-
-          {
-            echo "body<<EOF"
-            echo "## Automatic F-Droid update"
-            echo
-            echo "This pull request was generated automatically."
-            echo
-            echo "### Updated app"
-            echo
-            echo "- App: \`$APP_ID\`"
-            echo "- Version: **$VERSION**"
-            echo "- versionCode: \`$VERSION_CODE\`"
-            echo
-            echo "### Checks performed"
-            echo
-            echo "- F-Droid update check ran with \`--auto --autoonly\`."
-            echo "- Only \`$APP_ID\` was checked."
-            echo "- No app metadata files were added or removed."
-            echo "- \`changelogs.sh\` was run through \`fdroid-bot.sh\`."
-            echo "- \`fdroid-bot.sh\` completed successfully."
-            echo
-            echo "README version changes are handled in a separate README pull request."
-            echo
-            echo "Generated by GitHub Actions workflow: \`${GITHUB_WORKFLOW}\`."
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-
-      - name: Create or update pull request
-        if: steps.update.outputs.changed == 'true'
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-          PR_TITLE: ${{ steps.pr.outputs.title }}
-          PR_BODY: ${{ steps.pr.outputs.body }}
-          HEAD_BRANCH: ${{ steps.branch.outputs.branch }}
-        run: |
-          set -euo pipefail
-
-          EXISTING_PR="$(
-            gh pr list \
-              --repo "$GITHUB_REPOSITORY" \
-              --state open \
-              --head "$HEAD_BRANCH" \
-              --json number \
-              --jq '.[0].number // empty'
-          )"
-
-          if [ -n "$EXISTING_PR" ]; then
-            echo "Updating PR #$EXISTING_PR..."
-
-            gh pr edit \
-              "$EXISTING_PR" \
-              --repo "$GITHUB_REPOSITORY" \
-              --title "$PR_TITLE" \
-              --body "$PR_BODY"
-          else
-            echo "Creating pull request..."
-
-            gh pr create \
-              --repo "$GITHUB_REPOSITORY" \
-              --base "main" \
-              --head "$HEAD_BRANCH" \
-              --title "$PR_TITLE" \
-              --body "$PR_BODY"
-          fi
-
-      - name: Clean up gradlew-fdroid
-        if: always()
-        shell: bash
-        run: |
-          sudo rm -rf /opt/gradlew-fdroid
-
-  update-readme:
-    name: Create README version update PR
+  apply-updates:
+    name: Apply app updates directly to main
     needs:
       - update-app
     if: needs.update-app.result == 'success'
     runs-on: ubuntu-latest
 
+    outputs:
+      changed: ${{ steps.apply.outputs.changed }}
+
     steps:
-      - name: Checkout repository
+      - name: Checkout main
         uses: actions/checkout@v6
         with:
           ref: main
@@ -453,14 +244,15 @@ jobs:
           pattern: update-result-*
           path: update-results
 
-      - name: Update README versions
-        id: readme
+      - name: Apply metadata, changelog and README updates
+        id: apply
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
 
           UPDATED_COUNT=0
-          UPDATED_APPS=""
 
           while IFS= read -r RESULT_FILE; do
             CHANGED="$(jq -r '.changed' "$RESULT_FILE")"
@@ -473,8 +265,14 @@ jobs:
             VERSION="$(jq -r '.version' "$RESULT_FILE")"
             VERSION_CODE="$(jq -r '.version_code' "$RESULT_FILE")"
             SOURCE_CODE="$(jq -r '.source_code' "$RESULT_FILE" | sed 's#/$##')"
+            RESULT_DIR="$(dirname "$RESULT_FILE")"
 
-            echo "Updating README for $APP_ID to $VERSION ($VERSION_CODE)"
+            echo "Applying $APP_ID -> $VERSION ($VERSION_CODE)"
+
+            cp "$RESULT_DIR/metadata/$APP_ID.yml" "metadata/$APP_ID.yml"
+
+            chmod +x ./changelogs.sh
+            ./changelogs.sh "$APP_ID"
 
             export SOURCE_CODE VERSION VERSION_CODE APP_ID
 
@@ -492,14 +290,10 @@ jobs:
           updated = False
 
           for index, line in enumerate(lines):
-              if not line.lstrip().startswith("|"):
-                  continue
-
-              if source_code not in line:
+              if not line.lstrip().startswith("|") or source_code not in line:
                   continue
 
               cells = line.rstrip("\r\n").split("|")
-
               if len(cells) < 6:
                   raise SystemExit(
                       f"README table row for {source_code} has an unexpected format: {line.rstrip()}"
@@ -520,94 +314,152 @@ jobs:
           PY
 
             UPDATED_COUNT=$((UPDATED_COUNT + 1))
-            UPDATED_APPS="${UPDATED_APPS}${APP_ID}: ${VERSION} (${VERSION_CODE})\n"
           done < <(find update-results -type f -name result.json | sort)
 
-          if [ "$UPDATED_COUNT" -eq 0 ] || git diff --quiet -- README.md; then
+          if [ "$UPDATED_COUNT" -eq 0 ]; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "No README version changes are required."
+            echo "No app updates found."
             exit 0
           fi
 
           echo "changed=true" >> "$GITHUB_OUTPUT"
-          echo "count=$UPDATED_COUNT" >> "$GITHUB_OUTPUT"
+          echo "Applied $UPDATED_COUNT app update(s)."
 
-          {
-            echo "apps<<EOF"
-            printf '%b' "$UPDATED_APPS"
-            echo "EOF"
-          } >> "$GITHUB_OUTPUT"
-
-          git diff -- README.md
-
-      - name: Create README branch
-        if: steps.readme.outputs.changed == 'true'
-        id: branch
+      - name: Commit updates directly to main
+        if: steps.apply.outputs.changed == 'true'
         shell: bash
         run: |
           set -euo pipefail
-
-          BRANCH="bot/readme-version-updates"
-          echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
 
           git config user.name "freetimemaker-fdroid-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git checkout -B "$BRANCH"
-          git add README.md
-          git commit -m "Update app versions in README"
-          git push --force origin "HEAD:$BRANCH"
+          git add metadata README.md
 
-      - name: Create or update README pull request
-        if: steps.readme.outputs.changed == 'true'
+          if git diff --cached --quiet; then
+            echo "No app metadata, changelog or README changes to commit."
+            exit 0
+          fi
+
+          git pull --rebase origin main
+          git commit -m "Update F-Droid apps [fdroid-auto-update]"
+          git push origin HEAD:main
+
+  update-repository:
+    name: Update F-Droid repository on main
+    needs:
+      - apply-updates
+    if: >-
+      ${{
+        always() &&
+        (
+          (
+            github.event_name == 'push' &&
+            !contains(github.event.head_commit.message, '[fdroid-generated]')
+          ) ||
+          needs.apply-updates.outputs.changed == 'true'
+        )
+      }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: "3.13"
+
+      - name: Install F-Droid server tools
         shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-          HEAD_BRANCH: ${{ steps.branch.outputs.branch }}
-          UPDATED_APPS: ${{ steps.readme.outputs.apps }}
+        run: |
+          set -euo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install fdroidserver
+
+      - name: Install Android SDK Build Tools
+        shell: bash
         run: |
           set -euo pipefail
 
-          EXISTING_PR="$(
-            gh pr list \
-              --repo "$GITHUB_REPOSITORY" \
-              --state open \
-              --head "$HEAD_BRANCH" \
-              --json number \
-              --jq '.[0].number // empty'
-          )"
+          sudo apt-get update
+          sudo apt-get install -y apksigner android-sdk-build-tools
 
-          {
-            echo "## Automatic README version update"
-            echo
-            echo "This pull request updates the app versions and versionCodes in the README table."
-            echo
-            echo "### Updated apps"
-            echo
-            while IFS= read -r APP; do
-              if [ -n "$APP" ]; then
-                echo "- $APP"
-              fi
-            done <<< "$UPDATED_APPS"
-            echo
-            echo "Generated by GitHub Actions workflow: \`${GITHUB_WORKFLOW}\`."
-          } > /tmp/readme-pr-body.md
-
-          if [ -n "$EXISTING_PR" ]; then
-            echo "Updating README PR #$EXISTING_PR..."
-
-            gh pr edit \
-              "$EXISTING_PR" \
-              --repo "$GITHUB_REPOSITORY" \
-              --title "Update app versions in README" \
-              --body-file /tmp/readme-pr-body.md
-          else
-            echo "Creating README pull request..."
-
-            gh pr create \
-              --repo "$GITHUB_REPOSITORY" \
-              --base "main" \
-              --head "$HEAD_BRANCH" \
-              --title "Update app versions in README" \
-              --body-file /tmp/readme-pr-body.md
+          if ! command -v apksigner >/dev/null 2>&1; then
+            APKSIGNER_PATH="$(find /usr/lib/android-sdk/build-tools -type f -name apksigner | sort -V | tail -n1)"
+            test -n "$APKSIGNER_PATH"
+            sudo ln -sf "$APKSIGNER_PATH" /usr/bin/apksigner
           fi
+
+          apksigner version
+
+      - name: Set up gradlew-fdroid
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          sudo rm -rf /opt/gradlew-fdroid
+          sudo git clone --depth 1 \
+            https://gitlab.com/fdroid/gradlew-fdroid.git \
+            /opt/gradlew-fdroid
+
+          sudo chmod +x /opt/gradlew-fdroid/gradlew-fdroid
+          sed -i \
+            's#^gradle:.*#gradle: /opt/gradlew-fdroid/gradlew-fdroid#' \
+            config.yml
+
+          test -x /opt/gradlew-fdroid/gradlew-fdroid
+
+      - name: Get KeyStore
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ secrets.KEYSTORE_REPOSITORY }}
+          token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
+          path: temp_secrets
+
+      - name: Copy KeyStore
+        shell: bash
+        run: |
+          set -euo pipefail
+          cp temp_secrets/keystore.p12 ./keystore.p12
+          rm -rf temp_secrets
+
+      - name: Run fdroid.sh on main
+        shell: bash
+        env:
+          RUN_FDROID_MAIN: "true"
+        run: |
+          set -euo pipefail
+          chmod +x ./fdroid.sh
+          bash ./fdroid.sh
+
+      - name: Restore temporary config and remove secrets
+        if: always()
+        shell: bash
+        run: |
+          git checkout -- config.yml || true
+          rm -f keystore.p12
+          sudo rm -rf /opt/gradlew-fdroid
+
+      - name: Commit generated repository files
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "freetimemaker-fdroid-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No generated repository changes to commit."
+            exit 0
+          fi
+
+          git pull --rebase origin main
+          git commit -m "Update F-Droid repository [fdroid-generated]"
+          git push origin HEAD:main
