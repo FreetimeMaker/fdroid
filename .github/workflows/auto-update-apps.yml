@@ -470,14 +470,14 @@ jobs:
           cp temp_secrets/keystore.p12 ./keystore.p12
           rm -rf temp_secrets
 
-      - name: Run fdroid.sh on main
+      - name: Update F-Droid Repo
         shell: bash
         env:
           RUN_FDROID_MAIN: "true"
         run: |
           set -euo pipefail
-          chmod +x ./fdroid.sh
-          bash ./fdroid.sh
+          chmod +x ./fdroid-bot.sh
+          bash ./fdroid-bot.sh
 
       - name: Restore temporary config and remove secrets
         if: always()

@@ -42,3 +42,14 @@ else
     echo "./changelogs.sh"
     ./changelogs.sh
 fi
+
+echo
+echo "==> Updating repository..."
+echo "fdroid update"
+
+fdroid update
+
+echo
+echo "========================================"
+echo " Done."
+echo "========================================"
