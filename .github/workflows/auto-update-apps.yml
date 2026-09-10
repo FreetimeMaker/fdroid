@@ -161,17 +161,9 @@ jobs:
             exit 0
           fi
 
-          VERSION="$(
-            sed -n 's/^CurrentVersion:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1
-          )"
-
-          VERSION_CODE="$(
-            sed -n 's/^CurrentVersionCode:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1
-          )"
-
-          SOURCE_CODE="$(
-            sed -n 's/^SourceCode:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1 | sed 's#/$##'
-          )"
+          VERSION="$(sed -n 's/^CurrentVersion:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1)"
+          VERSION_CODE="$(sed -n 's/^CurrentVersionCode:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1)"
+          SOURCE_CODE="$(sed -n 's/^SourceCode:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1 | sed 's#/$##')"
 
           echo "changed=true" >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
@@ -256,10 +248,7 @@ jobs:
 
           while IFS= read -r RESULT_FILE; do
             CHANGED="$(jq -r '.changed' "$RESULT_FILE")"
-
-            if [ "$CHANGED" != "true" ]; then
-              continue
-            fi
+            [ "$CHANGED" = "true" ] || continue
 
             APP_ID="$(jq -r '.app_id' "$RESULT_FILE")"
             VERSION="$(jq -r '.version' "$RESULT_FILE")"
@@ -268,7 +257,6 @@ jobs:
             RESULT_DIR="$(dirname "$RESULT_FILE")"
 
             echo "Applying $APP_ID -> $VERSION ($VERSION_CODE)"
-
             cp "$RESULT_DIR/metadata/$APP_ID.yml" "metadata/$APP_ID.yml"
 
             chmod +x ./changelogs.sh
@@ -341,8 +329,8 @@ jobs:
             exit 0
           fi
 
-          git pull --rebase origin main
           git commit -m "Update F-Droid apps [fdroid-auto-update]"
+          git pull --rebase origin main
           git push origin HEAD:main
 
   update-repository:
@@ -381,7 +369,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install fdroidserver
 
-      - name: Install Android SDK Build Tools
+      - name: Install Android SDK tools
         shell: bash
         run: |
           set -euo pipefail
@@ -397,27 +385,24 @@ jobs:
 
           apksigner version
 
-      - name: Accept Android SDK licenses
+      - name: Accept Android SDK licenses and install required SDK packages
         shell: bash
         run: |
           set -euo pipefail
 
+          TARGET_SDK_ROOT="/usr/lib/android-sdk"
           SDKMANAGER="$(command -v sdkmanager || true)"
 
           if [ -z "$SDKMANAGER" ]; then
-            SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-}}"
-
-            if [ -n "$SDK_ROOT" ]; then
-              SDKMANAGER="$(
-                find "$SDK_ROOT" \
-                  -type f \
-                  -name sdkmanager \
-                  -perm -u+x \
-                  2>/dev/null \
-                  | sort \
-                  | tail -n1
-              )"
-            fi
+            SEARCH_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
+            SDKMANAGER="$(
+              find "$SEARCH_ROOT" \
+                -type f \
+                -name sdkmanager \
+                2>/dev/null \
+                | sort \
+                | tail -n1
+            )"
           fi
 
           if [ -z "$SDKMANAGER" ]; then
@@ -426,18 +411,25 @@ jobs:
           fi
 
           echo "Using sdkmanager: $SDKMANAGER"
+          echo "Target Android SDK: $TARGET_SDK_ROOT"
 
           set +o pipefail
-          yes | "$SDKMANAGER" --licenses
-          SDKMANAGER_STATUS="${PIPESTATUS[1]}"
+          yes | sudo "$SDKMANAGER" --sdk_root="$TARGET_SDK_ROOT" --licenses
+          LICENSE_STATUS="${PIPESTATUS[1]}"
           set -o pipefail
 
-          if [ "$SDKMANAGER_STATUS" -ne 0 ]; then
-            echo "::error::sdkmanager --licenses failed with exit code $SDKMANAGER_STATUS."
-            exit "$SDKMANAGER_STATUS"
+          if [ "$LICENSE_STATUS" -ne 0 ]; then
+            echo "::error::sdkmanager --licenses failed with exit code $LICENSE_STATUS."
+            exit "$LICENSE_STATUS"
           fi
 
-          echo "Android SDK licenses accepted."
+          sudo "$SDKMANAGER" \
+            --sdk_root="$TARGET_SDK_ROOT" \
+            "build-tools;36.0.0" \
+            "platforms;android-37"
+
+          echo "Installed SDK packages:"
+          sudo "$SDKMANAGER" --sdk_root="$TARGET_SDK_ROOT" --list_installed
 
       - name: Set up gradlew-fdroid
         shell: bash
@@ -502,6 +494,6 @@ jobs:
             exit 0
           fi
 
-          git pull --rebase origin main
           git commit -m "Update F-Droid repository [fdroid-generated]"
+          git pull --rebase origin main
           git push origin HEAD:main
