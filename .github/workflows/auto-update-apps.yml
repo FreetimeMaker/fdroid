@@ -302,6 +302,74 @@ jobs:
 
           rm -rf keystore.p12
 
+      - name: Update README app version
+        if: steps.update.outputs.changed == 'true'
+        shell: bash
+        env:
+          APP_ID: ${{ matrix.app }}
+          VERSION: ${{ steps.update.outputs.version }}
+          VERSION_CODE: ${{ steps.update.outputs.version_code }}
+        run: |
+          set -euo pipefail
+
+          SOURCE_CODE="$(
+            sed -n \
+              's/^SourceCode:[[:space:]]*//p' \
+              "metadata/$APP_ID.yml" \
+              | tail -n1 \
+              | sed 's#/$##'
+          )"
+
+          if [ -z "$SOURCE_CODE" ]; then
+            echo "::error::No SourceCode URL found in metadata/$APP_ID.yml"
+            exit 1
+          fi
+
+          export SOURCE_CODE
+
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          readme = Path("README.md")
+          source_code = os.environ["SOURCE_CODE"].rstrip("/")
+          version = os.environ["VERSION"]
+          version_code = os.environ["VERSION_CODE"]
+
+          lines = readme.read_text(encoding="utf-8").splitlines(keepends=True)
+          updated = False
+
+          for index, line in enumerate(lines):
+              if not line.lstrip().startswith("|"):
+                  continue
+
+              if source_code not in line:
+                  continue
+
+              cells = line.rstrip("\r\n").split("|")
+
+              if len(cells) < 6:
+                  raise SystemExit(
+                      f"README table row for {source_code} has an unexpected format: {line.rstrip()}"
+                  )
+
+              cells[-2] = f" {version} ({version_code}) "
+              newline = "\r\n" if line.endswith("\r\n") else "\n"
+              lines[index] = "|".join(cells) + newline
+              updated = True
+              break
+
+          if not updated:
+              raise SystemExit(
+                  f"Could not find README app table row containing SourceCode URL: {source_code}"
+              )
+
+          readme.write_text("".join(lines), encoding="utf-8")
+          PY
+
+          echo "README.md updated for $APP_ID: $VERSION ($VERSION_CODE)"
+          git diff -- README.md
+
       - name: Create app branch
         if: steps.update.outputs.changed == 'true'
         id: branch
@@ -405,6 +473,7 @@ jobs:
             echo "- \`fdroid lint $APP_ID\` completed successfully."
             echo "- \`changelogs.sh\` was run through \`fdroid-bot.sh\`."
             echo "- \`fdroid-bot.sh\` completed successfully."
+            echo "- \`README.md\` was updated to \`$VERSION ($VERSION_CODE)\`."
             echo "- Final metadata validation completed successfully."
 
             echo
