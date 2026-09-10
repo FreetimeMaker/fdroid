@@ -67,7 +67,7 @@ jobs:
           mapfile -t APP_IDS < /tmp/app-ids.txt
 
           # --autoonly restricts processing to apps that already opted into
-          # F-Droid auto updates. Passing the explicit app IDs ensures this
+          # F-Droid auto updates. Passing explicit existing app IDs ensures this
           # workflow can never discover/add a new app on its own.
           fdroid checkupdates --auto --autoonly --allow-dirty "${APP_IDS[@]}"
 
@@ -122,20 +122,20 @@ jobs:
           set -euo pipefail
           bash ./fdroid-bot.sh
 
-      - name: Create update branch and push changes
+      - name: Push bot branch
         if: steps.changes.outputs.changed == 'true'
         id: push
         shell: bash
         run: |
           set -euo pipefail
 
-          BRANCH="bot/fdroid-auto-update-$(date -u +'%Y%m%d-%H%M%S')"
+          BRANCH="bot/fdroid-auto-update"
           echo "branch=$BRANCH" >> "$GITHUB_OUTPUT"
 
           git config user.name "freetimemaker-fdroid-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git checkout -b "$BRANCH"
+          git checkout -B "$BRANCH"
           git add -A
 
           if git diff --cached --quiet; then
@@ -144,7 +144,7 @@ jobs:
           fi
 
           git commit -m "Auto-update F-Droid apps"
-          git push origin "$BRANCH"
+          git push --force-with-lease origin "$BRANCH"
 
       - name: Build pull request title and body
         if: steps.changes.outputs.changed == 'true'
@@ -194,7 +194,7 @@ jobs:
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
 
-      - name: Create pull request
+      - name: Create or update pull request
         if: steps.changes.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.FDROID_BOT_TOKEN || github.token }}
@@ -205,9 +205,24 @@ jobs:
         run: |
           set -euo pipefail
 
-          gh pr create \
+          EXISTING_PR="$(gh pr list \
             --repo "$GITHUB_REPOSITORY" \
-            --base "${GITHUB_REF_NAME:-main}" \
+            --state open \
             --head "$HEAD_BRANCH" \
-            --title "$PR_TITLE" \
-            --body "$PR_BODY"
+            --json number \
+            --jq '.[0].number // empty')"
+
+          if [ -n "$EXISTING_PR" ]; then
+            gh pr edit "$EXISTING_PR" \
+              --repo "$GITHUB_REPOSITORY" \
+              --title "$PR_TITLE" \
+              --body "$PR_BODY"
+            echo "Updated existing PR #$EXISTING_PR."
+          else
+            gh pr create \
+              --repo "$GITHUB_REPOSITORY" \
+              --base "${GITHUB_REF_NAME:-main}" \
+              --head "$HEAD_BRANCH" \
+              --title "$PR_TITLE" \
+              --body "$PR_BODY"
+          fi
