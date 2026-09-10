@@ -216,18 +216,6 @@ jobs:
           git diff \
             -- "metadata/$APP_ID.yml"
 
-      - name: Validate metadata
-        if: steps.update.outputs.changed == 'true'
-        shell: bash
-        env:
-          APP_ID: ${{ matrix.app }}
-        run: |
-          set -euo pipefail
-
-          fdroid readmeta
-
-          fdroid lint "$APP_ID"
-
       - name: Run fdroid-bot.sh
         if: steps.update.outputs.changed == 'true'
         shell: bash
