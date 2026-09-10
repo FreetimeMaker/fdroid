@@ -2,7 +2,7 @@ name: Auto-update existing F-Droid apps
 
 on:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
 
 permissions:
@@ -197,7 +197,7 @@ jobs:
       - name: Create or update pull request
         if: steps.changes.outputs.changed == 'true'
         env:
-          GH_TOKEN: ${{ secrets.FDROID_BOT_TOKEN || github.token }}
+          GH_TOKEN: ${{ github.token }}
           PR_TITLE: ${{ steps.pr.outputs.title }}
           PR_BODY: ${{ steps.pr.outputs.body }}
           HEAD_BRANCH: ${{ steps.push.outputs.branch }}
