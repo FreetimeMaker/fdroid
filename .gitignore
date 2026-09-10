@@ -13,4 +13,3 @@ tmp/*
 logs/*
 repo/*.tar.gz
 .idea/*
-*/diff
