@@ -19,18 +19,6 @@ echo "fdroid publish"
 fdroid publish
 
 echo
-echo "==> Preparing changelog script..."
-echo "chmod +x ./changelogs.sh"
-
-chmod +x ./changelogs.sh
-
-echo
-echo "==> Updating changelogs..."
-echo "./changelogs.sh"
-
-./changelogs.sh
-
-echo
 echo "==> Updating repository..."
 echo "fdroid update"
 
