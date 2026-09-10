@@ -42,14 +42,3 @@ else
     echo "./changelogs.sh"
     ./changelogs.sh
 fi
-
-echo
-echo "==> Updating F-Droid repository..."
-echo "fdroid update"
-
-fdroid update
-
-echo
-echo "========================================"
-echo " F-Droid repository update completed"
-echo "========================================"
