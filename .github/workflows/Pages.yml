@@ -2,7 +2,13 @@ name: Build & Deploy Jekyll to GitHub Pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+  workflow_run:
+    workflows:
+      - Auto-update existing F-Droid apps
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
@@ -12,17 +18,20 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   deploy:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
+        with:
+          ref: main
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -40,6 +49,24 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
+
+      - name: Cancel stale Pages deployment
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2026-03-10" \
+            "/repos/$GITHUB_REPOSITORY/pages/deployments/8ad183d31626293440ea9c776ce5778eb168648e/cancel"
+          EXIT_CODE=$?
+          set -e
+
+          if [ "$EXIT_CODE" -ne 0 ]; then
+            echo "The stale Pages deployment was already gone or could not be cancelled; continuing."
+          fi
 
       - name: Deploy to GitHub Pages
         id: deployment
