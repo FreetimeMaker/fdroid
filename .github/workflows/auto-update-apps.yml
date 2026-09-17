@@ -36,22 +36,16 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
-          mapfile -t METADATA_FILES < <(
-            find metadata -maxdepth 1 -type f -name '*.yml' -printf '%f\n' | sort
-          )
-
+          mapfile -t METADATA_FILES < <(find metadata -maxdepth 1 -type f -name '*.yml' -printf '%f\n' | sort)
           if [ "${#METADATA_FILES[@]}" -eq 0 ]; then
             echo 'apps=[]' >> "$GITHUB_OUTPUT"
             echo 'has_apps=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-
           APP_IDS=()
           for FILE in "${METADATA_FILES[@]}"; do
             APP_IDS+=("${FILE%.yml}")
           done
-
           APPS_JSON="$(printf '%s\n' "${APP_IDS[@]}" | jq -Rsc 'split("\n") | map(select(length > 0))')"
           echo "apps=$APPS_JSON" >> "$GITHUB_OUTPUT"
           echo 'has_apps=true' >> "$GITHUB_OUTPUT"
@@ -117,16 +111,13 @@ jobs:
           APP_ID: ${{ matrix.app }}
         run: |
           set -euo pipefail
-
           if git diff --quiet -- "metadata/$APP_ID.yml"; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-
           VERSION="$(sed -n 's/^CurrentVersion:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1)"
           VERSION_CODE="$(sed -n 's/^CurrentVersionCode:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1)"
           SOURCE_CODE="$(sed -n 's/^SourceCode:[[:space:]]*//p' "metadata/$APP_ID.yml" | tail -n1 | sed 's#/$##')"
-
           echo 'changed=true' >> "$GITHUB_OUTPUT"
           echo "version=$VERSION" >> "$GITHUB_OUTPUT"
           echo "version_code=$VERSION_CODE" >> "$GITHUB_OUTPUT"
@@ -144,7 +135,6 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p update-result/metadata
-
           jq -n \
             --arg app_id "$APP_ID" \
             --arg changed "$CHANGED" \
@@ -153,7 +143,6 @@ jobs:
             --arg source_code "$SOURCE_CODE" \
             '{app_id:$app_id,changed:($changed == "true"),version:$version,version_code:$version_code,source_code:$source_code}' \
             > update-result/result.json
-
           if [ "$CHANGED" = 'true' ]; then
             cp "metadata/$APP_ID.yml" "update-result/metadata/$APP_ID.yml"
           fi
@@ -192,36 +181,30 @@ jobs:
         id: apply
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
         run: |
           set -euo pipefail
           UPDATED_COUNT=0
-
           while IFS= read -r RESULT_FILE; do
             [ "$(jq -r '.changed' "$RESULT_FILE")" = 'true' ] || continue
-
             APP_ID="$(jq -r '.app_id' "$RESULT_FILE")"
             VERSION="$(jq -r '.version' "$RESULT_FILE")"
             VERSION_CODE="$(jq -r '.version_code' "$RESULT_FILE")"
             SOURCE_CODE="$(jq -r '.source_code' "$RESULT_FILE" | sed 's#/$##')"
             RESULT_DIR="$(dirname "$RESULT_FILE")"
-
             cp "$RESULT_DIR/metadata/$APP_ID.yml" "metadata/$APP_ID.yml"
             chmod +x ./changelogs.sh
             ./changelogs.sh "$APP_ID"
-
             export SOURCE_CODE VERSION VERSION_CODE APP_ID
             python - <<'PY'
           import os
           from pathlib import Path
-
           readme = Path("README.md")
           source_code = os.environ["SOURCE_CODE"].rstrip("/")
           version = os.environ["VERSION"]
           version_code = os.environ["VERSION_CODE"]
           app_id = os.environ["APP_ID"]
           lines = readme.read_text(encoding="utf-8").splitlines(keepends=True)
-
           for index, line in enumerate(lines):
               if line.lstrip().startswith("|") and source_code in line:
                   cells = line.rstrip("\r\n").split("|")
@@ -233,18 +216,14 @@ jobs:
                   break
           else:
               raise SystemExit(f"Could not find README row for {app_id}: {source_code}")
-
           readme.write_text("".join(lines), encoding="utf-8")
           PY
-
             UPDATED_COUNT=$((UPDATED_COUNT + 1))
           done < <(find update-results -type f -name result.json | sort)
-
           if [ "$UPDATED_COUNT" -eq 0 ]; then
             echo 'changed=false' >> "$GITHUB_OUTPUT"
             exit 0
           fi
-
           echo 'changed=true' >> "$GITHUB_OUTPUT"
 
       - name: Commit updates directly to main
@@ -255,11 +234,9 @@ jobs:
           git config user.name "freetimemaker-fdroid-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add metadata README.md
-
           if git diff --cached --quiet; then
             exit 0
           fi
-
           git commit -m "Update F-Droid apps [fdroid-auto-update]"
           git pull --rebase origin main
           git push origin HEAD:main
@@ -313,51 +290,40 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           SDK_ROOT="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
           SDKMANAGER="$SDK_ROOT/cmdline-tools/latest/bin/sdkmanager"
-
           if [ ! -x "$SDKMANAGER" ]; then
             SDKMANAGER="$(find "$SDK_ROOT/cmdline-tools" -type f -path '*/bin/sdkmanager' 2>/dev/null | sort -V | tail -n1)"
           fi
-
           if [ -z "$SDKMANAGER" ] || [ ! -x "$SDKMANAGER" ]; then
             echo "::error::Real Android sdkmanager was not found below $SDK_ROOT/cmdline-tools."
             exit 1
           fi
-
           echo "Android SDK root: $SDK_ROOT"
           echo "Android sdkmanager: $SDKMANAGER"
           "$SDKMANAGER" --version
-
           set +o pipefail
           yes | "$SDKMANAGER" --sdk_root="$SDK_ROOT" --licenses --channel=3
           LICENSE_STATUS="${PIPESTATUS[1]}"
           set -o pipefail
-
           if [ "$LICENSE_STATUS" -ne 0 ]; then
             echo "::error::Android sdkmanager --licenses failed with exit code $LICENSE_STATUS."
             exit "$LICENSE_STATUS"
           fi
-
           "$SDKMANAGER" --sdk_root="$SDK_ROOT" --channel=3 \
             "platform-tools" \
-            "build-tools;36.0.0" \
+            "build-tools;34.0.0" \
             "platforms;android-37.0" \
             "ndk;28.0.13004108"
-
-          APKSIGNER="$SDK_ROOT/build-tools/36.0.0/apksigner"
+          APKSIGNER="$SDK_ROOT/build-tools/34.0.0/apksigner"
           if [ ! -x "$APKSIGNER" ]; then
             echo "::error::apksigner was not installed at $APKSIGNER"
             exit 1
           fi
-
           sudo ln -sf "$APKSIGNER" /usr/bin/apksigner
-
           sed -i "s#^sdk_path:.*#sdk_path: $SDK_ROOT#" config.yml
           sed -i "s#^[[:space:]]*r28c:.*#  r28c: $SDK_ROOT/ndk/28.0.13004108#" config.yml
           sed -i 's#^apksigner:.*#apksigner: /usr/bin/apksigner#' config.yml
-
           echo "Runtime F-Droid Android configuration:"
           grep -E '^(sdk_path|apksigner):|^[[:space:]]+r28c:' config.yml
           apksigner version
@@ -379,17 +345,22 @@ jobs:
           token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
           path: temp_secrets
 
-      - name: Copy KeyStore
+      - name: Copy signing keys
         shell: bash
         run: |
           set -euo pipefail
           cp temp_secrets/keystore.p12 ./keystore.p12
+          cp temp_secrets/Luma-Store.jks ./Luma-Store.jks
+          cp temp_secrets/SuperSMP-Companion-KeyStore.jks ./SuperSMP-Companion-KeyStore.jks
           rm -rf temp_secrets
+          chmod 600 keystore.p12 Luma-Store.jks SuperSMP-Companion-KeyStore.jks
 
       - name: Update F-Droid Repo
         shell: bash
         env:
           RUN_FDROID_MAIN: "true"
+          GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
         run: |
           set -euo pipefail
           chmod +x ./fdroid-bot.sh
@@ -400,7 +371,8 @@ jobs:
         shell: bash
         run: |
           git checkout -- config.yml || true
-          rm -f keystore.p12
+          rm -f keystore.p12 Luma-Store.jks SuperSMP-Companion-KeyStore.jks
+          rm -rf temp_secrets
           sudo rm -rf /opt/gradlew-fdroid
 
       - name: Commit generated repository files
@@ -410,12 +382,10 @@ jobs:
           git config user.name "freetimemaker-fdroid-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-
           if git diff --cached --quiet; then
             echo "No generated repository changes to commit."
             exit 0
           fi
-
           git commit -m "Update F-Droid repository [fdroid-generated]"
           git pull --rebase origin main
           git push origin HEAD:main
