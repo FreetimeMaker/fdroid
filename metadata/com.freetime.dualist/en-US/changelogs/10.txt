@@ -1,0 +1,3 @@
+• Added Task Categories support
+• Fixed GitHub Actions release workflow
+• Improved UI strings and translations
