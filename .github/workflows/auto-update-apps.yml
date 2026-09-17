@@ -181,7 +181,7 @@ jobs:
         id: apply
         shell: bash
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
         run: |
           set -euo pipefail
           UPDATED_COUNT=0
@@ -359,7 +359,7 @@ jobs:
         shell: bash
         env:
           RUN_FDROID_MAIN: "true"
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_ACCESS_TOKEN }}
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
         run: |
           set -euo pipefail
