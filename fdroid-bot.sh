@@ -9,6 +9,38 @@ echo "========================================"
 APP_ID="${APP_ID:-}"
 
 echo
+echo "==> Selecting Java 17 for reproducible Android builds..."
+
+JAVA17_HOME=""
+
+if [ -n "${JAVA_HOME_17_X64:-}" ] && [ -x "${JAVA_HOME_17_X64}/bin/java" ]; then
+    JAVA17_HOME="$JAVA_HOME_17_X64"
+else
+    for JAVA_BIN in /usr/lib/jvm/*/bin/java /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17*/x64/bin/java; do
+        [ -x "$JAVA_BIN" ] || continue
+        if "$JAVA_BIN" -version 2>&1 | head -n1 | grep -Eq 'version "17([.]|\")'; then
+            JAVA17_HOME="$(dirname "$(dirname "$JAVA_BIN")")"
+            break
+        fi
+    done
+fi
+
+if [ -z "$JAVA17_HOME" ] || [ ! -x "$JAVA17_HOME/bin/java" ]; then
+    echo "::error::Java 17 was not found on the runner."
+    exit 1
+fi
+
+export JAVA_HOME="$JAVA17_HOME"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+echo "Using JAVA_HOME=$JAVA_HOME"
+java -version
+
+echo
+echo "==> Securing F-Droid config permissions..."
+chmod 600 config.yml
+
+echo
 echo "==> Building all apps..."
 echo "fdroid build --all"
 
