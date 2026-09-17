@@ -46,8 +46,75 @@ echo "fdroid build --all"
 
 fdroid build --all
 
+sign_with_developer_key() {
+    local app_id="$1"
+    local metadata_file="$2"
+    local keystore="$3"
+
+    if [ ! -f "$metadata_file" ]; then
+        echo "Metadata not found for $app_id; skipping developer signing."
+        return 0
+    fi
+
+    local version_code
+    version_code="$(sed -n 's/^CurrentVersionCode:[[:space:]]*//p' "$metadata_file" | tail -n1)"
+
+    if [ -z "$version_code" ]; then
+        echo "::error::Could not determine CurrentVersionCode for $app_id."
+        exit 1
+    fi
+
+    local unsigned_apk="unsigned/${app_id}_${version_code}.apk"
+    local signed_apk="repo/${app_id}_${version_code}.apk"
+
+    if [ ! -f "$unsigned_apk" ]; then
+        echo "::error::Expected source-built APK not found: $unsigned_apk"
+        exit 1
+    fi
+
+    if [ ! -f "$keystore" ]; then
+        echo "::error::Developer keystore not found: $keystore"
+        exit 1
+    fi
+
+    if [ -z "${KEYSTORE_PASSWORD:-}" ]; then
+        echo "::error::KEYSTORE_PASSWORD is not set."
+        exit 1
+    fi
+
+    mkdir -p repo
+    rm -f "$signed_apk" "$signed_apk.idsig"
+
+    echo
+echo "==> Signing $app_id with its developer key..."
+    apksigner sign \
+        --ks "$keystore" \
+        --ks-key-alias alle \
+        --ks-pass "pass:${KEYSTORE_PASSWORD}" \
+        --key-pass "pass:${KEYSTORE_PASSWORD}" \
+        --out "$signed_apk" \
+        "$unsigned_apk"
+
+    echo "==> Verifying developer signature for $app_id..."
+    apksigner verify --verbose --print-certs "$signed_apk"
+
+    # Prevent fdroid publish from signing this APK a second time with the
+    # repository key. The already developer-signed APK stays in repo/.
+    rm -f "$unsigned_apk" "$unsigned_apk.idsig"
+}
+
+sign_with_developer_key \
+    "com.freetime.ssmpc" \
+    "metadata/com.freetime.ssmpc.yml" \
+    "SuperSMP-Companion-KeyStore.jks"
+
+sign_with_developer_key \
+    "com.freetime.lumastore" \
+    "metadata/com.freetime.lumastore.yml" \
+    "Luma-Store.jks"
+
 echo
-echo "==> Publishing apps..."
+echo "==> Publishing remaining apps..."
 echo "fdroid publish"
 
 fdroid publish
