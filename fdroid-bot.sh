@@ -50,35 +50,6 @@ else
 fi
 
 echo
-echo "==> Replacing SuperSMP Companion APK with official signed release APK..."
-
-SSMPC_METADATA="metadata/com.freetime.ssmpc.yml"
-if [ -f "$SSMPC_METADATA" ]; then
-    VERSION="$(sed -n 's/^CurrentVersion:[[:space:]]*//p' "$SSMPC_METADATA" | tail -n1)"
-    VERSION_CODE="$(sed -n 's/^CurrentVersionCode:[[:space:]]*//p' "$SSMPC_METADATA" | tail -n1)"
-
-    if [ -n "$VERSION" ] && [ -n "$VERSION_CODE" ]; then
-        APK="repo/com.freetime.ssmpc_${VERSION_CODE}.apk"
-        RELEASE_URL="https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v${VERSION}/SSMPC-v${VERSION}.apk"
-
-        echo "Downloading official SuperSMP Companion ${VERSION} (${VERSION_CODE}) APK..."
-        curl --fail --location --retry 3 --retry-delay 2 \
-            "$RELEASE_URL" \
-            --output "$APK"
-
-        rm -f "${APK}.idsig"
-
-        echo "Verifying official SuperSMP Companion APK signature..."
-        apksigner verify --verbose --print-certs "$APK"
-    else
-        echo "::error::Could not determine SuperSMP Companion CurrentVersion/CurrentVersionCode."
-        exit 1
-    fi
-else
-    echo "SuperSMP Companion metadata not found; skipping official APK replacement."
-fi
-
-echo
 echo "==> Preparing changelog script..."
 echo "chmod +x ./changelogs.sh"
 
