@@ -4,6 +4,7 @@ License: GPL-3.0-only
 AuthorName: Freetime Maker
 AuthorEmail: FreetimeMaker@proton.me
 AuthorWebSite: https://free-time.me
+WebSite: https://luma.free-time.me
 SourceCode: https://github.com/FreetimeMaker/Luma-Store-Android
 IssueTracker: https://github.com/FreetimeMaker/Luma-Store-Android/issues
 Changelog: https://github.com/FreetimeMaker/Luma-Store-Android/releases
@@ -16,6 +17,7 @@ AutoName: Luma Store
 
 RepoType: git
 Repo: https://github.com/FreetimeMaker/Luma-Store-Android.git
+Binaries: https://github.com/FreetimeMaker/Luma-Store-Android/releases/download/v%v/Luma-Store-v%v.apk
 
 Builds:
   - versionName: 2.3.0
@@ -25,7 +27,10 @@ Builds:
     gradle:
       - yes
 
+AllowedAPKSigningKeys: b2d882225565f0a6e5dde62de1e3a0869177c08b713f8bccdae57d8ad29f1ef2
+
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
 CurrentVersion: 2.3.0
 CurrentVersionCode: 10
+

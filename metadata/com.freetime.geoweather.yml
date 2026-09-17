@@ -7,6 +7,7 @@ License: Apache-2.0
 AuthorName: Freetime Maker
 AuthorEmail: FreetimeMaker@proton.me
 AuthorWebSite: https://free-time.me/
+WebSite: https://geoweather.free-time.me/
 SourceCode: https://github.com/FreetimeMaker/GeoWeather
 IssueTracker: https://github.com/FreetimeMaker/GeoWeather/issues
 Translation: https://translate.codeberg.org/projects/geoweather/geoweather/
@@ -20,6 +21,7 @@ AutoName: GeoWeather
 
 RepoType: git
 Repo: https://github.com/FreetimeMaker/GeoWeather.git
+Binaries: https://github.com/FreetimeMaker/GeoWeather/releases/download/v%v/GeoWeather-v%v.apk
 
 Builds:
   - versionName: 3.1.2
