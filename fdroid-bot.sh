@@ -46,6 +46,37 @@ echo "fdroid build --all"
 
 fdroid build --all
 
+force_current_build() {
+    local app_id="$1"
+    local metadata_file="$2"
+
+    [ -f "$metadata_file" ] || return 0
+
+    local version_code
+    version_code="$(sed -n 's/^CurrentVersionCode:[[:space:]]*//p' "$metadata_file" | tail -n1)"
+
+    if [ -z "$version_code" ]; then
+        echo "::error::Could not determine CurrentVersionCode for $app_id."
+        exit 1
+    fi
+
+    local unsigned_apk="unsigned/${app_id}_${version_code}.apk"
+
+    if [ ! -f "$unsigned_apk" ]; then
+        echo
+        echo "==> Forcing fresh source build for ${app_id}:${version_code}..."
+        fdroid build --force "${app_id}:${version_code}"
+    fi
+
+    if [ ! -f "$unsigned_apk" ]; then
+        echo "::error::Expected source-built APK still not found after forced build: $unsigned_apk"
+        exit 1
+    fi
+}
+
+force_current_build "com.freetime.ssmpc" "metadata/com.freetime.ssmpc.yml"
+force_current_build "com.freetime.lumastore" "metadata/com.freetime.lumastore.yml"
+
 sign_with_developer_key() {
     local app_id="$1"
     local metadata_file="$2"
@@ -78,7 +109,7 @@ sign_with_developer_key() {
     fi
 
     if [ -z "${KEYSTORE_PASSWORD:-}" ]; then
-        echo "::error::KEYSTORE_PASSWORD is not set."
+        echo "::error::KEYSTORE_PASSWORD is not set. Add this secret to FreetimeMaker/fdroid."
         exit 1
     fi
 
@@ -86,7 +117,7 @@ sign_with_developer_key() {
     rm -f "$signed_apk" "$signed_apk.idsig"
 
     echo
-echo "==> Signing $app_id with its developer key..."
+    echo "==> Signing $app_id with its developer key..."
     apksigner sign \
         --ks "$keystore" \
         --ks-key-alias alle \
@@ -98,8 +129,6 @@ echo "==> Signing $app_id with its developer key..."
     echo "==> Verifying developer signature for $app_id..."
     apksigner verify --verbose --print-certs "$signed_apk"
 
-    # Prevent fdroid publish from signing this APK a second time with the
-    # repository key. The already developer-signed APK stays in repo/.
     rm -f "$unsigned_apk" "$unsigned_apk.idsig"
 }
 
