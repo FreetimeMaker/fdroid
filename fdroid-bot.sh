@@ -61,15 +61,31 @@ force_current_build() {
     fi
 
     local unsigned_apk="unsigned/${app_id}_${version_code}.apk"
+    local test_apk="tmp/${app_id}_${version_code}.apk"
+    local test_src="tmp/${app_id}_${version_code}_src.tar.gz"
+    local unsigned_src="unsigned/${app_id}_${version_code}_src.tar.gz"
 
     if [ ! -f "$unsigned_apk" ]; then
         echo
-        echo "==> Forcing fresh source build for ${app_id}:${version_code}..."
-        fdroid build --force "${app_id}:${version_code}"
+        echo "==> Forcing fresh source build for ${app_id}:${version_code} in test mode..."
+        rm -f "$test_apk" "$test_src"
+        fdroid build --test --force "${app_id}:${version_code}"
+
+        if [ ! -f "$test_apk" ]; then
+            echo "::error::Expected test-built APK not found: $test_apk"
+            exit 1
+        fi
+
+        mkdir -p unsigned
+        cp "$test_apk" "$unsigned_apk"
+
+        if [ -f "$test_src" ]; then
+            cp "$test_src" "$unsigned_src"
+        fi
     fi
 
     if [ ! -f "$unsigned_apk" ]; then
-        echo "::error::Expected source-built APK still not found after forced build: $unsigned_apk"
+        echo "::error::Expected source-built APK still not found: $unsigned_apk"
         exit 1
     fi
 }
