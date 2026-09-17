@@ -21,8 +21,6 @@ AutoName: SuperSMP Companion
 
 RepoType: git
 Repo: https://github.com/FreetimeMaker/SuperSMP-Companion-App.git
-Binaries:
-  https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk
 
 Builds:
   - versionName: 1.4.4
@@ -31,12 +29,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    srclibs:
-      - reproducible-apk-tools@v0.3.0
-    postbuild:
-      - mv $$OUT$$ unaligned.apk
-      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
-        --replace unaligned.apk $$OUT$$
 
   - versionName: 1.5.0
     versionCode: 19
@@ -44,12 +36,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    srclibs:
-      - reproducible-apk-tools@v0.3.0
-    postbuild:
-      - mv $$OUT$$ unaligned.apk
-      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
-        --replace unaligned.apk $$OUT$$
 
   - versionName: 1.6.0
     versionCode: 20
@@ -58,12 +44,6 @@ Builds:
     submodules: true
     gradle:
       - yes
-    srclibs:
-      - reproducible-apk-tools@v0.3.0
-    postbuild:
-      - mv $$OUT$$ unaligned.apk
-      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
-        --replace unaligned.apk $$OUT$$
 
   - versionName: 1.6.1
     versionCode: 21
@@ -71,12 +51,6 @@ Builds:
     subdir: app
     gradle:
       - yes
-    srclibs:
-      - reproducible-apk-tools@v0.3.0
-    postbuild:
-      - mv $$OUT$$ unaligned.apk
-      - $$reproducible-apk-tools$$/zipalign.py --page-size 16 --pad-like-apksigner
-        --replace unaligned.apk $$OUT$$
 
 AllowedAPKSigningKeys: fb4a9817258a428662be72a7736b2665f4878c913102055cf9e76ee9f45f62a7
 
