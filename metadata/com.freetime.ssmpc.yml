@@ -21,6 +21,8 @@ AutoName: SuperSMP Companion
 
 RepoType: git
 Repo: https://github.com/FreetimeMaker/SuperSMP-Companion-App.git
+Binaries:
+  https://github.com/FreetimeMaker/SuperSMP-Companion-App/releases/download/v%v/SSMPC-v%v.apk
 
 Builds:
   - versionName: 1.4.4
