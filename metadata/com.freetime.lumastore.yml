@@ -34,9 +34,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.0.0
+    versionCode: 12
+    commit: 6fd59bd607999a14ef8bbcc24148b7f14ccbcc5c
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: b2d882225565f0a6e5dde62de1e3a0869177c08b713f8bccdae57d8ad29f1ef2
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 2.3.1
-CurrentVersionCode: 11
+CurrentVersion: 3.0.0
+CurrentVersionCode: 12
