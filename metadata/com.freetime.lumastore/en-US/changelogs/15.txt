@@ -1,0 +1,3 @@
+• Fixed the Litecoin crashing error
+• Added a bit more like F-Droid
+• Much More
