@@ -1,0 +1,2 @@
+• Use the same Liquid Glass as GeoWeather
+• Fixed some things with the App Details

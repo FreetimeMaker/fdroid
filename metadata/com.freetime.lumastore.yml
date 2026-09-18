@@ -48,9 +48,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 3.3.0
+    versionCode: 16
+    commit: df139cd4b374444718e10987a9c0d34d3e0a1771
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: b2d882225565f0a6e5dde62de1e3a0869177c08b713f8bccdae57d8ad29f1ef2
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 3.2.0
-CurrentVersionCode: 15
+CurrentVersion: 3.3.0
+CurrentVersionCode: 16
