@@ -1,0 +1,18 @@
+• Redesigned the interface with Liquid Glass effects and new liquid glass shapes
+• Improved Liquid Glass support for light and dark themes
+• Added up to 16 days of weather forecasts with Open-Meteo
+• Added pull-to-refresh to the weather details screen
+• Removed the redundant refresh button from the weather details top bar
+• Simplified saved locations by removing manual location sorting controls
+• Removed accounts, subscriptions, cloud sync and plan restrictions
+• All available forecast days are now accessible without subscription limits
+• Improved donation wallet handling and fixed a crash caused by duplicate wallet entries
+• Improved weather detail and forecast screens
+• Added Normal, Outdoor and Travel notification profiles
+• Added Quiet Hours for suppressing regular overnight weather notifications
+• Added a first-run onboarding experience
+• Added a privacy-friendly Diagnostics & Privacy screen
+• Added Android app shortcuts for Current Location, Search and Settings
+• Added geoweather://open deep-link support
+• What’s New is shown automatically once per app version
+• Fixed several UI and build issues

@@ -62,9 +62,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.1.0
+    versionCode: 18
+    commit: 9103c6a989dd25f9aaa07de0fe09b47991b3fa9a
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: b2d882225565f0a6e5dde62de1e3a0869177c08b713f8bccdae57d8ad29f1ef2
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.0.0
-CurrentVersionCode: 17
+CurrentVersion: 4.1.0
+CurrentVersionCode: 18
