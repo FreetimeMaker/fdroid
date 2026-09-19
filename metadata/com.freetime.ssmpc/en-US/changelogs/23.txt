@@ -1,0 +1,4 @@
+• Made the Texts inside the Glass Buttons more readable
+• Migrated everything to Glass Buttons
+• Updated Donation Screen
+• Fixed the Map (hopefully now)
