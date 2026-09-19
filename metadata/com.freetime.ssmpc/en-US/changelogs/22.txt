@@ -1,0 +1,23 @@
+• Added Liquid Glass throughout the app
+• Redesigned cards, buttons, dialogs, top bars, and navigation
+• Added interactive Glass effects and animations
+• Added a new floating bottom navigation bar
+• Improved Material You integration
+• Simplified the main navigation
+• Added a More menu for Links, Shop, Map, and Settings
+• Improved navigation and back controls across the app
+• Added Automatic, Light, and Dark theme modes
+• Automatic mode switches between light and dark based on the time of day
+• Unified theme handling across all screens and activities
+• Improved the Map screen and WebView rendering
+• Fixed the map turning white or black
+• Added DOM storage and other required WebView features
+• Improved zoom and viewport behavior
+• Redesigned the Coordinates dialog
+• Improved Home, Settings, Commands, Coordinates, Donation, Wallet, and Changelog screens
+• Improved WebView controls and fullscreen screens
+• Added better support for edge-to-edge layouts
+• Fixed several UI issues
+• Fixed various Kotlin and layout issues
+• Improved compatibility with older Android versions
+• General code cleanup and consistency improvements
