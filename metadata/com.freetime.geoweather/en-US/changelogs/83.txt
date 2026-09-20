@@ -1,0 +1,9 @@
+• Redesigned GeoWeather with a more transparent, SimpMusic-inspired Liquid Glass interface
+• Reworked the main navigation into a compact floating glass control
+• Replaced more Material 3 surfaces, fields, actions and dialogs with dedicated GeoWeather glass components
+• Adding a location now happens directly in a Liquid Glass dialog instead of a separate screen
+• Location search now starts after the first character and hides locations that are already saved
+• Replaced the Material time picker with compact glass notification time controls
+• Improved light and dark mode text contrast across shared glass components
+• Improved settings, search, weather details and other screens for a more consistent interface
+• Fixed UI and build issues introduced during the design migration
