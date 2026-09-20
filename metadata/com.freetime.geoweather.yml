@@ -110,7 +110,7 @@ Builds:
   - versionName: 4.6.1
     versionCode: 84
     commit: e1889dd75956c02b8b25985e3f5a9c7c1dbc2bf5
-    subdir: androidApp
+    subdir: app
     gradle:
       - yes
 
