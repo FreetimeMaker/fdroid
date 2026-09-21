@@ -114,9 +114,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.6.3
+    versionCode: 86
+    commit: a12f9619b00b8b2001c9772a7e796bb813b86b58
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: e7370a3e2d3e5baa7124bea7fff3e2955e80c68f5c07ef0c8b9137e76e86e283
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.6.1
-CurrentVersionCode: 84
+CurrentVersion: 4.6.3
+CurrentVersionCode: 86
