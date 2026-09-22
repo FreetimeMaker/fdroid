@@ -1,0 +1,4 @@
+• Fixed automatic light and dark mode so GeoWeather correctly follows daylight and falls back to the system theme when sun data is unavailable
+• Improved forecast weather icons so nighttime forecasts use matching night icons after sunset
+• Improved the 16-day forecast foundation with hourly forecast data available across the full forecast range
+• Fixed additional weather detail, theme and forecast UI issues
