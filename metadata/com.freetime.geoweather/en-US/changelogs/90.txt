@@ -1,0 +1,6 @@
+• Expanded widgets with compact, forecast and detailed variants, per-widget location selection and dynamic weather-aware styling
+• Improved forecast insights with Today vs tomorrow comparisons, confidence levels, daylight duration and better day/night icons
+• Upgraded weather sharing and improved feels-like explanations
+• Added per-location smart alert thresholds for temperature, wind, rain, gusts, UV and frost
+• Improved persistent notifications and smart weather alerts
+• Improved Liquid Glass performance and fixed additional widget, forecast and UI issues
