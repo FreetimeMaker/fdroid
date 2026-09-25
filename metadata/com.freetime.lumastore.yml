@@ -105,9 +105,16 @@ Builds:
     gradle:
       - yes
 
+  - versionName: 4.3.5
+    versionCode: 26
+    commit: ac750900fa26047577e1fb49c57f48d3c7cddff2
+    subdir: app
+    gradle:
+      - yes
+
 AllowedAPKSigningKeys: b2d882225565f0a6e5dde62de1e3a0869177c08b713f8bccdae57d8ad29f1ef2
 
 AutoUpdateMode: Version
 UpdateCheckMode: Tags
-CurrentVersion: 4.3.3
-CurrentVersionCode: 24
+CurrentVersion: 4.3.5
+CurrentVersionCode: 26

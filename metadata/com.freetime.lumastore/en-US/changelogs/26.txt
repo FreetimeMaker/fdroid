@@ -1,0 +1,8 @@
+• Refreshed the interface with a cleaner non-glass design across app content
+• Kept Liquid Glass exclusively for the main navigation
+• Changed shared app links to luma.free-time.me/<app-id>
+• Improved direct app deep links
+• Fixed false offline status when cached store data is available
+• Improved developer dashboard reliability when optional statistics or metadata fail to load
+• Fixed Freetime Core 2.0.0 Liquid Glass compatibility issues
+• Improved FreetimeWarn version detection
