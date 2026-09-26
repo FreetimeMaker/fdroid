@@ -27,7 +27,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: main
 
@@ -63,7 +63,7 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
@@ -71,7 +71,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: "3.13"
+          python-version: "3.14"
 
       - name: Install F-Droid server tools
         shell: bash
@@ -148,7 +148,7 @@ jobs:
           fi
 
       - name: Upload update result
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: update-result-${{ matrix.app }}
           path: update-result
@@ -166,13 +166,13 @@ jobs:
 
     steps:
       - name: Checkout main
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
 
       - name: Download update results
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v8
         with:
           pattern: update-result-*
           path: update-results
@@ -252,11 +252,11 @@ jobs:
           needs.apply-updates.outputs.changed == 'true'
         )
       }}
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout main
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           ref: main
           fetch-depth: 0
@@ -265,7 +265,7 @@ jobs:
         uses: actions/setup-java@v6
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: "25"
 
       - name: Show Java version
         shell: bash
@@ -277,7 +277,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v7
         with:
-          python-version: "3.13"
+          python-version: "3.14"
 
       - name: Install F-Droid server tools
         shell: bash
@@ -339,7 +339,7 @@ jobs:
           test -x /opt/gradlew-fdroid/gradlew-fdroid
 
       - name: Get KeyStore
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: ${{ secrets.KEYSTORE_REPOSITORY }}
           token: ${{ secrets.KEYSTORE_ACCESS_TOKEN }}
@@ -352,8 +352,9 @@ jobs:
           cp temp_secrets/keystore.p12 ./keystore.p12
           cp temp_secrets/Luma-Store.jks ./Luma-Store.jks
           cp temp_secrets/SuperSMP-Companion-KeyStore.jks ./SuperSMP-Companion-KeyStore.jks
+          cp temp_secrets/GeoWeather-KeyStore.jks ./GeoWeather-KeyStore.jks
           rm -rf temp_secrets
-          chmod 600 keystore.p12 Luma-Store.jks SuperSMP-Companion-KeyStore.jks
+          chmod 600 keystore.p12 Luma-Store.jks SuperSMP-Companion-KeyStore.jks GeoWeather-KeyStore.jks
 
       - name: Update F-Droid Repo
         shell: bash
@@ -371,7 +372,7 @@ jobs:
         shell: bash
         run: |
           git checkout -- config.yml || true
-          rm -f keystore.p12 Luma-Store.jks SuperSMP-Companion-KeyStore.jks
+          rm -f keystore.p12 Luma-Store.jks SuperSMP-Companion-KeyStore.jks GeoWeather-KeyStore.jks
           rm -rf temp_secrets
           sudo rm -rf /opt/gradlew-fdroid
 
