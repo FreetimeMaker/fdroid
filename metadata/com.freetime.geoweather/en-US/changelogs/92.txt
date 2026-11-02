@@ -1,0 +1,4 @@
+• Updated all Freetime libraries to 3.0.0 and migrated to the new design APIs
+• Added floating bottom navigation with a separate city search action; larger screens retain the navigation rail
+• Updated cards, buttons, dialogs and top bars to Material 3 styling, with Liquid Glass limited to bottom navigation
+• Connected the saved Liquid Glass preference to the new navigation effect with a Material fallback when disabled
